@@ -131,8 +131,6 @@ p {
 	margin: 0 auto;
 	display:table;
 }
-
-/* LINHA */
 .container-row {
 	display: table;
 	float: left;
@@ -144,7 +142,10 @@ p {
 	margin-top:65px;
 	margin-bottom:25px;
 }
-div:after, div:before {
+section {
+	width:100%;
+}
+section:after, section:before {
 	content: "";
 	display: block;
 	clear: both;
@@ -156,8 +157,6 @@ div:after, div:before {
 .clearfix::after {
 	clear: both;
 }
-
-/* IMAGENS */
 img {
 	max-width: 100%;
 }
@@ -220,8 +219,6 @@ div img {
 	filter: alpha(opacity=50);
 	-moz-opacity: 0.50;
 }
-
-/* DESTAQUE */
 #spotlight {
 	background-image:url(../img/background-header.jpg);
 	background-repeat: repeat;
@@ -235,7 +232,23 @@ div img {
 	line-height:50px;
 }
 
-/* SERVIÇOS */
+#topo-portfolio {
+	background-image:url(../img/background-portfolio-section.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin:95px 0 0 0;
+	width: 100%;
+	height:450px;
+}
+#topo-portfolio .container-row {
+	margin-top:15px;
+}
+#filters {
+	
+	
+}
+
 #services {
 	background-image:url(../img/background-services-section.jpg);
 	background-position: center top;
@@ -283,8 +296,6 @@ div img {
 #services-bottom .container-row {
 	padding:45px 0 45px 0;
 }
-
-/* PORTFOLIO */
 #work-top {
 	background-image:url(../img/background-work-top.jpg);
 	background-repeat: repeat;
@@ -306,13 +317,6 @@ div img {
 	float: right;
 	max-width: 100%;
 }
-/* #work-top .work-details h4 {
-	border-bottom-color:#114B52;
-	border-bottom-style: solid;
-	border-bottom-width: 5px;
-	width:60%;
-	line-height:45px;
-}*/
 .work-details {
 	float: left;
 	width: 40%;
@@ -328,7 +332,6 @@ div img {
 	color:#FFFFFF;
 	float:left;
 	padding:0;
-	margin:15px 0 0 0;
 }
 .work-details .btn {
 	color: #FFFFFF;
@@ -355,8 +358,6 @@ div img {
 #work-bottom .container-row > h2, h4 {
 	text-transform:uppercase;
 }
-
-/* BRIEFING */
 #briefing {
 	background-image:url(../img/background-briefing-section.jpg);
 	background-position: center -1px;
