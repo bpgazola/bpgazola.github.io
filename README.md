@@ -1,1 +1,1 @@
-# bpgazola.github.io
+http://bpgazola.github.io
