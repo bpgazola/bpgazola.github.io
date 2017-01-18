@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Pixelrocket</title>
+<link rel="stylesheet" href="css/skin-home.css" />
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div><a id="logo" class="clearfix" href="#"></a> </div>
+        
+        <!--MENU-->
+        <nav>
+          <ul>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="servicos.html">serviços</a></li>
+            <li><a href="sobre.html">sobre</a></li>
+          </ul>
+        </nav>
+        <!--MENU--> 
+        
+        <img src="img/span-line.png"> </div>
+    </div>
+  </div>
+</header>
+<div id="spotlight">
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <h1>Seu projeto vai decolar</h1>
+        <img src="img/span-line-spotlight.jpg">
+        <h2> Design & Desenvolvimento </h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="services">
+  <div class="container">
+    <div class="content">
+      <div class="row"> 
+        
+        <!--IMPRESSOS-->
+        <div class="services-item"> <img class="icon-services" src="img/icon-print.jpg">
+          <h3>Impressos</h3>
+          <p>Criação de cartões de visita, folders, panfletos, catálogos, revistas. Arquivos finais em alta resolução para você enviar para a gráfica.</p>
+        </div>
+ 
+      
+      <!--IDENTIDADE-->
+      <div class="services-item"> <img class="icon-services" src="img/icon-branding.jpg">
+        <h3>Identidade</h3>
+        <p>Projetos completos de logotipo com desenvolvimento de manual com aplicação da marca.</p>
+      </div>
+      
+      <!--DESENVOLVIMENTO WEB-->
+      <div class="services-item"> <img class="icon-services" src="img/icon-dev-web.jpg">
+        <h3>Desenvolvimento Web</h3>
+        <p>Implementamos de forma eficiente os elementos do design sem abrir mão de nada. E tudo isso para desktop, tablets e smartphones com modernas aplicações em HTML5 e CSS3.</p>
+      </div>
+      
+      <!--DESIGN DE INTERFACE-->
+      <div class="services-item"> <img class="icon-services" src="img/icon-layout.jpg">
+        <h3>Design de Interfaces</h3>
+        <p>Criação de layouts exclusivos e guias de estilos para sites e blogs.
+          Foco no usuário com aplicações intuitivas com design efetivo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="services-bottom">
+  <div class="container">
+    <div class="container-row">
+      <h2>estas são algumas das soluções<br/>
+        que oferecemos.</h2>
+      <a class="btn" href="contato.html">peça um orçamento</a><a class="btn" href="servicos.html">veja os pacotes</a> </div>
+  </div>
+</div>
+<div id="work-top">
+  <div class="container">
+    <div class="container-row">
+      <h2>nós temos orgulho do que fazemos!</h2>
+      <h2>vamos construir soluções juntos.</h2>
+    </div>
+    <div class="container-row">
+      <div class="work-details">
+        <h4>pgqp programa de formação de líderes</h4>
+        <img src="img/span-line-work-top.jpg">
+        <p>Projeto desenvolvido para os cursos à distância da PUCRS em parceria com o PGQP. O site, com os conteúdos de cada módulo do curso, foi desenvolvido com uma linha de design flat.</p>
+        <div class="clearfix"></div>
+        <a class="btn" href="portfolio.html">veja o projeto</a> </div>
+      <figure><img src="img/work01.jpg"></figure>
+    </div>
+  </div>
+</div>
+<div id="work-bottom">
+  <div class="container">
+    <div class="container-row">
+      <h2>gostou do que viu até agora!<br/>
+        tem mais...</h2>
+    </div>
+    <div class="container-row">
+      <div class="work-details">
+        <h4>hsm educação</h4>
+        <img src="img/span-line-work-bottom.jpg">
+        <p>Criação do hotsite para a HSM-PUCRS Educação voltado para programas de educação executiva, como MBA´s.</p>
+        <div class="clearfix"></div>
+        <a class="btn" href="portfolio.html">veja o projeto</a> </div>
+      <figure><img src="img/work02.jpg"></figure>
+    </div>
+  </div>
+</div>
+<div id="briefing">
+  <div class="container">
+    <div class="container-row">
+      <h1>Como fazemos...</h1>
+      <p>Apresentamos soluções criativas, com tecnologia e inovação, unindo usabilidade com design na criação do seu projeto. Levantamos os requisitos, avaliamos as técnicas aplicáveis e estimamos o tempo adequado de cada etapa.</p>
+    </div>
+    <div class="briefing-item"><img src="img/icon-creativity.png">
+      <h5>praticamos a</h5>
+      <h3>criatividade</h3>
+    </div>
+    <div class="briefing-item"><img src="img/icon-project.png">
+      <h5>planejamos o</h5>
+      <h3>projeto</h3>
+    </div>
+    <div class="briefing-item"><img src="img/icon-design.png">
+      <h5>desenvolvemos o</h5>
+      <h3>layout</h3>
+    </div>
+    <div class="briefing-item"><img src="img/icon-test.png">
+      <h5>revisamos e</h5>
+      <h3>testamos</h3>
+    </div>
+    <div class="clearfix"></div>
+    <a class="btn" href="contato.html">embarcar agora</a> </div>
+</div>
+<footer id="footer">
+  <div class="container-row">
+    <div id="footer-inner"><a id="footer-logo" href="#"><img src="img/logo-footer.jpg"></a>
+      
+      <div class="container-row">
+        <p>© Pixelrocket 2015, todos os direitos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
