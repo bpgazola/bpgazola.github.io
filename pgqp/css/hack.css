@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+img {
+	border:none;
+}
+
+/* BOTÕES */
+
+.btn {
+	padding:10px 20px 10px 65px;
+	position:relative;
+	top:0;
+	left:45%;
+	margin-top:-50px;
+	margin-left:-45px;
+}
+
+.column {
+	float:left;
+}
