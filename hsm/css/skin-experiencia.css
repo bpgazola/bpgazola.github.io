@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Autor: Bruno Gazola de Paoli */
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* FONTES */
+@font-face {
+	font-family: Lato Regular;
+	src:url(../fonts/Lato-Reg.ttf), url(../fonts/Lato-Reg.eot); /* PARA IE */
+}
+@font-face {
+	font-family: Ubuntu Regular;
+	src:url(../fonts/Ubuntu-R.ttf), url(../fonts/Ubuntu-R.eot); /* PARA IE */
+}
+@font-face {
+	font-family: Ubuntu Light Italic;
+	src:url(../fonts/Ubuntu-LI.ttf), url(../fonts/Ubuntu-LI.eot); /* PARA IE */
+}
+@font-face {
+	font-family: Ubuntu Bold;
+	src:url(../fonts/Ubuntu-B.ttf), url(../fonts/Ubuntu-B.eot); /* PARA IE */
+}
+/* CONTEÚDO */
+#wrap {
+	max-width:1200px;
+	min-width:600px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#resize {
+	position:fixed;
+	margin:0 auto;
+	width:100%;
+	height:100%;
+}
+#content {
+	width:100%;
+	position:relative;
+	float:left;
+}
+.clear {
+	clear:both;
+}
+#top {
+	float:left;
+	width:100%;
+	background-color:#D2D9C5;
+}
+#logo {
+	width:100%;
+	height:auto;
+	float:left;
+	margin:1% 0 0 8%;
+	position:absolute;
+}
+#spotlight {
+	position:relative;
+	float:left;
+	width:100%;
+	height:443px;
+	background-image:url(../imagens/back-top-spotlight-experiencia.png);
+	background-repeat:no-repeat;
+	background-position:390px 120px
+}
+#tagline {
+	float:left;
+	margin:3% 0 0 7%;
+	width:50%;
+}
+#tagline p {
+	font-family: Lato Regular;
+	font-size:13px;
+	color:#FFF;
+	text-align:left;
+}
+.column {
+	margin:3% 0 0 0;
+	float:left;
+	width:40%;
+	position:relative;
+	padding:3%;
+}
+#perfil-aluno, span {
+    color: #00B9A3;
+    text-align: center;
+    text-transform: uppercase;
+}
+#tagline .column {
+	float:left;
+	width:40%;
+	position:relative;
+	margin:2% 0 0 0;
+	padding:0;
+}
+#perfil-aluno {
+	float:left;
+	width:100%;
+	background-color:#D2D9C5;
+	height:324px;
+	padding:3% 0 0 0;
+}
+#perfil-aluno .column {
+	margin:0 0 0 3%;
+	float:left;
+	width:40%;
+}
+
+/* TÍTULOS */
+h1 {
+	font-family: Ubuntu Regular;
+	font-size:35px;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	text-align:left;
+}
+h2 {
+	font-family: Ubuntu Light Italic;
+	font-size:30px;
+	color:#00B8A3;
+	text-transform:uppercase;
+	text-align:left;
+}
+h3 {
+    color: #FFFFFF;
+    font-family: Lato Regular;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* PARÁGRAFO */
+p {
+	font-family: Lato Regular;
+	font-size:13px;
+	color:#FFFFFF;
+	text-transform:none;
+	padding:3% 0 0 0;
+	text-align:left;
+}
+.aba div img {
+	float:left;
+	margin:3% 0 0 5%;
+}
+.aba div p {
+	font-family: Lato Regular;
+	font-size:13px;
+	color:#004311;
+	text-transform:none;
+	text-align:left;
+	width:30%;
+	float:left;
+}
+/* BOTÕES */
+
+.btn-mais a {
+	display:block;
+	position:absolute;
+	margin:3% 0 0 3%;
+	background-color:#00BAA3;
+	width:12%;
+	height:auto;
+	text-align:center;
+	padding:1%;
+	font-family: Ubuntu Light Italic;
+	font-size:15px;
+	color:#FFFFFF;
+	text-transform:lowercase;
+	text-decoration:none;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow: 0px 2px 0px #216D2F;
+	-moz-box-shadow: 0px 2px 0px #216D2F;
+	box-shadow: 0px 2px 0px #216D2F;
+}
+.btn-mais a:hover {
+	background-color:#FFFFFF;
+	color:#00BAA3;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+/* MENU NAV GLOBAL */
+#nav {
+	background-color:#ADB998;
+	width:100%;
+	margin:7% 0 0 0;
+	height:65px;
+	overflow:hidden;
+	position:relative;
+}
+#nav ul {
+	font-family:Ubuntu Bold;
+	font-size:15px;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	margin:0 0 0 5%;
+}
+#nav ul li {
+	display:inline-block;
+	list-style:none;
+	float:left;
+	padding:2%;
+}
+#nav ul li a {
+	text-decoration:none;
+	color:#FFFFFF;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1.0;
+	transition: opacity 0.2s ease-out;
+	-moz-transition: opacity 0.2s ease-out;
+	-webkit-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+}
+#nav ul li a:hover {
+	color:#FFFFFF;
+	opacity:1;
+	padding:55% 0 65% 0;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1.0;
+	background-color:#D2D9C5;
+}
+#nav ul li a.selected {
+	color:#FFFFFF;
+	opacity:1;
+	padding:55% 0 65% 0;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1.0;
+	background-color:#D2D9C5;
+}
+
+
+/* ESTILO PARA AGENDA DE EVENTOS */
+#content-abas {
+	width:100%;
+	background-color:#ADB998;
+}
+#content-abas ul {
+	margin:3% 0 0 7%;
+	width:100%;
+	list-style:none;
+}
+.tabs a {
+	float:left;
+	background-color:#FFFFF;
+	padding:2% 5% 2% 5%;
+	color:#FFFFFF;
+	font-family:Ubuntu Bold;
+	font-size:15px;
+	text-transform:uppercase;
+	text-decoration:none;
+	
+}
+.tabs a:hover {
+	color:#206C2E;
+	background-color:#FFFFFF;
+}
+.aba {
+	width:100%;
+	clear:both;
+	position:relative;
+	
+}
+.aba div {
+	background-color:#FFFFFF;
+	width:100%;
+	display:none;
+	position:absolute;
+	padding:0 15% 0 0;
+}
+.aba div:first-child {
+	display:block;
+}
+.aba div:target {
+	display:block;
+}
+
+/* RODAPÉ */
+#footer {
+	background-image:url(../imagens/back-footer.jpg);
+	background-repeat:repeat-x;
+	width:100%;
+	height:242px;
+	clear: both;
+	display: block;
+}
+#footer-inner {
+	float:left;
+	width:82%;
+	margin:2% 0 0 9%;
+	height:auto;
+}
+#footer-inner div {
+	float:left;
+	position:relative;
+	width:32%;
+}
+#footer-inner div h6 {
+	font-family: Ubuntu Bold;
+	font-size:15px;
+	color:#FFF;
+	text-align:left;
+}
+#footer-inner div p {
+	font-family: Lato Regular;
+	font-size:13px;
+	color:#FFF;
+}
+#footer-inner div ul li {
+	font-family: Ubuntu Regular;
+	text-transform:uppercase;
+	color:#FFF;
+	font-size:15px;
+	list-style:none;
+	padding:1% 0 1% 0;
+}
+#footer-inner div ul li a {
+	text-decoration:none;
+	color:#FFF;
+}
+#footer-inner div ul li a:hover {
+	text-decoration:underline;
+	color:#FFF;
+}
+
+/* ESTILO PARA O SLIDER TESTIMONIALS */
+
+#slider-testimonials {
+	float:left;
+	width:100%;
+	margin-top:280px;
+}
+#content-slider {
+	overflow:hidden;
+	padding:1% 0 0 0;
+	width:100%;
+	margin:0 auto;
+}
+.contentbox-wrapper {
+	position:relative;
+	width:10000px;
+	height:auto;
+}
+.contentbox {
+	width:750px;
+	height:auto;
+	float:left;
+	margin:0 5% 0 0;
+}
+.contentbox, img {
+	text-align:center;
+	padding:0 0 0 0;
+}
+/* MENU DO SLIDER */
+#menu-slider {
+	height:20px;
+	width:50px;
+	margin:2% 0 2% 48%;
+}
+#menu-slider ul li {
+	display:inline-block;
+	list-style:none;
+	float:left;
+	width:20px;
+	height:20px;
+	margin:0 10% 0 0;
+	font-family:Lato Regular;
+	font-size:15px;
+}
+#menu-slider ul li a {
+	background-image:url(../imagens/sprite-btn-slider.png);
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	text-decoration:none;
+	padding:0 9px 0 9px;
+	color:#F4F7F8;
+}
+#menu-slider a.active {
+	background-image:url(../imagens/sprite-btn-slider.png);
+	background-repeat:no-repeat;
+	background-position:-25px 0px;
+	color:#EE6557;
+}
