@@ -75,7 +75,7 @@ h3 {
 h4 {
 	font-family:Ubuntu Regular;
 	font-size:20px;
-	line-height:61px;
+	line-height:62px;
 	text-align:left;
 	text-transform:none;
 	color:#666;
@@ -168,11 +168,6 @@ p {
 .column-inner img {
 	margin:0 0 35% 0;
 }
-
-.column h4 {
-	margin:0 0 0 5%;
-}
-
 
 .column-inner a {
 	opacity: 1;
