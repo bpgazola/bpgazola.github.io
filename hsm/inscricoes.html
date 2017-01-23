@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>HSM-PUCRS Educação</title>
+<meta content="Bruno Gazola de Paoli" name="author"/>
+<meta content="bruno.paoli@pucrs.br" name="contact"/>
+<meta content="HSM-PUCRS Educação - Os cursos de MBA e PÓS-MBA são desenvolvidos em parceria com a HSM e apresentam o que há de mais moderno em educação executiva. Com uma proposta diferenciada os prgramas trazem temas atuais e em sintonia com as práticas de mercado. " name="description"/>
+<meta content="mba, cursos de mba, mba porto alegre, mba poa, mba rs, mba rio grande do sul, mba pucrs, cursos de mba, gestão de empresas, marketing, gestão de projetos, gestão de empresas familiares, liderança, inovação, mba marketing, negociação, mba gestão de empresas, mba gestão de projetos" name="keywords"/>
+<link type="text/css" href="css/skin-inscricoes.css" rel="stylesheet" />
+<!--SLIDER-->
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript">
+      $(function() {
+        
+		//vars
+		var conveyor = $(".content-conveyor", $("#sliderContent")),
+		item = $(".item", $("#sliderContent"));
+		
+		//set length of conveyor
+		conveyor.css("width", item.length * parseInt(item.css("width")));
+				
+        //config
+        var sliderOpts = {
+		  max: (item.length * parseInt(item.css("width"))) - parseInt($(".viewer", $("#sliderContent")).css("width")),
+          slide: function(e, ui) { 
+            conveyor.css("left", "-" + ui.value + "px");
+          }
+        };
+
+        //create slider
+        $("#slider").slider(sliderOpts);
+      });
+</script>
+</head>
+
+<body>
+<div id="wrap"> 
+  <!--INÍCIO DO CONTEÚDO DA PÁGINA-->
+  <div id="content">
+    <div id="top">
+      <div id="logo"><a href="index.html"><img src="imagens/logo.png" alt="HSM-PUCRS"></a></div>
+      <!--INÍCIO DO MENU-->
+      <div id="nav">
+        <ul>
+          <li><a href="proposta.html">proposta inovadora</a></li>
+          <li><a href="experiencia.html">experiência acadêmica</a></li>
+          <li><a href="infraestrutura.html">infraestrutura</a></li>
+          <li><a href="cursos.html">cursos</a></li>
+          <li><a href="#" class="selected">inscrições</a></li>
+          <li><a href="fale-conosco.html">fale conosco</a></li>
+        </ul>
+      </div>
+      <!--FIM DO MENU--> 
+    </div>
+    <!--INÍCIO DO SLIDER DE CURSOS-->
+    <div id="sliderContent" class="ui-corner-all">
+      <h2>cursos com inscrições abertas</h2>
+      <div class="viewer ui-corner-all">
+        <div class="content-conveyor ui-helper-clearfix">
+          <div class="item"> <a href="cursos-mba-marketing.html"><span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span><img src="imagens/thumb-mba-marketing.jpg" alt="MBA Marketing de Projetos"></a>
+            <h4>MBA</h4>
+            <h4 class="coursename">Marketing</h4>
+          </div>        
+          <div class="item"> <a href="cursos-gestao-empresarial.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-mba-gestao-empresarial.jpg" alt="MBA Gestão Empresarial"></a>
+            <h4>MBA</h4>
+            <h4 class="coursename">Gestão Empresarial</h4>
+          </div>
+          <div class="item"> <a href="cursos-gestao-projetos.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-mba-gestao-projetos.jpg" alt="MBA Gestão de Projetos"></a>
+            <h4>MBA</h4>
+            <h4 class="coursename">Gestão de Projetos</h4>
+          </div>
+          <div class="item"> <a href="cursos-gestao-empresas-familiares.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-edp-gestao-empresas-familiares.jpg" alt="EDP Gestão de Empresas Familiares"></a>
+            <h4>PÓS-MBA</h4>
+            <h4 class="coursename">Gestão de Empresas Familiares</h4>
+          </div>
+          <div class="item"> <a href="cursos-inovacao-estrategica.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-edp-inovacao.jpg" alt="EDP de Inovação Estratégica"></a>
+            <h4>PÓS-MBA</h4>
+            <h4 class="coursename">Inovação Estratégica</h4>
+          </div>
+          <div class="item"> <a href="cursos-edp-marketing.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-edp-marketing.jpg" alt="EDP em Marketing"></a>
+            <h4>PÓS-MBA</h4>
+            <h4 class="coursename">Marketing</h4>
+          </div>
+          <div class="item"> <a href="cursos-negociacao.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-edp-negociacao.jpg" alt="EDP em Negociação"></a>
+            <h4>PÓS-MBA</h4>
+            <h4 class="coursename">Negociação</h4>
+          </div>
+          <div class="item"> <a href="cursos-lideranca.html"><!--<span>
+            <p class="btn-inscreva">inscreva-se</p>
+            </span>--><img src="imagens/thumb-edp-lideranca.jpg" alt="EDP Liderança"></a>
+            <h4>PÓS-MBA</h4>
+            <h4 class="coursename">Liderança</h4>
+          </div>
+        </div>
+      </div>
+      <div id="slider"></div>
+    </div>
+    <!--FIM DO SLIDER DE CURSOS--> 
+    <!--INÍCIO DAS MATRÍCULAS-->
+    <div id="admissions">
+      <div id="content-admissions">
+        <div class="column">
+          <h3>seleção</h3>
+          <p>Primeiramente o candidato deve fazer sua inscrição no site. A seguir a secretaria entra em contato para agendamento de uma entrevista com o coordenador do curso e análise do currículo.</p>
+        </div>
+        <div class="column">
+          <h3>matrícula</h3>
+          <p>Os candidatos selecionados podem efetuar sua matrícula presencialmente na secretaria da HSM/PUCRS mediante entrega da documentação exigida. Formas de pagamento e maiores esclarecimentos são obtidos diretamente com a secretaria.</p>
+        </div>
+        <div class="column">
+          <h3>documentos</h3>
+          <ul>
+            <li>Cópia da identidade/CPF;</li>
+            <li>Cópia do histórico escolar de graduação; </li>
+            <li>Cópia do diploma/documento que comprove a conclusão da graduação;</li>
+            <li>Cópia do certificado pós-graduação Lato Sensu/MBA (caso possua);</li>
+            <li>Cópia do comprovante de residência;</li>
+            <li>Uma foto 3x4 original ou digitalizada.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--FIM DAS MATRÍCULAS--> 
+    <!--INÍCIO CONTATO-->
+    <div id="contato">
+      <div class="column">
+        <h5>dúvidas, fale conosco</h5>
+        <p>Av. Ipiranga, 6681 | Prédio 50 | 8° andar<br/>
+          De 2ª a 6ª das 13h às 22h45.<br/>
+          Tel: + 55 51 3353-6222<br/>
+          E-mail: hsmeducacao@pucrs.br</p>
+      </div>
+      <div class="column">
+        <form method="POST" action="contato.php">
+          <label>nome:</label>
+          <input type="text" name="nome" required="required" />
+          <label>e-mail:</label>
+          <input type="text" name="email" required="required"/>
+          </div>
+          <div class="column">
+          <label>mensagem:</label>
+          <textarea class="campo" rows="4" name="mensagem" required="required"></textarea>
+          <input type="button" class="btn-enviar" value="ENVIAR" onclick="submit()" />
+        </form>
+      </div>
+    </div>
+    <!--FIM CONTATO-->
+    <div class="clear"></div>
+    <!--INÍCIO DO RODAPÉ-->
+    <div id="footer">
+      <div id="footer-inner">
+        <div>
+          <h6>MBA</h6>
+          <ul>
+            <li><a href="cursos-gestao-projetos.html">gestão de projetos</a></li>
+            <li><a href="cursos-gestao-empresarial.html">gestão empresarial</a></li>
+            <li><a href="cursos-mba-marketing.html">marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6>PÓS-MBA</h6>
+          <ul>
+            <li><a href="cursos-gestao-empresas-familiares.html">gestão de empresas familiares</a></li>
+            <li><a href="cursos-inovacao-estrategica.html">inovação estratégica</a></li>
+            <li><a href="cursos-lideranca.html">liderança</a></li>
+            <li><a href="cursos-edp-marketing.html">marketing</a></li>
+            <li><a href="cursos-negociacao.html">negociação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6>HSM-PUCRS</h6>
+          <p>Av. Ipiranga, 6681 | Prédio 50 | 8° andar<br/>
+            De 2ª a 6ª das 13h às 22h45.<br/>
+            Tel: + 55 51 3353-6222<br/>
+            E-mail: hsmeducacao@pucrs.br</p>
+        </div>
+      </div>
+    </div>
+    <!--FIM DO RODAPÉ--> 
+  </div>
+  <!--FIM DO CONTEÚDO DA PÁGINA-->
+  <div class="clear"></div>
+  <div id="resize"></div>
+</div>
+<?php include_once("analyticstracking.php") ?>
+</body>
+</html>

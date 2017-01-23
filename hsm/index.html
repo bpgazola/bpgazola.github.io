@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<title>HSM-PUCRS Educação</title>
+<meta content="Bruno Gazola de Paoli" name="author"/>
+<meta content="bruno.paoli@pucrs.br" name="contact"/>
+<meta content="HSM-PUCRS Educação - Os cursos de MBA e PÓS-MBA são desenvolvidos em parceria com a HSM e apresentam o que há de mais moderno em educação executiva. Com uma proposta diferenciada os prgramas trazem temas atuais e em sintonia com as práticas de mercado. " name="description"/>
+<meta content="mba, cursos de mba, mba porto alegre, mba poa, mba rs, mba rio grande do sul, mba pucrs, cursos de mba, gestão de empresas, marketing, gestão de projetos, gestão de empresas familiares, liderança, inovação, mba marketing, negociação, mba gestão de empresas, mba gestão de projetos" name="keywords"/>
+<link type="text/css" href="css/skin-home.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+            $(function() {
+                $('.btn-goto a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    /*
+                    if you don't want to use the easing effects:
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1000);
+                    */
+                    event.preventDefault();
+                });
+            });
+</script>
+<!--SLIDER-->
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript">
+      $(function() {
+        
+		//vars
+		var conveyor = $(".content-conveyor", $("#sliderContent")),
+		item = $(".item", $("#sliderContent"));
+		
+		//set length of conveyor
+		conveyor.css("width", item.length * parseInt(item.css("width")));
+				
+        //config
+        var sliderOpts = {
+		  max: (item.length * parseInt(item.css("width"))) - parseInt($(".viewer", $("#sliderContent")).css("width")),
+          slide: function(e, ui) { 
+            conveyor.css("left", "-" + ui.value + "px");
+          }
+        };
+
+        //create slider
+        $("#slider").slider(sliderOpts);
+      });
+</script>
+<!--SCRIPT PARA O SCROLL HORIZONTAL DO SLIDESHOW-->
+<script type="text/javascript">
+
+function goto(id, a){	
+	//ANIMAÇÃO DA DIV
+	$(".contentbox-wrapper").animate({"left": -($(id).position().left)}, 600);
+	
+	//REMOVE A CLASSE 'ACTIVE' DE TODOS OS LINKS DENTRO DO MENU
+    $('#menu-slider a').removeClass('active');
+	
+	//ADICIONA A CLASSE 'ACTIVE' NO LINK SELECIONADO
+    $(a).addClass('active');	
+};
+
+</script>
+</head>
+
+<body>
+<div id="wrap">
+<!--INÍCIO DO CONTEÚDO DA PÁGINA-->
+<div id="content">
+  <div id="top">
+    <div id="logo"><a href="#"><img src="imagens/logo.png" alt="HSM-PUCRS"></a></div>
+    <!--INÍCIO DO MENU-->
+    <div id="nav">
+      <ul>
+        <li><a href="proposta.html">proposta inovadora</a></li>
+        <li><a href="experiencia.html">experiência acadêmica</a></li>
+        <li><a href="infraestrutura.html">infraestrutura</a></li>
+        <li><a href="cursos.html">cursos</a></li>
+        <li><a href="inscricoes.html">inscrições</a></li>
+        <li><a href="fale-conosco.html">fale conosco</a></li>
+      </ul>
+    </div>
+    <!--FIM DO MENU--> 
+    <!--INÍCIO DO DESTAQUE NO TOPO-->
+    <div id="spotlight">
+      <div id="tagline">
+        <h1>descubra por que</h1>
+        <h2>a hsm-pucrs é diferente</h2>
+        <h3>programas de MBA e PÓS-MBA</h3>
+        <span class="btn-goto"><a href="#diferencial"><img src="imagens/arrow-down.png"></a></span>
+       </div>
+    </div>
+    <!--FIM DO DESTAQUE NO TOPO--> 
+  </div>
+  <!--INÍCIO DO SLIDER DE CURSOS-->
+  <div id="sliderContent" class="ui-corner-all">
+    <div class="viewer ui-corner-all">
+      <div class="content-conveyor ui-helper-clearfix">
+        <div class="item"> <a href="cursos-mba-marketing.html"><span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span><img src="imagens/thumb-mba-marketing.jpg" alt="MBA Marketing de Projetos"></a>
+          <h4>MBA</h4>
+          <h4 class="coursename">Marketing</h4>
+        </div>
+        <div class="item"> <a href="cursos-gestao-empresarial.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span>--><img src="imagens/thumb-mba-gestao-empresarial.jpg" alt="MBA Gestão Empresarial"></a>
+          <h4>MBA</h4>
+          <h4 class="coursename">Gestão Empresarial</h4>
+        </div>
+        <div class="item"> <a href="cursos-gestao-projetos.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span>--><img src="imagens/thumb-mba-gestao-projetos.jpg" alt="MBA Gestão de Projetos"></a>
+          <h4>MBA</h4>
+          <h4 class="coursename">Gestão de Projetos</h4>
+        </div>
+        <div class="item"> <a href="cursos-gestao-empresas-familiares.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span>--><img src="imagens/thumb-edp-gestao-empresas-familiares.jpg" alt="EDP Gestão de Empresas Familiares"></a>
+          <h4>PÓS-MBA</h4>
+          <h4 class="coursename">Gestão de Empresas Familiares</h4>
+        </div>
+        <div class="item"> <a href="cursos-inovacao-estrategica.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span>--><img src="imagens/thumb-edp-inovacao.jpg" alt="EDP de Inovação Estratégica"></a>
+          <h4>PÓS-MBA</h4>
+          <h4 class="coursename">Inovação Estratégica</h4>
+        </div>
+        <div class="item"> <a href="cursos-edp-marketing.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span>--><img src="imagens/thumb-edp-marketing.jpg" alt="EDP em Marketing"></a>
+          <h4>PÓS-MBA</h4>
+          <h4 class="coursename">Marketing</h4>
+        </div>
+        <div class="item"> <a href="cursos-negociacao.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p>
+          </span>--><img src="imagens/thumb-edp-negociacao.jpg" alt="EDP em Negociação"></a>
+          <h4>PÓS-MBA</h4>
+          <h4 class="coursename">Negociação</h4>
+        </div>
+        <div class="item"> <a href="cursos-lideranca.html"><!--<span>
+          <p class="btn-inscreva">inscreva-se</p
+          </span>>--><img src="imagens/thumb-edp-lideranca.jpg" alt="EDP Liderança"></a>
+          <h4>PÓS-MBA</h4>
+          <h4 class="coursename">Liderança</h4>
+        </div>
+      </div>
+    </div>
+    <div id="slider"></div>
+  </div>
+  <!--FIM DO SLIDER DE CURSOS--> 
+  <!--INÍCIO DO CONTENT DIFERENCIAL-->
+  <div id="diferencial">
+    <h5>Proposta inovadora</h5>
+    <div id="content-column">
+      <div class="column"><img src="imagens/experts.png" alt="Presença dos Experts Internacionai">
+        <p>presença exclusiva de</p>
+        <p> <span>experts internacionais</span></p>
+      </div>
+      <div class="column"><img src="imagens/conteudo.png" alt="Conteudo Didáticos Exclusivos">
+        <p><span>conteúdo exclusivo</span></p>
+        <p> e material didático interativo</p>
+      </div>
+      <div class="column"><img src="imagens/foruns.png" alt="Transmissão Fóruns">
+        <p><span>transmissão exclusiva</span></p>
+        <p> dos fóruns hsm</p>
+      </div>
+      <span class="btn-mais"><a href="proposta.html">veja mais</a></span> </div>
+  </div>
+  <!--FIM DO CONTENT DIFERENCIAL--> 
+  <!--INÍCIO DO SLIDER COM DEPOIMENTOS-->
+  <div id="slider-testimonials">
+    <h4 id="testimonials">O que os alunos dizem sobre a HSM-PUCRS</h4>
+    <div id="content-slider">
+      <div class="contentbox-wrapper">
+        <div class="contentbox" id="slide1"> <img src="imagens/testimonials01.png"> </div>
+        <div class="contentbox" id="slide2"> <img src="imagens/testimonials02.png"> </div>
+      </div>
+    </div>
+    <!--INÍCIO DOS BOTÕES DO SLIDER-->
+    <div id="menu-slider">
+      <ul>
+        <li><a class="active" href="#" onClick="goto('#slide1', this); return false"></a></li>
+        <li><a href="#" onClick="goto('#slide2', this); return false"></a></li>
+      </ul>
+    </div>
+    <!--FIM DOS BOTÕES DO SLIDER--> 
+  </div>
+  <!--FIM DO SLIDER COM DEPOIMENTOS--> 
+  <!--INÍCIO DA AGENDA DE EVENTOS-->
+  <div id="agenda">
+  <ul class="tabs">
+    <li><a href="#aba1">FÓRUM</a></li>
+    <li><a href="#aba2">EXPO HSM</a></li>
+  </ul>
+  <div class="aba">
+    <div id="aba1">
+      <h6><a href="#">fórum hsm de negociação</a></h6>
+      <p class="date">setembro de 2014</p>
+      <p>Evento exclusivo para alunos e convidados especiais da HSM transmitido ao vivo. </p>
+    </div>
+    <div id="aba2">
+      <h6><a href="#">EXPO HSM</a></h6>
+      <p class="date">novembro de 2014</p>
+      <p>Evento exclusivo para alunos e convidados especiais da HSM transmitido ao vivo. </p>
+    </div>
+    </div>
+    </div>
+    <!--FIM DA AGENDA DE EVENTOS-->
+    <!--INÍCIO DO RODAPÉ-->
+    <div id="footer">
+      <div id="footer-inner">
+        <div>
+          <h6>MBA</h6>
+          <ul>
+            <li><a href="cursos-gestao-projetos.html">gestão de projetos</a></li>
+            <li><a href="cursos-gestao-empresarial.html">gestão empresarial</a></li>
+            <li><a href="cursos-mba-marketing.html">marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6>PÓS-MBA</h6>
+          <ul>
+            <li><a href="cursos-gestao-empresas-familiares.html">gestão de empresas familiares</a></li>
+            <li><a href="cursos-inovacao-estrategica.html">inovação estratégica</a></li>
+            <li><a href="cursos-lideranca.html">liderança</a></li>
+            <li><a href="cursos-edp-marketing.html">marketing</a></li>
+            <li><a href="cursos-negociacao.html">negociação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6>HSM-PUCRS</h6>
+          <p>Av. Ipiranga, 6681 | Prédio 50 | 8° andar<br/>
+            De 2ª a 6ª das 13h às 22h45<br/>
+            Tel: + 55 51 3353-6222<br/>
+            E-mail: hsmeducacao@pucrs.br</p>
+        </div>
+      </div>
+    </div>
+    <!--FIM DO RODAPÉ--> 
+  </div>
+  <!--FIM DO CONTEÚDO DA PÁGINA-->
+  <div class="clear"></div>
+  <div id="resize"></div>
+</div>
+<?php include_once("analyticstracking.php") ?>
+</body>
+</html>
