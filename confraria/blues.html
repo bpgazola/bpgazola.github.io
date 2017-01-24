@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="Bruno Gazola de Paoli" name="author"/>
+<meta content="bpgazola@outlook.com" name="contact"/>
+<meta content="Confraria do Blues - " name="description"/>
+<meta content="Confraria do blues, blues, blues porto alegre, blues poa, timeline, história do blues, sobre o blues" name="keywords"/>
+<title>Confraria do Blues - Blues</title>
+<link type="text/css" rel="stylesheet" media="screen" href="css/skin-blues.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--MOSTRAR E ESCONDER FORMULÁRIO DE CONTATO-->
+<script type="text/javascript">
+$(document).ready(function(){
+                $('#contato').hide();
+                
+                $('a#exibir').click(function(){
+                    $('#contato').show('fast');
+                });
+
+                $('a#ocultar').click(function(){
+                    $('#contato').hide('fast');
+                })
+            });
+</script>
+<!--SCRIPT PARA O SCROLL HORIZONTAL DO -->
+<script type="text/javascript">
+
+function goto(id, t){	
+	//ANIMAÇÃO DA DIV
+	$(".contentbox-wrapper").animate({"left": -($(id).position().left)}, 600);
+	
+	//REMOVE A CLASSE 'ACTIVE' DE TODOS OS LINKS DENTRO DO MENU
+    $('#menu-slider a').removeClass('active');
+	
+	//ADICIONA A CLASSE 'ACTIVE' NO LINK SELECIONADO
+    $(t).addClass('active');	
+}
+
+</script>
+
+</head>
+
+<body>
+<!--INÍCIO DO FORMULÁRIO DE CONTATO-->
+<div id="contato">
+<div id="content-contato">
+<form action="#" method="POST"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><label>Nome</label></td>
+  </tr>
+  <tr>
+    <td><input class="campo" type="text" name="nome" /></td>
+  </tr>
+  <tr>
+  	<td><label>E-mail</label></td>
+  </tr>
+  <tr>
+  	<td><input class="campo" type="text" name="e-mail" /></td>
+  </tr>
+</table>
+</td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><label>Mensagem</label></td>
+  </tr>
+  <tr>
+    <td><textarea class="campo-mensagem" name="mensagem"></textarea></td>
+  </tr>
+  <tr>
+    <td><input type="button" id="btn-fazercadastro" onclick="submit()" value="Enviar" /></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</form>
+<a id="ocultar" href="#"><img src="imagens/btn-ocultar.jpg"></a> 
+</div>
+</div>
+<!--FIM DO FORMULÁRIO DE CONTATO-->
+<!--INÍCIO DO CONTEÚDO DA PÁGINA-->
+<div id="page">
+  <div id="logo"><a href="index.html"><img src="imagens/logo-confraria.png" alt="#" /></a></div>
+  <!--INÍCIO DO MENU-->
+  <div id="nav">
+    <ul>
+      <li><a href="confraria.html">Confraria</a></li>
+      <span class="separador-menu"></span>
+      <li id="selected"><a href="blues.html">Blues</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="galeria-videos.html">Galeria</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="#">Blog</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="produtos.html">Loja</a></li>
+      <span class="separador-menu"></span>
+      <li><a id="exibir">Fale Conosco</a></li>
+      <span class="separador-menu"></span>
+    </ul>
+    <a href="compre-ticket.html"><img id="btn-compre-ticket" src="imagens/btn-menu-compre-ticket.png" /></a> </div>
+  <!--FIM DO MENU--> 
+  
+  <!--INÍCIO DO CONTAINER COM A IMAGEM NO TOPO-->
+  <div id="container"> 
+    <!--INÍCIO DA LINHA DO TEMPO-->
+    <div id="wrap">
+      <div id="content-slider">
+        <div class="contentbox-wrapper"> 
+          <!--1903-->
+          <div id="1903" class="contentbox">
+            <div id="slide-01">
+              <h2>1903</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1912-->
+          <div id="1912" class="contentbox">
+            <div id="slide-01">
+              <h2>1912</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1920-->
+          <div id="1920" class="contentbox">
+            <div id="slide-01">
+              <h2>1920</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1925-->
+          <div id="1925" class="contentbox">
+            <div id="slide-01">
+              <h2>1925</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1927-->
+          <div id="1927" class="contentbox">
+            <div id="slide-01">
+              <h2>1927</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1928-->
+          <div id="1928" class="contentbox">
+            <div id="slide-01">
+              <h2>1928</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1929-->
+          <div id="1929" class="contentbox">
+            <div id="slide-01">
+              <h2>1929</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1933-->
+          <div id="1933" class="contentbox">
+            <div id="slide-01">
+              <h2>1933</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1934-->
+          <div id="1934" class="contentbox">
+            <div id="slide-01">
+              <h2>1934</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1936-->
+          <div id="1936" class="contentbox">
+            <div id="slide-01">
+              <h2>1936</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1938-->
+          <div id="1938" class="contentbox">
+            <div id="slide-01">
+              <h2>1938</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1941-->
+          <div id="1941" class="contentbox">
+            <div id="slide-01">
+              <h2>1941</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1943-->
+          <div id="1943" class="contentbox">
+            <div id="slide-01">
+              <h2>1943</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1946-->
+          <div id="1946" class="contentbox">
+            <div id="slide-01">
+              <h2>1946</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1954-->
+          <div id="1954" class="contentbox">
+            <div id="slide-01">
+              <h2>1954</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1961-->
+          <div id="1961" class="contentbox">
+            <div id="slide-01">
+              <h2>1961</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+          <!--1963-->
+          <div id="1963" class="contentbox">
+            <div id="slide-01">
+              <h2>1963</h2>
+            </div>
+            <img src="imagens/slide-linha-do-tempo-01.jpg"> </div>
+        </div>
+      </div>
+      <div id="menu-slider">
+        <ul>
+          <li><a class="active" href="#" onClick="goto('#1903', this); return false">1903</a></li>
+          <li><a class="active" href="#" onClick="goto('#1912', this); return false">1912</a></li>
+          <li><a class="active" href="#" onClick="goto('#1920', this); return false">1920</a></li>
+          <li><a class="active" href="#" onClick="goto('#1925', this); return false">1925</a></li>
+          <li><a class="active" href="#" onClick="goto('#1927', this); return false">1927</a></li>
+          <li><a class="active" href="#" onClick="goto('#1928', this); return false">1928</a></li>
+          <li><a class="active" href="#" onClick="goto('#1929', this); return false">1929</a></li>
+          <li><a class="active" href="#" onClick="goto('#1933', this); return false">1933</a></li>
+          <li><a class="active" href="#" onClick="goto('#1934', this); return false">1934</a></li>
+          <li><a class="active" href="#" onClick="goto('#1936', this); return false">1936</a></li>
+          <li><a class="active" href="#" onClick="goto('#1938', this); return false">1938</a></li>
+          <li><a class="active" href="#" onClick="goto('#1941', this); return false">1941</a></li>
+          <li><a class="active" href="#" onClick="goto('#1943', this); return false">1943</a></li>
+          <li><a class="active" href="#" onClick="goto('#1946', this); return false">1946</a></li>
+          <li><a class="active" href="#" onClick="goto('#1954', this); return false">1954</a></li>
+          <li><a class="active" href="#" onClick="goto('#1961', this); return false">1961</a></li>
+          <li><a class="active" href="#" onClick="goto('#1963', this); return false">1963</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--FIM DA LINHA DO TEMPO--> 
+  </div>
+  <!--FIM DO CONTAINER COM A IMAGEM NO TOPO--> 
+  <!--INÍCIO DO CONTENT-->
+  <div id="content">
+    <div id="content-blues">
+        <h3>Fatos sobre</h3>
+        <h4>O Blues</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget mattis dolor, sed imperdiet nisi. Mauris tristique, odio vehicula faucibus blandit, massa enim dignissim est, a ornare nibh eros eget justo. </p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis a elit vestibulum, pellentesque purus ac, ornare lectus. Curabitur dignissim erat in diam suscipit pellentesque. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget mattis dolor, sed imperdiet nisi. Mauris tristique, odio vehicula faucibus blandit, massa enim dignissim est, a ornare nibh eros eget justo. </p>
+    </div>
+    <span class="separador-colunas"></span>
+    <div id="content-blues-coluna01">
+    <img src="imagens/album01.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget mattis dolor, sed imperdiet nisi. Mauris tristique, odio vehicula faucibus blandit, massa enim dignissim est, a ornare nibh eros eget justo. </p>
+    </div>
+    <span class="separador-colunas"></span>
+        <div id="content-blues-coluna02">
+    <img src="imagens/album02.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget mattis dolor, sed imperdiet nisi. Mauris tristique, odio vehicula faucibus blandit, massa enim dignissim est, a ornare nibh eros eget justo. </p>
+    </div>
+  </div>
+  <!--FIM DO CONTENT-->
+  <div id="content-parceiros"> <span><img src="imagens/separador-content-parceiros.jpg"></span>
+    <h3>Parceiros</h3>
+    <ul>
+      <li><a href="#"><img src="imagens/logo-coruja.png"></a></li>
+      <li><a href="#"><img src="imagens/loggo-guitargarage.png"></a></li>
+      <li><a href="#"><img src="imagens/logo-serranoamps.png"></a></li>
+      <li><a href="#"><img src="imagens/logo-tocadiscos.png"></a></li>
+      <li><a href="#"><img src="imagens/logo-camisetas.png"></a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <!--INÍCIO DO RODAPÉ-->
+  <div id="footer">
+    <div class="nav-footer">
+      <h5>Confraria</h5>
+      <ul>
+        <li><a href="confraria.html">A Confraria</a></li>
+        <li><a href="confraria.html">Quem Faz a Confraria</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Blues</h5>
+      <ul>
+        <li><a href="blues.html">Linha do Tempo do Blues</a></li>
+        <li><a href="blues.html">A História do Blues</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Galeria</h5>
+      <ul>
+        <li><a href="galeria-videos.html">Videos</a></li>
+        <li><a href="#">Fotos</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Loja</h5>
+      <ul>
+        <li><a href="produtos.html">Saiba como Comprar</a></li>
+        <li><a href="produtos.html">Camisetas</a></li>
+        <li><a href="produtos.html">Palhetas</a></li>
+        <li><a href="produtos.html">Bonés</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Tickets</h5>
+      <ul>
+        <li><a href="compre-ticket.html">Onde Comprar</a></li>
+        <li><a href="compre-ticket.html">Compra Antecipada</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Fale Conosco</h5>
+      <ul>
+        <li><a href="#">Atendimento</a></li>
+        <li><a href="#">Anunciar na Confraria</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Redes Sociais</h5>
+      <span><a href="#"><img src="imagens/social-youtube.png"></a></span> <span><a href="#"></a><img src="imagens/social-facebook.png"></a></span> </div>
+    <img src="imagens/logo-confraria.png">
+    <p>Copyright© 2013 - Todos os direitos reservados.</p>
+  </div>
+  <!--FIM DO RODAPÉ--> 
+</div>
+<!--FIM DO CONTEÚDO DA PÁGINA-->
+</body>
+</html>

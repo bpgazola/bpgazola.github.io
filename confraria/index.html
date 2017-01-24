@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="Bruno Gazola de Paoli" name="author"/>
+<meta content="bpgazola@outlook.com" name="contact"/>
+<meta content="Confraria do Blues - " name="description"/>
+<meta content="Confraria do blues, blues, blues porto alegre, blues poa" name="keywords"/>
+<title>Confraria do Blues - Home</title>
+<link type="text/css" rel="stylesheet" media="screen" href="css/skin-home.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--CARROSSEL DE IMAGENS TOPO-->
+<script type="text/javascript" src="js/jcarousel.js"></script>
+<script type="text/javascript">
+	$ (function(){
+		$(".carosel").jCarouselLite ({
+			btnNext: ".next",
+			btnPrev: ".prev",
+			visible: 1,
+			auto: false,
+			speed: 1000	
+			});
+		});
+</script>
+<!--MOSTRAR E ESCONDER FORMULÁRIO DE CONTATO-->
+<script type="text/javascript">
+$(document).ready(function(){
+                $('#contato').hide();
+                
+                $('a#exibir').click(function(){
+                    $('#contato').show('fast');
+                });
+
+                $('a#ocultar').click(function(){
+                    $('#contato').hide('fast');
+                })
+            });
+</script>
+</head>
+
+<body>
+<!--INÍCIO DO FORMULÁRIO DE CONTATO-->
+<div id="contato">
+<div id="content-contato">
+<form action="#" method="POST"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><label>Nome</label></td>
+  </tr>
+  <tr>
+    <td><input class="campo" type="text" name="nome" /></td>
+  </tr>
+  <tr>
+  	<td><label>E-mail</label></td>
+  </tr>
+  <tr>
+  	<td><input class="campo" type="text" name="e-mail" /></td>
+  </tr>
+</table>
+</td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><label>Mensagem</label></td>
+  </tr>
+  <tr>
+    <td><textarea class="campo-mensagem" name="mensagem"></textarea></td>
+  </tr>
+  <tr>
+    <td><input type="button" id="btn-fazercadastro" onclick="submit()" value="Enviar" /></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</form>
+<a id="ocultar" href="#"><img src="imagens/btn-ocultar.jpg"></a> 
+</div>
+</div>
+<!--FIM DO FORMULÁRIO DE CONTATO-->
+<!--INÍCIO DO CONTEÚDO DA PÁGINA--> 
+<div id="page">
+  <div id="logo"><a href="index.html"><img src="imagens/logo-confraria.png" alt="#" /></a></div>
+  <!--INÍCIO DO MENU-->
+  <div id="nav">
+    <ul>
+      <li><a href="confraria.html">Confraria</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="blues.html">Blues</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="galeria-videos.html">Galeria</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="#">Blog</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="produtos.html">Loja</a></li>
+      <span class="separador-menu"></span>
+      <li><a id="exibir">Fale Conosco</a></li>
+      <span class="separador-menu"></span>
+    </ul>
+    <a href="compre-ticket.html"><img id="btn-compre-ticket" src="imagens/btn-menu-compre-ticket.png" /></a> </div>
+  <!--FIM DO MENU--> 
+  
+  <!--INÍCIO DO SLIDER DE IMAGENS-->
+  <div id="carrosel-imagens">
+    <div id="botoes">
+      <button class="next"></button>
+      <button class="prev"></button>
+    </div>
+    <div id="container">
+      <div class="carosel">
+        <ul>
+          <li>
+            <div id="slide-01">
+              <h1>Uma lenda</h1>
+              <h2>Do Blues</h2>
+              <h3>De Chicago EUA</h3>
+              <div id="box-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat mi sit amet massa ultrices, quis venenatis dolor consequat. </p>
+              </div>
+              <!--BOTÃO--><span class="ver-mais"><a href="#">Ver mais</a></span></div>
+            <!--EMBED VIDEO-->
+            <div id="video">
+              <object type="application/x-shockwave-flash" style="width:350px; height:196.875px;" data="http://www.youtube.com/v/Iky2vRyLlUM">
+                <param name="movie" value="http://www.youtube.com/v/Iky2vRyLlUM" />
+                <param name="wmode" value="transparent" />
+              </object>
+            </div>
+            <!--IMAGEM DO SLIDE--><a href="#"><img src="imagens/slide-image01.jpg" alt="#"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--FIM DO SLIDER DE IMAGENS--> 
+  <!--INÍCIO DO CONTENT-->
+  <div id="content">
+    <div id="content-confraria">
+      <h3>A Confraria</h3>
+      <h2>Do Blues</h2>
+      <span class="ver-mais"><a href="confraria.html">Ver mais</a></span> </div>
+    <div id="content-galeria">
+      <h3>Galeria</h3>
+      <span class="ver-mais"><a href="galeria-videos.html">Ver mais</a></span> </div>
+    <div id="content-agenda">
+      <h3>Agenda</h3>
+      <h4>Junho</h4>
+      <ul>
+        <li>
+          <h3>00.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <li>
+          <h3>00.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <li>
+          <h3>00.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <li>
+          <h3>00.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <span class="ver-mais"><a href="#">Ver mais</a></span>
+      </ul>
+    </div>
+    <div id="content-posts">
+      <h3>últimos Posts</h3>
+      <ul>
+        <li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <span><img src="imagens/separador-agenda.jpg"></span></li>
+        <span class="ver-mais"><a href="#">Ver mais</a></span>
+      </ul>
+    </div>
+    <div id="content-facaparte"> <img src="imagens/btn-menu-facaparte.png"> <span class="ver-mais"><a href="faca-parte.html">Ver mais</a></span> </div>
+    <div id="content-shop">
+      <h2>Shop</h2>
+      <span class="ver-mais"><a href="produtos.html">Ver mais</a></span> </div>
+    <div id="content-parceiros"> <span><img src="imagens/separador-content-parceiros.jpg"></span>
+      <h3>Parceiros</h3>
+      <ul>
+        <li><a href="#"><img src="imagens/logo-coruja.png"></a></li>
+        <li><a href="#"><img src="imagens/loggo-guitargarage.png"></a></li>
+        <li><a href="#"><img src="imagens/logo-serranoamps.png"></a></li>
+        <li><a href="#"><img src="imagens/logo-tocadiscos.png"></a></li>
+        <li><a href="#"><img src="imagens/logo-camisetas.png"></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--FIM DO CONTENT-->
+  <div class="clear"></div>
+  <!--INÍCIO DO RODAPÉ-->
+  <div id="footer">
+    <div class="nav-footer">
+      <h5>Confraria</h5>
+      <ul>
+        <li><a href="confraria.html">A Confraria</a></li>
+        <li><a href="confraria.html">Quem Faz a Confraria</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Blues</h5>
+      <ul>
+        <li><a href="blues.html">Linha do Tempo do Blues</a></li>
+        <li><a href="blues.html">A História do Blues</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Galeria</h5>
+      <ul>
+        <li><a href="galeria-videos.html">Videos</a></li>
+        <li><a href="#">Fotos</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Loja</h5>
+      <ul>
+        <li><a href="produtos.html">Saiba como Comprar</a></li>
+        <li><a href="produtos.html">Camisetas</a></li>
+        <li><a href="produtos.html">Palhetas</a></li>
+        <li><a href="produtos.html">Bonés</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Tickets</h5>
+      <ul>
+        <li><a href="compre-ticket.html">Onde Comprar</a></li>
+        <li><a href="compre-ticket.html">Compra Antecipada</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Fale Conosco</h5>
+      <ul>
+        <li><a href="#">Atendimento</a></li>
+        <li><a href="#">Anunciar na Confraria</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Redes Sociais</h5>
+      <span><a href="#"><img src="imagens/social-youtube.png"></a></span> <span><a href="#"></a><img src="imagens/social-facebook.png"></a></span> </div>
+    <img src="imagens/logo-confraria.png">
+    <p>Copyright© 2013 - Todos os direitos reservados.</p>
+  </div>
+  <!--FIM DO RODAPÉ--> 
+</div>
+<!--FIM DO CONTEÚDO DA PÁGINA-->
+</body>
+</html>

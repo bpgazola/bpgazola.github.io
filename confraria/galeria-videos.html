@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="Bruno Gazola de Paoli" name="author"/>
+<meta content="bpgazola@outlook.com" name="contact"/>
+<meta content="Confraria do Blues - " name="description"/>
+<meta content="Confraria do blues, blues, blues porto alegre, blues poa" name="keywords"/>
+<title>Confraria do Blues - Galeria de Videos</title>
+<link type="text/css" rel="stylesheet" media="screen" href="css/skin-galeria.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--SCRIPT PARA A MÁSCARA DOS VIDEOS NO TOPO-->
+<script type="text/javascript"> 
+function ExpandeDiv(id_video)
+	{
+		var qtd_div = document.getElementsByTagName('div').length;
+		var div_sel = document.getElementById(id_video);
+		var todas_divs;
+
+		for (var i = 1; i <= qtd_div; i++)
+			{
+			todas_divs = document.getElementById("div"+i);
+
+			if (todas_divs.id != id_video)
+			todas_divs.style.display = 'none';
+			else
+			div_sel.style.display = 'block';
+		}
+	}
+</script>
+<!--SCRIPT PARA O MENU E ABAS DO CONTENT COM OS VIDEOS
+<script type="text/javascript">
+
+	$(document).ready(function(){
+	$('#menu-abas-galeria ul li:first').addClass('active');
+	$('#menu-abas-galeria ul li a').click(function(){ 
+	$('#menu-abas-galeria ul li').removeClass('active');
+	$(this).parent().addClass('active');
+
+	});
+});
+</script>-->
+<!--SCRIPT PARA AS ABAS-->
+<script type="text/javascript">
+
+$(document).ready(function(){
+$('#tabs div').hide();
+$('#tabs div:first').show();
+$('#tabs ul li:first').addClass('active');
+$('#tabs ul li a').click(function(){ 
+$('#tabs ul li').removeClass('active');
+$(this).parent().addClass('active'); 
+var currentTab = $(this).attr('href'); 
+$('#tabs div').hide();
+$(currentTab).show();
+return false;
+});
+});
+</script>
+<!--MOSTRAR E ESCONDER FORMULÁRIO DE CONTATO-->
+<script type="text/javascript">
+$(document).ready(function(){
+                $('#contato').hide();
+                
+                $('a#exibir').click(function(){
+                    $('#contato').show('fast');
+                });
+
+                $('a#ocultar').click(function(){
+                    $('#contato').hide('fast');
+                })
+            });
+</script>
+</head>
+
+<body>
+<!--INÍCIO DO FORMULÁRIO DE CONTATO-->
+<div id="contato">
+<div id="content-contato">
+<form action="#" method="POST"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><label>Nome</label></td>
+  </tr>
+  <tr>
+    <td><input class="campo" type="text" name="nome" /></td>
+  </tr>
+  <tr>
+  	<td><label>E-mail</label></td>
+  </tr>
+  <tr>
+  	<td><input class="campo" type="text" name="e-mail" /></td>
+  </tr>
+</table>
+</td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><label>Mensagem</label></td>
+  </tr>
+  <tr>
+    <td><textarea class="campo-mensagem" name="mensagem"></textarea></td>
+  </tr>
+  <tr>
+    <td><input type="button" id="btn-fazercadastro" onclick="submit()" value="Enviar" /></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</form>
+<a id="ocultar" href="#"><img src="imagens/btn-ocultar.jpg"></a> 
+</div>
+</div>
+<!--FIM DO FORMULÁRIO DE CONTATO-->
+<!--INÍCIO DO CONTEÚDO DA PÁGINA-->
+<div id="page">
+  <div id="logo"><a href="index.html"><img src="imagens/logo-confraria.png" alt="#" /></a></div>
+  <!--INÍCIO DO MENU-->
+  <div id="nav">
+    <ul>
+      <li><a href="confraria.html">Confraria</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="blues.html">Blues</a></li>
+      <span class="separador-menu"></span>
+      <li id="selected"><a href="galeria-videos.html">Galeria</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="#">Blog</a></li>
+      <span class="separador-menu"></span>
+      <li><a href="produtos.html">Loja</a></li>
+      <span class="separador-menu"></span>
+      <li><a id="exibir">Fale Conosco</a></li>
+      <span class="separador-menu"></span>
+    </ul>
+    <a href="compre-ticket.html"><img id="btn-compre-ticket" src="imagens/btn-menu-compre-ticket.png" /></a> </div>
+  <!--FIM DO MENU--> 
+  
+  <!--INÍCIO DO CONTAINER COM A IMAGEM NO TOPO-->
+  <div id="container">
+    <div id="menu-galeria">
+      <ul>
+        <li><a href="galeria-videos.html">Videos</a></li>
+        <span id="separador-menu-galeria"></span>
+        <li><a href="#">Fotos</a></li>
+      </ul>
+    </div>
+    <!--INÍCIO DA MÁSCARA DO VIDEO-->
+    <div id="video"> 
+      <!--DIV ONDE VAI A MÁSCARA-->
+      <div id="mascara">
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/3gQQBMq9Cow">
+          <param name="movie" value="http://www.youtube.com/v/3gQQBMq9Cow" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+      <!--TODOS OS VIDEOS DEVERÃO IR NESTA DIV--> 
+      <!--VIDEO DO PLAYER/MÁSCARA (DIV1)-->
+      <div id="div1" style="display:none";>
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/3gQQBMq9Cow">
+          <param name="movie" value="http://www.youtube.com/v/3gQQBMq9Cow" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+      <!--VIDEO  DO PLAYER (DIV2)-->
+      <div id="div2" style="display:none";>
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/Y1khpZlD6zQ">
+          <param name="movie" value="http://www.youtube.com/v/Y1khpZlD6zQ" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+      <!--VIDEO DO PLAYER (DIV3)-->
+      <div id="div3" style="display:none";>
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/lY1eKgmKBh8">
+          <param name="movie" value="http://www.youtube.com/v/lY1eKgmKBh8" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+      <!--VIDEO DO PLAYER (DIV4)-->
+      <div id="div4" style="display:none";>
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/RDtolbZ2cC8">
+          <param name="movie" value="http://www.youtube.com/v/RDtolbZ2cC8" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+      <!--VIDEO DO PLAYER (DIV5)-->
+      <div id="div5" style="display:none";>
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/3gQQBMq9Cow">
+          <param name="movie" value="http://www.youtube.com/v/3gQQBMq9Cow" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+      <!--VIDEO DO PLAYER (DIV6)-->
+      <div id="div6" style="display:none";>
+        <object type="application/x-shockwave-flash" style="width:535px;height:325px;" data="http://www.youtube.com/v/3gQQBMq9Cow">
+          <param name="movie" value="http://www.youtube.com/v/3gQQBMq9Cow" />
+          <param name="wmode" value="transparent" />
+        </object>
+      </div>
+    </div>
+    <!--FIM DA MÁSCARA DO VIDEO--> 
+    <img src="imagens/imagem-topo-galeria.jpg"></div>
+  <!--FIM DO CONTAINER COM A IMAGEM NO TOPO--> 
+  <!--INÍCIO DO CONTENT-->
+  <div id="content"> 
+    <!--INÍCIO DO MENU COM OS VIDEOS-->
+    <div id="tabs">
+    <ul>
+      <li><a href="#tab-confrariaTV">Confraria TV</a></li>
+      <li><a href="#tab-shows">Shows</a></li>
+      <li><a href="#tab-tutoriais">Tutoriais</a></li>
+      <li><a href="#tab-instrumentos">Instrumentos</a></li>
+      <li><a href="#tab-estilos">Estilos</a></li>
+      <li><a href="#tab-musicos">Músicos</a></li>
+    </ul>
+    <div id="tab-confrariaTV"> 
+      <span><a href="#" onclick="ExpandeDiv('div1')"><img src="imagens/thumb-video01.jpg"></a></span>
+    </div>
+    <div id="tab-shows"> 
+     <span><a href="#" onclick="ExpandeDiv('div2')"><img src="imagens/thumb-video02.jpg"></a></span>
+    </div>
+    <div id="tab-tutoriais">
+      <span><a href="#" onclick="ExpandeDiv('div3')"><img src="imagens/thumb-video03.jpg"></a></span>
+    </div>
+    <div id="tab-instrumentos"> 
+     <span><a href="#" onclick="ExpandeDiv('div4')"><img src="imagens/thumb-video04.jpg"></a></span>
+    </div>
+    <div id="tab-estilos"> 
+     <span><a href="#" onclick="ExpandeDiv('div1')"><img src="imagens/thumb-video01.jpg"></a></span>
+    </div>
+    <div id="tab-musicos"> 
+    <span><a href="#" onclick="ExpandeDiv('div1')"><img src="imagens/thumb-video01.jpg"></a></span>
+    </div>
+  </div>
+    <!--<div id="menu-abas-galeria">
+      <ul>
+        <li> <a href="#aba1">Confraria TV</a> </li>
+        <li> <a href="#aba2">Shows</a> </li>
+        <li> <a href="#aba3">Tutoriais</a> </li>
+        <li> <a href="#aba4">Instrumentos</a> </li>
+        <li> <a href="#aba5">Estilos</a> </li>
+        <li> <a href="#aba6">Músicos</a> </li>
+      </ul>
+    </div>-->
+    <!--FIM DO MENU COM OS VIDEOS--> 
+    <!--INÍCIO DAS ABAS COM OS VIDEOS-->
+    <!--<div class="aba">
+      <div id="aba1"> <span><a href="#" onclick="ExpandeDiv('div1')"><img src="imagens/thumb-video01.jpg"></a></span></div>
+      <div id="aba2"> <span><a href="#" onclick="ExpandeDiv('div2')"><img src="imagens/thumb-video02.jpg"></a></span></div>
+      <div id="aba3"> <span><a href="#" onclick="ExpandeDiv('div3')"><img src="imagens/thumb-video03.jpg"></a></span></div>
+      <div id="aba4"> <span><a href="#" onclick="ExpandeDiv('div4')"><img src="imagens/thumb-video04.jpg"></a></span></div>
+      <div id="aba5"> <span><a href="#" onclick="ExpandeDiv('div5')"><img src="imagens/thumb-video01.jpg"></a></span></div>
+      <div id="aba6"> <span><a href="#" onclick="ExpandeDiv('div6')"><img src="imagens/thumb-video01.jpg"></a></span></div>
+    </div>-->
+    <!--FIM DAS ABAS COM OS VIDEOS--> 
+  </div>
+  <!--FIM DO CONTENT-->
+  <div id="content-parceiros"> <span><img src="imagens/separador-content-parceiros.jpg"></span>
+    <h3>Parceiros</h3>
+    <ul>
+      <li><a href="#"><img src="imagens/logo-coruja.png"></a></li>
+      <li><a href="#"><img src="imagens/loggo-guitargarage.png"></a></li>
+      <li><a href="#"><img src="imagens/logo-serranoamps.png"></a></li>
+      <li><a href="#"><img src="imagens/logo-tocadiscos.png"></a></li>
+      <li><a href="#"><img src="imagens/logo-camisetas.png"></a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <!--INÍCIO DO RODAPÉ-->
+  <div id="footer">
+    <div class="nav-footer">
+      <h5>Confraria</h5>
+      <ul>
+        <li><a href="confraria.html">A Confraria</a></li>
+        <li><a href="confraria.html">Quem Faz a Confraria</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Blues</h5>
+      <ul>
+        <li><a href="blues.html">Linha do Tempo do Blues</a></li>
+        <li><a href="blues.html">A História do Blues</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Galeria</h5>
+      <ul>
+        <li><a href="galeria-videos.html">Videos</a></li>
+        <li><a href="#">Fotos</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Loja</h5>
+      <ul>
+        <li><a href="produtos.html">Saiba como Comprar</a></li>
+        <li><a href="produtos.html">Camisetas</a></li>
+        <li><a href="produtos.html">Palhetas</a></li>
+        <li><a href="produtos.html">Bonés</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Tickets</h5>
+      <ul>
+        <li><a href="compre-ticket.html">Onde Comprar</a></li>
+        <li><a href="compre-ticket.html">Compra Antecipada</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Fale Conosco</h5>
+      <ul>
+        <li><a href="#">Atendimento</a></li>
+        <li><a href="#">Anunciar na Confraria</a></li>
+      </ul>
+    </div>
+    <div class="nav-footer">
+      <h5>Redes Sociais</h5>
+      <span><a href="#"><img src="imagens/social-youtube.png"></a></span> <span><a href="#"></a><img src="imagens/social-facebook.png"></a></span> </div>
+    <img src="imagens/logo-confraria.png">
+    <p>Copyright© 2013 - Todos os direitos reservados.</p>
+  </div>
+  <!--FIM DO RODAPÉ--> 
+</div>
+<!--FIM DO CONTEÚDO DA PÁGINA-->
+</body>
+</html>
