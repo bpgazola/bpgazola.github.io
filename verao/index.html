@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="x-ua-compatible" content="IE=8" />
+<meta content="Bruno Gazola de Paoli" name="author"/>
+<meta content="bruno.paoli@pucrs.br" name="contact"/>
+<title>Cursos de Verão</title>
+<meta name="description" content="Site Cursos de Verão PUCRS - Reúne a oferta dos cursos de verão da Universidade durante o perído de férias"/>
+<meta name="keywords" content="cursos, férias, férias verão, cursos breves, cursos curtos, cursos curta duração"/>
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="imagens/favicon.ico" />
+<link type="text/css" href="css/skin.css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<!--SCRIPT PARA O SCROLL HORIZONTAL DO SLIDESHOW-->
+<script type="text/javascript">
+
+function goto(id, a){	
+	//ANIMAÇÃO DA DIV
+	$(".contentbox-wrapper").animate({"left": -($(id).position().left)}, 500);
+	
+	//REMOVE A CLASSE 'ACTIVE' DE TODOS OS LINKS DENTRO DO MENU
+    $('#menu-slider a').removeClass('active');
+	
+	//ADICIONA A CLASSE 'ACTIVE' NO LINK SELECIONADO
+    $(a).addClass('active');	
+};
+
+</script>
+<!--SCRIPT PARA O SCROLL TO-->
+<script type="text/javascript">
+            $(function() {
+                $('.goto a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    event.preventDefault();
+                });
+            });
+</script>
+</head>
+
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-24309383-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--INÍCIO DO WRAP-->
+<div id="wrap">
+  <div id="top-bar">
+  <div class="content">
+  <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.pucrs.br%2Fverao&amp;width&amp;layout=button_count&amp;action=recommend&amp;show_faces=true&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+  <span style="float:left; margin:0 0 0 4%;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.pucrs.br/verao" data-text="Veja a lista dos Cursos de Verão da PUCRS" data-via="aprender_sempre" data-lang="pt" data-related="aprender_sempre" data-hashtags="CursosVeraoPUCRS">Tweetar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+
+  </div>
+  </div>
+  <!--INÍCIO DO TOP-->
+  <div id="top">
+    <div class="content">
+      <div id="logo"><img src="imagens/sol.png"></div>
+      <div class="goto"><a href="#content-slider">veja os cursos <img src="imagens/seta.png"></a></div>
+      <div id="aba"></div>
+    </div>
+  </div>
+  <!--FIM DO TOP-->
+  <div class="clear"></div>
+  <!--INÍCIO DO DESTAQUE-->
+  <div id="spot-light">
+    <div class="content">
+      <h1>aproveita as férias</h1>
+      <h2>para enriquecer teu currículo</h2>
+      <p>os cursos de verão são cursos de curta e média duração oferecidos em várias áreas do conhecimento.</p>
+    </div>
+  </div>
+  <!--FIM DO DESTAQUE-->
+  <div class="clear"></div>
+  <div id="cursos">
+  <!--INÍCIO DO SLIDER-->
+  <div id="content-slider">
+    <div class="content">
+      <div class="contentbox-wrapper"> 
+        <!--INÍCIO DO SLIDE 1-->
+        <div class="contentbox" id="slide1">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-experimentacaodesingthiking.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Experimentação em Design Thinking </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1013">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Programação Orientada a Objetos com C# Básico</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=254">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Programação para Web com Asp.Net MVC e C# </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=779">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Agile testing: o teste de software para analistas, programadores e testadores </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=505">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Programação Orientada a Objetos com C# Avançado</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=272">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-gestaoprojetosmicrosoft.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Gestão de projetos usando Microsoft Project - 19ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=807">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 1--> 
+        <!--INÍCIO DO SLIDE 2-->
+        <div class="contentbox" id="slide2">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-gestaoprojetosmicrosoft.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Gestão de projetos usando Microsoft Project - 20ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=686">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Programando APPs Universais para Windows e Windows Phone </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=932">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Programando com o Microsoft SQL Server 2012 </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=358">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Administrando o Microsoft SQL Server 2012 - 10ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=936">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Instalando e Administrando Redes com o Windows Server 2012 </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1024">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Ferramentas de Business Intelligence Microsoft SQL Server 2012</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=934">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 2--> 
+        <!--INÍCIO DO SLIDE 3-->
+        <div class="contentbox" id="slide3">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cerveja.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Fabricação caseira de cerveja e manipulação de fermento cervejeiro </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=916">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-ferramentasmoleculares.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Ferramentas Moleculares para o Estudo de Proteínas </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=427">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-financaspessoais.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Curso do Estúdio de Finanças | Finanças Pessoais: como planejar seu futuro financeiro 4ª Edição</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=891">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-financaspessoais.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Curso do Estúdio de Finanças | Como investir (módulo avançado): acompanhando investimentos de forma estratégica 2ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=892">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Avançado (Macros e Dashboard) 2007 - 7º Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=966">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Avançado (Macros e Dashboard) 2007 (8º edição) </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=951">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 3--> 
+        <!--INÍCIO DO SLIDE 4-->
+        <div class="contentbox" id="slide4">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Intermediário 2007 - 23ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=782">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Intermediário 2007 - 24ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=843">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Intermediário 2007 - 25ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=661">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Básico 2007 - 14ª Edição</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=969">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-excelavancado.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Excel Básico 2007 - 15ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=700">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Gestão e Estratégias do Mercado de Luxo</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1003">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 4--> 
+        <!--INÍCIO DO SLIDE 5-->
+        <div class="contentbox" id="slide5">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Elaboração de Projetos de Inovação para Captação de Recursos - 1ª Edição  </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1026">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Elaboração de Projetos de Inovação para Captação de Recursos - 2ª Edição  </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1025">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-android.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Desenvolvimento de aplicativos móveis na plataforma Android - Módulo I </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=579">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-android.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Desenvolvimento de aplicativos móveis na plataforma Android - Módulo II </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=580">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-android.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Desenvolvimento de Aplicativos Móveis na Plataforma Android - Módulo III </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=784">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Desenvolvimento de jogos 2D na Plataforma Android - Módulo IV  </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=785">inscreva-se</a></span> </div>
+          </div>
+
+        </div>
+        <!--FIM DO SLIDE 5--> 
+        <!--INÍCIO DO SLIDE 6-->
+        <div class="contentbox" id="slide6">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Análise de Negócios no Mundo da TI </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1028">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-processo-civil.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Atualização nos Recursos do Processo Civil - Módulo I </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=910">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-processo-civil.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Atualização nos Recursos do Processo Civil - Módulo II </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1023">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-locacaocomercial.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Locação Comercial </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1017">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-diagnostico-imagem.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Diagnóstico por Imagem para Profissionais da Saúde </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=955">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-formacaoprofessoresfilosofia.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Formação para Professores de Filosofia - Semipresencial </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1011">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 6--> 
+        <!--INÍCIO DO SLIDE 7-->
+        <div class="contentbox" id="slide7">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-radiofarmacosaplicados.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Radiofármacos Aplicados à Imagem Molecular em PET/CT e SPECT/CT </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=568">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Comentário Esportivo</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=794">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-quimica-quantica.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Fundamentos de Química Quântica</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=943">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-autocadbasico.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Autocad Básico - 27ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=786">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-autocadbasico.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Autocad Básico - 28ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=756">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-autocadbasico.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Autocad Básico - 29ª Edição </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1018">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 7--> 
+        <!--INÍCIO DO SLIDE 8-->
+        <div class="contentbox" id="slide8">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-brincandoeaprendendo.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Brincando e Aprendendo na PUCRS - Edição de férias 2015 </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=290">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-desenvolvimentoevalidacaoeletromedicos.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Desenvolvimento e Validação de Equipamentos Eletromédicos </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1021">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-propulsaovisaopratica.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Propulsão por Motor Foguete - Uma Visão Prática</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1020">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-coachingparalideres.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Coaching para Líderes Farmacêuticos e Profissionais da Área da Saúde - Desenvolvendo e Estimulando a Alta Performance na Gestão</h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1022">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Ateliê Pensamento Criativo </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=806">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Fundamentos de Teste de Software  </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1034">inscreva-se</a></span> </div>
+          </div>
+        </div>
+        <!--FIM DO SLIDE 8--> 
+        <!--INÍCIO DO SLIDE 9-->
+        <div class="contentbox" id="slide9">
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Gestão de Projetos Criativos: Metodologia e Processos 1ª Edição  </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1033">inscreva-se</a></span> </div>
+          </div>
+          <div class="wrapper-thumb-cursos">
+            <div class="thumb-imagem-curso"><img src="imagens/thumb-cursos-no-image.jpg" alt="#" /></div>
+            <span><img style="margin:-14px 0 0 0; position:relative;" src="imagens/back-thumb-cursos.png"></span>
+            <div class="thumb-descricao-curso">
+              <h3>Gestão de Projetos Criativos: Metodologia e processos 2ª Edição  </h3>
+              <span class="btn-inscreva"><a href="http://www3.pucrs.br/portal/page/portal/educon/index/extensao/curso?cd_curso=1032">inscreva-se</a></span> </div>
+          </div>
+
+        </div>
+        <!--FIM DO SLIDE 9--> 
+        
+      </div>
+      <!--FIM DO CONTENTBOX WRAPPER--> 
+      <!--INÍCIO DOS BOTÕES DO SLIDER-->
+      <div id="menu-slider">
+        <ul>
+          <li><a class="active" href="#" onclick="goto('#slide1', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide2', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide3', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide4', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide5', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide6', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide7', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide8', this); return false"></a></li>
+          <li><a href="#" onclick="goto('#slide9', this); return false"></a></li>
+        </ul>
+      </div>
+      <!--FIM DOS BOTÕES DO SLIDER--> 
+    </div>
+  </div>
+  <!--FIM DO SLIDER-->
+  </div>
+  <div class="clear"></div>
+  <!--INÍCIO PASSO A PASSO-->
+  <div id="bottom">
+    <div class="content">
+      <h1>como fazer cursos de verão</h1>
+      <h2>acompanhe o passo a passo</h2>
+      <p>fazer um dos cursos de Curta Duração da PUCRS é fácil. Você pode fazer a inscrição on-line e pagar o boleto em qualquer agência da rede bancária.</p>
+      <ul id="itens">
+        <li><img class="icon-itens" src="imagens/icon-busca.png" alt="busque o seu curso" />
+          <h3>encontre o curso</h3>
+          <p>Faça sua inscrição pelo site ou presencialmente, no EDUCON.</p>
+        </li>
+        <li><img class="icon-itens" src="imagens/icon-pagamento.png" alt="pague sua inscrição" />
+          <h3>pague sua inscrição</h3>
+          <p>Com o boleto financeiro você paga a sua inscrição e está matriculado.</p>
+        </li>
+        <li><img class="icon-itens" src="imagens/icon-frequencia.png" alt="frequência nas aulas" />
+          <h3>frequência de 75%</h3>
+          <p>Para concluir o curso é necessário comparecer a no mínimo 75% das aulas.</p>
+        </li>
+        <li><img class="icon-itens" src="imagens/icon-certificado.png" alt="cerificado" />
+          <h3>certificado</h3>
+          <p>Em até 30 dias, após o final das aulas, é possível retirar o seu certificado.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--FIM DO PASSO A PASSO-->
+  <div class="clear"></div>
+  <!--INÍCIO FORMULÁRIO CONTATO-->
+  <div id="fale">
+    <div class="content">
+      <h1>Não encontrou o curso que deseja fazer?</h1>
+      <h2>faça sua sugestão</h2>
+      <!--INÍCIO DO FORMULÁRIO-->
+      <div id="form-contato">
+        <form method="POST" action="contato.php">
+          <label>nome</label>
+          <input type="text" name="nome" required="required" />
+          <label>e-mail</label>
+          <input type="text" name="email" required="required"/>
+          <label>sugestão</label>
+          <textarea class="campo" rows="10" name="sugestao" required="required"></textarea>
+          <input type="button" id="btn-send" value="ENVIAR" onclick="submit()" />
+        </form>
+      </div>
+      <!--FIM DO FORMULÁRIO--> 
+    </div>
+  </div>
+  <!--FIM FALE CONOSCO--> 
+  
+  <!--FIM DO FORMULÁRIO DE CONTATO--> 
+  <!--INÍCIO DO RODAPÉ-->
+  <div id="footer">
+    <div class="content">
+      <div id="footer-inner"> <a href="http://maristas.org.br/"><img src="imagens/logo-marista.png" alt="marista" /></a>
+        <div class="column">
+          <p>EDUCAÇÃO CONTINUADA<br/>
+            Av. Ipiranga, 6681 - Prédio 15, sala 112<br/>
+            Partenon | Porto Alegre/RS | CEP: 90619-900<br/>
+            Fone: (51) 3320-3727</p>
+          <p>© EDUCON.</p>
+        </div>
+        <a href="http://www.pucrs.br/portal/"><img style="float:right" src="imagens/logo-pucrs.png" alt="PUCRS" /></a><a href="http://www3.pucrs.br/portal/page/portal/educon/index"> <img style="float:right" src="imagens/logo-educon.png" alt="EDUCON" /></a><span class="line"></span> </div>
+    </div>
+  </div>
+  <!--FIM DO RODAPÉ--> 
+</div>
+<!--FIM DO WRAP-->
+<div class="clear"></div>
+<div id="resize"></div>
+</body>
+</html>
