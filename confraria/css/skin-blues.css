@@ -1,0 +1,449 @@
+@charset "utf-8";
+/* CSS Document */
+/* Autor: Bruno Gazola de Paoli */
+
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FONTES */
+@font-face {
+ font-family: Lato Regular;
+ src:url(../fonts/Lato-Reg.ttf), url(../fonts/Lato-Reg.eot); /* PARA IE */
+}
+@font-face {
+ font-family: Ubuntu Regular;
+ src:url(../fonts/Ubuntu-R.ttf), url(../fonts/Ubuntu-R.eot); /* PARA IE */
+}
+@font-face {
+ font-family: Ubuntu Bold;
+ src:url(../fonts/Ubuntu-B.ttf), url(../fonts/Ubuntu-B.eot); /* PARA IE */
+}
+/* CONTEÚDO */
+body {
+	background-color:#F1F1F1;
+	background-image:url(../imagens/background-body-blues.jpg);
+	background-repeat:repeat-x;
+	width:100%;
+	height:auto;
+}
+#content {
+	margin:20px auto;
+	width:100%;
+	height:100%;
+	padding-bottom:60px;
+}
+#content p {
+	font-family:Lato Regular;
+	font-size:15px;
+	line-height:18px;
+	color:#000;
+	margin:10px 0 0 0;	
+}
+#content-blues {
+	float:left;
+	width:350px;
+	height:auto;
+	margin:15px 0 0 0;
+}
+#content-blues h3 {
+	color:#000;
+	text-shadow:none;
+}
+#content-blues h4 {
+	margin:0 0 0 0;
+}
+
+#content-blues-coluna01 {
+	float:left;
+	width:180px;
+	height:auto;
+	padding:0 15px 0 15px;
+	margin:15px 0 0 0;
+}
+#content-blues-coluna02 {
+	float:left;
+	width:180px;
+	height:auto;
+	padding:0 15px 0 15px;
+	margin:15px 0 0 0;
+}
+#container {
+	margin:0 auto;
+	padding:0;
+	width:1024px;
+	height:448px;
+}
+#slide-01 {
+	margin:120px 0 0 200px;
+	width:600px;
+	height:100%;
+	position:absolute;
+}
+#content-parceiros {
+	float:left;
+	margin:50px 0 0 0;
+	width:1024px;
+	height:auto;
+}
+#content-parceiros h3 {
+	text-shadow:none;
+	color:#000;
+	margin:10px 0 0 0;	
+}
+#content-parceiros ul {
+	list-style:none;
+	margin:10px 0 0 15px;
+}
+#content-parceiros ul li {
+	padding:0 135px 0 0;	
+	display:block;
+	float:left;
+}
+.separador-colunas {
+	width:2px;
+	height:372px;
+	background-image:url(../imagens/separador-colunas-content.jpg);
+	background-repeat:no-repeat;
+	float:left;
+	position:relative;
+	margin:15px 0 0 0;
+}
+#page {
+	position:relative;
+	max-width:1024px;
+	height:100%;
+	margin:0 auto;
+	padding-bottom:295px;
+}
+#logo {
+	float:left;
+	position:absolute;
+	width:133px;
+	height:138px;
+	margin-top:-20px;
+	margin-left:40px;
+	z-index:1000;
+}
+/* RODAPÉ */
+#footer {
+	position:absolute;
+	bottom:0;
+	max-width:1024px;
+	height:220px;
+	padding:15px 5px 15px 5px;
+}
+#footer p {
+	font-size:11px;
+	color:#999999;
+	font-family:Lato Regular;
+	margin:2px 0 0 0;
+}
+.nav-footer {
+	float:left;
+	width:120px;
+	margin:15px 0 0 0;	
+}
+.nav-footer ul {
+	list-style:none;
+	font-seize:11px;
+	color:#999999;
+	font-family:Lato Regular;
+}
+.nav-footer ul li {padding:5px 0 0 0;}
+.nav-footer ul li a {
+	text-decoration:none;
+	color:#999999;	
+}
+.nav-footer ul li a:hover {
+	text-decoration:underline;	
+}
+.nav-footer img {
+	margin:10px 0 0 0;	
+}
+.clear {
+	clear:both;	
+	display: block; 
+	height: 0; 
+	visibility: hidden;
+}
+/* MENU */
+#nav {
+	background-repeat:repeat-x;
+	height:77px;
+	width:100%;
+	margin-top:23px;
+}
+#nav ul {
+	font-family:Lato Regular;
+	font-size:15px;
+	color:#FFF;
+	width:800px;
+	margin:0 0 0 220px;
+	text-transform:uppercase;
+}
+#nav ul li {
+	display:block;
+	list-style:none;
+	float:left;
+	padding:30px 15px 30px 15px;
+}
+#nav ul li a {
+	color:#FFF;
+	text-decoration:none;
+}
+#nav ul li a:hover {
+	color:#FFF;
+	text-decoration:underline;
+}
+#selected {
+	text-decoration:underline;	
+}
+.separador-menu {
+	width:3px;
+	height:3px;
+	background-image:url(../imagens/separador-menu.jpg);
+	background-repeat:no-repeat;
+	float:left;
+	position:relative;
+	margin:35px 0 0 0;
+}
+#btn-compre-ticket {
+	margin:15px 0 0 20px;
+}
+
+/* TÍTULOS E PARÁGRAFO */
+h1 {
+	font-family:Ubuntu Bold;
+	font-size:35px;
+	color:#FFFFFF;
+	text-shadow: #000 2px 2px 2px;
+	text-transform:uppercase;
+}
+h2 {
+	font-family:Ubuntu Bold;
+	font-size:45px;
+	color:#FFFFFF;
+	text-shadow: #000 2px 2px 2px;
+	text-transform:uppercase;
+}
+h3 {
+	font-family:Ubuntu Bold;
+	font-size:25px;
+	color:#FFFFFF;
+	text-shadow: #000 2px 2px 2px;
+	text-transform:uppercase;
+}
+h4 {
+	font-family: Ubuntu Bold;
+	font-size:20px;
+	color:#999999;
+	margin:0 0 0 25px;
+}
+h5 {
+	font-family:Ubuntu Bold;
+	font-size:15px;
+	color:#FFF;
+	text-decoration:underline;	
+}
+/* BOX PARA TEXTO */
+#box-text {
+	max-width:100%;
+	height:auto;
+	padding:10px 5px 10px 5px;
+	margin:15px 0 0 0;
+	border-left:2px solid #CCCCCC;
+	background-color:#000;
+	filter: alpha(opacity=80); /*IE*/
+	-moz-opacity: 0.80; /*Firefox*/
+	opacity: 0.80; /*Chrome, Safari */
+}
+#box-text p {
+	font-family:Ubuntu Bold;
+	font-size:15px;
+	line-height:18px;
+	color:#FFFFFF;
+	text-shadow: #000 2px 2px 2px;
+}
+/* BOTÕES */
+.ver-mais a {
+	font-family:Ubuntu Regular;
+	color:#FFF;
+	font-size:15px;
+	text-shadow:#000 2px 2px 2px;
+	display:block;
+	background-image:url(../imagens/btn-ver-mais.png);
+	background-repeat:no-repeat;
+	width:80px;
+	height:27px;
+	text-decoration:none;
+	padding:5px 0 0 8px;
+	margin:10px 0 0 0;
+}
+.ver-mais a:hover {
+	filter: alpha(opacity=80); /*IE*/
+	-moz-opacity: 0.80; /*Firefox*/
+	opacity: 0.80; /*Chrome, Safari */
+}
+#btn-fazercadastro {
+	clear:both;
+	cursor:pointer;
+	float:left;
+	width:120px;
+	height:27px;
+	background-image:url(../imagens/btn-fazer-cadastro.png);
+	background-repeat:no-repeat;
+	border:none;
+	color:#FFF;
+	font-size:15px;
+	text-shadow:#000 2px 2px 2px;
+	margin:10px 0 0 0;
+}
+/* ESTILO PARA A LINHA DO TEMPO */
+#wrap {
+	max-width:1024px;
+	margin:0 auto;
+	height:448px;
+	z-index:500;
+}
+#content-slider {
+	overflow:hidden;
+}
+.contentbox-wrapper {
+	position:relative;
+	left:0;
+	width:100000px;
+	height:448px;
+}
+.contentbox {
+	width:1000px;
+	height:100%;
+	float:left;
+	background:#fff;
+}
+
+/* MENU DA LINHA DO TEMPO */
+#menu-slider {
+	height:auto;
+}
+#menu-slider ul li a {
+	display:inline;
+	float:left;
+	font-family:Ubuntu Bold;
+	font-size:15px;
+	color:#FFFFFF;
+	text-shadow: #000 2px 2px 2px;
+	text-decoration:none;
+	background-image:url(../imagens/palheta-menu.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	width:49px;
+	height:51px;
+	padding:15px 0 0 10px;
+	
+}
+#menu-slider a.active {
+	text-decoration:none;
+	color:#FFFFFF;
+	
+}
+
+
+/* ESTILO PARA A DIV COM O FORMULÁRIO DE CONTATO */
+#contato {
+	position:absolute;
+	width:100%;
+	height:448px;
+	background-image:url(../imagens/background-contato.jpg);
+	background-repeat:repeat-x;
+	color:#000000;
+	z-index:900;
+	margin:77px 0 0 0;
+	border-bottom:30px solid #000;
+}
+#content-contato {
+	position:relative;
+	max-width:600px;
+	height:100%;
+	margin:0 auto;
+	padding:45px 45px 45px 45px;
+}
+#ocultar {
+	position:absolute;
+	margin:208px 0 0 250px;
+}
+
+/* ESTILO PARA O CAMPO DO FORMULÁRIO */
+.campo {
+	background-color:#FFF;
+	border:solid 1px #666666;
+	height:25px;
+	width:250px;
+	padding:0 0 0 5px;
+	font-family:Lato Regular;
+	font-size:15px;
+	color:#000;
+}
+.campo-mensagem {
+	background-color:#FFF;
+	border:solid 1px #666666;
+	height:85px;
+	width:250px;
+	padding:0 0 0 5px;
+	font-family:Lato Regular;
+	font-size:15px;
+	color:#000;
+}
+
+.campo-menor {
+	background-color:#FFF;
+	border:solid 1px #666666;
+	height:25px;
+	width:150px;
+	padding:0 0 0 5px;
+	font-family:Lato Regular;
+	font-size:15px;
+	color:#000;
+}
+
+label {
+	text-align: right;
+	font-family:Ubuntu Bold;
+	font-size:20px;
+	color:#999999;
+	display: block;
+	float: left;
+	margin:5px 0 5px 0;
+}
+.checkbox {
+	font-family:Lato Regular;
+	font-size:15px;
+	color:#000;
+}
