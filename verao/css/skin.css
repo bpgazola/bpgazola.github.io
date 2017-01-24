@@ -1,0 +1,435 @@
+@charset "utf-8";
+/* CSS Document */
+/* Autor: Bruno Gazola de Paoli */
+/* Contact: bruno.paoli@pucrs.br */
+
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* FONTES */
+@font-face {
+	font-family: Lato Regular;
+	src:url(../fonts/Lato-Reg.ttf), url(../fonts/Lato-Reg.eot); /* PARA IE */
+}
+@font-face {
+	font-family: Ubuntu Regular;
+	src:url(../fonts/Ubuntu-R.ttf), url(../fonts/Ubuntu-R.eot); /* PARA IE */
+}
+@font-face {
+	font-family: Ubuntu Bold;
+	src:url(../fonts/Ubuntu-B.ttf), url(../fonts/Ubuntu-B.eot); /* PARA IE */
+}
+
+body {
+	overflow-x:hidden;
+}
+#wrap {
+	width:100%;
+	margin:0 auto;
+}
+#resize {
+	position:fixed;
+	margin:0 auto;
+	width:100%;
+	height:100%;
+}
+.content {
+	margin:0 auto;
+	width:1024px;
+	height:100%;
+}
+.clear {
+	clear:both;
+}
+#top-bar {
+	float:left;
+	background-color:#FB4C14;
+	width:100%;
+	height:26px;
+	margin:0 auto;
+}
+#top {
+	float:left;
+	margin:0 auto;
+	background-color:#F39227;
+	width:100%;
+	height:350px;
+}
+#logo {
+	margin:5% auto;
+	width:200px;
+	height:200px;
+}
+#aba {
+	position:relative;
+	background-image:url(../imagens/aba-top.png);
+	width:106px;
+	height:53px;
+	margin:-8% auto;
+	z-index:100;
+}
+#spot-light {
+	float:left;
+	background-color:#D54307;
+	width:100%;
+	height:450px;
+	margin:0 auto;
+	z-index:10;
+}
+#bottom {
+	float:left;
+	background-color:#D54307;
+	width:100%;
+	height:auto;
+}
+#cursos {
+	float:left;
+	width:100%;
+	height:auto;
+	background-color:#F39227;
+}
+#fale {
+	float:left;
+	width:100%;
+	height:auto;
+	background-color:#F39227;
+}
+#form-contato {
+	float:left;
+	margin:5% 0 0 15%;
+	width:40%;
+	height:auto;
+	padding:2% 15% 10% 15%;
+}
+/* BOTÃO */
+.goto a {
+	position:relative;
+	cursor:pointer;
+	display:block;
+	width:100px;
+	clear:both;
+	margin:5% auto;
+	font-family:Ubuntu Bold;
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:center;
+	text-decoration:none;
+	z-index:110;
+	text-transform:uppercase;
+	
+}
+.btn-inscreva a {
+	display:block;
+	position:relative;
+	float:left;
+	margin:5% 0 3% 17%;
+	background-color:#F39227;
+	width:50%;
+	height:auto;
+	text-align:center;
+	padding:5%;
+	font-family: Ubuntu Bold;
+	font-size:12px;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	text-decoration:none;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow: 0px 2px 0px #FB4C14;
+	-moz-box-shadow: 0px 2px 0px #FB4C14;
+	box-shadow: 0px 2px 0px #FB4C14;
+}
+.btn-inscreva a:hover {
+	background-color:#FFFFFF;
+	color:#F39227;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+/* TÍTULOS */
+h1 {
+	font-family:Ubuntu Regular;
+	font-size:30px;
+	color:#D54307;
+	text-align:center;
+	background-color:#FFFFFF;
+	padding:2%;
+	width:35%;
+	margin:10% auto;
+	-webkit-transform: skew(-17deg);
+    -moz-transform: skew(-17deg);
+    -o-transform: skew(-17deg); 
+	text-transform:uppercase;
+}
+h2 {
+	font-family:Ubuntu Regular;
+	font-size:20px;
+	color:#D54307;
+	text-align:center;
+	background-color:#FFFFFF;
+	padding:2%;
+	width:35%;
+	margin:-6% auto;
+	-webkit-transform: skew(-17deg);
+    -moz-transform: skew(-17deg);
+    -o-transform: skew(-17deg); 
+	text-transform:uppercase;
+}
+h3 {
+	font-family:Ubuntu Regular;
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:center;
+	padding:2%;
+	text-transform:uppercase;
+}
+/* PARÁGRAFO */
+p {
+	font-family:Lato Regular;
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:center;
+	width:45%;
+	text-align:center; 
+	margin:10% auto;
+	text-transform:uppercase;
+}
+/* ESTILO PARA O SLIDER */
+#content-slider {
+	overflow:hidden;
+	padding:5% 0 5% 19%;
+	width:75%;
+	margin:0 auto;
+	
+}
+.contentbox-wrapper {
+	position:relative;
+	width:100000px;
+	height:auto;
+}
+.contentbox {
+	width:750px;
+	height:100%;
+	float:left;
+	margin:0 5% 0 0;
+}
+.contentbox, img {
+	text-align:center;
+}
+/* MENU DO SLIDER */
+#menu-slider {
+	float: left;
+    height: 55%;
+    margin-left: 24%;
+    margin-right: 0;
+    margin-top: 2%;
+    position: relative;
+    width: 30%;
+}
+#menu-slider ul li {
+	display:inline-block;
+	list-style:none;
+	float:left;
+	height:36px;
+	margin:0 2% 0 0;
+	font-family:Lato Regular;
+	font-size:15px;
+	z-index:
+}
+#menu-slider ul li a {
+	background-image:url(../imagens/sprite-btn-slider.png);
+	background-repeat:no-repeat;
+	background-position:-20px 1px;
+	text-decoration:none;
+	padding:0 21px 0 0;
+	color:#F4F7F8;
+}
+#menu-slider a.active {
+	background-image:url(../imagens/sprite-btn-slider.png);
+	background-repeat:no-repeat;
+	background-position:1px 1px;
+	color:#EE6557;
+}
+
+/* THUMB CURSOS */
+.wrapper-thumb-cursos {
+	width:220px;
+	height:auto;
+	float:left;
+	position:relative;
+	margin:1%;
+}
+.thumb-imagem-curso {
+	width:220px;
+	height:220px;
+	float:left;
+	position:relative;
+}
+.thumb-descricao-curso {
+	background-color:#D54307;
+	width:220px;
+	height:132px;
+	float:left;
+	position:relative;
+}
+
+/* ICONS */
+#itens {
+	margin:-5% 0 10% 5%;
+	list-style:none;
+	overflow:hidden;
+}
+#itens, img {
+	text-align:center;
+}
+#itens h2 {
+	font-family:Ubuntu Regular;
+	font-size:15px;
+	color:#FFF;
+	border:none;
+	text-align:center;
+	text-transform:uppercase;
+	padding:0 0 5% 0;
+}
+#itens p {
+	font-family:Lato Regular;
+	font-size:13px;
+	line-height:18px;
+	width:100%;
+	color:#FFFFFF;
+	text-align:center;
+	margin:0 auto;
+}
+#itens li {
+	float: left;
+	width: 15%;
+	height: 180px;
+	background-color:#F39227;
+	margin:2% 2% 0 0;
+	padding:3%;
+	transition: opacity 0.5s ease-out;
+}
+.icon-itens {
+	display:inline-block;
+	height:25%;
+	-moz-transition: height 0.1s ease-out;
+	-webkit-transition: height 0.1s ease-out;
+	-o-transition: height 0.1s ease-out;
+	transition: height 0.1s ease-out;
+}
+.icon-itens:hover {
+	height:30%;
+}
+/* RODAPÉ */
+#footer {
+	background-color:#D54307;
+	width:100%;
+	height:200px;
+	clear: both;
+	content: ".";
+	display: block;
+}
+#footer-inner {
+	float:left;
+	width:95%;
+	height:auto;
+	padding:5% 0 0 2%;
+	margin:0 0 0 1%;
+}
+#footer-inner .column {
+	float:left;
+	width:30%;
+	height:auto;
+}
+#footer-inner img {
+	margin:0 3% 1% 0;
+	float:left;
+}
+#footer p {
+	font-family:Lato Regular;
+	font-size:13px;
+	width:100%;
+	color:#FFFFFF;
+	text-align:left;
+	float:right;
+	margin:0 0 0 25%;
+}
+/* FORMULÁRIOS */
+label {
+	float:left;
+	position:relative;
+	font-family:Ubuntu Bold;
+	font-size:20px;
+	color:#FFFFFF;
+	width:100%;
+	text-transform:uppercase;
+	margin:2% 0 2% 0;
+}
+input {
+	float:left;
+	position:relative;
+	width:90%;
+	padding:3%;
+	border:solid 1px #EE6557;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	color:#666;
+	font-family:Lato Regular;
+	font-size:15px;
+	line-height:18px;
+}
+.campo {
+	float:left;
+	position:relative;
+	width:90%;
+	padding:3%;
+	border:solid 1px #EE6557;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	color:#666;
+	font-family:Lato Regular;
+	font-size:15px;
+	line-height:18px;
+}
+input:focus, textarea:focus { 
+	border:solid 1px #EE6557
+}
+#btn-send {
+	cursor:pointer;
+	display:inline-block;
+	background-color:#D54307;
+	font-family: Ubuntu Regular;
+	font-size:15px;
+	width:25%;
+	float:left;
+	color:#FFF;
+	margin:3% 0 0 0;
+	padding:2%;
+	text-align:center;
+	border:none;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-webkit-box-shadow: 0px 2px 0px #FB4C14;
+	-moz-box-shadow: 0px 2px 0px #FB4C14;
+	box-shadow: 0px 2px 0px #FB4C14;
+	text-transform:uppercase;
+	text-decoration:none;
+}
