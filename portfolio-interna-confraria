@@ -15,10 +15,10 @@
     <nav>
       <ul>
        
-        <li><a href="portfolio.html">portfolio</a></li>
-        <li><a href="servicos.html">serviços</a></li>
-        <li><a href="sobre.html">sobre</a></li>
-        <li><a href="contato.html">contato</a></li>
+        <li><a href="portfolio">portfolio</a></li>
+        <li><a href="servicos">serviços</a></li>
+        <li><a href="sobre">sobre</a></li>
+        <li><a href="contato">contato</a></li>
       </ul>
     </nav>
     <!--MENU--> 
@@ -26,7 +26,7 @@
 
     <img src="img/span-line.png"> </div>
 </header>
-<div id="buttons"> <a href="portfolio-interna-fisiopet.html"><span id="previous"></span></a> <a href="portfolio-interna-hsm.html"><span id="next"></span></a> </div>
+<div id="buttons"> <a href="portfolio-interna-fisiopet"><span id="previous"></span></a> <a href="portfolio-interna-hsm"><span id="next"></span></a> </div>
 <div id="top">
   <div class="container">
     <div class="container-row"> <img src="img/work-confraria.png"> </div>
@@ -39,7 +39,7 @@
       <h4>confraria do blues</h4>
       <p>Projeto desenvolvido para a Confraria do Blues de Porto Alegre. Site totalmente personalizado conta com galeria de videos, fotos, além de uma seção espcial para a venda de produtos da marca.</p>
       <div class="clearfix"></div>
-      <a class="btn" href="http://www.pixelrocket.com.br/confraria/">visite o site</a><a class="btn" href="contato.html">começar um projeto</a> </div>
+      <a class="btn" href="http://www.pixelrocket.com.br/confraria/">visite o site</a><a class="btn" href="contato">começar um projeto</a> </div>
     <div class="work-details-list">
       <h6>serviços fornecidos</h6>
       <ul>
