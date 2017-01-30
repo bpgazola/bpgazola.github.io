@@ -16,9 +16,9 @@
       <ul>
   
         <li><a href="#">portfolio</a></li>
-        <li><a href="servicos.html">serviços</a></li>
-        <li><a href="sobre.html">sobre</a></li>
-        <li><a href="contato.html">contato</a></li>
+        <li><a href="servicos">serviços</a></li>
+        <li><a href="sobre">sobre</a></li>
+        <li><a href="contato">contato</a></li>
       </ul>
     </nav>
     <!--MENU--> 
@@ -55,22 +55,22 @@
       <div class="clear"></div>
       <!--INÍCIO DO FILTER COM OS THUMBS DO PORTFOLIO-->
       <ul class="ff-items">
-        <li class="ff-item-type-1"> <a href="portfolio-interna-inverno.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-inverno"> <span>
           <h2>cursos de invero</h2>
           <p>Projeto desenvolvido para os cursos de inverno da PUCRS. O site, com design flat, é estilo singlepage. Este tipo de projeto traz uma proposta de interação com o usuário um pouco diferente dos tradicionais sites.</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project15.jpg"> </a> </li>
-        <li class="ff-item-type-1"> <a href="portfolio-interna-fisiopet.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-fisiopet"> <span>
           <h2>fisioterapia para animais São Francisco</h2>
           <p>Projeto desenvolvido para clínica de reabilitação animal. Site flat totalmente responsivo com cores vibrantes e visual moderno.</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project20.jpg"> </a> </li>
-        <li class="ff-item-type-1"> <a href="portfolio-interna-confraria.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-confraria"> <span>
           <h2>confraria do blues</h2>
           <p>Projeto desenvolvido para a Confraria do Blues de Porto Alegre. Site totalmente personalizado conta com galeria de videos, fotos, além de uma seção espcial para a venda de produtos da marca.</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project01.jpg"> </a> </li>
-        <li class="ff-item-type-1"> <a href="portfolio-interna-hsm.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-hsm"> <span>
           <h2>hsm educação</h2>
           <p>Hotsite desenvolvido para a empresa HSM Educação Executiva.</p>
           <p>VER PROJETO</p>
@@ -85,7 +85,7 @@
           <p>Este projeto foi desenvolvido para a PUCRS. Além da marca, também foram desenvolvidos impressos e o site para o programa de estudos para estrangeiros no Brasil</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project03.jpg"> </a> </li>
-        <li class="ff-item-type-1"> <a href="portfolio-interna-educon.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-educon"> <span>
           <h2>educação continuada</h2>
           <p>Re-design do site de cursos de Pós-Graduação da PUCRS.</p>
           <p>VER PROJETO</p>
@@ -100,12 +100,12 @@
           <p>Adesivagem dos elevadores da HSM-Educação.</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project18.jpg"> </a> </li>
-        <li class="ff-item-type-4"> <a href="portfolio-interna-blues.html"> <span>
+        <li class="ff-item-type-4"> <a href="portfolio-interna-blues"> <span>
           <h2>confraria do Blues</h2>
           <p>Apresentação desenvolvida para a Confraria do Blues.</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project08.jpg"> </a> </li>
-        <li class="ff-item-type-1"> <a href="portfolio-interna-pgqp.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-pgqp"> <span>
           <h2>Criação do hotsite para o PGQP</h2>
           <p>Criação do projeto para os cursos de formação de líderes da parceria entre PUCRS e PGQP</p>
           <p>VER PROJETO</p>
@@ -115,7 +115,7 @@
           <p>Logo densenvolvido para a empresa Solar Eventos.</p>
           <p>VER PROJETO</p>
           </span> <img src="img/project14.jpg"> </a> </li>
-        <li class="ff-item-type-1"> <a href="portfolio-interna-verao.html"> <span>
+        <li class="ff-item-type-1"> <a href="portfolio-interna-verao"> <span>
           <h2>cursos de verão</h2>
           <p>Projeto desenvolvido para os cursos de verão da Universidade. O site, com design flat, é estilo singlepage. Este tipo de projeto traz uma proposta de interação com o usuário um pouco diferente dos tradicionais sites.</p>
           <p>VER PROJETO</p>
