@@ -10,15 +10,15 @@
 
 <header id="header">
   <div class="container">
-    <div><a id="logo" class="clearfix" href="index.html"></a> </div>
+    <div><a id="logo" class="clearfix" href="index"></a> </div>
     <!--MENU-->
     <nav>
       <ul>
        
-        <li><a href="portfolio.html">portfolio</a></li>
-        <li><a href="servicos.html">serviços</a></li>
-        <li><a href="sobre.html">sobre</a></li>
-        <li><a href="contato.html">contato</a></li>
+        <li><a href="portfolio">portfolio</a></li>
+        <li><a href="servicos">serviços</a></li>
+        <li><a href="sobre">sobre</a></li>
+        <li><a href="contato">contato</a></li>
       </ul>
     </nav>
     <!--MENU--> 
@@ -26,7 +26,7 @@
 
     <img src="img/span-line.png"> </div>
 </header>
-<div id="buttons"> <a href="portfolio-interna-pgqp.html"><span id="previous"></span></a> <a href="portfolio.html"><span id="next"></span></a> </div>
+<div id="buttons"> <a href="portfolio-interna-pgqp"><span id="previous"></span></a> <a href="portfolio"><span id="next"></span></a> </div>
 <div id="top">
   <div class="container">
     <div class="container-row"> <img src="img/work-verao.png"> </div>
@@ -39,7 +39,7 @@
       <h4>cursos de verão pucrs</h4>
       <p>Hotsite desenvolvido para os cursos de curta duração da PUCRS.</p>
       <div class="clearfix"></div>
-      <a class="btn" href="http://www.pixelrocket.com.br/verao/">visite o site</a><a class="btn" href="contato.html">começar um projeto</a> </div>
+      <a class="btn" href="http://www.pixelrocket.com.br/verao/">visite o site</a><a class="btn" href="contato">começar um projeto</a> </div>
     <div class="work-details-list">
       <h6>serviços fornecidos</h6>
       <ul>
