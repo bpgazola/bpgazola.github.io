@@ -9,7 +9,7 @@
 <body>
 <header id="header">
   <div class="container">
-    <div><a id="logo" class="clearfix" href="index.html"></a> </div>
+    <div><a id="logo" class="clearfix" href="index"></a> </div>
     <!--MENU-->
     <nav>
       <ul>
