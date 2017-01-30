@@ -22,8 +22,7 @@
       </ul>
     </nav>
     <!--MENU--> 
-            <div id="social-media"><a href="https://www.facebook.com/bruno.gazola.5"><img src="img/ico-facebook.png"></a><a href="https://br.linkedin.com/in/bruno-gazola-de-paoli-ab5a2032"><img src="img/ico-linkedin.png"></a><a href="https://www.behance.net/bpgazola"><img src="img/ico-behance.png"></a></div>
-
+    <div id="social-media"><a href="https://www.facebook.com/bruno.gazola.5"><img src="img/ico-facebook.png"></a><a href="https://br.linkedin.com/in/bruno-gazola-de-paoli-ab5a2032"><img src="img/ico-linkedin.png"></a><a href="https://www.behance.net/bpgazola"><img src="img/ico-behance.png"></a></div>
     <img src="img/span-line.png"> </div>
 </header>
 <div id="top">
