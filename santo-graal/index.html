@@ -1,0 +1,134 @@
+﻿<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Santo Graal</title>
+<link rel="stylesheet" href="css/skin.css">
+</head>
+
+<body>
+<div id="header">
+  <div class="container">
+    <div class="row">
+      <div class="column column-8">
+        <div id="logo"></div>
+        <nav>
+          <ul>
+            <li class="active"><a href="#about">sobre o santo graal</a></li>
+            <li><a href="#">cardápio</a></li>
+            <li><a href="#">localização</a></li>
+            <li><a href="#">reservas</a></li>
+          </ul>
+        </nav>
+        <div id="social"><a class="no-transitions" href="#"><img src="img/facebook-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/instagram-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/mail-ico.jpg"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="spotlight">
+  <div class="container">
+    <div class="row">
+      <div class="column column-8">
+        <h1>A busca pelo Santo Graal chegou ao fim...</h1>
+        <h2>Ele está em Porto Alegre!</h2>
+        <address>
+        <p>Av. Copacabana, 721 - Tristeza</p>
+        <p>TEL: 51 3333 33 33</p>
+        <img id="pin" src="img/pin.png"> <span><a href="#">VER NO MAPA</a></span>
+        </address>
+      </div>
+    </div>
+  </div>
+  <!--CARROSSEL-->
+  <div id="carrossel">
+    <div class="container">
+      <div class="row">
+        <div class="column column-8">
+          <div id="carrossel-wrap">
+            <ul>
+              <li>
+                <div><img class="vertical-align" src="img/slide-ico-01.png">
+                  <h3>happy hour - as melhores cervejas artesanais!</h3>
+                  <p>Todas as terças-feiras happy hour - 16h às 19h - R$ 8,00 Pints e R$ 5,00 Half Pints </p>
+                </div>
+              </li>
+              <li>
+                <div><img class="vertical-align" src="img/slide-ico-01.png">
+                  <h3>happy hour - as melhores cervejas artesanais!</h3>
+                  <p>Todas as terças-feiras happy hour - 16h às 19h - R$ 8,00 Pints e R$ 5,00 Half Pints </p>
+                </div>
+              </li>
+              <li>
+                <div><img class="vertical-align" src="img/slide-ico-01.png">
+                  <h3>happy hour - as melhores cervejas artesanais!</h3>
+                  <p>Todas as terças-feiras happy hour - 16h às 19h - R$ 8,00 Pints e R$ 5,00 Half Pints </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <nav id="menu-carrossel"> <a href="#" class="prev"></a> <a href="#" class="next"></a> </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="column column-8">
+        <h1>Sobre o</h1>
+        <h2>Santo Graal</h2>
+      </div>
+    </div>
+    <div class="row">
+    <div class="column column-4">
+    <div id="box-text"><p>adshdjkashdkjashdkjsahdskjh</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!--########################  JS ##########################--> 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jcarousellite.js"></script> 
+
+<!--SCRIPT PARA RETIRAR O ACTIVE DO MENU--> 
+<script type="text/javascript">
+$(document).ready(function() {
+      $("nav li a").on("click", function(event){
+      $("nav li").find(".active").removeClass("active");
+      $(this).parent().addClass("active");
+   });
+});
+</script> 
+
+<!--SCRIPT PARA O CARROSSEL--> 
+<script type="text/javascript">
+$(function() {
+    $("#carrossel-wrap"). jCarouselLite({
+        btnPrev: '.prev', 
+        btnNext: '.next',
+        visible: 1,
+		speed: 2000, 
+		auto: true
+    })
+})
+</script> 
+
+<!--SCRIPT PARA EFEITO DESLIZANTE NA PÁGINA--> 
+<script type="text/javascript">
+var $doc = $('html, body');
+	$('nav ul li a').click(function() {
+    	$doc.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    	}, 500);
+    return false;
+});
+</script> 
+
+<!--########################  JS ##########################-->
+
+</body>
+</html>
