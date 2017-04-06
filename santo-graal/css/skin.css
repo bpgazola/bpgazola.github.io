@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* FONTES */
+
+@font-face {
+	font-family: Athelas;
+	src: url('../fonts/Athelas.eot');
+	src: url('../fonts/Athelas.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family: Open Sans Regular;
+	src: url('../fonts/OpenSans-Regular.eot');
+	src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family: Open Sans Light;
+	src: url('../fonts/OpenSans-Light.eot');
+	src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family: Open Sans Bold;
+	src: url('../fonts/OpenSans-Bold.eot');
+	src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family: Snickles;
+	src: url('../fonts/Snickles.eot');
+	src: url('../fonts/Snickles.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+/* CONTEÚDO PÁGINA */
+
+.container {
+	max-width: 1040px;
+	min-width: 940px;
+	margin: 0 auto;
+}
+.row:before, .row:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+section:after, div:before {
+	content: "";
+	display: block;
+	clear: both;
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* GRID DE 8 COLUNAS */
+
+.column {
+	position: relative;
+	float: left;
+}
+.column + .column {
+	margin-left: 2.5%;
+}
+.column-1 {
+	width: 10.3125%;
+}
+.column-2 {
+	width: 23.125%;
+}
+.column-3 {
+	width: 35.9375%;
+}
+.column-4 {
+	width: 48.75%;
+}
+.column-5 {
+	width: 61.5625%;
+}
+.column-6 {
+	width: 74.375%;
+}
+.column-7 {
+	width: 87.1875%;
+}
+.column-8 {
+	width: 100%;
+}
+
+#spotlight {
+	background-image:url(../img/back-spotlight.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:100%;
+	height: 399px;
+	float:left;
+	padding: 130px 0 0 0;
+	margin: 130px 0 0 0;
+}
+address p {
+	font-family: Open Sans Bold;
+	font-size: 20px;
+	line-height: 25px;
+	color:#FFF;
+	text-align: center;
+}
+#spotlight address {
+	margin: 5% 0 0 0;
+}
+#pin {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 0 20px 0;
+	width: 20px;
+	height: 31px;
+}
+address span a {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+	text-decoration:none;
+	font-family: Open Sans Regular;
+	font-size: 13px;
+	color: #FFF;
+}
+#about {
+	background-image:url(../img/back-about.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:100%;
+	height: 935px;
+	float:left;
+	margin: 165px 0 0 0;
+}
+#about .container {
+	padding: 145px 0 0 0;
+}
+#about .container h1 {
+	text-align: left;
+}
+#about .container h2 {
+	text-align: left;
+	border-bottom: solid 2px #CF9A2B;
+	width: 32%;
+}
+#bot-text-top {
+	float: left;
+	background-image: url(../img/border-box-top-right.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	width: 100%;
+	height: 27px;
+}
+#box-text {
+	width: 100%;
+	height: auto;
+	padding: 5%;
+	margin: 35px 0 0 0;
+	border: solid 4px #FFFFFF;
+/* CARROSSEL */
+
+#carrossel {
+	background-image: url(../img/back-carrossel.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 165px;
+	float: left;
+	margin: 114px 0 0 0;
+}
+#carrossel-wrap {
+	float: left;
+	height: 150px;
+	width: 100%;
+}
+#carrossel-wrap ul {
+	width: 100%;
+	float: left;
+	height: 150px;
+}
+#carrossel-wrap li {
+	margin: 15px auto;
+	height: 130px;
+	width: 100%;
+}
+#carrossel-wrap img {
+	float: left;
+}
+#carrossel-wrap div {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+}
+#carrossel-wrap h3 {
+	margin: 0 0 0 125px;
+}
+#carrossel-wrap p {
+	margin: 0 0 0 125px;
+	color: #221F1F;
+	font-style: italic;
+}
+#menu-carrossel {
+	margin: 55px 0 0 0;
+	position: absolute;
+	float: left;
+	width: 1040px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+}
+.prev {
+	background-image: url(../img/prev-arrow.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 48px;
+	display: block;
+	float: left;
+}
+.next {
+	background-image: url(../img/next-arrow.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 48px;
+	display: block;
+	float: right;
+}
+/* CABEÇALHO */
+
+#header {
+	position: fixed;
+	z-index: 1000;
+	height: 130px;
+	width: 100%;
+	background-color: #000000;
+}
+#header #logo {
+	float: left;
+	width:  218px;
+	height: 102px;
+	background-image: url('../img/logo.jpg');
+	margin:1% 0 1% 0;
+}
+/* MENU DE NAVEGAÇÃO */
+
+nav {
+	float: left;
+	margin: 6.5% 0 0 15%;
+	z-index: 10000;
+}
+nav li {
+	display: inline-block;
+	margin: 0 8px 0 8px;
+}
+nav li a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-family: Athelas;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+nav ul li.active a, nav ul li a:hover {
+	padding: 8px;
+	margin: -8px;
+	color: #FFF;
+	background-color: #F8B735;
+	border-radius: 15px;
+	-moz-transition: 0.3s all ease-out;
+	-webkit-transition: 0.3s all ease-out;
+	-o-transition: 0.3s all ease-out;
+	transition: 0.3s all ease-out;
+}
+#social {
+	width: 70px;
+	height: 20px;
+	float: right;
+	margin: 6.5% 0 0 0;
+}
+#social img {
+	display: inline-block;
+	padding: 0 3% 0 3%;
+}
+a.no-transitions {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border-radius: 0;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+/* TÍTULOS */
+
+h1 {
+	font-family: Athelas;
+	font-size: 39px;
+	line-height: 20px;
+	text-align: center;
+	color: #FFF;
+}
+h2 {
+	font-family: Open Sans Bold;
+	font-size: 47px;
+	text-align: center;
+	color: #FFF;
+	text-transform:uppercase;
+}
+h3 {
+	font-family: Open Sans Bold;
+	font-size: 20px;
+	text-align: left;
+	color: #221F1F;
+	text-transform:uppercase;
+}
+/* PARÁGRAFO */
+
+p {
+	font-family: Athelas;
+	font-size: 15px;
+	line-height: 18px;
+	color: #FFF;
+	text-align: left;
+}
