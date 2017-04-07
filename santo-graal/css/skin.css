@@ -19,36 +19,36 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-family: Athelas;
 	src: url('../fonts/Athelas.eot');
 	src: url('../fonts/Athelas.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Open Sans Regular;
 	src: url('../fonts/OpenSans-Regular.eot');
 	src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Open Sans Light;
 	src: url('../fonts/OpenSans-Light.eot');
 	src: url('../fonts/OpenSans-Light.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Open Sans Bold;
 	src: url('../fonts/OpenSans-Bold.eot');
 	src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Snickles;
 	src: url('../fonts/Snickles.eot');
 	src: url('../fonts/Snickles.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
+	font-weight: normal;
+	font-style: normal;
 }
 /* CONTEÚDO PÁGINA */
 
@@ -56,6 +56,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	max-width: 1040px;
 	min-width: 940px;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 .row:before, .row:after {
 	content: " ";
@@ -72,7 +73,6 @@ section:after, div:before {
 	display: table;
 	clear: both;
 }
-
 /* GRID DE 8 COLUNAS */
 
 .column {
@@ -106,7 +106,6 @@ section:after, div:before {
 .column-8 {
 	width: 100%;
 }
-
 #spotlight {
 	background-image:url(../img/back-spotlight.jpg);
 	background-repeat: no-repeat;
@@ -150,8 +149,8 @@ address span a {
 	background-image:url(../img/back-about.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	width:100%;
-	height: 935px;
+	width: 100%;
+	height: 990px;
 	float:left;
 	margin: 165px 0 0 0;
 }
@@ -166,20 +165,106 @@ address span a {
 	border-bottom: solid 2px #CF9A2B;
 	width: 32%;
 }
-#bot-text-top {
+#box-text-top {
+	position: absolute;
+	margin: 3% 0 0 14.5%;
 	float: left;
 	background-image: url(../img/border-box-top-right.png);
 	background-repeat: no-repeat;
-	background-position: top left;
+	background-position: top right;
 	width: 100%;
-	height: 27px;
+	height: 28px;
 }
 #box-text {
+	float: left;
+	width: 100%;
+	padding: 3%;
+	height: auto;
+	margin: 5% 0 0 5%;
+	border: solid 4px #FFFFFF;
+}
+#box-text-bottom {
+	position: relative;
+	margin: -3.1% 0 0 3%;
+	float: left;
+	background-image: url(../img/border-box-bottom-left.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 28px;
+}
+.illustraition-wrap {
+	margin: 50% 0 0 0;
+}
+.illustraition-wrap img {
+	vertical-align: middle;
+	height: auto;
+	border:0;
+}
+.illustraition {
+	position: relative;
+	z-index:2;
+}
+#catalog {
+	background-color: #323232;
+	background-image: url(../img/catalog-giz.png);
+	background-position: top center;
+	background-repeat: no-repeat;
 	width: 100%;
 	height: auto;
-	padding: 5%;
-	margin: 35px 0 0 0;
-	border: solid 4px #FFFFFF;
+	float: left;
+}
+#catalog .container {
+	padding: 145px 0 0 0;
+}
+#catalog .container h1 {
+	text-align: left;
+}
+#catalog .container h2 {
+	text-align: left;
+	border-bottom: solid 2px #993300;
+	width: 50%;
+	margin: 0 0 85px 0;
+}
+#catalog .line-band {
+	margin: 75px 0 0 0;	
+}
+#catalog .line-bottom-band {
+	display: block;
+	margin-left: 10.3125%;
+	margin-right: 10.3125%;
+	width: 100%; /* 683px% */
+	height: 11px;
+}
+
+/* ITENS DO MENU/CATÁLOGO/PRODUTOS */
+.item {
+	float:left;
+	margin: 0 0 35px 0;
+}
+.item-image-wrap {
+	background-image: url(../img/border-item.png);
+	background-repeat: no-repeat;
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 8% 0 5% 5%;
+}
+.item-image-wrap:hover {
+	background-image: url(../img/border-select-item.png);
+}
+.item-inner {
+	height: 100%;
+	float:left;
+}
+.item h1 {
+	text-align: left;
+	margin: 0 0 25px 0;
+	line-height: 45px;
+}
+.item p {
+	font-style: italic;
+}
+
 /* CARROSSEL */
 
 #carrossel {
@@ -284,7 +369,7 @@ nav li a {
 	font-size: 15px;
 	text-transform: uppercase;
 }
-nav ul li.active a, nav ul li a:hover {
+li.active a, li a:hover {
 	padding: 8px;
 	margin: -8px;
 	color: #FFF;
@@ -337,6 +422,17 @@ h3 {
 	text-align: left;
 	color: #221F1F;
 	text-transform:uppercase;
+}
+h4 {
+	font-family: Snickles;
+	font-size: 39px;
+	line-height: 70px;
+	text-align: center;
+	width: 458px;
+	color: #FFF;
+	background-image: url(../img/band-catalog.png);
+	height: 112px;
+	margin: 0 0 45px 0;
 }
 /* PARÁGRAFO */
 
