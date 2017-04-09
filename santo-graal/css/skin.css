@@ -73,6 +73,12 @@ section:after, div:before {
 	display: table;
 	clear: both;
 }
+#conten {
+	width: 100%;	
+}
+#bodyContent p {
+	color: #221F1F;	
+}
 /* GRID DE 8 COLUNAS */
 
 .column {
@@ -234,7 +240,61 @@ address span a {
 	margin-right: 10.3125%;
 	width: 100%; /* 683px% */
 	height: 11px;
+	padding: 35px 0 35px 0;
 }
+#location {
+	background-color: #F8B735;
+	background-image: url(../img/back-location.png);
+	background-position: top right;
+	width: 100%;
+	float: left;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+#location .container {
+	padding: 145px 0 0 0;
+}
+#location h1 {
+	text-align: left;
+	color: #221F1F;
+}
+#location h2 {
+	text-align: left;
+	color: #221F1F;
+	border-bottom: solid 2px #993300;
+	width: 50%;
+	margin: 0 0 45px 0;
+}
+#map {
+	width: 100%;
+	height: 350px; 
+}
+#reservation {
+	background-color: #F8B735;
+	background-image: url(../img/back-reservation.png);
+	background-position: top center;
+	width: 100%;
+	float: left;
+	background-repeat: no-repeat;
+	height: 775px;;
+	margin: 300px 0 0 0;
+}
+#reservation .container {
+	padding: 145px 0 0 0;
+}
+#reservation .container h1 {
+	text-align: left;
+	color: #221F1F;
+}
+#reservation .container h2 {
+	text-align: left;
+	border-bottom: solid 2px #993300;
+	width: 64%;
+	margin: 0 0 85px 0;
+	color: #221F1F;
+}
+
+
 
 /* ITENS DO MENU/CATÁLOGO/PRODUTOS */
 .item {
