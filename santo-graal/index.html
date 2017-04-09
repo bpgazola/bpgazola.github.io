@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Santo Graal - Burger e Beer</title>
 <link rel="stylesheet" href="css/skin.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jcarousellite.js"></script>
 </head>
 
 <body>
@@ -17,8 +19,8 @@
           <ul>
             <li class="active"><a href="#about">sobre o santo graal</a></li>
             <li><a href="#catalog">cardápio</a></li>
-            <li><a href="#">localização</a></li>
-            <li><a href="#">reservas</a></li>
+            <li><a href="#location">localização</a></li>
+            <li><a href="#reservation">reservas</a></li>
           </ul>
         </nav>
         <div id="social"><a class="no-transitions" href="#"><img src="img/facebook-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/instagram-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/mail-ico.jpg"></a></div>
@@ -34,8 +36,8 @@
         <h2>Ele está em Porto Alegre!</h2>
         <address>
         <p>Av. Copacabana, 721 - Tristeza</p>
-        <p>TEL: 51 3333 33 33</p>
-        <img id="pin" src="img/pin.png"> <span><a href="#">VER NO MAPA</a></span>
+        <p>TEL: 51 3239 35 66</p>
+        <img id="pin" src="img/pin.png"> <span><a href="#location">VER NO MAPA</a></span>
         </address>
       </div>
     </div>
@@ -85,15 +87,11 @@
       <div class="column column-4">
         <div id="box-text-top"></div>
         <div id="box-text">
-          <p>Praesent non sapien justo. Ut vulputate velit leo, non rhoncus turpis tristique sed. Integer in nisl massa. Sed lorem erat, accumsan quis diam eu, vulputate iaculis neque. Sed vitae posuere mauris. Maecenas id sollicitudin nisi. Donec mollis ut est ut posuere. Morbi interdum sodales fringilla. Fusce eu scelerisque nibh. Quisque vel libero nec tortor molestie maximus. Sed tristique ultrices metus, sed pulvinar tortor accumsan eleifend. Sed bibendum tempor sem, id pretium quam congue ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+          <p>Para nós a mesa é sagrada e nela necessariamente precisamos encontrar a boa comida e boa bebida, nesse sentido, o nome “Santo Graal” é a representação disso, seja pela referência Celta que denota o Graal como sendo um caldeirão mágico capaz de transformar os alimentos, ou pela referência da Santa Ceia onde Jesus usou o Graal para beber e dar de beber aos seus discípulos, surgindo daí o termo Santo Graal. </p>
           <p>&nbsp;</p>
-          <p>In viverra tellus at urna pharetra, vestibulum viverra mauris viverra. Phasellus pulvinar vehicula vulputate. Sed bibendum nibh feugiat, semper urna quis, dignissim eros. Vivamus sit amet diam et nunc venenatis lobortis et feugiat turpis. Duis sagittis metus ac est tristique auctor. Morbi vitae tellus pretium, elementum lorem eget, maximus enim. Ut eget lectus arcu. </p>
+          <p>Queremos proporcionar as pessoas que nos visitam não uma simples refeição, mas uma experiência única e cheia de sabor e aromas. Essa é a essência do Santo Graal Burguer & Beer, receber todos aqueles que comungam desse mesmo pensamento e são apreciadores da boa mesa. </p>
           <p>&nbsp;</p>
-          <p>In viverra tellus at urna pharetra, vestibulum viverra mauris viverra. Phasellus pulvinar vehicula vulputate. Sed bibendum nibh feugiat, semper urna quis, dignissim eros. Vivamus sit amet diam et nunc venenatis lobortis et feugiat turpis. Duis sagittis metus ac est tristique auctor. Morbi vitae tellus pretium, elementum lorem eget, maximus enim. Ut eget lectus arcu. </p>
-          <p>&nbsp;</p>
-          <p>In viverra tellus at urna pharetra, vestibulum viverra mauris viverra. Phasellus pulvinar vehicula vulputate. Sed bibendum nibh feugiat, semper urna quis, dignissim eros. Vivamus sit amet diam et nunc venenatis lobortis et feugiat turpis. Duis sagittis metus ac est tristique auctor. Morbi vitae tellus pretium, elementum lorem eget, maximus enim. Ut eget lectus arcu. </p>
-          <p>&nbsp;</p>
-          <p>In viverra tellus at urna pharetra, vestibulum viverra mauris viverra. Phasellus pulvinar vehicula vulputate. Sed bibendum nibh feugiat, semper urna quis, dignissim eros. Vivamus sit amet diam et nunc venenatis lobortis et feugiat turpis. Duis sagittis metus ac est tristique auctor. Morbi vitae tellus pretium, elementum lorem eget, maximus enim. Ut eget lectus arcu. </p>
+          <p>Um lugar onde queremos compartilhar a boa mesa, com muita atenção às pessoas e garantindo uma experiência única e cheia de aromas e sabores...</p>
         </div>
         <div id="box-text-bottom"></div>
       </div>
@@ -107,14 +105,14 @@
 <div class="container">
 <div class="row">
   <div class="column column-8">
-    <h1>Bruger & Beer</h1>
+    <h1>Burguer & Beer</h1>
     <h2>Juntos para Sempre</h2>
   </div>
 </div>
 <div class="row">
   <div class="column column-2"><img class="line-band" src="img/line-left-top-band.png"></div>
   <div class="column column-4">
-    <h4>Burger</h4>
+    <h4>Burguer</h4>
   </div>
   <div class="column column-2"><img class="line-band" src="img/line-right-top-band.png"></div>
 </div>
@@ -234,11 +232,30 @@
   </div>
 </div>
 </section>
+<section id="location">
+  <div class="container">
+    <div class="row">
+      <div class="column column-8">
+        <h1>O caminho</h1>
+        <h2>Para o Santo Graal</h2>
+      </div>
+    </div>
+  </div>
+  <div id="map"></div>
+</section>
+<section id="reservation">
+<div class="container">
+	<div class="row">
+    <div class="column column-8">
+            <h1>Faça a sua reserva</h1>
+        <h2>O banquete será servido</h2>
+
+    </div>
+    </div>
+</div>
+</section>
 
 <!--########################  JS ##########################--> 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
-<script type="text/javascript" src="js/jcarousellite.js"></script> 
 
 <!--SCRIPT PARA RETIRAR O ACTIVE DO MENU--> 
 <script type="text/javascript">
@@ -266,7 +283,7 @@ $(function() {
 <!--SCRIPT PARA EFEITO DESLIZANTE NA PÁGINA--> 
 <script type="text/javascript">
 var $doc = $('html, body');
-	$('nav ul li a').click(function() {
+	$('a').click(function() {
     	$doc.animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     	}, 300);
@@ -274,6 +291,121 @@ var $doc = $('html, body');
 });
 </script> 
 
+<!--SCRIPT PARA MOSTRAR O MAPA--> 
+<script type="text/x-javascript">
+      function initMap() {
+        var uluru = {lat: -30.1044712, lng: -51.2546448};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+		  styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+       
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+		  draggable: true,
+		  animation: google.maps.Animation.DROP,
+		  position: {lat: -30.1044712, lng: -51.2546448}
+        });
+		
+		 var contentString = '<div id="content">'+
+      '<h1>Santo Graal</h1>'+
+      '<div id="bodyContent">'+
+      '<p>Um lugar onde queremos compartilhar a boa mesa,'+
+	  ' com muita atenção às pessoas e garantindo uma'+ 
+	  ' experiência única e cheia de aromas e sabores...'+'</p>'+'<p>'+'Av. Copacabana, 721'+'</p>'+'<p>'+'Ligar (51) 3239-3566</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+</script> 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqDCH3pfT0Pg6b3zKWzM6FP5QfIasDeZg&callback=initMap"></script> 
 <!--########################  JS ##########################-->
 
 </body>
