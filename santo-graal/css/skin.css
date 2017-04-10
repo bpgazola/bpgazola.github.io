@@ -73,9 +73,6 @@ section:after, div:before {
 	display: table;
 	clear: both;
 }
-#conten {
-	width: 100%;	
-}
 #bodyContent p {
 	color: #221F1F;	
 }
