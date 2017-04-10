@@ -50,32 +50,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-weight: normal;
 	font-style: normal;
 }
-/* CONTEÚDO PÁGINA */
-
-.container {
-	max-width: 1040px;
-	min-width: 940px;
-	margin: 0 auto;
-	overflow-x: hidden;
-}
-.row:before, .row:after {
-	content: " ";
-	display: table;
-	clear: both;
-}
-section:after, div:before {
-	content: "";
-	display: block;
-	clear: both;
-}
-.clearfix:before, .clearfix:after {
-	content: " ";
-	display: table;
-	clear: both;
-}
-#bodyContent p {
-	color: #221F1F;	
-}
 /* GRID DE 8 COLUNAS */
 
 .column {
@@ -109,6 +83,33 @@ section:after, div:before {
 .column-8 {
 	width: 100%;
 }
+/* CONTEÚDO PÁGINA */
+
+.container {
+	max-width: 1040px;
+	min-width: 940px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+.row:before, .row:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+section:after, div:before {
+	content: "";
+	display: block;
+	clear: both;
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+#bodyContent p {
+	color: #221F1F;	
+}
+
 #spotlight {
 	background-image:url(../img/back-spotlight.jpg);
 	background-repeat: no-repeat;
@@ -155,7 +156,7 @@ address span a {
 	width: 100%;
 	height: 990px;
 	float:left;
-	margin: 165px 0 0 0;
+	margin: 155px 0 0 0;
 }
 #about .container {
 	padding: 145px 0 0 0;
@@ -166,7 +167,7 @@ address span a {
 #about .container h2 {
 	text-align: left;
 	border-bottom: solid 2px #CF9A2B;
-	width: 32%;
+	width: 36%;
 }
 #box-text-top {
 	position: absolute;
@@ -196,7 +197,7 @@ address span a {
 	height: 28px;
 }
 .illustraition-wrap {
-	margin: 50% 0 0 0;
+	margin: 40% 0 0 -15%;
 }
 .illustraition-wrap img {
 	vertical-align: middle;
@@ -225,7 +226,7 @@ address span a {
 #catalog .container h2 {
 	text-align: left;
 	border-bottom: solid 2px #993300;
-	width: 50%;
+	width: 55%;
 	margin: 0 0 85px 0;
 }
 #catalog .line-band {
@@ -246,7 +247,7 @@ address span a {
 	width: 100%;
 	float: left;
 	background-repeat: no-repeat;
-	height: 300px;
+	height: 350px;
 }
 #location .container {
 	padding: 145px 0 0 0;
@@ -259,7 +260,7 @@ address span a {
 	text-align: left;
 	color: #221F1F;
 	border-bottom: solid 2px #993300;
-	width: 50%;
+	width: 56%;
 	margin: 0 0 45px 0;
 }
 #map {
@@ -286,7 +287,7 @@ address span a {
 #reservation .container h2 {
 	text-align: left;
 	border-bottom: solid 2px #993300;
-	width: 64%;
+	width: 70%;
 	margin: 0 0 85px 0;
 	color: #221F1F;
 }
@@ -440,7 +441,6 @@ form option {
 }
 
 /* CARROSSEL */
-
 #carrossel {
 	background-image: url(../img/back-carrossel.jpg);
 	background-repeat: no-repeat;
@@ -486,10 +486,10 @@ form option {
 	margin: 55px 0 0 0;
 	position: absolute;
 	float: left;
-	width: 1040px;
+	width: 940px;
 	margin-left: auto;
 	margin-right: auto;
-	z-index: 1000;
+	z-index: 9999;
 }
 .prev {
 	background-image: url(../img/prev-arrow.png);
@@ -617,3 +617,36 @@ p {
 	color: #FFF;
 	text-align: left;
 }
+
+/* QUERIES */
+
+@media screen and (max-width: 939px) and (min-width: 768px) {
+
+.container {
+	max-width: 939px;
+	min-width: 768px;
+	border: solid 1px #FF0000;
+}
+	
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+
+.container {
+	max-width: 767px;
+	min-width: 480px;
+	border: solid 1px #00FFFF;
+}
+	
+}
+
+@media screen and (max-width: 479px) and (min-width: 320px) {
+
+.container {
+	max-width: 479px;
+	min-width: 320px;
+	border: solid 1px #FF00FF;
+}
+	
+}
+
