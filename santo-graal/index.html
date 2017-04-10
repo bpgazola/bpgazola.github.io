@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/skin.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/jcarousellite.js"></script>
+<script type="text/javascript" src="js/jquery.customSelect.js"></script>
 </head>
 
 <body>
@@ -244,18 +245,76 @@
   <div id="map"></div>
 </section>
 <section id="reservation">
-<div class="container">
-	<div class="row">
-    <div class="column column-8">
-            <h1>Faça a sua reserva</h1>
+  <div class="container">
+    <div class="row">
+      <div class="column column-8">
+        <h1>Faça a sua reserva</h1>
         <h2>O banquete será servido</h2>
-
+      </div>
     </div>
+    <div class="row">
+      <form method="post" action="#">
+        <div class="column column-4">
+          <label>Nome</label>
+          <input class="insert" value="" type="text" />
+          <label>E-mail</label>
+          <input class="insert" value="" type="text" />
+          <label>Telefone</label>
+          <input class="insert" value="" type="text" />
+          <label>Pessoas</label>
+          <select class="styled">
+            <option>1 - 2</option>
+            <option>3 - 4</option>
+            <option>5 - 6</option>
+            <option>7 - 8</option>
+            <option>9 - 10</option>
+            <option>11 - 12</option>
+            <option>13 - 14</option>
+            <option>15 - 16</option>
+            <option>17 - 18</option>
+            <option>19 - 20</option>
+            <option>Mais de 20</option>
+          </select>
+        </div>
+        <div class="column column-4">
+          <label>Mensagem</label>
+          <textarea class="text" value=""></textarea>
+          <button class="send" type="submit">Enviar</button>
+        </div>
+      </form>
     </div>
-</div>
+    <div class="row">
+      <div class="column column-8">
+        <address>
+        <p>Av. Copacabana, 721 - Tristeza</p>
+        <p>TEL: 51 3239 35 66</p>
+        </address>
+        <h4>Siga o Santo Graal</h4>
+        <div id="social-footer">
+        <a href="#"><img src="img/facebook-ico-footer.jpg"></a>
+        <a href="#"><img src="img/instagram-ico-footer.jpg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<div id="footer">
+<div class="container">
+	<div class="column column-4"><p>© Santo Graal 2017, todos os direitos reservados.
+</p></div>
+	
+	<div class="column column-4"><p style="text-align:right">Site desenvolvido por Pixelrocket</p></div>
+</div>
+</div>
 
 <!--########################  JS ##########################--> 
+
+<!--SCRIPT PARA CUSTOMIZAR O SELECT DO FORMULÁRIO DE CONTATO--> 
+<script type="text/javascript">
+		$(function(){
+		$('select.styled').customSelect();
+	});
+</script> 
 
 <!--SCRIPT PARA RETIRAR O ACTIVE DO MENU--> 
 <script type="text/javascript">
