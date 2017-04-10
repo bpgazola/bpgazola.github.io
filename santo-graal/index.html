@@ -6,8 +6,8 @@
 <title>Santo Graal - Burger e Beer</title>
 <link rel="stylesheet" href="css/skin.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/jcarousellite.js"></script>
-<script type="text/javascript" src="js/jquery.customSelect.js"></script>
+<script src="js/jcarousellite.js"></script>
+<script src="js/jquery.customSelect.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <li><a href="#reservation">reservas</a></li>
           </ul>
         </nav>
-        <div id="social"><a class="no-transitions" href="#"><img src="img/facebook-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/instagram-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/mail-ico.jpg"></a></div>
+        <div id="social"><a class="no-transitions" href="#"><img src="img/facebook-ico.jpg"></a><a class="no-transitions" href="#"><img src="img/instagram-ico.jpg"></a><a class="no-transitions" href="#reservation"><img src="img/mail-ico.jpg"></a></div>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
               </li>
             </ul>
           </div>
-          <nav id="menu-carrossel"> <a href="#" class="prev"></a> <a href="#" class="next"></a> </nav>
+          <div id="menu-carrossel"> <a href="#" class="prev"></a> <a href="#" class="next"></a> </div>
         </div>
       </div>
     </div>
@@ -290,34 +290,33 @@
         <p>TEL: 51 3239 35 66</p>
         </address>
         <h4>Siga o Santo Graal</h4>
-        <div id="social-footer">
-        <a href="#"><img src="img/facebook-ico-footer.jpg"></a>
-        <a href="#"><img src="img/instagram-ico-footer.jpg"></a>
-        </div>
+        <div id="social-footer"> <a href="#"><img src="img/facebook-ico-footer.jpg"></a> <a href="#"><img src="img/instagram-ico-footer.jpg"></a> </div>
       </div>
     </div>
   </div>
 </section>
 <div id="footer">
-<div class="container">
-	<div class="column column-4"><p>© Santo Graal 2017, todos os direitos reservados.
-</p></div>
-	
-	<div class="column column-4"><p style="text-align:right">Site desenvolvido por Pixelrocket</p></div>
-</div>
+  <div class="container">
+    <div class="column column-4">
+      <p>© Santo Graal 2017, todos os direitos reservados. </p>
+    </div>
+    <div class="column column-4">
+      <p style="text-align:right">Site desenvolvido por Pixelrocket</p>
+    </div>
+  </div>
 </div>
 
 <!--########################  JS ##########################--> 
 
 <!--SCRIPT PARA CUSTOMIZAR O SELECT DO FORMULÁRIO DE CONTATO--> 
-<script type="text/javascript">
-		$(function(){
-		$('select.styled').customSelect();
+<script>
+$(document).ready(function(){
+		$("select.styled").customSelect();
 	});
 </script> 
 
 <!--SCRIPT PARA RETIRAR O ACTIVE DO MENU--> 
-<script type="text/javascript">
+<script>
 $(document).ready(function() {
       $("nav a").on("click", function(event){
       $("nav").find(".active").removeClass("active");
@@ -327,31 +326,29 @@ $(document).ready(function() {
 </script> 
 
 <!--SCRIPT PARA O CARROSSEL--> 
-<script type="text/javascript">
-$(function() {
-    $("#carrossel-wrap"). jCarouselLite({
-        btnPrev: '.prev', 
-        btnNext: '.next',
+<script>
+    $("#carrossel-wrap").jCarouselLite({
+        btnPrev: ".prev", 
+        btnNext: ".next",
         visible: 1,
 		speed: 4000, 
-		auto: true
-    })
-})
+		auto: true,
+});
 </script> 
 
 <!--SCRIPT PARA EFEITO DESLIZANTE NA PÁGINA--> 
-<script type="text/javascript">
-var $doc = $('html, body');
-	$('a').click(function() {
+<script>
+var $doc = $("html, body");
+	$("a").click(function() {
     	$doc.animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
-    	}, 300);
+    	}, 500);
     return false;
 });
 </script> 
 
 <!--SCRIPT PARA MOSTRAR O MAPA--> 
-<script type="text/x-javascript">
+<script>
       function initMap() {
         var uluru = {lat: -30.1044712, lng: -51.2546448};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -465,6 +462,7 @@ var $doc = $('html, body');
 }
 </script> 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqDCH3pfT0Pg6b3zKWzM6FP5QfIasDeZg&callback=initMap"></script> 
+
 <!--########################  JS ##########################-->
 
 </body>
