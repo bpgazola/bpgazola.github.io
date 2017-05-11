@@ -373,7 +373,7 @@ p {
 	z-index: 999;
 	width: 56px;
 	height: 53px;
-	left: 50%;
+	left: 100%;
 	margin-left: -50px;
 }
 /* RODAPÉ */
@@ -389,11 +389,8 @@ p {
 	color: #FFF;
 	text-align: left;
 	font-size: Roboto Regular;
-	float: right;
-	margin: 5% 0 0 0;
-}
-#footer p:firts-child {
 	float: left;
+	margin: 5% 0 0 0;
 }
 
 /* MEDIA QUERIES RESPONSIVAS */
@@ -596,10 +593,11 @@ nav {
 	display: none;
 }
 .menu-trigger { 
-	display: block;
-	width: 100%;
 	float: left;
-	position: absolute;
+	left: 0;
+	margin-left: 0;
+	display: block;
+	position: fixed;
 	height: 55px;
 }
 .menu-trigger ul {
@@ -610,7 +608,19 @@ nav {
 .menu-trigger ul li {
 	float:left;
 	display:list-item;
-	list-style: none; 
+	list-style: none;
+}
+.menu-trigger ul li a {
+	padding: 3%;
+	margin: 0;
+	color: none;
+	background-color: none;
+	border-radius: 0;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+
 }
 .menu-trigger ul li a {
 	display: block;
@@ -619,7 +629,6 @@ nav {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Roboto Regular;
-
 }
 li > a:after { content: " "; } 
 li > a:only-child:after { content: " "; }  		
@@ -634,7 +643,7 @@ li > a:only-child:after { content: " "; }
 	display:list-item;
 }
 .menu-trigger ul ul li {
-	width: 320px;
+	width: 479px;
 	float: none;
 	position: relative;
 	border-bottom:solid 1px #CCCCCC;
