@@ -276,10 +276,11 @@ div img {
 }
 
 #services .container-row {
-	padding:0 0 0 10%;
 	width:100%;
 }
-
+.services-package:first-child {
+	margin-left: 10%;
+}
 .services-package {
 	background-color:#FFFFFF;
 	width:25%;
