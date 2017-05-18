@@ -277,6 +277,7 @@ div img {
 
 #services .container-row {
 	width:100%;
+	padding: 0 0 0 0;
 }
 .services-package:first-child {
 	margin-left: 10%;
