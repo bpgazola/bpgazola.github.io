@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* CSS Document */
+
+/* RESET */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	margin:0;
 	padding:0;
@@ -176,11 +179,19 @@ p {
 opacity:0;
 }
 10% {
-transform:translateY(0);
+-webkit-transform:translate(0,0);  
+-moz-transform:translate(0,0);  
+-ms-transform:translate(0,0);  
+-o-transform:translate(0,0);  
+transform:translate(0,0);
 opacity:1;
 }
 100% {
-transform:translateY(10px);
+-webkit-transform:translate(0,10px);  
+-moz-transform:translate(0,10px);  
+-ms-transform:translate(0,10px);  
+-o-transform:translate(0,10px);  
+transform:translate(0,10px);
 opacity:1;
 }
 }
@@ -228,7 +239,7 @@ body {
 }
 header {
 	width:100%;
-	height:106px;
+	min-height:106px;
 	background:#2f1b56;
 	background:-moz-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
 	background:-webkit-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
@@ -254,7 +265,7 @@ header .social img {
 }
 #spotlight {
 	width:100%;
-	height:440px;
+	min-height:440px;
 	background:#2f1b56;
 	background:-moz-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
 	background:-webkit-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
@@ -281,7 +292,11 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f1b56', endCo
 }
 @keyframes astronaut {
 50% {
-transform:translate(120px, 15px) rotate(10deg)
+-webkit-transform:translate(12px,15px) rotate(10deg);  
+-moz-transform:translate(12px,15px) rotate(10deg); 
+-ms-transform:translate(12px,15px) rotate(10deg); 
+-o-transform:translate(12px,15px) rotate(10deg); 
+transform:translate(120px, 15px) rotate(10deg);
 }
 }
 #helmet {
@@ -526,7 +541,7 @@ header .social {
 	margin:-3% auto;
 }
 #services .container {
-	padding:80px 3% 0 3%;
+	padding:80px 5% 0 3%;
 }
 #jobs .container {
 	padding:50px 3% 0 3%;
@@ -675,7 +690,7 @@ p {
 	padding:0 3% 0 0;
 }
 #jobs {
-	height:800px;
+	height:850px;
 }
 #jobs .container {
 	padding:30px 3% 0 3%;
@@ -683,11 +698,19 @@ p {
 #jobs .btn {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);  
+	-moz-transform:translate(-50%, -100%);
+	-ms-transform:translate(-50%, -100%); 
+	-o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 }
 #jobs .btn:active {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);  
+	-moz-transform:translate(-50%, -100%);
+	-ms-transform:translate(-50%, -100%); 
+	-o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 	top:100%;
 	margin-top:5px;
@@ -707,7 +730,11 @@ p {
 	clear:right;
 	margin:5% 0 0 50%;
 	padding:0 0 0 0;
-	transform:translateX(-50%);
+	-webkit-transform:translate(-50%,0);  
+	-moz-transform:translate(-50%,0);
+	-ms-transform:translate(-50%,0); 
+	-o-transform:translate(-50%,0);
+	transform:translate(-50%,0);
 }
 #about {
 	height:400px;
@@ -739,11 +766,19 @@ p {
 #work .btn {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);  
+	-moz-transform:translate(-50%, -100%);
+	-ms-transform:translate(-50%, -100%); 
+	-o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 }
 #work .btn:active {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);  
+	-moz-transform:translate(-50%, -100%);
+	-ms-transform:translate(-50%, -100%); 
+	-o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 	top:100%;
 	margin-top:5px;
@@ -899,11 +934,19 @@ p {
 #jobs .btn {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);
+    -moz-transform:translate(-50%, -100%);
+    -ms-transform:translate(-50%, -100%);
+    -o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 }
 #jobs .btn:active {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);
+    -moz-transform:translate(-50%, -100%);
+    -ms-transform:translate(-50%, -100%);
+    -o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 	top:100%;
 	margin-top:5px;
@@ -923,7 +966,11 @@ p {
 	clear:right;
 	margin:5% 0 0 50%;
 	padding:0 0 0 0;
-	transform:translateX(-50%);
+	-webkit-transform:translate(-50%,0);
+    -moz-transform:translate(-50%,0);
+    -ms-transform:translate(-50%,0);
+    -o-transform:translate(-50%,0);
+	transform:translate(-50%,0);
 }
 #about {
 	height:400px;
@@ -955,11 +1002,19 @@ p {
 #work .btn {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);
+    -moz-transform:translate(-50%, -100%);
+    -ms-transform:translate(-50%, -100%);
+    -o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 }
 #work .btn:active {
 	left:50%;
 	position:absolute;
+	-webkit-transform:translate(-50%, -100%);
+    -moz-transform:translate(-50%, -100%);
+    -ms-transform:translate(-50%, -100%);
+    -o-transform:translate(-50%, -100%);
 	transform:translate(-50%, -100%);
 	top:100%;
 	margin-top:5px;
