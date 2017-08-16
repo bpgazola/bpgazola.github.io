@@ -2,6 +2,8 @@
 /* CSS Document */
 #spotlight-about {
 	width:100%;
+	position:relative;
+	float:left;
 	height:440px;
 	background:#2f1b56;
 	background:-moz-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
@@ -18,11 +20,11 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f1b56', endCo
 #moon {
 	background-image:url(../img/parallax-04.png);
 	background-repeat:no-repeat;
-	background-position:80% 20%;
+	background-position:80% 10%;
 	width:100%;
-	height:580px;
+	height:100%;
 	position:absolute;
-	z-index:9999;
+	z-index:8888;
 	animation-name:moon;
 	animation-duration:5.5s;
 	animation-iteration-count:infinite;
@@ -37,6 +39,8 @@ transform:translate(120px, 15px) rotate(10deg);
 }
 }
 #about-pixel {
+	position:relative;
+	float:left;
 	width:100%;
 	height:380px;
 	background-color:#FFF;
@@ -54,6 +58,8 @@ transform:translate(120px, 15px) rotate(10deg);
 	max-width:100%;
 }
 #how-work {
+	position:relative;
+	float:left;
 	width:100%;
 	height:381px;
 	background-color:#2F1B56;
@@ -62,15 +68,19 @@ transform:translate(120px, 15px) rotate(10deg);
 	padding:41px 0 0 0;
 }
 #how-work p {
+	position:relative;
+	float:left;
 	color:#FFF;
-	margin:20% 0 5% 0;
+	margin:5% 0 5% 0;
 }
 #how-work h4 {
 	color:#FFF;
 	margin:45% 0 15% 0;
 }
 #how-work h3 {
-	margin:7% 0 0 20%;
+	position:relative;
+	float:left;
+	margin:10% 0 0 5%;
 }
 .circle {
 	position:relative;
@@ -84,8 +94,8 @@ transform:translate(120px, 15px) rotate(10deg);
 .circle h3 {
 	font-size:30px;
 	color:#2F1B56;
+	padding:15% 0 0 15%;
 	position:absolute;
-	padding:15% 0 0 0;
 }
 @media screen and (max-width:939px) and (min-width:768px) {
 #spotlight-about .container {
@@ -105,20 +115,26 @@ transform:translate(120px, 15px) rotate(10deg);
 #spotlight-about .container {
 	padding:70px 3% 0 3%;
 }
+#spotlight-about h3 {
+	margin:3% 0 0 15%
+}
+#spotlight-about h2 {
+	margin:3% 0 10% 0;
+}
+#moon {
+	background-image:url(../img/parallax-04-mobile.png);
+}
 #about-pixel .container {
 	padding:50px 3% 0 3%;
 }
 #about-pixel {
-	height:800px;
+	height:750px;
 }
 #about-pixel h5 {
 	text-align:center;
-	margin:25% 0 0 0;
+	margin:15% 0 0 0;
 }
-#moon {
-	background-image:url(../img/parallax-04-mobile.png);
-	background-position:80% 70%;
-}
+
 #box-about-pixel {
 	max-width:175px;
 	margin:0 auto;
@@ -127,7 +143,7 @@ transform:translate(120px, 15px) rotate(10deg);
 	max-width:100%;
 }
 #about-pixel .btn {
-	margin-top:15%;
+	margin-top:10%;
 	left:50%;
 	position:absolute;
 	-webkit-transform:translate(-50%, -100%);
@@ -151,38 +167,45 @@ transform:translate(120px, 15px) rotate(10deg);
 	padding:20px 3% 0 3%;
 }
 #how-work {
-	height:750px;
+	height:900px;
 }
 #how-work h4 {
-	color:#FFF;
 	margin:0 0 5% 0;
-	text-align:center;
+}
+#how-work p {
+	margin:5% 0 5% 0;
+}
+#how-work h3 {;
+	margin:5% 0 0 3%;
 }
 footer {
 	margin:0 0 0 0 !important;
 }
 }
 @media screen and (max-width:479px) and (min-width:320px) {
-#spotlight-about {
-	height:480px;
-}
 #spotlight-about .container {
 	padding:30px 3% 0 3%;
 }
+#spotlight-about h3 {
+	margin:3% 0 0 15%
+}
+#spotlight-about h2 {
+	margin:3% 0 10% 0;
+}
 #moon {
 	background-image:url(../img/parallax-04-mobile.png);
-	background-position:80% 70%;
 }
 #about-pixel .container {
 	padding:50px 3% 0 3%;
 }
 #about-pixel {
-	height:800px;
+	height:750px;
 }
 #about-pixel h5 {
-	margin:25% 0 0 0;
 	text-align:center;
+	margin:15% 0 0 0;
 }
+
 #box-about-pixel {
 	max-width:175px;
 	margin:0 auto;
@@ -191,7 +214,7 @@ footer {
 	max-width:100%;
 }
 #about-pixel .btn {
-	margin-top:15%;
+	margin-top:10%;
 	left:50%;
 	position:absolute;
 	-webkit-transform:translate(-50%, -100%);
@@ -215,12 +238,16 @@ footer {
 	padding:20px 3% 0 3%;
 }
 #how-work {
-	height:750px;
+	height:900px;
 }
 #how-work h4 {
-	color:#FFF;
 	margin:0 0 5% 0;
-	text-align:center;
+}
+#how-work p {
+	margin:5% 0 5% 0;
+}
+#how-work h3 {;
+	margin:5% 0 0 3%;
 }
 footer {
 	margin:0 0 0 0 !important;

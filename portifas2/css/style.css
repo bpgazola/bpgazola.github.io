@@ -266,6 +266,8 @@ header .social img {
 #spotlight {
 	width:100%;
 	min-height:440px;
+	position:relative;
+	float:left;
 	background:#2f1b56;
 	background:-moz-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
 	background:-webkit-linear-gradient(left, #2f1b56 0%, #3d3aaf 100%);
@@ -281,11 +283,11 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f1b56', endCo
 #astronaut {
 	background-image:url(../img/parallax-01.png);
 	background-repeat:no-repeat;
-	background-position:80% 20%;
+	background-position:80% 10%;
 	width:100%;
-	height:580px;
+	height:100%;
 	position:absolute;
-	z-index:9999;
+	z-index:8888;
 	animation-name:astronaut;
 	animation-duration:5.5s;
 	animation-iteration-count:infinite;
@@ -302,15 +304,17 @@ transform:translate(120px, 15px) rotate(10deg);
 #helmet {
 	background-image:url(../img/parallax-02.png);
 	background-repeat:no-repeat;
-	background-position:25% 100%;
+	background-position:25% 57%;
 	position:absolute;
-	z-index:9999;
+	z-index:8888;
 	width:100%;
-	height:300px;
+	height:100%;
 }
 #services {
 	width:100%;
 	height:380px;
+	position:relative;
+	float:left;
 	background-color:#FFF;
 }
 #services .container {
@@ -325,6 +329,8 @@ transform:translate(120px, 15px) rotate(10deg);
 #jobs {
 	width:100%;
 	height:327px;
+	position:relative;
+	float:left;
 	background-color:#2F1B56;
 }
 #jobs .container {
@@ -365,6 +371,8 @@ transform:translate(120px, 15px) rotate(10deg);
 	background-size:cover;
 	height:324px;
 	width:100%;
+	position:relative;
+	float:left;
 }
 #about .container {
 	padding:68px 0 0 0;
@@ -390,6 +398,8 @@ transform:translate(120px, 15px) rotate(10deg);
 	background-color:#FFF;
 	width:100%;
 	height:381px;
+	position:relative;
+	float:left;
 }
 #work .container {
 	padding:68px 0 0 0;
@@ -444,9 +454,10 @@ transform:translate(120px, 15px) rotate(10deg);
 }
 footer {
 	background-color:#000000;
-	width:100%;
-	height:140px;
-	bottom:0;
+	position:relative;
+	float:left;
+    bottom:0px;
+    width:100%;
 }
 footer .container {
 	padding:30px 0 0 0;
@@ -526,6 +537,7 @@ li.active a, li a:hover {
 .container {
 	max-width:939px;
 	min-width:768px;
+	/* border:solid 1px #FF0000;  VERMELHO */
 }
 header .container {
 	padding:0 3% 0 3%;
@@ -584,6 +596,7 @@ footer #inner .container {
 .container {
 	max-width:767px;
 	min-width:480px;
+	/* border:solid 1px #00FF00;  VERDE */
 }
 .column {
 	position:relative;
@@ -631,7 +644,7 @@ header #logo {
 	position:absolute;
 	float:left;
 	top:0;
-	padding:4% 0 0 0;
+	padding:3% 0 0 0;
 }
 nav {
 	position:absolute;
@@ -658,9 +671,14 @@ header .social {
 #spotlight .container {
 	padding:30px 3% 0 3%;
 }
+#spotlight h3 {
+	margin:3% 0 0 15%
+}
+#spotlight h2 {
+	margin:3% 0 10% 0;
+}
 #astronaut {
 	background-image:url(../img/parallax-01-mobile.png);
-	z-index:8000;
 }
 #services {
 	height:500px;
@@ -669,12 +687,12 @@ header .social {
 	padding:30px 3% 0 3%;
 }
 #services h5 {
-	padding:10% 0 0 0;
+	padding:5% 0 0 0;
 	text-align:center;
 }
 #helmet {
 	background-image:url(../img/parallax-02-mobile.png);
-	background-position:85% 70%;
+	background-position:65% 55%
 }
 #box-services {
 	max-width:150px;
@@ -690,10 +708,20 @@ p {
 	padding:0 3% 0 0;
 }
 #jobs {
-	height:850px;
+	height:870px;
 }
 #jobs .container {
 	padding:30px 3% 0 3%;
+}
+#jobs h4 {
+	width:100%;
+	text-align:center;
+	margin:0 0 10% 0;
+}
+#jobs h1 {
+	font-size:15px;
+	line-height:18px;
+	text-align:left;
 }
 #jobs .btn {
 	left:50%;
@@ -715,16 +743,6 @@ p {
 	top:100%;
 	margin-top:5px;
 }
-#jobs h4 {
-	width:100%;
-	text-align:center;
-	margin:5% 0 15% 0;
-}
-#jobs h1 {
-	font-size:15px;
-	line-height:18px;
-	text-align:left;
-}
 .jobs-item {
 	width:50%;
 	clear:right;
@@ -737,7 +755,7 @@ p {
 	transform:translate(-50%,0);
 }
 #about {
-	height:400px;
+	height:430px;
 }
 #about .container {
 	padding:30px 3% 0 3%;
@@ -760,7 +778,7 @@ p {
 }
 #work h4 {
 	color:#2D1954;
-	margin:0 0 15% 0;
+	margin:0 0 10% 0;
 	text-align:center;
 }
 #work .btn {
@@ -790,27 +808,31 @@ p {
 	margin:5% auto;
 }
 footer {
-	margin:350px 0 0 0;
-	height:190px;
+	background-color:#000000;
+	position:relative;
+	float:left;
+    bottom:0px;
+    width:100%;
+	margin:60% 0 0 0;
 }
 footer .container {
-	padding:3% 3% 0 3%;
+	padding:30px 3% 0 3%;
 }
 .footer-icon {
-	margin:1% 3% 0 0;
+	margin:0 3% 1% 0;
 }
 footer p {
-	margin:2% 0 0 0;
+	font-size:12px;
+	line-height:15px;
+	color:#FFFFFF;
+	margin:1% 0 0 0;
 }
 footer .social {
 	float:left;
-	margin:5% 0 0 0;
+	margin:1% 0 0 0;
 }
 footer #inner .container {
 	padding:0 3% 0 3%;
-}
-footer #inner p {
-	margin:2% 0 0 0;
 }
 .arrow-up {
 	display:none;
@@ -820,6 +842,7 @@ footer #inner p {
 .container {
 	max-width:479px;
 	min-width:320px;
+	/*border:solid 1px #0000FF;  AZUL */
 }
 .column {
 	position:relative;
@@ -867,7 +890,7 @@ header #logo {
 	position:absolute;
 	float:left;
 	top:0;
-	padding:4% 0 0 0;
+	padding:3% 0 0 0;
 }
 nav {
 	position:absolute;
@@ -910,7 +933,7 @@ header .social {
 }
 #helmet {
 	background-image:url(../img/parallax-02-mobile.png);
-	background-position:85% 70%;
+	background-position:65% 55%
 }
 #box-services {
 	max-width:150px;

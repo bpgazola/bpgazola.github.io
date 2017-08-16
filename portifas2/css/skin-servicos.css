@@ -4,6 +4,8 @@
 	width:100%;
 	background-color:#FFF;
 	height:381px;
+	position:relative;
+	float:left;
 }
 #spotlight-services .container {
 	padding:81px 0 0 0;
@@ -11,16 +13,19 @@
 #camera {
 	background-image:url(../img/parallax-03.png);
 	background-repeat:no-repeat;
-	background-position:23% 100%;
+	background-position:25% 15%;
 	position:absolute;
-	z-index:9999;
+	z-index:8888;
 	width:100%;
-	height:300px;
+	height:100%;
 }
 #jobs-services {
+	position:relative;
+	float:left;
 	width:100%;
 	background-color:#2F1B56;
-	height:687px;
+	height:630px;
+	z-index:9999;
 }
 #jobs-services h1 {
 	text-align:center;
@@ -62,6 +67,8 @@
 	background-size:cover;
 	height:324px;
 	width:100%;
+	position:relative;
+	float:left;
 }
 #package .container {
 	padding:70px 0 0 0;
@@ -89,6 +96,8 @@
 	background-color:#FFFFFF;
 	width:100%;
 	height:648px;	
+	position:relative;
+	float:left;
 }
 #package-suggestion .container {
 	padding:52px 0 0 0;
@@ -160,26 +169,25 @@
 }
 @media screen and (max-width:767px) and (min-width:480px) {	
 #spotlight-services {
-	height:600px;
+	height:550px;
 }
 #spotlight-services .container {
-	padding:10% 3% 0 3%;
+	padding:30px 3% 0 3%;
 }
 #spotlight-services h5 {
 	text-align:center;
-	padding:20% 0 0 0;
+	padding:5% 0 0 0;
 }
 #camera {
 	background-image:url(../img/parallax-03-mobile.png);
-	background-position:93% 100%;
+	background-position:75% 15%;
 }
 #jobs-services {
-	height:2550px;
+	height:2300px;
 }
 #jobs-services .jobs-item {
 	width:50%;
-	height:auto;
-	margin:0 0 10% 50%;
+	margin:0 0 3% 50%;
 	padding:0 0 0 0;
 	-webkit-transform:translate(-50%,0);  
 	-moz-transform:translate(-50%,0);
@@ -188,7 +196,7 @@
 	transform:translate(-50%,0);
 }
 #package .container {
-	padding:40px 3% 0 3%;
+	padding:30px 3% 0 3%;
 }
 #package p {
 	color:#FFFFFF;
@@ -209,7 +217,7 @@
 #package-suggestion .jobs-item {
 	width:50%;
 	height:auto;
-	margin:0 0 10% 50%;
+	margin:0 0 3% 50%;
 	padding:0 0 0 0;
 	-webkit-transform:translate(-50%,0);  
 	-moz-transform:translate(-50%,0);
@@ -218,33 +226,31 @@
 	transform:translate(-50%,0);
 }
 footer {
-	margin:1500px 0 0 0;
-	height:190px;
+	margin:1350px 0 0 0;
+	height:210px;
 }
 }
 @media screen and (max-width:479px) and (min-width:320px) {
 #spotlight-services {
-	height:630px;
+	height:550px;
 }
-
 #spotlight-services .container {
-	padding:10% 3% 0 3%;
+	padding:30px 3% 0 3%;
 }
 #spotlight-services h5 {
 	text-align:center;
-	padding:30% 0 0 0;
+	padding:15% 0 0 0;
 }
 #camera {
 	background-image:url(../img/parallax-03-mobile.png);
-	background-position:100% 100%;
+	background-position:90% 15%;
 }
 #jobs-services {
-	height:2700px;
+	height:2500px;
 }
 #jobs-services .jobs-item {
 	width:50%;
-	height:auto;
-	margin:0 0 10% 50%;
+	margin:0 0 3% 50%;
 	padding:0 0 0 0;
 	-webkit-transform:translate(-50%,0);  
 	-moz-transform:translate(-50%,0);
@@ -253,10 +259,10 @@ footer {
 	transform:translate(-50%,0);
 }
 #package {
-	height:400px;
+	height:350px;
 }
 #package .container {
-	padding:55px 3% 0 3%;
+	padding:30px 3% 0 3%;
 }
 #package p {
 	color:#FFFFFF;
@@ -277,7 +283,7 @@ footer {
 #package-suggestion .jobs-item {
 	width:50%;
 	height:auto;
-	margin:0 0 10% 50%;
+	margin:0 0 3% 50%;
 	padding:0 0 0 0;
 	-webkit-transform:translate(-50%,0);  
 	-moz-transform:translate(-50%,0);
@@ -286,7 +292,7 @@ footer {
 	transform:translate(-50%,0);
 }
 footer {
-	margin:1500px 0 0 0;
-	height:190px;
+	margin:1350px 0 0 0;
+	height:210px;
 }
 }
