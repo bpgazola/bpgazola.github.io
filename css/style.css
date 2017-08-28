@@ -538,7 +538,6 @@ li.active a, li a:hover {
 .container {
 	max-width:939px;
 	min-width:768px;
-	border:solid 1px #FF0000;  /* VERMELHO */
 }
 header .container {
 	padding:0 3% 0 3%;
@@ -597,7 +596,6 @@ footer #inner .container {
 .container {
 	max-width:767px;
 	min-width:480px;
-	border:solid 1px #00FF00; /* VERDE */
 }
 .column {
 	position:relative;
@@ -858,7 +856,6 @@ footer #inner p {
 .container {
 	max-width:479px;
 	min-width:320px;
-	border:solid 1px #0000FF; /* AZUL */
 }
 .column {
 	position:relative;
