@@ -290,18 +290,9 @@ opacity:1;
     margin-top:20px;
     margin-left:-50px;
 }
-#icon-whatss {
-	width:29px;
-    height:28px;
-    position:absolute;
-    top:12%;
-    left:34%;;
-    margin-top:20px;
-    margin-left:-50px;
-}
 #nubentes {
 	width:100%;
-	min-height:768px;
+	min-height:850px;
 	background-color:#EEEDE9;
 }
 #nubentes h1 {
@@ -333,7 +324,7 @@ opacity:1;
 }
 #presents {
 	width:100%;
-	min-height:600px;
+	min-height:850px;
 	background-color:#E82B4B;
 }
 #presents h1 {
@@ -356,12 +347,6 @@ opacity:1;
 }
 #weeding {
 	min-height:380px;
-}
-#icon-whatss {
-    top:9%;
-    left:30%;
-    margin-top:15px;
-    margin-left:-50px;
 }
 #dinner {
 	min-height:500px;
@@ -388,23 +373,32 @@ nav ul li {
     height:255px;
 }
 #spotlight {
-	min-height:630px;
+	min-height:680px;
+}
+#spotlight h1 {
+	line-height:95px;
 }
 #weeding {
 	min-height:380px;
 }
-#icon-whatss {
-    top:9%;
-    left:30%;
-    margin-top:10px;
-    margin-left:-110px;
+#weeding h1 {
+	line-height:75px;
 }
 #dinner {
 	min-height:450px;
 }
+#dinner h1 {
+	line-height:75px;
+}
 p {
 	font-size:15px;
 	line-height:18px;
+}
+#nubentes h1 {
+	line-height:75px;
+}
+#presents h1 {
+	line-height:75px;
 }
 #polaroid {
 	width:284px;
@@ -454,9 +448,6 @@ p {
 #weeding h1 {
 	line-height:75px;
 }
-#icon-whatss {
-    display:none;
-}
 #dinner {
 	min-height:480px;
 }
@@ -482,6 +473,9 @@ p {
 }
 #icon-nubentes {
     left:40%;
+}
+#presents {
+	min-height:550px;
 }
 #presents h1 {
 	line-height:75px;
