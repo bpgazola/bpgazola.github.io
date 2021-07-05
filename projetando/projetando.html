@@ -2,6 +2,22 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- SCRIPT GOOGLE TAG MANAGER -->
+    <script type="text/javascript">
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js"
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-PFD8X4X");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -203,6 +219,23 @@
             transition: 0.3s all ease-out;
         }
         
+        .btn-default.focus,
+        .btn-default:focus {
+            color: #FFFFFF;
+            background-color: #152740;
+            border-color: none;
+        }
+        
+        .btn.active.focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn:active:focus,
+        .btn:focus {
+            outline: none!important;
+            outline-offset: none!important;
+        }
+        
         #vc-na-pucrs .quizzes .btn-arrow,
         #vc-na-pucrs .vestibulares .btn-arrow {
             display: inline-block;
@@ -336,6 +369,322 @@
         
         .modal-header {
             border-bottom: none!important;
+        }
+        
+        .modal-header .close {
+            font-size: 35px;
+            font-weight: 700;
+        }
+        
+        .agendamento .modal-content {
+            background-color: #32BBAA!important;
+        }
+        
+        .fale-profissional .modal-content {
+            background-color: #FDC574!important;
+        }
+        
+        .fale-conosco .modal-content {
+            background-color: #355DA9!important;
+        }
+        
+        .agendamento .modal-header .close,
+        .fale-profissional .modal-header .close,
+        .fale-conosco .modal-header .close {
+            float: right;
+            font-size: 35px;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-shadow: none!important;
+            filter: none!important;
+            opacity: 1!important;
+        }
+        
+        .agendamento .modal-body,
+        .fale-profissional .modal-body,
+        .fale-conosco .modal-body {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        
+        .agendamento .modal-content h3 {
+            font-family: inherit;
+            font-size: 2em;
+            color: #00283F;
+            margin: 0 0 5% 0;
+            font-weight: 600;
+        }
+        
+        .fale-profissional .modal-content h3 {
+            font-family: inherit;
+            font-size: 2em;
+            color: #E55028;
+            margin: 0% 0 5% 0;
+            font-weiht: 600;
+        }
+        
+        .fale-conosco .modal-content h3 {
+            font-family: inherit;
+            font-size: 2em;
+            color: #5EC1E6;
+            margin: 0 0 5% 0;
+            font-weight: 600;
+        }
+        
+        .agendamento .modal-content p {
+            font-family: 'Roboto', sans-serif;
+            font-size: inherit;
+            line-height: 2em;
+            color: #FFFFFF;
+            font-weight: 100;
+            margin: 2% 0 2% 0;
+        }
+        
+        .fale-profissional .modal-content p {
+            font-family: 'Roboto', sans-serif;
+            font-size: inherit;
+            line-height: 2em;
+            color: #345CA9;
+            font-weight: 100;
+            margin: 2% 0 2% 0;
+        }
+        
+        .fale-conosco .modal-content p {
+            font-family: 'Roboto', sans-serif;
+            font-size: inherit;
+            line-height: 2em;
+            color: #FFFFFF;
+            font-weight: 100;
+            margin: 2% 0 2% 0;
+        }
+        /* Formulários */
+        
+        .agendamento .vfbp-form,
+        .fale-profissional .vfbp-form,
+        .fale-conosco .vfbp-form {
+            width: 90%;
+            margin: 10% auto;
+        }
+        
+        .agendamento .vfbp-form label,
+        .fale-conosco .vfbp-form label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: inherit;
+            color: #FFFFFF;
+        }
+        
+        .fale-profissional .vfbp-form label {
+            color: #345CA9;
+        }
+        
+        .agendamento .vfbp-form .vfb-checkbox label,
+        .fale-profissional .vfbp-form .vfb-checkbox label,
+        .fale-conosco .vfbp-form .vfb-checkbox label {
+            font-weight: 100;
+        }
+        
+        .agendamento .vfbp-form .vfb-checkbox label a {
+            color: #00283F;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        .fale-profissional .vfbp-form .vfb-checkbox label a {
+            color: #E55028;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        .fale-conosco .vfbp-form .vfb-checkbox label a {
+            color: #5EC1E6;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        .agendamento .vfbp-form .vfb-checkbox input[type=checkbox],
+        .fale-profissional .vfbp-form .vfb-checkbox input[type=checkbox],
+        .fale-conosco .vfbp-form .vfb-checkbox input[type=checkbox] {
+            margin: 4px 4px 0 0;
+        }
+        
+        .agendamento .vfbp-form .vfb-form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            margin: 0 0 10px 0;
+            font-size: 0.8em;
+            color: #FFFFFF;
+            background-color: #094554;
+            background-image: none;
+            border: none;
+            border-radius: 0;
+            font-style: italic;
+            font-weight: 100;
+        }
+        
+        .fale-profissional .vfbp-form .vfb-form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            margin: 0 0 10px 0;
+            font-size: 0.8em;
+            color: #FFFFFF;
+            background-color: #EA896E;
+            background-image: none;
+            border: none;
+            border-radius: 0;
+            font-style: italic;
+            font-weight: 100;
+        }
+        
+        .fale-conosco .vfbp-form .vfb-form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            margin: 0 0 10px 0;
+            font-size: 0.8em;
+            color: #FFFFFF;
+            background-color: #5EC1E6;
+            background-image: none;
+            border: none;
+            border-radius: 0;
+            font-style: italic;
+            font-weight: 100;
+        }
+        
+        .fale-conosco textarea {
+            height: 220px!important;
+            width: 100%!important;
+        }
+        
+        .agendamento .vfbp-form .vfb-form-control::placeholder,
+        .fale-profissional .vfbp-form .vfb-form-control::placeholder,
+        .fale-conosco .vfbp-form .vfb-form-control::placeholder {
+            color: #FFFFFF;
+        }
+        /* Botão de envio */
+        
+        .agendamento .vfbp-form .btn,
+        .fale-profissional .vfbp-form .btn {
+            display: inline-block;
+            position: relative;
+            padding: 1.5% 3%;
+            padding-right: 8%;
+            background-color: #345CA9;
+            color: #FFFFFF;
+            margin: 10% 0 5% 0;
+            font-weight: 100;
+            min-width: 220px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.8em;
+            border-radius: 0;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .fale-conosco .vfbp-form .btn {
+            display: inline-block;
+            position: relative;
+            padding: 1.5% 3%;
+            padding-right: 8%;
+            background-color: #152740;
+            color: #FFFFFF;
+            margin: 10% 0 5% 0;
+            font-weight: 100;
+            min-width: 220px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.8em;
+            border-radius: 0;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .fale-conosco .vfbp-form .btn:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-top: 3%;
+            padding-bottom: inherit;
+            background-color: #5EC1E6;
+            width: 2.8em;
+            content: "\e080";
+            font-family: 'Glyphicons Halflings';
+            color: #FFFFFF;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .agendamento .vfbp-form .btn:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-top: 3%;
+            padding-bottom: inherit;
+            background-color: #152740;
+            width: 2.8em;
+            content: "\e080";
+            font-family: 'Glyphicons Halflings';
+            color: #FFFFFF;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .agendamento .vfbp-form .btn:hover {
+            background-color: #152740;
+            color: #FFFFFF;
+            -moz-transition: 0.3s all ease-out;
+            -webkit-transition: 0.3s all ease-out;
+            -o-transition: 0.3s all ease-out;
+            transition: 0.3s all ease-out;
+            text-decoration: none;
+        }
+        
+        .fale-conosco .vfbp-form .btn:hover {
+            background-color: #5EC1E6;
+            color: #FFFFFF;
+            -moz-transition: 0.3s all ease-out;
+            -webkit-transition: 0.3s all ease-out;
+            -o-transition: 0.3s all ease-out;
+            transition: 0.3s all ease-out;
+            text-decoration: none;
+        }
+        
+        .fale-profissional .vfbp-form .btn:after {
+            background-color: #E55028;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-top: 3%;
+            padding-bottom: inherit;
+            width: 2.8em;
+            content: "\e080";
+            font-family: 'Glyphicons Halflings';
+            color: #FFFFFF;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .fale-profissional .vfbp-form .btn:hover {
+            background-color: #E55028;
+            color: #FFFFFF;
+            -moz-transition: 0.3s all ease-out;
+            -webkit-transition: 0.3s all ease-out;
+            -o-transition: 0.3s all ease-out;
+            transition: 0.3s all ease-out;
+            text-decoration: none;
         }
         /* Sections */
         
@@ -1003,7 +1352,7 @@
                     <li><a href="#vc-na-pucrs">Você na PUCRS</a></li>
                     <li><a href="#expandindo">Expandindo o conhecimento</a></li>
                 </ul>
-                <button type="button" class="btn btn-default navbar-btn">Fale conosco</button>
+                <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#fale-conosco">Fale conosco</button>
             </div>
         </div>
     </nav>
@@ -2433,9 +2782,9 @@
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="form-fale-com-profissional">
                         <h3>Fale com um profissional da área</h3>
-
                         <p>Aproveite para trocar uma ideia com um profissional da sua área de interesse</p>
-                        <a href="#" target="_blank" class="btn-arrow">entre em contato</a>
+                        <!--Botão gatilho do modal para formulário de fale com um profissional-->
+                        <a href="" class="btn-arrow" data-toggle="modal" data-target="#fale-profissional">entre em contato</a>
                     </div>
                 </div>
             </div>
@@ -2456,7 +2805,8 @@
                     <a href="#" target="_blank" class="btn-arrow">saiba mais</a>
                     <h3>Agendamento de visitas</h3>
                     <p>Vai ser incível receber você na PUCRS, mas enquanto isso não é possível presencialmente, você pode agendar um horário conosco para um bate papo virtual</p>
-                    <a href="#" target="_blank" class="btn-arrow">entre em contato</a>
+                    <!--Botão gatilho do modal para formulário de agendamento-->
+                    <a href="" class="btn-arrow" data-toggle="modal" data-target="#agendamento">entre em contato</a>
                 </div>
             </div>
             <div class="row mt-5">
@@ -2929,6 +3279,169 @@
 
         </div>
     </section>
+
+    <!--Modal de Formulários-->
+    <div class="modal fade agendamento" id="agendamento" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Agendamento de visitas</h3>
+                    <p>Vai ser incrível receber você na PUCRS, mas enquanto não é possível presencialmente, você pode agendar um horário conosco para um bate papo virtual.</p>
+                    <p>É uma boa oportunidade para tirar dúvidas com os/as professores/as do curso que você escolheu, enquanto aguarda o momento de ir visitar toda a infraestrutura dos prédios, salas, laboratórios e o que mais você desejar.</p>
+                    <p>Além disso, podemos conversar sobre opções de financiamento, bolsas de estudo e descontos especiais para você ingressar na nossa Universidade.</p>
+                    <form method="post" enctype="multipart/form-data" id="vfbp-form-33" class="vfbp-form" novalidate="">
+                        <div style="display:none;"><label for="vfbp-EMAIL-AN8fuQyoDLXem">If you are human, leave this field blank.</label><input size="25" autocomplete="off" type="text" name="vfbp-EMAIL-AN8fuQyoDLXem" value="" id=""></div><input type="hidden" name="_vfb-timestamp-33"
+                            value="1625487638" id=""><input type="hidden" name="_vfb-form-id" value="33" id="">
+                        <div class="vfb-col-12 vfb-fieldType-text" id="vfbField618">
+                            <div class="vfb-form-group"><label for="vfb-field-618" class="vfb-control-label">Nome <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-618" class="vfb-form-control" placeholder="Digite seu nome" required="required" type="text" name="vfb-field-618" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-email" id="vfbField607">
+                            <div class="vfb-form-group"><label for="vfb-field-607" class="vfb-control-label">E-mail <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-607" class="vfb-form-control" placeholder="Digite seu e-mail" required="required" data-vfb-pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" type="email" name="vfb-field-607" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-phone" id="vfbField608">
+                            <div class="vfb-form-group"><label for="vfb-field-608" class="vfb-control-label">Telefone <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-608" class="vfb-form-control vfb-intl-phone" placeholder="Digite seu telefone" required="required" data-default-country="br" data-hide-flags="1" data-national-mode="1" type="tel" name="vfb-field-608"
+                                        value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-select" id="vfbField609"><label for="vfb-field-609" class="vfb-control-label">Público</label>
+                            <div>
+                                <div class="vfb-form-group"><select id="vfb-field-609" class="vfb-form-control" placeholder="" name="vfb-field-609"><option value="Aluno de Ensino médio">Aluno de Ensino médio</option><option value="Família de futuro aluno">Família de futuro aluno</option><option value="Colégio/cursinho">Colégio/cursinho</option><option value="Outro">Outro</option></select></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-checkbox" id="vfbField610"><label for="vfb-field-610" class="vfb-control-label"></label>
+                            <div>
+                                <div class="vfb-checkbox"><label><input id="vfb-field-610-0" class="" placeholder="" data-vfb-multiple="vfb-field-610" type="checkbox" name="vfb-field-610[0]" value="1">Declaro que concordo com a <a href="https://www.pucrs.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a> de Dados da PUCRS/Rede Marista</label></div>
+                                <div class="vfb-checkbox"><label><input id="vfb-field-610-1" class="" placeholder="" data-vfb-multiple="vfb-field-610" type="checkbox" name="vfb-field-610[1]" value="1">Desejo receber informações da PUCRS/Rede Marista</label></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-submit" id="vfbField611"><button id="vfb-field-611" class=" btn btn-primary" placeholder="" type="submit" name="_vfb-submit">Enviar</button></div>
+                        <div class="vfb-clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade fale-profissional" id="fale-profissional" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Fale com um profissional da área</h3>
+                    <p>É hora de <strong>esclarecer suas dúvidas</strong> sobre sua área de interesse. Preencha o formulário e <strong>aguarde nosso retorno</strong>, vamos contatar nossos professores para <strong>ajudar você nesse momento de decisão</strong>.</p>
+                    <form method="post" enctype="multipart/form-data" id="vfbp-form-34" class="vfbp-form" novalidate="">
+                        <div style="display:none;"><label for="vfbp-EMAIL-AN8fuQyoDLXem">If you are human, leave this field blank.</label><input size="25" autocomplete="off" type="text" name="vfbp-EMAIL-AN8fuQyoDLXem" value="" id=""></div><input type="hidden" name="_vfb-timestamp-34"
+                            value="1625487638" id=""><input type="hidden" name="_vfb-form-id" value="34" id="">
+                        <div class="vfb-col-12 vfb-fieldType-text" id="vfbField619">
+                            <div class="vfb-form-group"><label for="vfb-field-619" class="vfb-control-label">Nome <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-619" class="vfb-form-control" placeholder="Digite seu nome" required="required" type="text" name="vfb-field-619" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-email" id="vfbField614">
+                            <div class="vfb-form-group"><label for="vfb-field-614" class="vfb-control-label">E-mail <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-614" class="vfb-form-control" placeholder="Digite seu e-amil" required="required" data-vfb-pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" type="email" name="vfb-field-614" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-phone" id="vfbField615">
+                            <div class="vfb-form-group"><label for="vfb-field-615" class="vfb-control-label">Telefone <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-615" class="vfb-form-control vfb-intl-phone" placeholder="Digite seu telefone" required="required" data-default-country="br" data-hide-flags="1" data-national-mode="1" type="tel" name="vfb-field-615"
+                                        value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-select" id="vfbField620"><label for="vfb-field-620" class="vfb-control-label">Curso de interesse - opcional</label>
+                            <div>
+                                <div class="vfb-form-group"><select id="vfb-field-620" class="vfb-form-control" placeholder="" name="vfb-field-620"><option value="Psicologia">Psicologia</option><option value="Odontologia">Odontologia</option><option value="Biomedicina">Biomedicina</option><option value="Ciências Biológicas">Ciências Biológicas</option><option value="Enfermagem">Enfermagem</option><option value="Educação Física">Educação Física</option><option value="Farmácia">Farmácia</option><option value="Fisioterapia">Fisioterapia</option><option value="Gastronomia">Gastronomia</option><option value="Nutrição">Nutrição</option><option value="Design de Comunicação">Design de Comunicação</option><option value="Design de Produto">Design de Produto</option><option value="Jornalismo">Jornalismo</option><option value="Publicidade e Propaganda">Publicidade e Propaganda</option><option value="Relações Públicas">Relações Públicas</option><option value="Produção Audiovisual">Produção Audiovisual</option><option value="Direito">Direito</option><option value="Ciências Sociais">Ciências Sociais</option><option value="Escrita Criativa">Escrita Criativa</option><option value="Filosofia">Filosofia</option><option value="Geografia">Geografia</option><option value="História">História</option><option value="Letras: Inglês">Letras: Inglês</option><option value="Letras: Espanhol">Letras: Espanhol</option><option value="Letras: Português">Letras: Português</option><option value="Pedagogia">Pedagogia</option><option value="Serviço Social">Serviço Social</option><option value="Relações Internacionais">Relações Internacionais</option><option value="Teologia">Teologia</option><option value="Medicina">Medicina</option><option value="Administração">Administração</option><option value="Ciência Contábeis">Ciência Contábeis</option><option value="Ciências Econômicas">Ciências Econômicas</option><option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option><option value="Ciência da Computação">Ciência da Computação</option><option value="Ciência e Inovação em Alimentos">Ciência e Inovação em Alimentos</option><option value="Ciências Aeronáuticas">Ciências Aeronáuticas</option><option value="Ciências de Dados e Inteligência Artificial">Ciências de Dados e Inteligência Artificial</option><option value="Engenharia Civil">Engenharia Civil</option><option value="Engenharia de Computação">Engenharia de Computação</option><option value="Engenharia de Controle e Automação">Engenharia de Controle e Automação</option><option value="Engenharia de Produção">Engenharia de Produção</option><option value="Engenharia de Software">Engenharia de Software</option><option value="Engenharia Elétrica">Engenharia Elétrica</option><option value="Engenharia Mecânica">Engenharia Mecânica</option><option value="Engenharia Química">Engenharia Química</option><option value="Física">Física</option><option value="Matemática">Matemática</option><option value="Química">Química</option><option value="Sistemas de Informação">Sistemas de Informação</option></select></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-checkbox" id="vfbField621"><label for="vfb-field-621" class="vfb-control-label"></label>
+                            <div>
+                                <div class="vfb-checkbox"><label><input id="vfb-field-621-0" class="" placeholder="" data-vfb-multiple="vfb-field-621" type="checkbox" name="vfb-field-621[0]" value="1">Declaro que concordo com a <a href="https://www.pucrs.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a> de Dados da PUCRS/Rede Marista</label></div>
+                                <div class="vfb-checkbox"><label><input id="vfb-field-621-1" class="" placeholder="" data-vfb-multiple="vfb-field-621" type="checkbox" name="vfb-field-621[1]" value="1">Desejo receber informações da PUCRS/Rede Marista</label></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-submit" id="vfbField622"><button id="vfb-field-622" class=" btn btn-primary" placeholder="" type="submit" name="_vfb-submit">Enviar</button></div>
+                        <div class="vfb-clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade fale-conosco" id="fale-conosco" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Fale conosco</h3>
+                    <p>Utilize o formulário abaixo para falar com a nossa equipe. Você pode nos enviar uma mensagem falando mais sobre a sua necessidade e em breve entraremos em contato.</p>
+                    <form method="post" enctype="multipart/form-data" id="vfbp-form-35" class="vfbp-form" novalidate="">
+                        <div style="display:none;"><label for="vfbp-EMAIL-AN8fuQyoDLXem">If you are human, leave this field blank.</label><input size="25" autocomplete="off" type="text" name="vfbp-EMAIL-AN8fuQyoDLXem" value="" id=""></div><input type="hidden" name="_vfb-timestamp-35"
+                            value="1625487638" id=""><input type="hidden" name="_vfb-form-id" value="35" id="">
+                        <div class="vfb-col-12 vfb-fieldType-text" id="vfbField623">
+                            <div class="vfb-form-group"><label for="vfb-field-623" class="vfb-control-label">Nome <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-623" class="vfb-form-control" placeholder="Digite seu nome" required="required" type="text" name="vfb-field-623" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-email" id="vfbField624">
+                            <div class="vfb-form-group"><label for="vfb-field-624" class="vfb-control-label">E-mail <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-624" class="vfb-form-control" placeholder="Digite seu e-mail" required="required" data-vfb-pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" type="email" name="vfb-field-624" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-phone" id="vfbField625">
+                            <div class="vfb-form-group"><label for="vfb-field-625" class="vfb-control-label">Phone <span class="vfb-required-asterisk">*</span></label>
+                                <div><input id="vfb-field-625" class="vfb-form-control vfb-intl-phone" placeholder="Digite seu telefone" required="required" data-default-country="br" data-hide-flags="1" data-national-mode="1" type="tel" name="vfb-field-625"
+                                        value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-text" id="vfbField626">
+                            <div class="vfb-form-group"><label for="vfb-field-626" class="vfb-control-label">Assunto - opcional</label>
+                                <div><input id="vfb-field-626" class="vfb-form-control" placeholder="Digite um assunto ou sua dúvida" type="text" name="vfb-field-626" value=""></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-textarea" id="vfbField627">
+                            <div class="vfb-form-group"><label for="vfb-field-627" class="vfb-control-label">Mensagem <span class="vfb-required-asterisk">*</span></label>
+                                <div><textarea id="vfb-field-627" class="vfb-form-control" placeholder="Deixe sua mensagem aqui" required="required" rows="10" name="vfb-field-627" cols="50"></textarea></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-checkbox" id="vfbField628"><label for="vfb-field-628" class="vfb-control-label"></label>
+                            <div>
+                                <div class="vfb-checkbox"><label><input id="vfb-field-628-0" class="" placeholder="" data-vfb-multiple="vfb-field-628" type="checkbox" name="vfb-field-628[0]" value="1">Declaro que concordo com a <a href="https://www.pucrs.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a> de Dados da PUCRS/Rede Marista</label></div>
+                                <div class="vfb-checkbox"><label><input id="vfb-field-628-1" class="" placeholder="" data-vfb-multiple="vfb-field-628" type="checkbox" name="vfb-field-628[1]" value="1">Desejo receber informações da PUCRS/Rede Marista</label></div>
+                            </div>
+                        </div>
+                        <div class="vfb-clearfix"></div>
+                        <div class="vfb-col-12 vfb-fieldType-submit" id="vfbField629"><button id="vfb-field-629" class=" btn btn-primary" placeholder="" type="submit" name="_vfb-submit">Enviar</button></div>
+                        <div class="vfb-clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Modal de vídeos Carrossel PUCRS Revisa-->
     <div class="modal fade " id="pucrs-revisa-biologia" tabindex="-1 " role="dialog ">
@@ -4627,7 +5140,31 @@
 
     });
 </script>
+<!-- SCRIPT GOOGLE ANALYTICS -->
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+            i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments);
+            }),
+        (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+    );
 
+    ga("create", "UA-43503103-51", "auto");
+    ga("send", "pageview");
+</script>
 
 
 </body>
