@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    overflow-x: hidden;
+}
+
+header {
+    min-height: 120px;
+    width: 100vw;
+    background-color: #094740;
+    padding: 20px 0 0 20px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-inner span {
+    background-color: #FFFFFF;
+    width: 2px;
+    height: 2em;
+    margin: 0 1% 0 1%;
+}
+
+.header-inner img {
+    width: 15%;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #094740;
+    font-weight: 800;
+    line-height: 1em;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    color: #094740;
+    font-weight: 800;
+    line-height: 1em;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    font-weight: 800;
+    line-height: 1em;
+    margin: 0px;
+}
+
+#access-to-tests {
+    background-color: #FFFFFF;
+    padding: 5% 0 5% 0;
+    margin-top: 10px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.nav-button .btn-arrow:first-child {
+    margin-top: 50px;
+}
+
+.nav-button .btn-arrow:last-child {
+    margin-bottom: 50px;
+}
+
+.btn-arrow {
+    display: inline-block;
+    position: relative;
+    font-size: 1.2em;
+    min-width: 60%;
+    background-color: #F9F9F9;
+    color: #14A493;
+    border-radius: 10px;
+    text-align: left;
+    padding: 2% 5% 2% 5%;
+    margin: 8px 0 8px 0;
+    font-weight: 600;
+    box-shadow: 0px 2px #14A493;
+}
+
+.btn-arrow:hover,
+.btn-arrow:focus {
+    text-decoration: none;
+    background-color: #14A493;
+    color: #FFFFFF;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}
+
+.element-fade-up {
+    margin-top: 20%;
+    position: absolute;
+}
+
+.element-absolute {
+    position: absolute;
+    right: 0px;
+}
+
+.element-absolute img {
+    width: 70%;
+    height: auto;
+}
+
+#why-study {
+    width: 100vw;
+    margin-top: 10%;
+}
+
+.reasons {
+    width: 100vw;
+    height: 130vh;
+    padding: 5% 0 0 0;
+    background: #094740;
+}
+
+.bullets {
+    margin-top: 5%;
+}
+
+.bullets .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #0B5850;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*
+.circle:hover {
+    height: 130px;
+    width: 130px;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}*/
+
+.circle img {
+    width: 50%;
+    height: auto;
+}
+
+.bullets .item .legend {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #FFFFFF;
+    margin: 3% 0 3% 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.bullets .item p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+    color: #FFFFFF;
+    margin: 0px;
+    text-align: center;
+}
+
+.form-contact {
+    background-color: #0B5850;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    margin-top: 10%;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.form-inner input:focus,
+.form-inner textarea:focus {
+    border: solid 1px #FFFFFF;
+}
+
+.form-inner input {
+    display: inline-block;
+    width: 48%;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    background: #094740;
+    margin-top: 5%;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form-inner textarea {
+    width: 100%;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    background: #094740;
+    margin-top: 3%;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form-inner textarea {
+    resize: none;
+}
+
+.form-inner input::placeholder,
+.form-inner textarea::placeholder {
+    color: #4CB596;
+}
+
+.form-inner input:first-child {
+    margin-right: 3%;
+}
+
+button {
+    min-width: 100px;
+    padding: 1%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3%;
+    background: #094740;
+    font-family: inherit;
+    font-size: inherit;
+    color: #4CB596;
+}
+
+button:hover {
+    background: #FFFFFF;
+    color: #094740;
+    font-weight: 600;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}
+
+footer {
+    background: #094740;
+    padding: 3% 0 3% 0;
+}
+
+footer .logo-marista {
+    width: 40%;
+    height: auto;
+}
+
+footer .logo-pucrs {
+    width: 80%;
+    height: auto;
+}
+
+footer .logo-lexis {
+    width: 80%;
+    height: auto;
+}
+
+.align-item-center {
+    display: flex;
+    align-items: center;
+}
