@@ -314,6 +314,34 @@ p {
     transition: 0.3s all ease-out;
 }
 
+.btn-start-test {
+    display: inline-block;
+    position: relative;
+    font-size: 1.2em;
+    min-width: 100%;
+    background-color: #F9F9F9;
+    color: #14A493;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2% 5% 2% 5%;
+    margin: 8px 0 8px 0;
+    font-weight: 600;
+    box-shadow: 0px 2px #14A493;
+    margin-bottom: 15%;
+}
+
+.btn-start-test:hover,
+.btn-start-test:focus {
+    text-decoration: none;
+    background-color: #14A493;
+    color: #FFFFFF;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}
+
 .btn-back {
     display: inline-block;
     position: relative;
@@ -494,7 +522,8 @@ textarea {
     padding: 10% 15% 15% 15%;
 }
 
-.form-more-inner label {
+.form-more-inner label,
+.form-more-information-inner label {
     color: #14A493;
     display: inline-block;
     width: 100%;
@@ -503,6 +532,7 @@ textarea {
 }
 
 .form-more-inner input,
+.form-more-information-inner input,
 .form-more-inner textarea {
     display: inline-block;
     width: 100%;
@@ -579,6 +609,31 @@ textarea {
     height: auto;
     padding: 5%;
     margin-top: -10%;
+}
+
+.form-more-information-inner p {
+    margin-top: 5%;
+}
+
+.form-more-information-inner form {
+    width: 70%;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.form-more-information-inner input[type=checkbox] {
+    width: 20px;
+}
+
+.checkbox label {
+    font-size: .8em;
+    text-transform: none;
+    color: #8B8E91;
+    margin-top: 5px;
 }
 
 
