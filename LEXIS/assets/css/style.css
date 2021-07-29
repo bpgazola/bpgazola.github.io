@@ -546,6 +546,7 @@ textarea {
 }
 
 .form-more-inner input:focus,
+.form-more-information-inner input:focus,
 .form-more-inner textarea:focus {
     border: solid 1px #7EC395;
 }
