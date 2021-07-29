@@ -219,6 +219,50 @@ p {
     margin-bottom: 5%;
 }
 
+.info-test {
+    margin-top: 5%;
+}
+
+.info-test .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.icon-interrogation img {
+    width: 100%;
+    height: auto;
+}
+
+.icon-clock img {
+    width: 75%;
+    height: auto;
+}
+
+.icon-questions img {
+    width: 75%;
+    height: auto;
+}
+
+.info-test .title {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #646464;
+    margin-left: 3%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.info-test .legend {
+    color: #FFFFFF;
+    margin-left: 3%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+}
+
 
 /* Nav Buttoms */
 
@@ -401,7 +445,8 @@ textarea {
     font-size: inherit;
 }
 
-.form-contact-inner textarea {
+.form-contact-inner textarea,
+.form-more-inner textarea {
     resize: none;
 }
 
@@ -525,6 +570,15 @@ textarea {
     -webkit-transition: 0.3s all ease-out;
     -o-transition: 0.3s all ease-out;
     transition: 0.3s all ease-out;
+}
+
+.form-more-information {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    margin-top: -10%;
 }
 
 
