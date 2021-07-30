@@ -302,6 +302,136 @@ p {
     padding: 10% 15% 15% 15%;
 }
 
+.questions-block-text {
+    background: url(../images/background-questions-block-text.svg) repeat-y;
+    background-size: 50%;
+    background-position-x: 0px;
+}
+
+.block-text {
+    padding: 10%;
+}
+
+.questions:first-child {
+    padding: 10% 0 0 0;
+}
+
+.block-text .instruction {
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.block-text p {
+    color: #FFFFFF;
+}
+
+.block-text p::first-letter {
+    padding-left: 10%;
+}
+
+.block-text span.source {
+    font-size: .8em;
+    color: #FFFFFF;
+    font-family: inherit;
+}
+
+.questions .instruction {
+    color: #000000;
+}
+
+.query {
+    /*display: flex;
+    align-items: flex-start;*/
+    margin: 5% 0 10% 0;
+}
+
+.query-index {
+    /*background: #C1C1C1;
+    padding: 1%;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px;
+    width: 15%;
+    margin-right: 3%;*/
+    display: inline;
+    padding: .5% 2% .5% 2%;
+    font-size: .8em;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 5px;
+    background: #C1C1C1;
+    margin-right: 3%;
+}
+
+.query .question p {
+    font-weight: 800;
+    color: #000000;
+}
+
+.query label {
+    color: #14A493;
+    font-weight: 100;
+    display: inline;
+    line-height: 1.8em;
+    margin-left: 12%;
+}
+
+.query label .sentence {
+    padding-left: 5%
+}
+
+
+/* Custom radio */
+
+
+/* Hide the browser's default checkbox */
+
+.query input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.query .checkmark {
+    position: absolute;
+    margin-top: 1%;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    border: solid 2px #14A493;
+}
+
+
+/* When the checkbox is checked, add a background */
+
+.query input:checked~.checkmark {
+    background-color: #14A493;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.query .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.query input:checked~.checkmark:after {
+    display: block;
+}
+
 
 /* Progress bar */
 
