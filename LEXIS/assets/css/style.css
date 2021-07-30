@@ -265,7 +265,7 @@ p {
 .test-progress {
     background: #F9F9F9;
     width: 100vw;
-    min-height: 350px;
+    min-height: 400px;
 }
 
 .info-progress {
