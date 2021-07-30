@@ -5,7 +5,7 @@
 html,
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     overflow-x: hidden;
 }
 
@@ -93,7 +93,6 @@ p {
 
 #why-study {
     width: 100vw;
-    margin-top: 10%;
 }
 
 .reasons {
@@ -263,6 +262,75 @@ p {
     float: left;
 }
 
+.test-progress {
+    background: #F9F9F9;
+    width: 100vw;
+    min-height: 450px;
+}
+
+.info-progress {
+    margin-top: 5%;
+}
+
+.info-progress .legend {
+    color: #094740;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.info-progress h2,
+.info-progress h4 {
+    display: inline;
+}
+
+.info-progress h4 {
+    color: #14A493
+}
+
+.info-progress hr.line {
+    border: solid 1px #000000;
+    margin-bottom: 3%;
+}
+
+.control-buttoms {
+    width: 30%;
+}
+
+#warning-modal-inner {
+    width: 100%;
+    height: auto;
+    padding: 10% 15% 15% 15%;
+}
+
+
+/* Progress bar */
+
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #D2EADA;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #14A493;
+    -webkit-box-shadow: inset 0 -1px 0 rgb(0 0 0 / 15%);
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 15%);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
 
 /* Nav Buttoms */
 
@@ -408,12 +476,73 @@ p {
     transition: 0.3s all ease-out;
 }
 
+.btn-back-test {
+    width: 45%;
+    margin-top: 5%;
+    padding: 2% 2% 2% 10%;
+    border-radius: 5px;
+    border: solid 1px #7EC395;
+    text-align: left;
+    background: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    color: #7EC395;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-back-test:hover,
+.btn-back-test:focus,
+#warning-modal-inner .btn-back-test:hover,
+#warning-modal-inner .btn-back-test:focus {
+    text-decoration: none;
+    background-color: #7EC395;
+    color: #094740;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}
+
+.btn-next-test {
+    width: 45%;
+    margin-top: 5%;
+    padding: 2% 12% 2% 2%;
+    border-radius: 5px;
+    border: none;
+    text-align: right;
+    background: #14A493;
+    font-family: inherit;
+    font-size: inherit;
+    color: #FFFFFF;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-next-test:hover,
+.btn-next-test:focus {
+    text-decoration: none;
+    background-color: #094740;
+    color: #FFFFFF;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}
+
+#warning-modal-inner .btn-back-test {
+    padding: 2% 2% 2% 12%;
+}
+
+#warning-modal-inner .btn-next-test {
+    padding: 2% 16% 2% 2%;
+}
+
 
 /* Content */
 
 .element-fade-up {
     margin-top: 20%;
-    position: absolute;
 }
 
 .element-absolute {
