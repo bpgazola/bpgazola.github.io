@@ -265,7 +265,7 @@ p {
 .test-progress {
     background: #F9F9F9;
     width: 100vw;
-    min-height: 400px;
+    min-height: 450px;
 }
 
 .info-progress {
@@ -302,17 +302,23 @@ p {
     padding: 10% 15% 15% 15%;
 }
 
+/* Questions */
+
 .questions-block-text {
     background: url(../images/background-questions-block-text.svg) repeat-y;
     background-size: 50%;
     background-position-x: 0px;
 }
 
+.questions-block {
+    background: #FFFFFF;
+}
+
 .block-text {
     padding: 10%;
 }
 
-.questions:first-child {
+.questions-block-text .questions:first-child {
     padding: 10% 0 0 0;
 }
 
@@ -342,7 +348,7 @@ p {
 .query {
     /*display: flex;
     align-items: flex-start;*/
-    margin: 5% 0 10% 0;
+    margin: 10% 0 10% 0;
 }
 
 .query-index {
@@ -366,7 +372,7 @@ p {
     margin-right: 3%;
 }
 
-.query .question p {
+.query .question p, .query .question-single p {
     font-weight: 800;
     color: #000000;
 }
@@ -382,6 +388,71 @@ p {
 .query label .sentence {
     padding-left: 5%
 }
+
+.question-block .control-buttoms-query {
+    width: 40%;
+    margin-left: 15%;
+    margin-bottom: 35%;
+}
+
+
+.control-buttoms-query {
+    width: 80%;
+    margin-left: 12%;
+}
+
+.control-buttoms-query .btn-back-test {
+    width: 45%;
+    margin-top: 5%;
+    padding: 2% 10% 2% 12%;
+}
+
+.control-buttoms-query .btn-next-test {
+    width: 45%;
+    margin-top: 5%;
+    padding: 2% 10% 2% 2%;
+}
+
+/* Single Question page */
+
+.query p.sentence {
+    color: #14A493;
+    line-height: 1.8em;
+    margin-left: 10%;
+    font-weight: 800;
+}
+
+.query p.dialog {
+    color: #14A493;
+    line-height: 1.8em;
+    margin-left: 10%;
+    font-weight: 100;
+}
+
+.query span.person {
+    font-weight: 800;
+    margin-right: 3%;
+}
+
+.query .question-single label {
+    margin-left: 10%;
+}
+
+.query .question-single label .sentence {
+    padding-left: 2.5%;
+}
+
+.query .question-single .checkmark {
+    margin-top: .5%;
+} 
+
+.query .question-single .control-buttoms-query {
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 25%;
+}
+
 
 
 /* Custom radio */
