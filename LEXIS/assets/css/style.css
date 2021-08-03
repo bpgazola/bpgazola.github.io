@@ -302,6 +302,19 @@ p {
     padding: 10% 15% 15% 15%;
 }
 
+#result-test {
+    background: #4CB596;
+    min-height: 400px;
+    width: 100vw;
+}
+
+#result-test .messege {
+    margin-top: 5%;
+}
+
+#result-test h2 {
+    color:#FFFFFF
+}
 /* Questions */
 
 .questions-block-text {
@@ -310,12 +323,18 @@ p {
     background-position-x: 0px;
 }
 
+.questions-block-text .question {
+    display: flex;
+    align-items: flex-start;
+}
+
 .questions-block {
     background: #FFFFFF;
 }
 
 .block-text {
     padding: 10%;
+    
 }
 
 .questions-block-text .questions:first-child {
@@ -389,16 +408,9 @@ p {
     padding-left: 5%
 }
 
-.question-block .control-buttoms-query {
-    width: 40%;
-    margin-left: 15%;
-    margin-bottom: 35%;
-}
-
-
 .control-buttoms-query {
     width: 80%;
-    margin-left: 12%;
+    margin-left: 10%;
 }
 
 .control-buttoms-query .btn-back-test {
@@ -434,25 +446,88 @@ p {
     margin-right: 3%;
 }
 
-.query .question-single label {
+.questions .question-single {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.question-block .control-buttoms-query {
+    width: 45%;
+    margin-left: 10%;
+    margin-bottom: 30%;
+    margin-top: -5%;
+}
+
+.question-block label {
     margin-left: 10%;
 }
 
-.query .question-single label .sentence {
+.question-block label .sentence {
     padding-left: 2.5%;
 }
 
-.query .question-single .checkmark {
+.question-block .questions .checkmark {
     margin-top: .5%;
 } 
 
-.query .question-single .control-buttoms-query {
-    width: 40%;
-    margin-top: 5%;
+.question-block .questions .control-buttoms-query {
+    width: 45%;
     margin-left: 10%;
-    margin-bottom: 25%;
+    margin-bottom: 30%;
 }
 
+
+/* Single Question Video page */
+
+.questions-block-video {
+    background: #14A493;
+    width: 100vw;
+    height: 300px;
+}
+
+.block-video {
+    margin-top: 3%;
+    width: 60%;
+}
+
+.block-video .instruction {
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+}
+
+.block-video span.source {
+    font-size: .8em;
+    color: #094740;
+    font-family: inherit;
+    font-weight: 800;
+    margin-top: 3%;
+}
+
+.questions-block-video .query label {
+    margin-left: 11%;
+}
+
+.questions-block-video .query label .sentence {
+    padding-left: 2.5%;
+}
+
+.questions-block-video .query .checkmark {
+    margin-top: .5%;
+}
+
+.questions-block-video .question {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.questions-block-video .control-buttoms-query {
+    width: 45%;
+    margin-bottom: 30%;
+    margin-top: -5%;
+}
 
 
 /* Custom radio */
