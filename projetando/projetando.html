@@ -337,8 +337,27 @@
             font-size: 0.8em;
         }
         
+        .modal-formacao .btn-arrow {
+            display: inline-block;
+            position: relative;
+            padding: 1.5% 3%;
+            padding-right: 8%;
+            background-color: #345CA9;
+            color: #FFFFFF;
+            margin: 1% auto;
+            font-weight: 100;
+            min-width: 220px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.8em;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        
         #experimentacao .btn-arrow:after,
-        #estude .btn-arrow:after {
+        #estude .btn-arrow:after,
+        .modal-formacao .btn-arrow:after {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -394,6 +413,33 @@
             font-weight: 700;
         }
         
+        .modal-formacao .modal-content {
+            background-color: #FEC66E!important;
+        }
+        
+        .modal-formacao h2 {
+            font-family: inherit;
+            font-size: 2em;
+            color: #E55028;
+            font-weight: 600;
+        }
+        
+        .modal-formacao h3 {
+            font-family: inherit;
+            font-size: 1.2em;
+            color: #E55028;
+            font-weight: 600;
+        }
+        
+        .modal-formacao p {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: 2em;
+            color: #345CA9;
+            font-weight: 100;
+            margin: 2% 5% 2% 5%;
+        }
+        
         .agendamento .modal-content {
             background-color: #32BBAA!important;
         }
@@ -408,7 +454,8 @@
         
         .agendamento .modal-header .close,
         .fale-profissional .modal-header .close,
-        .fale-conosco .modal-header .close {
+        .fale-conosco .modal-header .close,
+        .modal-formacao .close {
             float: right;
             font-size: 35px;
             font-weight: 700;
@@ -3361,41 +3408,23 @@
 
         <!--Modal Formação para Professores/Evento-->
         <div class="modal fade modal-formacao" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <h4 class="modal-title text-center">Formação para Educadores/as do futuro</h4>
-                        <p style="color:#00283F;">O presente e o futuro da educação estão se transformando, assim como os/as nossos estudantes. E para acompanhar esse cenário e atender ainda mais às necessidades de cada aluno/a, é preciso estar pronto para os desafios do novo
+                        <h2 class="modal-title text-center">Formação para Educadores/as do futuro</h2>
+                        <p>O presente e o futuro da educação estão se transformando, assim como os/as nossos estudantes. E para acompanhar esse cenário e atender ainda mais às necessidades de cada aluno/a, é preciso estar pronto para os desafios do novo
                             Ensino Médio.</p>
-                        <p style="color:#00283F;"> Pensando nisso, a PUCRS, através do Projetando o Futuro, preparou uma ação muito especial para você. Um momento dedicado a  <strong>reforma do ensino médio</strong>, temática esta que impacta na realidade cotidiana e de planejamento
+                        <p> Pensando nisso, a PUCRS, através do Projetando o Futuro, preparou uma ação muito especial para você. Um momento dedicado a  <strong>reforma do ensino médio</strong>, temática esta que impacta na realidade cotidiana e de planejamento
                             de cada educador/a.</p>
-                        <h4 class="text-center" style="font-size:1.2em">Novo Ensino Médio: pontos, contrapontos e conexões</h4>
-                        <p style="color:#00283F; text-align: center;">Palestra com <strong>Ricardo Mariz</strong> (Doutor em Sociologia, Mestre em Educação e Pedagogo) e mediação do <strong>Ir. Manuir</strong>, vice-reitor da PUCRS.  </p><br/>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td colspan="3">
-                                        <p style="color:#00283F; text-align: center; font-weight: 800; font-size: 1em;">Webinário com certificação na plataforma Zoom</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p style="color:#00283F; text-align: center;"><strong>Dia: </strong>8 de setembro</p>
-                                    </td>
-                                    <td>
-                                        <p style="color:#00283F; text-align: center;"><strong>Horário: </strong>19h</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <a href="https://webappcl.pucrs.br/inscricoes/inscricao?projeto=8e44859697328fc1" type="button" class="btn btn-default center-block" style="width: 50%; margin-top: 5%;">Inscreva-se</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <h3 class="modal-title text-center">Novo Ensino Médio: pontos, contrapontos e conexões</h3>
+                        <p class="text-center"><em>Webinário com certificação na plataforma Zoom. </em></p>
+                        <p>Palestra com <strong>Ricardo Mariz</strong> (Doutor em Sociologia, Mestre em Educação e Pedagogo) e mediação do <strong>Ir. Manuir</strong>, vice-reitor da PUCRS.  </p>
+                        <p class="text-center"><strong>Data:</strong> 8 de setembro<br/>
+                            <strong>Horário:</strong> 19h</p><br/>
+                        <a href="https://webappcl.pucrs.br/inscricoes/inscricao?projeto=8e44859697328fc1" target="_blank" class="btn-arrow">inscreva-se</a>
                     </div>
                 </div>
                 <!-- /.modal-content -->
