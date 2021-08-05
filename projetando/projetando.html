@@ -2,6 +2,21 @@
 <html lang="pt-BR">
 
 <head>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js"
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-PFD8X4X");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -28,6 +43,13 @@
     <!-- Última versão CSS compilada e minificada -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 
     <style>
@@ -66,6 +88,12 @@
             background-color: #355da9;
             min-height: 90px;
             padding: 5% 0 0 0;
+        }
+        
+        footer a,
+        footer a:hover {
+            text-decoration: none;
+            color: #FFFFFF;
         }
         
         footer .row:nth-child(1) {
@@ -183,6 +211,12 @@
             justify-content: center;
             flex-direction: row;
             flex-wrap: wrap;
+        }
+        
+        .align-item-center-bottom {
+            display: flex;
+            align-content: center;
+            align-items: flex-end;
         }
         /* Botões */
         
@@ -680,6 +714,10 @@
             background: url(http://www.pucrs.br/wp-content/uploads/2021/07/background-spotlight-top.svg) no-repeat top right, url(http://www.pucrs.br/wp-content/uploads/2021/07/background-spotlight-bottom.svg) no-repeat bottom center;
         }
         
+        #spotlight h1 {
+            -webkit-text-stroke-color: #00283F;
+        }
+        
         #bottom-spotlight {
             position: relative;
             z-index: 100;
@@ -841,7 +879,7 @@
             font-family: inherit;
             font-size: 1.5em;
             color: #00283F;
-            margin: 0;
+            margin: 10% 0 5% 0;
             font-weight: 600;
         }
         
@@ -856,7 +894,7 @@
         /* Content */
         
         .arrow {
-            margin: 5% auto;
+            margin: 0 auto;
             animation-name: arrow;
             animation-duration: 1.3s;
             animation-iteration-count: infinite;
@@ -929,11 +967,11 @@
                 opacity: 1;
             }
             50% {
-                -webkit-transform: translate(0, 30px);
-                -moz-transform: translate(0, 30px);
-                -ms-transform: translate(0, 30px);
-                -o-transform: translate(0, 30px);
-                transform: translate(0, 30px);
+                -webkit-transform: translate(0, 10px);
+                -moz-transform: translate(0, 10px);
+                -ms-transform: translate(0, 10px);
+                -o-transform: translate(0, 10px);
+                transform: translate(0, 10px);
                 opacity: 1;
             }
             100% {
@@ -1155,7 +1193,7 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            padding: 4.5% 5%;
+            padding: 8% 5%;
             text-transform: uppercase;
             font-size: inherit;
             max-height: 100px;
@@ -1213,7 +1251,7 @@
             font-size: 0;
             line-height: 0;
             position: absolute;
-            top: 10%;
+            top: 7%;
             display: block;
             width: 30px;
             height: 30px;
@@ -1234,7 +1272,7 @@
         }
         
         .carousel-smart .slick-prev {
-            left: -1.5%;
+            left: -4%;
         }
         
         .carousel-smart .slick-prev:before {
@@ -1242,7 +1280,7 @@
         }
         
         .carousel-smart .slick-next {
-            right: -1.5%;
+            right: -4%;
         }
         
         .carousel-smart .slick-next:before {
@@ -1284,14 +1322,6 @@
         }
         
         @media (max-width: 768px) {
-            .carousel-smart .slick-prev,
-            .carousel-smart .slick-next,
-            .carousel-videos .slick-prev,
-            .carousel-videos .slick-next,
-            .carousel-spotify .slick-prev,
-            .carousel-spotify .slick-next {
-                display: none!important;
-            }
             footer img.lettering-footer {
                 width: 25%;
                 height: auto;
@@ -1309,6 +1339,24 @@
             }
             .navbar-nav {
                 margin: 15% 0 0 7%;
+            }
+        }
+        
+        @media (max-width: 767px) and (min-width: 320px) {
+            .carousel-videos .slick-prev,
+            .carousel-videos .slick-next {
+                top: 110%;
+            }
+            .carousel-videos .slick-prev,
+            .carousel-spotify .slick-prev {
+                left: 42%;
+            }
+            .carousel-videos .slick-next,
+            .carousel-spotify .slick-next {
+                right: 42%;
+            }
+            #spotlight {
+                padding: 30% 0 5% 0;
             }
         }
     </style>
@@ -1349,7 +1397,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <img class="center-block img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/lettering_projetando-o-futuro.svg " width="35% " height="auto ">
-                        <h1>Um roreito completo para<br/>construir a sua trajetória.</h1>
+                        <h1>Um roteiro completo para<br/>construir a sua trajetória.</h1>
                         <div class="arrow">
                             <a href="#bottom-spotlight"><img class="center-block" src="http://www.pucrs.br/wp-content/uploads/2021/07/arrow.svg"></a>
                         </div>
@@ -1388,13 +1436,13 @@
                         <div class="element-fade-bottom-proposito hidden-sm hidden-xs" data-aos="fade-right"><img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/element_fade-right-proposito.svg"></div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                        <h2>O primeiro passo desta experiência é o <strong>autoconhecimento</strong>, porque nos ajuda a descobrir mais sobre <strong>o que gostamos, e o que nos move e o que nos inspira</strong>.</h2>
+                        <h2>O primeiro passo desta experiência é o <strong>autoconhecimento</strong>, porque nos ajuda a descobrir mais sobre <strong>o que gostamos, o que nos move e o que nos inspira</strong>.</h2>
                         <p>E como você pode imaginar, na hora de começar a graduação, faz toda a diferença escolher aquele curso que está <strong>mais alinhado com a nossa identidade e personalidade</strong>.</p>
                         <p>Reunimos aqui algumas ferramentas que vão ajudar a <strong>traçar um caminho personalizado para o seu futuro</strong>. Vamos lá?</p>
                         <p class="text-center"><strong>Preparado/a para encontrar seu propósito?</strong></p>
                         <a href="https://pucrs.qualtrics.com/jfe/form/SV_bm6CaKylalUur6l" target="_blank" class="btn-arrow">responda aqui</a>
-                        <p class="text-center"><strong>Veja como pode ser o seu futuro</strong></p>
-                        <a href="https://seufuturo.pucrs.br/" target="_blank" class="btn-arrow">crie seu moodboard</a>
+                        <!--<p class="text-center"><strong>Veja como pode ser o seu futuro</strong></p>
+                        <a href="https://seufuturo.pucrs.br/" target="_blank" class="btn-arrow">crie seu moodboard</a>-->
                     </div>
                 </div>
             </div>
@@ -1419,7 +1467,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="carousel-vida-universitario">
                             <h3>Vida de universitário</h3>
-                            <p>Conheça os cursos da PUCRS e como é ser nosso aluno.</p>
+                            <p>Assista aos vídeos do Open Campus 2020, conheça os cursos e veja como é ser nosso aluno.</p>
                         </div>
                     </div>
                 </div>
@@ -1431,7 +1479,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#psicologia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-psicologia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1444,7 +1492,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#psicologia2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-psicologia2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1457,7 +1505,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#odontologia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-odontologia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1470,7 +1518,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#odontologia2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-odontologia2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1483,7 +1531,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#biomedicina">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-biomedicina.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1496,7 +1544,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#ciencias-biologicas">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-ciencias-biologicas.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1509,7 +1557,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#enfermagem">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-enfermagem.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1522,7 +1570,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#educacao-fisica">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-educacao-fisica.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1535,7 +1583,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#educacao-fisica2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-educacao-fisica2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1548,7 +1596,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#farmacia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-farmacia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1561,7 +1609,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#fisioterapia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-fisioterapia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1574,7 +1622,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#fisioterapia2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-fisioterapia2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1587,7 +1635,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#gastronomia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-gastronomia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1600,7 +1648,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#gastronomia2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-gastronomia2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1613,7 +1661,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#nutricao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-nutricao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1626,7 +1674,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#nutricao2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-nutricao2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1639,7 +1687,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#design">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-design.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1652,7 +1700,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#design2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-design2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1665,7 +1713,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#jornalismo">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-jornalismo.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1678,7 +1726,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#publicidade">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-publicidade-propaganda.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1691,7 +1739,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#publicidade2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-publicidade-propaganda2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1704,7 +1752,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#relacoes-publicas">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-relacoes-publicas.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1717,7 +1765,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#producao-audiovisual">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-producao-audiovisual.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1730,7 +1778,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#producao-audiovisual2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-producao-audiovisual2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1743,7 +1791,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#direito">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-direito.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1756,7 +1804,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#direito2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-direito2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1769,7 +1817,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#escrita-criativa">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-escrita-criativa.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
 
@@ -1782,7 +1830,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#filosofia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-filosofia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1794,7 +1842,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#historia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-historia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1806,7 +1854,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#letras-ingles">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-letras-ingles.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1818,7 +1866,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#letras-portugues">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-letras-portugues.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1830,7 +1878,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#pedagogia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-pedagogia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1842,7 +1890,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#servico-social">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-servico-social.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1854,7 +1902,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#teologia">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-teologia.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1866,7 +1914,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#medicina">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-medicina.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1878,7 +1926,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#medicina2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-medicina2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1890,7 +1938,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#administracao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-administracao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1902,7 +1950,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#administracao2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-administracao2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1914,7 +1962,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#arquitetura">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-arquitetura-urbanismo.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1926,19 +1974,19 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#arquitetura2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-arquitetura-urbanismo2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
                                     <div class="legenda-video">
-                                        <p>Patrimônia e Paisagem</p>
+                                        <p>Patrimônio e Paisagem</p>
                                         <p><strong>Arquitetura e Urbanismo</strong></p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#ciencia-computacao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-ciencias-computacao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1950,7 +1998,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#ciencia-aeronautica">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-ciencias-aeronauticas.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1962,7 +2010,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#ciencia-aeronautica2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-ciencias-aeronauticas2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1974,7 +2022,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#ciencia-dados">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-ciencia-de-dados-e-inteligencia-artificial.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1986,7 +2034,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#ciencia-dados2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-ciencia-de-dados-e-inteligencia-artificial2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -1998,7 +2046,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-civil">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-civil.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2010,7 +2058,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-civil2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-civil2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2022,7 +2070,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-computacao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-da-computacao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2034,7 +2082,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-automacao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-de-controle-e-automacao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2046,7 +2094,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-producao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-de-producao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2058,7 +2106,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-producao2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-de-producao2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2070,7 +2118,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-software">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-de-software.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2082,7 +2130,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-software2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-de-software2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2094,7 +2142,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-eletrica">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-eletrica.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2106,7 +2154,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-mecanica">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-mecanica.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2118,7 +2166,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-mecanica2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-mecanica2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2130,7 +2178,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-quimica">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-quimica.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2142,7 +2190,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#engenharia-quimica2">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-engenharia-quimica2.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2154,7 +2202,7 @@
                                 <div class="carousel-item">
                                     <div class="video-click" data-toggle="modal" data-target="#sistemas-informacao">
                                         <a href="#" class="thumbnail">
-                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-de-universitario.svg" alt="...">
+                                            <img class="img-responsive" src="http://www.pucrs.br/wp-content/uploads/2021/07/thumb-vida-universitario-sistemas-da-informacao.svg" alt="...">
                                         </a>
                                         <div class="thumbnail-overlay"><img src="http://www.pucrs.br/wp-content/uploads/2021/07/play.svg" class="play"></div>
                                     </div>
@@ -2785,12 +2833,11 @@
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <h2><strong>Escolher a universidade em que vamos estudar</strong> é outro momento importante na nossa caminhada. Afinal, não é apenas o lugar dos nossos aprendizados e descobertas: <strong>também é uma epécie de novo lar</strong>.</h2>
                         <p><strong>Acolhimento</strong> é uma das nossas principais características, e é assim que você vai se sentir aqui: <strong>em casa</strong>.</p>
-                        <p>E para ficar <strong>ainda mais próximo de vir estudar com a gente</strong>, temos conteúdos que ajudam a <strong>se preparar para o nosso vestibular</strong>. Aproveite e bons estudos!</p>
                         <h3>Por que escolher a PUCRS?</h3>
                         <p>Existem muitas outras razões para estudar na PUCRS. Clique e conheça.</p>
-                        <a href="#" target="_blank" class="btn-arrow">saiba mais</a>
+                        <a href="https://www.pucrs.br/estudenapucrs/por-que-escolher-a-pucrs/" target="_blank" class="btn-arrow">saiba mais</a>
                         <h3>Agendamento de visitas</h3>
-                        <p>Vai ser incível receber você na PUCRS, mas enquanto isso não é possível presencialmente, você pode agendar um horário conosco para um bate papo virtual</p>
+                        <p>Vai ser incível receber você na PUCRS, mas enquanto isso não é possível presencialmente, você pode agendar um horário conosco para um bate papo virtual.</p>
                         <!--Botão gatilho do modal para formulário de agendamento-->
                         <a href="" class="btn-arrow" data-toggle="modal" data-target="#agendamento">entre em contato</a>
                     </div>
@@ -2820,7 +2867,7 @@
 
                                                 </div>
                                                 <div class="legenda-video">
-                                                    <p class="white">Internacionalização</p>
+                                                    <p class="white">Internacionalização dos estudos e Mobilidade Acadêmica</p>
                                                 </div>
                                             </div>
                                             <div class="carousel-item">
@@ -2868,7 +2915,7 @@
 
                                                 </div>
                                                 <div class="legenda-video">
-                                                    <p class="white">Pastoral PUCRS</p>
+                                                    <p class="white">Projeto de Vida, Voluntariado, Meditação e Espiritualidade</p>
                                                 </div>
                                             </div>
                                             <div class="carousel-item">
@@ -3035,6 +3082,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <p class="mt-5">E para ficar <strong>ainda mais próximo de vir estudar com a gente</strong>, temos conteúdos que ajudam a <strong>se preparar para o nosso vestibular</strong>. Aproveite e bons estudos!</p>
                         <h3>Teste seus conhecimentos</h3>
                     </div>
                 </div>
@@ -3043,12 +3091,15 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <div class="quizzes">
-                            <h4>Quizzes do Museu</h4><a href="https://www.pucrs.br/mct/quiz-fisica/" target="_blank" class="btn-arrow">acesse os exercícios</a>
+                            <h4>Quizzes do Museu</h4>
+                            <p>Confira os quizzes nas áreas de Física, Química e Biologia.</p><a href="https://www.pucrs.br/mct/quiz-fisica/" target="_blank" class="btn-arrow">acesse os exercícios</a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <div class="vestibulares">
-                            <h4>Vestibulares PUCRS</h4><a href="https://www.pucrs.br/estudenapucrs/provas-e-gabaritos/" target="_blank" class="btn-arrow">acesse as provas antigas</a>
+                            <h4>Vestibulares PUCRS</h4>
+                            <p>Mantenha-se preparado e estude com as provas dos anos anteriores.</p>
+                            <a href="https://www.pucrs.br/estudenapucrs/provas-e-gabaritos/" target="_blank" class="btn-arrow">acesse as provas</a>
                         </div>
                     </div>
                 </div>
@@ -3207,43 +3258,84 @@
                             <div class="carousel-smartpaper slider">
                                 <div class="carousel-item">
                                     <div class="smart-paper">
-                                        <div class="smart current">Educação Midiática</div>
-                                        <div class="smart default">Empreendedorismo e Inovação</div>
-
+                                        <div class="smart current">Conhecimento</div>
+                                        <div class="smart default">Pensamento científico, crítico e criativo</div>
                                     </div>
                                     <div class="smart-legenda mt-3">
-                                        <h4>SMART EDUCAÇÃO MIDIÁTICA</h4>
-                                        <p>Entenda o conceito de Educação Midiática, que se refere à forma como as pessoas buscam e compartilham informação. Nesse material, você vai saber como determinados público utilizam as redes sociais e descobrir possíveis
-                                            soluções para a questão da desinformação.</p>
-                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/03/Projetando-o-Futuro-Educac%CC%A7a%CC%83o-Midia%CC%81tica.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
+                                        <h4>EDUCAÇÃO FINANCEIRA</h4>
+                                        <p>Esse material foi preparado para ajudar você a usar o dinheiro com consciência, se organizar financeiramente e economizar para realizar projetos futuros. Afinal, aprender sobre educação financeira desde cedo faz
+                                            toda a diferença na vida.</p>
+                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/07/2021_07_12-educacao-financeira.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="smart-paper">
-                                        <div class="smart current">Empreendedorismo e Inovação</div>
-                                        <div class="smart default">Educação para a Carreira</div>
-
+                                        <div class="smart current">Pensamento científico, crítico e criativo</div>
+                                        <div class="smart default">Repertório Digital</div>
                                     </div>
                                     <div class="smart-legenda mt-3">
-                                        <h4>SMART EMPREENDEDORISMO E INOVAÇÃO</h4>
-                                        <p>Vem descobrir que empreender é muito mais do que criar empresas e startups. É se desenvolver como didadão/ã propositvo/a, ativando competências capazes de transformar ideias em projetos reais.</p>
-                                        <a href="https://www.pucrs.br/wp-content/uploads/2020/06/Projetando-o-Futuro-Descomplicando-o-empreendedorismo-29-6-min.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
+                                        <h4>EMPREENDEDORISMO E INOVAÇÃO</h4>
+                                        <p>Venha entender o empreendedorismo de forma descomplicada. Com esse conteúdo você vai descobrir que empreender é muito mais do que criar empresas e startups, é ativar competências capazes de transformar ideias em
+                                            projetos reais, gerando benefícios para a sociedade.</p>
+                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/07/2021_07_12-projetando-o-futuro-descomplicando-o-empreendedorismo.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="smart-paper">
-                                        <div class="smart current">Educação para a Carreira</div>
-                                        <div class="smart default">Educação Midiática</div>
-
+                                        <div class="smart current">Repertório digital</div>
+                                        <div class="smart default">Trabalho e Projeto de Vida</div>
                                     </div>
                                     <div class="smart-legenda mt-3">
-                                        <h4>SMART EDUCAÇÃO PARA A CARREIRA</h4>
-                                        <p>Se você já sabe qual seu futuro profissional ou ainda está em dúvida do caminho a seguir, esse Smart Paper foi pensado para te ajudar a refletir sobre a tua carreira, seja ela qual for.</p>
-                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/03/Projetando-o-Futuro-Educacao-para-a-Carreira.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
+                                        <h4>EDUCAÇÃO MIDIÁTICA</h4>
+                                        <p>Entenda o conceito de Educação Midiática, que envolve a forma como as pessoas buscam e compartilham informação hoje em dia. Com esse conteúdo você vai saber como determinados públicos utilizam as redes sociais e
+                                            descobrir possíveis soluções para a questão da desinformação.</p>
+                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/07/2021_07_12-projetando-o-futuro-educacao-midiatica-smart.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>´
+                                        <h4>INFLUÊNCIA DIGITAL E YOUTUBERS</h4>
+                                        <p>Se você tem curiosidade sobre como funciona a comunicação atual e já se perguntou como um YouTuber se torna famoso, esse smart paper foi feito para você. Venha saber mais sobre o YouTube e sobre o universo dos influenciadores
+                                            digitais.
+                                        </p>
+                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/07/2021_07_12-influencia-digital-e-youtubers.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="smart-paper">
+                                        <div class="smart current">Trabalho e Projeto de Vida</div>
+                                        <div class="smart default">Autoconhecimento e Autocuidado</div>
+                                    </div>
+                                    <div class="smart-legenda mt-3">
+                                        <h4>EDUCAÇÃO PARA A CARREIRA</h4>
+                                        <p>Esse smart paper foi pensado para te ajudar a explorar possibilidades e refletir sobre a sua carreira, não importa se você já sabe qual é o seu futuro profissional ou ainda está em dúvida sobre o caminho a trilhar.</p>
+                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/07/2021_07_12-projetando-o-futuro-educacao-para-a-carreira.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
+                                        <h4 class="mt-3">DIFERENCIAIS PUCRS</h4>
+                                        <p>Nesse material, você vai saber mais sobre a PUCRS, um lugar para estudar, sonhar e viver. Venha conhecer os motivos para construir o seu futuro com a gente!</p>
+                                        <a href="https://www.pucrs.br/wp-content/uploads/2021/07/2021_07_12-smartpaper-diferenciais.pdf" target="_blank" class="btn-arrow">acesse o smartpaper</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="smart-paper">
+                                        <div class="smart current">Autoconhecimento e Autocuidado</div>
+                                        <div class="smart default">Responsabilidade e Cidadania</div>
+                                    </div>
+                                    <div class="smart-legenda mt-3">
+                                        <h4>SAÚDE MENTAL EM TEMPOS DE PANDEMIA</h4>
+                                        <p>A saúde mental é a nossa capacidade de enfrentar os desafios da vida com equilíbrio entre as emoções e o comportamento. E como manter esse equilíbrio durante a pandemia é ainda mais desafiador, a Profa. Dra. Rita
+                                            Petrarca gravou um vídeo com algumas dicas para minimizar o que estamos vivendo no momento.</p>
+                                        <a href="https://www.instagram.com/tv/CDd9G-AHD_G/" target="_blank" class="btn-arrow">veja o vídeo</a>
                                     </div>
                                 </div>
 
-
+                                <div class="carousel-item">
+                                    <div class="smart-paper">
+                                        <div class="smart current">Responsabilidade e Cidadania</div>
+                                        <div class="smart default">Conhecimento</div>
+                                    </div>
+                                    <div class="smart-legenda mt-3">
+                                        <h4>DIVERSIDADE & INCLUSÃO</h4>
+                                        <p>Nesse vídeo, a Profa. Dra. Ana Lúcia Suárez Maciel fala sobre a importância da diversidade e da inclusão. Além de explicar esses conceitos, ela nos convida a ampliar o nosso olhar, já que a riqueza da nossa sociedade
+                                            está no reconhecimento das diferenças que são parte da natureza humana. </p>
+                                        <a href="https://www.instagram.com/tv/CEmCUX_nilf/" target="_blank" class="btn-arrow">veja o vídeo</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3258,13 +3350,59 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <h3>Conheça nossos cursos e formas de ingresso</h3>
-                        <p><strong>Ingresse em uma das melhores universidades do país</strong>. Confira as principais informações sobre as formas de ingresso na PUCRS.</p>
+                        <p><strong>Ingresse em uma das melhores universidades do país</strong>.</p>
+                        <p> Confira as principais informações sobre as formas de ingresso na PUCRS.</p>
                         <a href="https://www.pucrs.br/estudenapucrs/" target="_blank" class="btn-arrow">quero saber mais</a>
                     </div>
                 </div>
 
             </div>
         </section>
+
+        <!--Modal Formação para Professores/Evento-->
+        <div class="modal fade modal-formacao" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title text-center">Formação para Educadores/as do futuro</h4>
+                        <p style="color:#00283F;">O presente e o futuro da educação estão se transformando, assim como os/as nossos estudantes. E para acompanhar esse cenário e atender ainda mais às necessidades de cada aluno/a, é preciso estar pronto para os desafios do novo
+                            Ensino Médio.</p>
+                        <p style="color:#00283F;"> Pensando nisso, a PUCRS, através do Projetando o Futuro, preparou uma ação muito especial para você. Um momento dedicado a  <strong>reforma do ensino médio</strong>, temática esta que impacta na realidade cotidiana e de planejamento
+                            de cada educador/a.</p>
+                        <h4 class="text-center" style="font-size:1.2em">Novo Ensino Médio: pontos, contrapontos e conexões</h4>
+                        <p style="color:#00283F; text-align: center;">Palestra com <strong>Ricardo Mariz</strong> (Doutor em Sociologia, Mestre em Educação e Pedagogo) e mediação do <strong>Ir. Manuir</strong>, vice-reitor da PUCRS.  </p><br/>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3">
+                                        <p style="color:#00283F; text-align: center; font-weight: 800; font-size: 1em;">Webinário com certificação na plataforma Zoom</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="color:#00283F; text-align: center;"><strong>Dia: </strong>8 de setembro</p>
+                                    </td>
+                                    <td>
+                                        <p style="color:#00283F; text-align: center;"><strong>Horário: </strong>19h</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <a href="https://webappcl.pucrs.br/inscricoes/inscricao?projeto=8e44859697328fc1" type="button" class="btn btn-default center-block" style="width: 50%; margin-top: 5%;">Inscreva-se</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
         <!--Modal de Formulários-->
         <div class="modal fade agendamento" id="agendamento" tabindex="-1" role="dialog">
@@ -4926,7 +5064,7 @@
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MWh_-B5CGtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/--ocefu2WIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -4953,9 +5091,11 @@
                     <img class="img-responsive lettering-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/lettering_projetando-o-futuro-footer.svg">
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <p><img class="icon-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/icon_whatsapp.svg">(51) 98187-0833</p>
-                    <p><img class="icon-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/icon_email.svg">relacionamento@pucrs.br</p>
-                    <p><img class="icon-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/icon_instagram.svg">instagram.br/pucrspravc</p>
+                    <p><img class="icon-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/icon_whatsapp.svg">
+                        <a href="https://wa.me/5551981870833" target="_blank">(51) 98187-0833</a></a>
+                    </p>
+                    <p><img class="icon-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/icon_email.svg"><a href="mailto:relacionamento@pucrs.br">relacionamento@pucrs.br</a></p>
+                    <p><img class="icon-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/icon_instagram.svg"><a href="https://www.instagram.com/pucrspravc/" target="_blank">instagram.com/pucrspravc</a></p>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <img class="img-responsive lettering-footer" src="http://www.pucrs.br/wp-content/uploads/2021/07/lettering_pucrs-footer.svg">
@@ -4976,6 +5116,12 @@
     <!--Slick Carousel -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--Page Scripts-->
+    <!--Abrir Modal-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            jQuery(".modal-formacao").modal();
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
     <script type="text/javascript">
         AOS.init();
@@ -5005,7 +5151,7 @@
         $(document).on('ready', function() {
             $('.carousel').slick({
                 dots: false,
-                infinite: false,
+                infinite: true,
                 speed: 300,
                 slidesToShow: 3,
                 slidesToScroll: 3,
@@ -5027,7 +5173,7 @@
         $(document).on('ready', function() {
             $('.carousel-smartpaper').slick({
                 dots: false,
-                infinite: false,
+                infinite: true,
                 speed: 300,
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -5043,6 +5189,31 @@
             });
 
         });
+    </script>
+    <!-- SCRIPT PARA GOOGLE ANALYTICS -->
+    <script type="text/javascript">
+        (function(i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            (i[r] =
+                i[r] ||
+                function() {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+            (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(
+            window,
+            document,
+            "script",
+            "//www.google-analytics.com/analytics.js",
+            "ga"
+        );
+
+        ga("create", "UA-43503103-51", "auto");
+        ga("send", "pageview");
     </script>
 
 </body>
