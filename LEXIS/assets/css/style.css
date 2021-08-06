@@ -2484,8 +2484,10 @@ hr.line {
     .form-more-information {
         margin-top: -25%;
     }
-    .control-buttoms {
+    .test-progress .control-buttoms {
         width: 100%;
+        margin-bottom: 45%;
+        font-size: .8em;
     }
     .test-progress {
         min-height: 350px;
