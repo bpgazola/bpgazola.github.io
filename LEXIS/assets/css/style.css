@@ -2349,6 +2349,9 @@ hr.line {
         width: 100%;
         word-break: break-all;
     }
+    .card p.result {
+        margin-top: 135%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2408,6 +2411,9 @@ hr.line {
     }
     .result .group-cards:first-child {
         margin-top: -20%;
+    }
+    .card p.result {
+        margin-top: 140%;
     }
 }
 
