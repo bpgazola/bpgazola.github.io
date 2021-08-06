@@ -302,17 +302,17 @@ p {
     padding: 10% 15% 15% 15%;
 }
 
-#result-test {
+.result-test {
     background: #4CB596;
     min-height: 400px;
     width: 100vw;
 }
 
-#result-test .messege {
+.result-test .messege {
     margin-top: 5%;
 }
 
-#result-test h2 {
+.result-test h2 {
     color: #FFFFFF
 }
 
@@ -2309,4 +2309,276 @@ hr.line {
     left: 0.04em;
     width: 0.92em;
     height: 0.92em;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 991px) {
+    .btn-back {
+        left: 10%;
+    }
+    .group-buttoms {
+        width: 80%;
+    }
+    .icon-interrogation img {
+        width: 90%;
+        height: auto;
+    }
+    .control-buttoms {
+        width: 40%;
+    }
+    .block-text {
+        background: #14A493;
+    }
+    .test-progress {
+        min-height: 400px;
+    }
+    .questions-block-text {
+        background: none;
+    }
+    .control-buttoms-query {
+        width: 60%;
+        margin-bottom: 25%;
+    }
+    .block-video {
+        width: 90%;
+    }
+    .block-video span.source {
+        float: none;
+        width: 100%;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner img {
+        width: 20%;
+    }
+    .element-fade-up img {
+        width: 70%;
+        height: auto;
+    }
+    .reasons {
+        height: auto;
+        padding-bottom: 15%;
+    }
+    .icon-interrogation img {
+        width: 100%;
+        height: auto;
+    }
+    footer .logo-marista {
+        width: 50%;
+        height: auto;
+    }
+    footer .logo-pucrs {
+        width: 90%;
+        height: auto;
+    }
+    footer .logo-lexis {
+        width: 90%;
+        height: auto;
+    }
+    .btn-back {
+        left: 1%;
+    }
+    .icon-flag img {
+        width: 4%;
+    }
+    .form-more-information {
+        margin-top: -15%;
+    }
+    .control-buttoms {
+        width: 60%;
+    }
+    .control-buttoms-query {
+        width: 70%;
+        margin-bottom: 30%;
+    }
+    .block-video {
+        width: 90%;
+    }
+    .block-video span.source {
+        float: none;
+        width: 100%;
+        word-break: break-all;
+    }
+    .result-test {
+        min-height: 320px;
+    }
+    .result .group-cards:first-child {
+        margin-top: -20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 90%!important;
+    }
+    .header-inner span {
+        display: none;
+    }
+    .header-inner img {
+        width: 35%;
+    }
+    .btn-back {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        min-width: 150px;
+        text-align: right;
+        padding: 1% 5% 1% 5%;
+    }
+    .form-contact-inner input {
+        width: 100%;
+    }
+    .reasons {
+        height: auto;
+        padding-bottom: 15%;
+    }
+    .align-item-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer .logo-marista {
+        width: 15%;
+        height: auto;
+    }
+    footer .logo-pucrs {
+        width: 30%;
+        height: auto;
+    }
+    footer .logo-lexis {
+        width: 30%;
+        height: auto;
+    }
+    footer img {
+        margin-bottom: 5%;
+    }
+    .btn-back {
+        float: left!important;
+    }
+    .icon-flag img {
+        width: 5%;
+    }
+    .group-buttoms {
+        width: 100%;
+        margin-bottom: 25%;
+    }
+    .form-more-inner button.back,
+    .form-more-inner button.send {
+        font-size: .8em;
+    }
+    .btn-more {
+        min-width: 150px;
+        padding: 1% 2% 1% 2%;
+        margin-bottom: 3%;
+    }
+    .icon-interrogation img {
+        width: 140%;
+        height: auto;
+    }
+    .form-more-information {
+        margin-top: -25%;
+    }
+    .control-buttoms {
+        width: 100%;
+    }
+    .test-progress {
+        min-height: 350px;
+    }
+    .control-buttoms-query {
+        width: 80%;
+        margin-bottom: 45%;
+        font-size: .8em;
+    }
+    .control-buttoms-query .btn-back-test {
+        width: 45%;
+        margin-top: 5%;
+        padding: 2% 5% 2% 10%;
+    }
+    .control-buttoms-query .btn-next-test {
+        width: 45%;
+        margin-top: 5%;
+        padding: 2% 5% 2% 2%;
+    }
+    #warning-modal-inner {
+        padding: 10% 15% 25% 15%;
+    }
+    #warning-modal-inner .btn-back-test {
+        font-size: .8em;
+    }
+    #warning-modal-inner .btn-next-test {
+        font-size: .8em;
+    }
+    .block-text span.source {
+        float: none;
+    }
+    .block-text {
+        padding-bottom: 25%;
+    }
+    .question-block .control-buttoms-query {
+        width: 80%;
+        margin-bottom: 45%;
+    }
+    .query label {
+        font-size: .8em;
+        line-height: 1.2em;
+        margin-left: 20%;
+    }
+    .question-block .questions .checkmark {
+        margin-top: 2%;
+    }
+    .question-block label .sentence {
+        padding-left: 5%;
+    }
+    .questions-block-video {
+        height: 200px;
+    }
+    .block-video {
+        width: 100%;
+    }
+    .block-video span.source {
+        float: none;
+        width: 100%;
+        word-break: break-all;
+    }
+    .block-video {
+        width: 100%;
+    }
+    .block-video span.source {
+        float: none;
+        width: 100%;
+        word-break: break-all;
+    }
+    .questions-block-video .query label {
+        margin-left: 20%;
+    }
+    .questions-block-video .query .checkmark {
+        margin-top: 1.5%;
+    }
+    .questions-block-video .query label .sentence {
+        padding-left: 5%;
+    }
+    .result-test {
+        min-height: 300px;
+    }
+    .result .group-cards:first-child {
+        margin-top: -25%;
+    }
+    .card p.result {
+        margin-top: 125%;
+    }
+    .more-courses {
+        margin-bottom: 85%;
+    }
+    .more-courses .btn-arrow:first-child {
+        margin-top: 10%;
+    }
+    .questions-block-video .control-buttoms-query {
+        width: 80%;
+    }
 }
