@@ -2432,6 +2432,7 @@ hr.line {
         align-items: center;
         flex-direction: column;
         width: 90%!important;
+        text-align: center;
     }
     .header-inner span {
         display: none;
@@ -2439,15 +2440,30 @@ hr.line {
     .header-inner img {
         width: 35%;
     }
+    .nav-button .btn-arrow {
+        width: 100%!important;
+    }
+    .element-fade-up {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-contact-inner input,
+    .form-contact-inner textarea {
+        padding: 4%;
+    }
     .btn-back {
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
         min-width: 150px;
         text-align: right;
-        padding: 1% 5% 1% 5%;
+        padding: 2% 5% 2% 5%;
     }
     .form-contact-inner input {
         width: 100%;
+    }
+    #about-language {
+        min-height: 400px;
     }
     .reasons {
         height: auto;
@@ -2489,11 +2505,14 @@ hr.line {
     }
     .btn-more {
         min-width: 150px;
-        padding: 1% 2% 1% 2%;
+        padding: 2% 2% 2% 2%;
         margin-bottom: 3%;
     }
+    .info-test .legend:nth-child(2) {
+        margin-left: 10%;
+    }
     .icon-interrogation img {
-        width: 140%;
+        width: 200%;
         height: auto;
     }
     .form-more-information {
