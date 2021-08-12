@@ -2626,4 +2626,7 @@ hr.line {
     .bullets .item {
         margin-bottom: 10%;
     }
+    .more-courses .btn-arrow {
+        width: 100%;
+    }
 }
