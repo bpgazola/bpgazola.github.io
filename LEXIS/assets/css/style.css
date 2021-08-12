@@ -97,7 +97,7 @@ p {
 
 .reasons {
     width: 100vw;
-    height: 130vh;
+    height: auto;
     padding: 5% 0 0 0;
     background: #094740;
 }
