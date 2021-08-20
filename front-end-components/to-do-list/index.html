@@ -108,19 +108,23 @@
             color: #555;
             font-size: 1em;
             line-height: 1.2em;
+            border-bottom: solid 1px #ccc;
             -moz-transition: 0.5s all ease-out;
             -webkit-transition: 0.5s all ease-out;
             -o-transition: 0.5s all ease-out;
             transition: 0.5s all ease-out;
         }
         
+        ul li:first-child {
+            border-top: solid 1px #ccc;
+        }
+        
         ul li:last-child {
             border-radius: 0 0 4px 4px;
         }
-        
-        ul li:nth-child(odd) {
+        /*ul li:nth-child(odd) {
             background: #ccc;
-        }
+        }*/
         
         ul li:hover {
             background: #ddd;
