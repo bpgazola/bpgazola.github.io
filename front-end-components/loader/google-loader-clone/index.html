@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Google Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #1d1f20;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .loader {
+            display: block;
+        }
+        
+        .loader span {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-name: move;
+        }
+        
+        .loader span:not(:first-child) {
+            margin-left: 10px;
+        }
+        
+        span:first-child {
+            background: #517BBD;
+        }
+        
+        span:nth-child(2) {
+            background: #E84437;
+            animation-delay: .2s;
+        }
+        
+        span:nth-child(3) {
+            background: #FBBD09;
+            animation-delay: .3s;
+        }
+        
+        span:nth-child(4) {
+            background: #32A952;
+            animation-delay: .4s;
+        }
+        
+        @keyframes move {
+            0% {
+                -webkit-transform: translate(0, 0);
+                -moz-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
+                -o-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+            50% {
+                -webkit-transform: translate(0, 20px);
+                -moz-transform: translate(0, 20px);
+                -ms-transform: translate(0, 20px);
+                -o-transform: translate(0, 20px);
+                transform: translate(0, 20px);
+            }
+            100% {
+                -webkit-transform: translate(0, 0);
+                -moz-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
+                -o-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
