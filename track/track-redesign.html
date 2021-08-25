@@ -1,0 +1,1095 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-2094688-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel=“canonical” href=”https://www.pucrs.br/track/” />
+    <title>Track Startup PUCRS</title>
+    <meta name="description" content="O Track é o seu caminho de empreendedorismo dentro da PUCRS. Conheça todas as possibilidades do ecossistema de inovação e desenvolvimento de novos negócios na Universidade. São oportunidades para você que tem apenas uma ideia e quer desenvolver, até você que já tem uma startup pronta para decolar. Descubra quais são os caminhos feitos para você de acordo com o seu contexto! Bem-vindos ao nosso universo de empreendedorismo e inovação."
+    />
+    <!-- Bootstrap CSS -->
+    <!-- Última versão CSS compilada e minificada -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/brands.min.js" integrity="sha512-n+LJkKtr963iJwCP7oilRjd0m+j/TkcG50S5DVdDEWkduZow4yc267LccOutUUoNbf23+c+Gy6Oj2d2l9rUT0Q==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        ul {
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a:active {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .flex-vertical-center {
+            display: flex;
+            align-items: center;
+        }
+        /* barra fixa lateral */
+        
+        .container-lateral {
+            height: 100%;
+            width: 100%;
+            padding: 50px 0;
+        }
+        
+        .lateral {
+            background-color: #fff;
+            display: fixed;
+            position: fixed;
+            right: 0;
+            z-index: 5;
+            width: 150px;
+            height: 100vh;
+        }
+        
+        .lateral img {
+            display: block;
+            margin: 0 auto;
+        }
+        /* barra fixa lateral */
+        /* hamburgues */
+        
+        .hamburguer {
+            width: 4rem;
+            height: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+        
+        .hamburguer-mobile {
+            display: none;
+        }
+        
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #f36a10;
+            border-radius: 16px;
+            transition: 0.2s ease-out;
+        }
+        
+        .line:first-of-type {
+            width: 50%;
+            margin-left: auto;
+        }
+        /* hamburgues */
+        /* nav bar */
+        
+        .nav-bar {
+            position: fixed;
+            z-index: 4;
+            background-color: #fff;
+            top: 0;
+            right: -25rem;
+            height: 100vh;
+            width: 25rem;
+            padding: 100px 0 0 10px;
+            display: flex;
+            justify-content: center;
+            transition: 0.5s ease-out;
+        }
+        
+        .nav-bar li {
+            list-style: none;
+            text-align: right;
+            padding: 10px 0;
+        }
+        
+        .nav-bar li a {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #000;
+        }
+        
+        .fecha-menu {
+            height: 30px;
+            width: 30px;
+            display: none;
+            position: relative;
+        }
+        
+        .toggle {
+            right: 150px;
+        }
+        
+        #progressbar {
+            height: 71%;
+            width: 5px;
+            margin: 20px auto;
+            background: #a5a5a5;
+        }
+        
+        #progressbar div {
+            width: 5px;
+            background: #001e30;
+        }
+        
+        .fa,
+        .fas {
+            color: #fc9450;
+            ;
+        }
+        /* nav bar */
+        /* bolas */
+        
+        .bola-1 {
+            position: absolute;
+            left: 44%;
+            top: -50%;
+            width: 436px;
+            height: 436px;
+            border-radius: 50%;
+            background: #fc9450;
+            animation: move 3.8s linear infinite;
+        }
+        
+        .bola-2 {
+            position: absolute;
+            right: -5%;
+            top: -15%;
+            width: 436px;
+            height: 436px;
+            border-radius: 50%;
+            background: #1f4e7e;
+            animation: move 3.8s linear infinite;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: rotate(0deg) translate(10px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(10px) rotate(360deg);
+            }
+        }
+        /* bolas */
+        /* sections */
+        /*capa */
+        
+        #capa {
+            height: 100vh;
+            margin-right: 150px;
+        }
+        
+        #capa .row {
+            height: 50vh;
+            padding: 45px 0;
+        }
+        
+        #capa .logo {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+        }
+        
+        #capa .barra-superior .col-sm-4 {
+            padding: 45px 0;
+        }
+        
+        #capa .barra-superior {
+            height: 50%;
+            width: 100%;
+            background: rgb(0, 30, 48);
+            background: linear-gradient(90deg, rgba(0, 30, 48, 1) 0%, rgba(0, 30, 48, 1) 60%, rgba(243, 106, 16, 1) 60%, rgba(243, 106, 16, 1) 100%);
+            position: relative;
+            z-index: 2;
+        }
+        
+        #capa .barra-inferior {
+            height: 50%;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(0, 30, 48, 1) 60%, rgba(0, 30, 48, 1) 100%);
+        }
+        
+        #capa h2 {
+            color: #001e30;
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 5% 0;
+        }
+        
+        #capa p {
+            font-size: 1.2em;
+        }
+        
+        #capa ul.caminhos {
+            display: flex;
+            flex-wrap: wrap !important;
+        }
+        
+        #capa ul.caminhos li {
+            margin: 10px;
+        }
+        
+        #capa ul.caminhos .fa,
+        #capa ul.caminhos .fas {
+            font-size: 1.2em;
+            padding: 1px 0 0 0;
+        }
+        
+        .sub-link {
+            text-decoration: underline;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1f4e7e;
+        }
+        /*capa */
+        /*calendario */
+        
+        #calendario {
+            background-color: #edf1f5;
+            height: auto;
+            margin-right: 150px;
+            padding-top: 10%;
+        }
+        
+        #calendario-header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .icon-header {
+            width: 50px;
+            height: 50px;
+            background: #1F4E7E;
+            border-radius: 50%;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .icon-header img {
+            width: 50%;
+        }
+        
+        #calendario-header h1 {
+            color: #001e30;
+            font-size: 2em;
+            line-height: 2.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 5% 0;
+        }
+        
+        .calendario-item {
+            margin-bottom: 3%;
+        }
+        
+        .collapsible {
+            width: 100%;
+            background: #FFF;
+            cursor: pointer;
+            padding: 3%;
+            border: none;
+            text-align: left;
+            outline: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .collapsible-content {
+            padding: 0 5%;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            background-color: #ffffff;
+        }
+        
+        .collapsible .fas {
+            color: #1F4E7E;
+            font-size: 2.2em;
+            font-weight: 600;
+            margin-left: 45%;
+            transition: all 400ms ease-out;
+        }
+        
+        .active .fas {
+            transform: rotate(270deg);
+            transition: all 400ms ease-out;
+        }
+        
+        .data p {
+            color: #001E30;
+            font-size: 3em;
+            line-height: .5em;
+            text-align: right;
+            max-width: 3em;
+            width: auto;
+            font-weight: 600;
+        }
+        
+        .data p.mes {
+            color: #001E30;
+            font-size: 1.2em;
+            line-height: 1em;
+            max-width: 3em;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .data hr {
+            border-top: solid 2px #001E30;
+            width: 50%;
+            float: right;
+            height: 1px;
+            margin-top: -5px;
+            margin-bottom: 0;
+        }
+        
+        p.titulo {
+            color: #001E30;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0 0 0 5%;
+        }
+        
+        .collapsible-content-lateral {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .collapsible-content-line {
+            width: 2px;
+            background: #F36A10;
+            height: 220px;
+            margin: 200% 0 0 0;
+        }
+        
+        .collapsible-infos {
+            padding-bottom: 5%;
+        }
+        
+        .thumb-collapsible {
+            margin-bottom: 3%;
+        }
+        
+        .calendario-hide {
+            transition: all 0.2s ease-out;
+        }
+        /*calendario */
+        
+        #noticias {
+            height: auto;
+            margin-right: 150px;
+        }
+        
+        #noticias .row:nth-child(n+2) {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+        #noticias-header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #noticias-header h1 {
+            color: #001e30;
+            font-size: 2em;
+            line-height: 2.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 5% 0;
+        }
+        
+        #noticias .card img {
+            width: 100%;
+        }
+        
+        #noticias h1 {
+            font-size: 30px;
+            color: #001e30;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        
+        #noticias h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #001e30;
+        }
+        
+        #noticias .info {
+            margin: 15px 0;
+        }
+        
+        #noticias .tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            background-color: rgba(243, 106, 16, 1);
+            padding: 3px 10px;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 400;
+            margin: 0 15px 0 0;
+        }
+        
+        #noticias .data {
+            color: #a5a5a5;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        /* noticias */
+        /* sections */
+        /* botões */
+        
+        .btn-ver-mais {
+            display: inline-block;
+            background: #27619D;
+            border: solid 1px #27619D;
+            color: #fff;
+            font-size: 1.2em;
+            text-align: center;
+            border-radius: 50px;
+            cursor: pointer;
+            min-width: 400px;
+            padding: 1% 10% 1% 10%;
+            margin: 5% 0 5% 0;
+            position: relative;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 8px 20px -2px #000000b0;
+        }
+        
+        .btn-ver-mais:hover {
+            background: #173B5F;
+            transition: all 0.2s ease-out;
+        }
+        /* botões */
+        /* barra laranja */
+        
+        .barra {
+            height: 133px;
+            background-color: rgba(243, 106, 16, 1);
+            margin-bottom: 100px;
+        }
+        
+        .barra img {
+            position: relative;
+            top: 35px;
+        }
+        /* barra laranja */
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="lateral">
+            <div class="container-lateral">
+                <div class="hamburguer">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div id="progressbar">
+                    <div></div>
+                </div>
+                <div class="imagem">
+                    <img src="https://www.pucrs.br/wp-content/uploads/2020/07/track-lateral.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <div class="fecha-menu"></div>
+                <li class="nav-list-item">
+                    <a href="#o-que-e-track" class="sub-link nav-link"><i class="fas fa-caret-right"></i> O que é</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#calendario" class="sub-link nav-link"><i class="fas fa-caret-right"></i> Saiba como
+                        participar</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#noticias" class="sub-link nav-link"><i class="fas fa-caret-right"></i> O que
+                        estamos
+                        fazendo</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="#capa" class="sub-link nav-link"><i class="fas fa-caret-right"></i>Topo</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="capa">
+            <div class="barra-superior">
+                <div class="bola-1 hidden-xs"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 logo">
+                            <img src="https://www.pucrs.br/wp-content/uploads/2020/07/logo_TRACK.svg" alt="" />
+                        </div>
+                        <div class="col-md-4">
+                            <div class="hamburguer hamburguer-mobile">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="barra-inferior">
+                <div class="container">
+                    <div class="row flex-vertical-center">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <h2>Conheça os caminhos do Empreendedorismo na PUCRS</h2>
+                            <p>O Track é o seu caminho de empreendedorismo dentro da PUCRS. Aqui, nós te mostramos todas as possibilidades do ecossistema de inovação e desenvolvimento de novos negócios na Universidade. São oportunidades para você que tem
+                                apenas uma ideia e quer desenvolver, até você que já tem uma startup pronta para decolar. Descubra quais são os caminhos feitos para você de acordo com o seu contexto! Bem-vindos ao nosso universo de empreendedorismo e
+                                inovação!
+                            </p>
+                            <ul class="caminhos">
+                                <li>
+                                    <a href="#o-que-e-track" class="sub-link"><i class="fas fa-caret-right"></i> O que é</a>
+                                </li>
+                                <li>
+                                    <a href="#calendario" class="sub-link"><i class="fas fa-caret-right"></i> Saiba como
+                                        participar</a>
+                                </li>
+
+                                <li>
+                                    <a href="#noticias" class="sub-link"><i class="fas fa-caret-right"></i> O que
+                                        estamos
+                                        fazendo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bola-2 hidden-xs"></div>
+            </div>
+        </section>
+        <section id="calendario">
+            <div class="collapse-calendario">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="calendario-header">
+                                <div class="icon-header"><img src="./assets/images/icon-agenda.svg"></div>
+                                <h1>Próximos eventos</h1>
+                            </div>
+                            <div class="calendario-default">
+                                <div class="calendario-item">
+                                    <button type="button" class="collapsible"><div class="data"><p>23</p><p class="mes">AGO</p><hr></div><p class="titulo">Maratonas de Inovação PUCRS 2021</p><i class="fas fa-arrow-right arrow"></i></button>
+                                    <div class="collapsible-content">
+                                        <div class="row">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <div class="collapsible-content-lateral">
+                                                    <div class="collapsible-content-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                                <div class="collapsible-infos">
+                                                    <img class="thumb-collapsible" src="./assets/images/thumb.png">
+                                                    <p><strong>Data:</strong> 23/08 a 02/09</p>
+                                                    <p><strong>Horário:</strong> 16h</p>
+                                                    <p><strong>Sobre o evento</strong></p>
+                                                    <p>Integração do conhecimento acadêmico com a prática de mercado, explorando o potencial de geração de novos produtos ou negócios (startups) no contexto da solução proposta, usando metodologias criativas,
+                                                        em um ambiente de inovação e empreendedorismo. Quem participa encontra problemas reais que os desafiam a pensar e criar de soluções a partir do raciocínio investigativo, da empatia e da interação
+                                                        com outros participantes.
+                                                    </p>
+                                                    <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendario-item">
+                                    <button type="button" class="collapsible"><div class="data"><p>23</p><p class="mes">AGO</p><hr></div><p class="titulo">Maratonas de Inovação PUCRS 2021</p><i class="fas fa-arrow-right arrow"></i></button>
+                                    <div class="collapsible-content">
+                                        <div class="row">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <div class="collapsible-content-lateral">
+                                                    <div class="collapsible-content-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                                <div class="collapsible-infos">
+                                                    <img class="thumb-collapsible" src="./assets/images/thumb.png">
+                                                    <p><strong>Data:</strong> 23/08 a 02/09</p>
+                                                    <p><strong>Horário:</strong> 16h</p>
+                                                    <p><strong>Sobre o evento</strong></p>
+                                                    <p>Integração do conhecimento acadêmico com a prática de mercado, explorando o potencial de geração de novos produtos ou negócios (startups) no contexto da solução proposta, usando metodologias criativas,
+                                                        em um ambiente de inovação e empreendedorismo. Quem participa encontra problemas reais que os desafiam a pensar e criar de soluções a partir do raciocínio investigativo, da empatia e da interação
+                                                        com outros participantes.
+                                                    </p>
+                                                    <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendario-item">
+                                    <button type="button" class="collapsible"><div class="data"><p>23</p><p class="mes">AGO</p><hr></div><p class="titulo">Maratonas de Inovação PUCRS 2021</p><i class="fas fa-arrow-right arrow"></i></button>
+                                    <div class="collapsible-content">
+                                        <div class="row">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <div class="collapsible-content-lateral">
+                                                    <div class="collapsible-content-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                                <div class="collapsible-infos">
+                                                    <img class="thumb-collapsible" src="./assets/images/thumb.png">
+                                                    <p><strong>Data:</strong> 23/08 a 02/09</p>
+                                                    <p><strong>Horário:</strong> 16h</p>
+                                                    <p><strong>Sobre o evento</strong></p>
+                                                    <p>Integração do conhecimento acadêmico com a prática de mercado, explorando o potencial de geração de novos produtos ou negócios (startups) no contexto da solução proposta, usando metodologias criativas,
+                                                        em um ambiente de inovação e empreendedorismo. Quem participa encontra problemas reais que os desafiam a pensar e criar de soluções a partir do raciocínio investigativo, da empatia e da interação
+                                                        com outros participantes.
+                                                    </p>
+                                                    <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendario-hide">
+                                <div class="calendario-item">
+                                    <button type="button" class="collapsible"><div class="data"><p>23</p><p class="mes">AGO</p><hr></div><p class="titulo">Maratonas de Inovação PUCRS 2021</p><i class="fas fa-arrow-right arrow"></i></button>
+                                    <div class="collapsible-content">
+                                        <div class="row">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <div class="collapsible-content-lateral">
+                                                    <div class="collapsible-content-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                                <div class="collapsible-infos">
+                                                    <img class="thumb-collapsible" src="./assets/images/thumb.png">
+                                                    <p><strong>Data:</strong> 23/08 a 02/09</p>
+                                                    <p><strong>Horário:</strong> 16h</p>
+                                                    <p><strong>Sobre o evento</strong></p>
+                                                    <p>Integração do conhecimento acadêmico com a prática de mercado, explorando o potencial de geração de novos produtos ou negócios (startups) no contexto da solução proposta, usando metodologias criativas,
+                                                        em um ambiente de inovação e empreendedorismo. Quem participa encontra problemas reais que os desafiam a pensar e criar de soluções a partir do raciocínio investigativo, da empatia e da interação
+                                                        com outros participantes.
+                                                    </p>
+                                                    <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendario-item">
+                                    <button type="button" class="collapsible"><div class="data"><p>23</p><p class="mes">AGO</p><hr></div><p class="titulo">Maratonas de Inovação PUCRS 2021</p><i class="fas fa-arrow-right arrow"></i></button>
+                                    <div class="collapsible-content">
+                                        <div class="row">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <div class="collapsible-content-lateral">
+                                                    <div class="collapsible-content-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                                <div class="collapsible-infos">
+                                                    <img class="thumb-collapsible" src="./assets/images/thumb.png">
+                                                    <p><strong>Data:</strong> 23/08 a 02/09</p>
+                                                    <p><strong>Horário:</strong> 16h</p>
+                                                    <p><strong>Sobre o evento</strong></p>
+                                                    <p>Integração do conhecimento acadêmico com a prática de mercado, explorando o potencial de geração de novos produtos ou negócios (startups) no contexto da solução proposta, usando metodologias criativas,
+                                                        em um ambiente de inovação e empreendedorismo. Quem participa encontra problemas reais que os desafiam a pensar e criar de soluções a partir do raciocínio investigativo, da empatia e da interação
+                                                        com outros participantes.
+                                                    </p>
+                                                    <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendario-item">
+                                    <button type="button" class="collapsible"><div class="data"><p>23</p><p class="mes">AGO</p><hr></div><p class="titulo">Maratonas de Inovação PUCRS 2021</p><i class="fas fa-arrow-right arrow"></i></button>
+                                    <div class="collapsible-content">
+                                        <div class="row">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <div class="collapsible-content-lateral">
+                                                    <div class="collapsible-content-line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                                <div class="collapsible-infos">
+                                                    <img class="thumb-collapsible" src="./assets/images/thumb.png">
+                                                    <p><strong>Data:</strong> 23/08 a 02/09</p>
+                                                    <p><strong>Horário:</strong> 16h</p>
+                                                    <p><strong>Sobre o evento</strong></p>
+                                                    <p>Integração do conhecimento acadêmico com a prática de mercado, explorando o potencial de geração de novos produtos ou negócios (startups) no contexto da solução proposta, usando metodologias criativas,
+                                                        em um ambiente de inovação e empreendedorismo. Quem participa encontra problemas reais que os desafiam a pensar e criar de soluções a partir do raciocínio investigativo, da empatia e da interação
+                                                        com outros participantes.
+                                                    </p>
+                                                    <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn-ver-mais" type="button">Ver mais</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="noticias">
+            <div class="barra">
+                <img src="https://www.pucrs.br/wp-content/uploads/2020/07/element_circle.svg
+            " alt="" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div id="noticias-header">
+                            <div class="icon-header"><img src="./assets/images/icon-noticias.svg"></div>
+                            <h1>Notícias</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="noticias-default">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/tecnopuc/2021/02/26/educacao-impulsiona-porto-alegre-como-uma-das-melhores-cidades-para-empreender-no-pais/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/02/coworking_empreendedorismo_inovacao_tecnologia_tecnopucfoto-Bruno_Todesquini-1.png" alt="Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">26/02/2021 - 16h11</span>
+                                        </div>
+                                        <h2>
+                                            Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/tecnopuc/2021/03/08/steve-blank-empreendedor-do-vale-do-silicio-considerado-o-pai-do-empreendedorismo-moderno-participa-de-edicao-especial-do-tecnopuc-talks/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://www.pucrs.br/track/wp-content/uploads/sites/252/2021/03/steve-blank.png" alt="Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">08/03/2021</span>
+                                        </div>
+                                        <h2>
+                                            Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/blog/programa-incentiva-a-conexao-empreendedora-entre-alunas-e-alumni/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/2021_03_11-conexao_rio_poa_delas2-768x768-2.png" alt="Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão
+                                            empreendedora entre alunas e alumni" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">08/03/2021</span>
+                                        </div>
+                                        <h2>
+                                            Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão empreendedora entre alunas e alumni
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/blog/empreendedor-camaleao-confira-os-aprendizados-do-5o-ideacao/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/05/paineis_ideacao_idear_pucrs_2021-5.png" alt="Empreendedor camaleão: confira os aprendizados do 5º Ideação" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">17/05/2021 - 18h48</span>
+                                        </div>
+                                        <h2>
+                                            Empreendedor camaleão: confira os aprendizados do 5º Ideação
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://tecnopuc.pucrs.br/vale-do-silicio-no-tecnopuc-assista-o-encontro-com-cheryl-edison/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/screenshot-www.jornaldocomercio.com-2021.05.25-13_09_37.png" alt="Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">28/05/2021</span>
+                                        </div>
+                                        <h2>
+                                            Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://tecnopuc.pucrs.br/navi-hub-de-inteligencia-artificial-e-ciencia-de-dados-sera-lancado-dia-24/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/06/screenshot-static.wixstatic.com-2021.06.07-11_20_17.png" alt="NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">07/06/2021</span>
+                                        </div>
+                                        <h2>
+                                            NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="noticias-hide">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/tecnopuc/2021/02/26/educacao-impulsiona-porto-alegre-como-uma-das-melhores-cidades-para-empreender-no-pais/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/02/coworking_empreendedorismo_inovacao_tecnologia_tecnopucfoto-Bruno_Todesquini-1.png" alt="Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">26/02/2021 - 16h11</span>
+                                        </div>
+                                        <h2>
+                                            Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/tecnopuc/2021/03/08/steve-blank-empreendedor-do-vale-do-silicio-considerado-o-pai-do-empreendedorismo-moderno-participa-de-edicao-especial-do-tecnopuc-talks/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://www.pucrs.br/track/wp-content/uploads/sites/252/2021/03/steve-blank.png" alt="Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">08/03/2021</span>
+                                        </div>
+                                        <h2>
+                                            Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/blog/programa-incentiva-a-conexao-empreendedora-entre-alunas-e-alumni/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/2021_03_11-conexao_rio_poa_delas2-768x768-2.png" alt="Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão
+                                            empreendedora entre alunas e alumni" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">08/03/2021</span>
+                                        </div>
+                                        <h2>
+                                            Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão empreendedora entre alunas e alumni
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://www.pucrs.br/blog/empreendedor-camaleao-confira-os-aprendizados-do-5o-ideacao/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/05/paineis_ideacao_idear_pucrs_2021-5.png" alt="Empreendedor camaleão: confira os aprendizados do 5º Ideação" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">17/05/2021 - 18h48</span>
+                                        </div>
+                                        <h2>
+                                            Empreendedor camaleão: confira os aprendizados do 5º Ideação
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://tecnopuc.pucrs.br/vale-do-silicio-no-tecnopuc-assista-o-encontro-com-cheryl-edison/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/screenshot-www.jornaldocomercio.com-2021.05.25-13_09_37.png" alt="Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">28/05/2021</span>
+                                        </div>
+                                        <h2>
+                                            Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <a href="https://tecnopuc.pucrs.br/navi-hub-de-inteligencia-artificial-e-ciencia-de-dados-sera-lancado-dia-24/" target="_blank">
+                                    <div class="card-esquerda">
+                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/06/screenshot-static.wixstatic.com-2021.06.07-11_20_17.png" alt="NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24" />
+                                    </div>
+                                    <div class="card-direita">
+                                        <div class="info">
+                                            <span class="tag">Tecnopuc</span>
+                                            <span class="data">07/06/2021</span>
+                                        </div>
+                                        <h2>
+                                            NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-ver-mais" type="button">Ver mais</button>
+            </div>
+        </section>
+    </main>
+
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- Bootstrap JS -->
+    <!-- Última versão JavaScript compilada e minificada -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <!--Page Scripts-->
+    <script>
+        //Menu lateral
+        $(document).ready(function() {
+            $("#progressbar").show();
+            $(window).scroll(function() {
+                var ducumentScrollTop = $(document).scrollTop(),
+                    scrollHeight = $(document).height() - $(window).height(),
+                    progressBarWidth = (ducumentScrollTop / scrollHeight) * 100;
+                $("#progressbar div").height(progressBarWidth + "%");
+            });
+
+            $(".hamburguer, .fecha-menu").click(function() {
+                $(".nav-bar").toggleClass("toggle");
+            });
+        });
+        //Smoth scroll top
+        $("a.sub-link[href^='#']").click(function(e) {
+            e.preventDefault();
+
+            var position = $($(this).attr("href")).offset().top;
+
+            $("body, html").animate({
+                scrollTop: position
+            });
+        });
+        //Collapse
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+        //Botão ver mais
+        $(document).ready(function() {
+            $(".calendario-hide").hide();
+            $(".noticias-hide").hide();
+
+            $(".btn-ver-mais").click(function() {
+                $(".calendario-hide").slideToggle(200);
+                $(".noticias-hide").slideToggle(200);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
