@@ -444,7 +444,9 @@
         }
         
         #noticias .card img {
+            display: block;
             width: 100%;
+            height: 220px;
         }
         
         #noticias h1 {
@@ -482,11 +484,62 @@
             font-size: 12px;
             font-weight: 400;
         }
+        
+        .overlay {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .overlay:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .8);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        
+        .overlay:hover:after {
+            opacity: .8;
+        }
         /* noticias */
+        
+        #trilha {
+            background-color: #edf1f5;
+            height: auto;
+            margin-right: 150px;
+            padding-top: 10%;
+        }
+        
+        #trilha-header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #trilha-header h1 {
+            color: #001e30;
+            font-size: 2em;
+            line-height: 2.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 5% 0;
+        }
+        
+        .triangulo {
+            border-top: 60px solid #edf1f5;
+            border-bottom: 60px solid #edf1f5;
+            border-left: 20px solid #2E75BD;
+        }
         /* sections */
         /* botões */
         
-        .btn-ver-mais {
+        .btn-ver-mais-calendario,
+        .btn-ver-mais-noticias {
             display: inline-block;
             background: #27619D;
             border: solid 1px #27619D;
@@ -505,7 +558,8 @@
             box-shadow: 0px 8px 20px -2px #000000b0;
         }
         
-        .btn-ver-mais:hover {
+        .btn-ver-mais-calendario:hover,
+        .btn-ver-mais-noticias:hover {
             background: #173B5F;
             transition: all 0.2s ease-out;
         }
@@ -776,7 +830,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn-ver-mais" type="button">Ver mais</button>
+                            <button class="btn-ver-mais-calendario" type="button">Ver mais</button>
                         </div>
                     </div>
                 </div>
@@ -801,7 +855,8 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/tecnopuc/2021/02/26/educacao-impulsiona-porto-alegre-como-uma-das-melhores-cidades-para-empreender-no-pais/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/02/coworking_empreendedorismo_inovacao_tecnologia_tecnopucfoto-Bruno_Todesquini-1.png" alt="Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País" />
+                                        <div class="overlay">
+                                            <img src="https://www.pucrs.br/wp-content/uploads/2021/02/coworking_empreendedorismo_inovacao_tecnologia_tecnopucfoto-Bruno_Todesquini-1.png" alt="Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -819,7 +874,9 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/tecnopuc/2021/03/08/steve-blank-empreendedor-do-vale-do-silicio-considerado-o-pai-do-empreendedorismo-moderno-participa-de-edicao-especial-do-tecnopuc-talks/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://www.pucrs.br/track/wp-content/uploads/sites/252/2021/03/steve-blank.png" alt="Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks" />
+                                        <div class="overlay"><img src="https://www.pucrs.br/track/wp-content/uploads/sites/252/2021/03/steve-blank.png" alt="Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks"
+                                            /></div>
+
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -837,8 +894,8 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/blog/programa-incentiva-a-conexao-empreendedora-entre-alunas-e-alumni/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/2021_03_11-conexao_rio_poa_delas2-768x768-2.png" alt="Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão
-                                            empreendedora entre alunas e alumni" />
+                                        <div class="overlay"><img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/2021_03_11-conexao_rio_poa_delas2-768x768-2.png" alt="Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão
+                                            empreendedora entre alunas e alumni" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -858,7 +915,7 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/blog/empreendedor-camaleao-confira-os-aprendizados-do-5o-ideacao/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/05/paineis_ideacao_idear_pucrs_2021-5.png" alt="Empreendedor camaleão: confira os aprendizados do 5º Ideação" />
+                                        <div class="overlay"><img src="https://www.pucrs.br/wp-content/uploads/2021/05/paineis_ideacao_idear_pucrs_2021-5.png" alt="Empreendedor camaleão: confira os aprendizados do 5º Ideação" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -876,7 +933,7 @@
                             <div class="card">
                                 <a href="https://tecnopuc.pucrs.br/vale-do-silicio-no-tecnopuc-assista-o-encontro-com-cheryl-edison/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/screenshot-www.jornaldocomercio.com-2021.05.25-13_09_37.png" alt="Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison" />
+                                        <div class="overlay"><img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/screenshot-www.jornaldocomercio.com-2021.05.25-13_09_37.png" alt="Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -894,7 +951,7 @@
                             <div class="card">
                                 <a href="https://tecnopuc.pucrs.br/navi-hub-de-inteligencia-artificial-e-ciencia-de-dados-sera-lancado-dia-24/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/06/screenshot-static.wixstatic.com-2021.06.07-11_20_17.png" alt="NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24" />
+                                        <div class="overlay"><img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/06/screenshot-static.wixstatic.com-2021.06.07-11_20_17.png" alt="NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -916,7 +973,8 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/tecnopuc/2021/02/26/educacao-impulsiona-porto-alegre-como-uma-das-melhores-cidades-para-empreender-no-pais/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/02/coworking_empreendedorismo_inovacao_tecnologia_tecnopucfoto-Bruno_Todesquini-1.png" alt="Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País" />
+                                        <div class="overlay"><img src="https://www.pucrs.br/wp-content/uploads/2021/02/coworking_empreendedorismo_inovacao_tecnologia_tecnopucfoto-Bruno_Todesquini-1.png" alt="Educação impulsiona Porto Alegre como uma das melhores cidades para empreender no País"
+                                            /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -934,7 +992,8 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/tecnopuc/2021/03/08/steve-blank-empreendedor-do-vale-do-silicio-considerado-o-pai-do-empreendedorismo-moderno-participa-de-edicao-especial-do-tecnopuc-talks/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://www.pucrs.br/track/wp-content/uploads/sites/252/2021/03/steve-blank.png" alt="Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks" />
+                                        <div class="overlay"><img src="https://www.pucrs.br/track/wp-content/uploads/sites/252/2021/03/steve-blank.png" alt="Steve Blank, empreendedor do Vale do Silício considerado o pai do empreendedorismo moderno, participa de edição especial do Tecnopuc Talks"
+                                            /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -952,8 +1011,8 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/blog/programa-incentiva-a-conexao-empreendedora-entre-alunas-e-alumni/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/2021_03_11-conexao_rio_poa_delas2-768x768-2.png" alt="Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão
-                                            empreendedora entre alunas e alumni" />
+                                        <div class="overlay"><img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/2021_03_11-conexao_rio_poa_delas2-768x768-2.png" alt="Tecnopuc e Parque Tecnológico da UFRJ oferecem programa para incentivar a conexão
+                                            empreendedora entre alunas e alumni" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -973,7 +1032,7 @@
                             <div class="card">
                                 <a href="https://www.pucrs.br/blog/empreendedor-camaleao-confira-os-aprendizados-do-5o-ideacao/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://www.pucrs.br/wp-content/uploads/2021/05/paineis_ideacao_idear_pucrs_2021-5.png" alt="Empreendedor camaleão: confira os aprendizados do 5º Ideação" />
+                                        <div class="overlay"><img src="https://www.pucrs.br/wp-content/uploads/2021/05/paineis_ideacao_idear_pucrs_2021-5.png" alt="Empreendedor camaleão: confira os aprendizados do 5º Ideação" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -991,7 +1050,7 @@
                             <div class="card">
                                 <a href="https://tecnopuc.pucrs.br/vale-do-silicio-no-tecnopuc-assista-o-encontro-com-cheryl-edison/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/screenshot-www.jornaldocomercio.com-2021.05.25-13_09_37.png" alt="Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison" />
+                                        <div class="overlay"><img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/05/screenshot-www.jornaldocomercio.com-2021.05.25-13_09_37.png" alt="Vale do Silício no Tecnopuc: assista o encontro com Cheryl Edison" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -1009,7 +1068,7 @@
                             <div class="card">
                                 <a href="https://tecnopuc.pucrs.br/navi-hub-de-inteligencia-artificial-e-ciencia-de-dados-sera-lancado-dia-24/" target="_blank">
                                     <div class="card-esquerda">
-                                        <img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/06/screenshot-static.wixstatic.com-2021.06.07-11_20_17.png" alt="NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24" />
+                                        <div class="overlay"><img src="https://tecnopuc.pucrs.br/wp-content/uploads/2021/06/screenshot-static.wixstatic.com-2021.06.07-11_20_17.png" alt="NAVI: Hub de Inteligência Artificial e Ciência de Dados será lançado dia 24" /></div>
                                     </div>
                                     <div class="card-direita">
                                         <div class="info">
@@ -1025,7 +1084,41 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-ver-mais" type="button">Ver mais</button>
+                <button class="btn-ver-mais-noticias" type="button">Ver mais</button>
+            </div>
+        </section>
+        <section id="trilha">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div id="trilha-header">
+                            <div class="icon-header"><img src="./assets/images/icon-desenvolvimento.svg"></div>
+                            <h1>Desenvolvimento do meu negócio</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trilha-tabs">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                                <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                                <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+                                <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane" id="home">Home</div>
+                                <div role="tabpanel" class="tab-pane" id="profile">Profile</div>
+                                <div role="tabpanel" class="tab-pane" id="messages">Messages</div>
+                                <div role="tabpanel" class="tab-pane" id="settings">Settings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -1078,13 +1171,17 @@
                 }
             });
         }
+
         //Botão ver mais
         $(document).ready(function() {
             $(".calendario-hide").hide();
             $(".noticias-hide").hide();
 
-            $(".btn-ver-mais").click(function() {
+            $(".btn-ver-mais-calendario").click(function() {
                 $(".calendario-hide").slideToggle(200);
+            });
+
+            $(".btn-ver-mais-noticias").click(function() {
                 $(".noticias-hide").slideToggle(200);
             });
         });
