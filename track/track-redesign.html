@@ -41,6 +41,12 @@
             padding: 0;
             box-sizing: border-box;
             font-family: "Roboto", sans-serif;
+            --bg-blue-1: #2E75BD;
+            --bg-blue-2: #27619D;
+            --bg-blue-3: #1F4E7E;
+            --bg-blue-4: #173B5F;
+            --bg-blue-5: #10273F;
+            --bg-blue-6: #081420;
         }
         
         body {
@@ -529,12 +535,149 @@
             text-transform: uppercase;
             margin: 0 0 5% 0;
         }
+        /* tabs */
         
-        .triangulo {
-            border-top: 60px solid #edf1f5;
-            border-bottom: 60px solid #edf1f5;
-            border-left: 20px solid #2E75BD;
+        .nav-tabs {
+            border: none;
         }
+        
+        .nav-tabs li:nth-child(1) {
+            background: var(--bg-blue-1);
+        }
+        
+        .nav-tabs li:before:nth-child(1) {
+            border-left: 20px solid var(--bg-blue-1);
+        }
+        
+        .nav-tabs li:nth-child(2) {
+            background: var(--bg-blue-2);
+        }
+        
+        .nav-tabs li:nth-child(3) {
+            background: var(--bg-blue-3);
+        }
+        
+        .nav-tabs li:nth-child(4) {
+            background: var(--bg-blue-4);
+        }
+        
+        .nav-tabs li:nth-child(5) {
+            background: var(--bg-blue-5);
+        }
+        
+        .nav-tabs li:nth-child(6) {
+            background: var(--bg-blue-6);
+        }
+        
+        .nav-tabs li {
+            float: left;
+            margin-bottom: 1%;
+            padding-left: 3%;
+            background: transparent;
+            width: 150px;
+            height: 150px;
+            margin-left: 2%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-tabs li a {
+            color: #FFFFFF;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        .nav-tabs li a:hover {
+            color: #FFFFFF;
+            background: none;
+            border: none;
+        }
+        
+        .nav-tabs li:before {
+            content: "";
+            position: absolute;
+            right: -20px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-top: 75px solid transparent;
+            border-bottom: 75px solid transparent;
+        }
+        
+        .nav-tabs li:nth-child(1)::before {
+            border-left: 20px solid var(--bg-blue-1);
+        }
+        
+        .nav-tabs li:nth-child(2)::before {
+            border-left: 20px solid var(--bg-blue-2);
+        }
+        
+        .nav-tabs li:nth-child(3)::before {
+            border-left: 20px solid var(--bg-blue-3);
+        }
+        
+        .nav-tabs li:nth-child(4)::before {
+            border-left: 20px solid var(--bg-blue-4);
+        }
+        
+        .nav-tabs li:nth-child(5)::before {
+            border-left: 20px solid var(--bg-blue-5);
+        }
+        
+        .nav-tabs li:nth-child(6)::before {
+            border-left: 20px solid var(--bg-blue-6);
+        }
+        
+        .nav-tabs li:after {
+            content: "";
+            position: absolute;
+            left: -1px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 20px solid #FFF;
+            border-top: 75px solid transparent;
+            border-bottom: 75px solid transparent;
+        }
+        
+        .nav-tabs li:hover {
+            background: #F36A10;
+            transition: all 0.5s;
+        }
+        
+        .nav-tabs li:hover::before {
+            border-left: 20px solid #F36A10;
+            border-top: 75px solid transparent;
+            border-bottom: 75px solid transparent;
+            transition: all 0.5s;
+        }
+        
+        .nav-tabs li:first-child::after {
+            border: none;
+        }
+        
+        .nav-tabs li.active {
+            background: #F36A10;
+        }
+        
+        .nav-tabs li.active:before {
+            border-left: 20px solid #F36A10;
+        }
+        
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:focus,
+        .nav-tabs>li.active>a:hover {
+            color: #FFFFFF;
+            cursor: default;
+            background: none;
+            border: none;
+        }
+        /* tabs */
         /* sections */
         /* botões */
         
@@ -1097,24 +1240,27 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="trilha-tabs">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-                                <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-                                <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-                                <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                                <li><a href="#1" role="tab" data-toggle="tab">Vontade de fazer a diferença</a>
+                                </li>
+                                <li><a href="#2" role="tab" data-toggle="tab">Motivação de aprender sobre negócios</a></li>
+                                <li><a href="#3" role="tab" data-toggle="tab">Ideia, tecnologia ou projeto</a></li>
+                                <li><a href="#4" role="tab" data-toggle="tab">Startup</a></li>
+                                <li><a href="#5" role="tab" data-toggle="tab">Startup em expansão</a></li>
+                                <li><a href="#6" role="tab" data-toggle="tab">Negócio consolidado</a></li>
                             </ul>
-
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane" id="home">Home</div>
-                                <div role="tabpanel" class="tab-pane" id="profile">Profile</div>
-                                <div role="tabpanel" class="tab-pane" id="messages">Messages</div>
-                                <div role="tabpanel" class="tab-pane" id="settings">Settings</div>
+                                <div role="tabpanel" class="tab-pane" id="1">Conteúdo "Vontade de fazer a diferença"</div>
+                                <div role="tabpanel" class="tab-pane" id="2">Conteúdo "Motivação de aprender sobre negócios"</div>
+                                <div role="tabpanel" class="tab-pane" id="3">Conteúdo "Ideia, tecnologia ou projeto"</div>
+                                <div role="tabpanel" class="tab-pane" id="4">Conteúdo "Startup"</div>
+                                <div role="tabpanel" class="tab-pane" id="5">Conteúdo "Startup em expansão"</div>
+                                <div role="tabpanel" class="tab-pane" id="6">Conteúdo "Negócio consolidado"</div>
                             </div>
                         </div>
                     </div>
@@ -1147,7 +1293,7 @@
             });
         });
         //Smoth scroll top
-        $("a.sub-link[href^='#']").click(function(e) {
+        $("a.sub-link[href^='#'], .nav-tabs li a").click(function(e) {
             e.preventDefault();
 
             var position = $($(this).attr("href")).offset().top;
