@@ -63,6 +63,7 @@
             width: 150px;
             height: 150px;
             margin-left: 2%;
+            cursor: pointer;
         }
         
         .nav-tabs li a {
@@ -75,6 +76,18 @@
             color: #FFFFFF;
             background: none;
             border: none;
+        }
+        
+        .nav-tabs li:before {
+            content: "";
+            position: absolute;
+            right: -20px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-top: 75px solid transparent;
+            border-bottom: 75px solid transparent;
         }
         
         .nav-tabs li:nth-child(1)::before {
@@ -99,18 +112,6 @@
         
         .nav-tabs li:nth-child(6)::before {
             border-left: 20px solid var(--bg-blue-6);
-        }
-        
-        .nav-tabs li:before {
-            content: "";
-            position: absolute;
-            right: -20px;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-top: 75px solid transparent;
-            border-bottom: 75px solid transparent;
         }
         
         .nav-tabs li:after {
