@@ -704,7 +704,6 @@ p.titulo {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
@@ -727,15 +726,20 @@ p.titulo {
     background: #081420;
     transform: rotateY(180deg);
     opacity: .8;
+    padding: 5%;
+}
+
+.flip-card-back p {
     color: #FFF;
     text-align: left;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
 }
 
 .flip-card-back .sub-link .fas {
     transform: rotate(0deg)!important;
+}
+
+.flip-card-back a {
+    background: #FFF;
 }
 
 .flip-overlay {
