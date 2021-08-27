@@ -835,8 +835,8 @@ p.titulo {
 
 #contato .circulo-azul {
     position: absolute;
-    bottom: -30px;
-    right: -10px;
+    bottom: -10px;
+    right: 120px;
 }
 
 #contato h1 {
@@ -850,44 +850,6 @@ p.titulo {
 
 #contato .row {
     margin: 70px 0 0px;
-}
-
-.form,
-.text {
-    background-color: #5b7b9b;
-    padding: 6px 12px;
-    font-size: 16px;
-    border: 0;
-    border-radius: 8px;
-}
-
-.form {
-    display: inline-block;
-    width: 260px;
-    height: 38px;
-    margin: 5px 5px;
-}
-
-textarea {
-    resize: none;
-}
-
-.text {
-    display: block;
-    width: 533px;
-    height: 150px;
-    margin: 5px auto 20px;
-}
-
-.btn {
-    text-transform: uppercase;
-    padding: 9px 35px !important;
-    background-color: #1f4e7e;
-    color: #fff;
-}
-
-.btn:hover {
-    color: #fff !important;
 }
 
 .rodape-card {
@@ -991,3 +953,123 @@ textarea {
 
 
 /* barra laranja */
+
+
+/* media query */
+
+@media (max-width: 400px) {
+    .collapsible-content-lateral {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .collapsible .fas {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+        border: solid 2px blue;
+    }
+    .lateral {
+        display: none;
+    }
+    .toggle {
+        right: 0px;
+    }
+    .nav-bar {
+        display: unset;
+        padding: 45px 45px 0 0;
+    }
+    .nav-bar.toggle {
+        min-width: 100% !important;
+        background-color: #001e30;
+    }
+    .nav-bar li a {
+        color: #fff;
+    }
+    .fecha-menu {
+        display: flex;
+    }
+    .toggle .fecha-menu:after {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        color: #f36a10;
+        text-align: right;
+        content: "\d7";
+        font-size: 30px;
+    }
+    #capa,
+    #calendario,
+    #noticias,
+    #trilha,
+    #video,
+    #contato {
+        margin-right: 0px;
+    }
+    #capa {
+        height: unset;
+    }
+    #capa .row {
+        height: unset;
+    }
+    #capa .logo {
+        display: block;
+        height: unset;
+        text-align: center;
+    }
+    #capa .logo img {
+        max-width: 250px;
+    }
+    #capa .barra-superior {
+        background: rgb(0, 30, 48);
+    }
+    #capa .barra-inferior {
+        background: rgb(255, 255, 255);
+    }
+    #capa .barra-superior .row {
+        position: relative;
+        padding: 0;
+    }
+    #capa .barra-superior .col-md-8 {
+        margin: 80px 0 40px;
+    }
+    #capa .barra-superior .col-md-4 {
+        position: absolute;
+        display: flex;
+        top: 20px;
+        padding: 0 15px;
+        width: 100%;
+    }
+    .hamburguer-mobile {
+        display: flex;
+    }
+    .barra {
+        height: 75px;
+        margin-bottom: 60px;
+    }
+    .barra img {
+        max-width: 110px;
+        top: 15px;
+        left: -30px;
+    }
+    #contato img.circulo-azul {
+        right: -20px;
+        max-width: 110px;
+    }
+    #contato .row {
+        margin: 0;
+    }
+    #contato .col-sm-4 {
+        border: 0;
+    }
+    #contato .rodape-card {
+        margin: 70px 0;
+    }
+}
+
+
+/* media query */
