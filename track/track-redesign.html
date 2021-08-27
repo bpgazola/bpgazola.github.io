@@ -29,698 +29,14 @@
     <!-- Bootstrap CSS -->
     <!-- Última versão CSS compilada e minificada -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/brands.min.js" integrity="sha512-n+LJkKtr963iJwCP7oilRjd0m+j/TkcG50S5DVdDEWkduZow4yc267LccOutUUoNbf23+c+Gy6Oj2d2l9rUT0Q==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Roboto", sans-serif;
-            --bg-blue-1: #2E75BD;
-            --bg-blue-2: #27619D;
-            --bg-blue-3: #1F4E7E;
-            --bg-blue-4: #173B5F;
-            --bg-blue-5: #10273F;
-            --bg-blue-6: #081420;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        ul {
-            padding: 0;
-        }
-        
-        li {
-            list-style: none;
-        }
-        
-        a:active {
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: none;
-        }
-        
-        .flex-vertical-center {
-            display: flex;
-            align-items: center;
-        }
-        /* barra fixa lateral */
-        
-        .container-lateral {
-            height: 100%;
-            width: 100%;
-            padding: 50px 0;
-        }
-        
-        .lateral {
-            background-color: #fff;
-            display: fixed;
-            position: fixed;
-            right: 0;
-            z-index: 5;
-            width: 150px;
-            height: 100vh;
-        }
-        
-        .lateral img {
-            display: block;
-            margin: 0 auto;
-        }
-        /* barra fixa lateral */
-        /* hamburgues */
-        
-        .hamburguer {
-            width: 4rem;
-            height: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            margin: 0 auto;
-        }
-        
-        .hamburguer-mobile {
-            display: none;
-        }
-        
-        .line {
-            width: 100%;
-            height: 2px;
-            background-color: #f36a10;
-            border-radius: 16px;
-            transition: 0.2s ease-out;
-        }
-        
-        .line:first-of-type {
-            width: 50%;
-            margin-left: auto;
-        }
-        /* hamburgues */
-        /* nav bar */
-        
-        .nav-bar {
-            position: fixed;
-            z-index: 4;
-            background-color: #fff;
-            top: 0;
-            right: -25rem;
-            height: 100vh;
-            width: 25rem;
-            padding: 100px 0 0 10px;
-            display: flex;
-            justify-content: center;
-            transition: 0.5s ease-out;
-        }
-        
-        .nav-bar li {
-            list-style: none;
-            text-align: right;
-            padding: 10px 0;
-        }
-        
-        .nav-bar li a {
-            text-transform: uppercase;
-            font-size: 20px;
-            color: #000;
-        }
-        
-        .fecha-menu {
-            height: 30px;
-            width: 30px;
-            display: none;
-            position: relative;
-        }
-        
-        .toggle {
-            right: 150px;
-        }
-        
-        #progressbar {
-            height: 71%;
-            width: 5px;
-            margin: 20px auto;
-            background: #a5a5a5;
-        }
-        
-        #progressbar div {
-            width: 5px;
-            background: #001e30;
-        }
-        
-        .fa,
-        .fas {
-            color: #fc9450;
-            ;
-        }
-        /* nav bar */
-        /* bolas */
-        
-        .bola-1 {
-            position: absolute;
-            left: 44%;
-            top: -50%;
-            width: 436px;
-            height: 436px;
-            border-radius: 50%;
-            background: #fc9450;
-            animation: move 3.8s linear infinite;
-        }
-        
-        .bola-2 {
-            position: absolute;
-            right: -5%;
-            top: -15%;
-            width: 436px;
-            height: 436px;
-            border-radius: 50%;
-            background: #1f4e7e;
-            animation: move 3.8s linear infinite;
-        }
-        
-        @keyframes move {
-            0% {
-                transform: rotate(0deg) translate(10px) rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg) translate(10px) rotate(360deg);
-            }
-        }
-        /* bolas */
-        /* sections */
-        /*capa */
-        
-        #capa {
-            height: 100vh;
-            margin-right: 150px;
-        }
-        
-        #capa .row {
-            height: 50vh;
-            padding: 45px 0;
-        }
-        
-        #capa .logo {
-            display: flex;
-            align-items: flex-end;
-            height: 100%;
-        }
-        
-        #capa .barra-superior .col-sm-4 {
-            padding: 45px 0;
-        }
-        
-        #capa .barra-superior {
-            height: 50%;
-            width: 100%;
-            background: rgb(0, 30, 48);
-            background: linear-gradient(90deg, rgba(0, 30, 48, 1) 0%, rgba(0, 30, 48, 1) 60%, rgba(243, 106, 16, 1) 60%, rgba(243, 106, 16, 1) 100%);
-            position: relative;
-            z-index: 2;
-        }
-        
-        #capa .barra-inferior {
-            height: 50%;
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            background: rgb(255, 255, 255);
-            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(0, 30, 48, 1) 60%, rgba(0, 30, 48, 1) 100%);
-        }
-        
-        #capa h2 {
-            color: #001e30;
-            font-size: 2em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 0 0 5% 0;
-        }
-        
-        #capa p {
-            font-size: 1.2em;
-        }
-        
-        #capa ul.caminhos {
-            display: flex;
-            flex-wrap: wrap !important;
-        }
-        
-        #capa ul.caminhos li {
-            margin: 10px;
-        }
-        
-        #capa ul.caminhos .fa,
-        #capa ul.caminhos .fas {
-            font-size: 1.2em;
-            padding: 1px 0 0 0;
-        }
-        
-        .sub-link {
-            text-decoration: underline;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #1f4e7e;
-        }
-        /*capa */
-        /*calendario */
-        
-        #calendario {
-            background-color: #edf1f5;
-            height: auto;
-            margin-right: 150px;
-            padding-top: 10%;
-        }
-        
-        #calendario-header {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        .icon-header {
-            width: 50px;
-            height: 50px;
-            background: #1F4E7E;
-            border-radius: 50%;
-            display: flex;
-            justify-content: space-around;
-        }
-        
-        .icon-header img {
-            width: 50%;
-        }
-        
-        #calendario-header h1 {
-            color: #001e30;
-            font-size: 2em;
-            line-height: 2.2em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 0 0 5% 0;
-        }
-        
-        .calendario-item {
-            margin-bottom: 3%;
-        }
-        
-        .collapsible {
-            width: 100%;
-            background: #FFF;
-            cursor: pointer;
-            padding: 3%;
-            border: none;
-            text-align: left;
-            outline: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .collapsible-content {
-            padding: 0 5%;
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.2s ease-out;
-            background-color: #ffffff;
-        }
-        
-        .collapsible .fas {
-            color: #1F4E7E;
-            font-size: 2.2em;
-            font-weight: 600;
-            margin-left: 45%;
-            transition: all 400ms ease-out;
-        }
-        
-        .active .fas {
-            transform: rotate(270deg);
-            transition: all 400ms ease-out;
-        }
-        
-        .data p {
-            color: #001E30;
-            font-size: 3em;
-            line-height: .5em;
-            text-align: right;
-            max-width: 3em;
-            width: auto;
-            font-weight: 600;
-        }
-        
-        .data p.mes {
-            color: #001E30;
-            font-size: 1.2em;
-            line-height: 1em;
-            max-width: 3em;
-            font-weight: bold;
-            text-align: right;
-        }
-        
-        .data hr {
-            border-top: solid 2px #001E30;
-            width: 50%;
-            float: right;
-            height: 1px;
-            margin-top: -5px;
-            margin-bottom: 0;
-        }
-        
-        p.titulo {
-            color: #001E30;
-            font-size: 1.8em;
-            font-weight: bold;
-            margin: 0 0 0 5%;
-        }
-        
-        .collapsible-content-lateral {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        .collapsible-content-line {
-            width: 2px;
-            background: #F36A10;
-            height: 220px;
-            margin: 200% 0 0 0;
-        }
-        
-        .collapsible-infos {
-            padding-bottom: 5%;
-        }
-        
-        .thumb-collapsible {
-            margin-bottom: 3%;
-        }
-        
-        .calendario-hide {
-            transition: all 0.2s ease-out;
-        }
-        /*calendario */
-        
-        #noticias {
-            height: auto;
-            margin-right: 150px;
-        }
-        
-        #noticias .row:nth-child(n+2) {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-        
-        #noticias-header {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        #noticias-header h1 {
-            color: #001e30;
-            font-size: 2em;
-            line-height: 2.2em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 0 0 5% 0;
-        }
-        
-        #noticias .card img {
-            display: block;
-            width: 100%;
-            height: 220px;
-        }
-        
-        #noticias h1 {
-            font-size: 30px;
-            color: #001e30;
-            text-transform: uppercase;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 45px;
-        }
-        
-        #noticias h2 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #001e30;
-        }
-        
-        #noticias .info {
-            margin: 15px 0;
-        }
-        
-        #noticias .tag {
-            font-size: 12px;
-            text-transform: uppercase;
-            background-color: rgba(243, 106, 16, 1);
-            padding: 3px 10px;
-            color: #fff;
-            border-radius: 4px;
-            font-weight: 400;
-            margin: 0 15px 0 0;
-        }
-        
-        #noticias .data {
-            color: #a5a5a5;
-            font-size: 12px;
-            font-weight: 400;
-        }
-        
-        .overlay {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .overlay:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, .8);
-            opacity: 0;
-            transition: all 0.5s;
-        }
-        
-        .overlay:hover:after {
-            opacity: .8;
-        }
-        /* noticias */
-        
-        #trilha {
-            background-color: #edf1f5;
-            height: auto;
-            margin-right: 150px;
-            padding-top: 10%;
-        }
-        
-        #trilha-header {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        #trilha-header h1 {
-            color: #001e30;
-            font-size: 2em;
-            line-height: 2.2em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 0 0 5% 0;
-        }
-        /* tabs */
-        
-        .nav-tabs {
-            border: none;
-        }
-        
-        .nav-tabs li:nth-child(1) {
-            background: var(--bg-blue-1);
-        }
-        
-        .nav-tabs li:before:nth-child(1) {
-            border-left: 20px solid var(--bg-blue-1);
-        }
-        
-        .nav-tabs li:nth-child(2) {
-            background: var(--bg-blue-2);
-        }
-        
-        .nav-tabs li:nth-child(3) {
-            background: var(--bg-blue-3);
-        }
-        
-        .nav-tabs li:nth-child(4) {
-            background: var(--bg-blue-4);
-        }
-        
-        .nav-tabs li:nth-child(5) {
-            background: var(--bg-blue-5);
-        }
-        
-        .nav-tabs li:nth-child(6) {
-            background: var(--bg-blue-6);
-        }
-        
-        .nav-tabs li {
-            float: left;
-            margin-bottom: 1%;
-            padding-left: 3%;
-            background: transparent;
-            width: 150px;
-            height: 150px;
-            margin-left: 2%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-tabs li a {
-            color: #FFFFFF;
-            border: none;
-            border-radius: 0;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-        }
-        
-        .nav-tabs li a:hover {
-            color: #FFFFFF;
-            background: none;
-            border: none;
-        }
-        
-        .nav-tabs li:before {
-            content: "";
-            position: absolute;
-            right: -20px;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-top: 75px solid transparent;
-            border-bottom: 75px solid transparent;
-        }
-        
-        .nav-tabs li:nth-child(1)::before {
-            border-left: 20px solid var(--bg-blue-1);
-        }
-        
-        .nav-tabs li:nth-child(2)::before {
-            border-left: 20px solid var(--bg-blue-2);
-        }
-        
-        .nav-tabs li:nth-child(3)::before {
-            border-left: 20px solid var(--bg-blue-3);
-        }
-        
-        .nav-tabs li:nth-child(4)::before {
-            border-left: 20px solid var(--bg-blue-4);
-        }
-        
-        .nav-tabs li:nth-child(5)::before {
-            border-left: 20px solid var(--bg-blue-5);
-        }
-        
-        .nav-tabs li:nth-child(6)::before {
-            border-left: 20px solid var(--bg-blue-6);
-        }
-        
-        .nav-tabs li:after {
-            content: "";
-            position: absolute;
-            left: -1px;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-left: 20px solid #FFF;
-            border-top: 75px solid transparent;
-            border-bottom: 75px solid transparent;
-        }
-        
-        .nav-tabs li:hover {
-            background: #F36A10;
-            transition: all 0.5s;
-        }
-        
-        .nav-tabs li:hover::before {
-            border-left: 20px solid #F36A10;
-            border-top: 75px solid transparent;
-            border-bottom: 75px solid transparent;
-            transition: all 0.5s;
-        }
-        
-        .nav-tabs li:first-child::after {
-            border: none;
-        }
-        
-        .nav-tabs li.active {
-            background: #F36A10;
-        }
-        
-        .nav-tabs li.active:before {
-            border-left: 20px solid #F36A10;
-        }
-        
-        .nav-tabs>li.active>a,
-        .nav-tabs>li.active>a:focus,
-        .nav-tabs>li.active>a:hover {
-            color: #FFFFFF;
-            cursor: default;
-            background: none;
-            border: none;
-        }
-        /* tabs */
-        /* sections */
-        /* botões */
-        
-        .btn-ver-mais-calendario,
-        .btn-ver-mais-noticias {
-            display: inline-block;
-            background: #27619D;
-            border: solid 1px #27619D;
-            color: #fff;
-            font-size: 1.2em;
-            text-align: center;
-            border-radius: 50px;
-            cursor: pointer;
-            min-width: 400px;
-            padding: 1% 10% 1% 10%;
-            margin: 5% 0 5% 0;
-            position: relative;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0px 8px 20px -2px #000000b0;
-        }
-        
-        .btn-ver-mais-calendario:hover,
-        .btn-ver-mais-noticias:hover {
-            background: #173B5F;
-            transition: all 0.2s ease-out;
-        }
-        /* botões */
-        /* barra laranja */
-        
-        .barra {
-            height: 133px;
-            background-color: rgba(243, 106, 16, 1);
-            margin-bottom: 100px;
-        }
-        
-        .barra img {
-            position: relative;
-            top: 35px;
-        }
-        /* barra laranja */
-    </style>
+
 
 </head>
 
@@ -1245,22 +561,166 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li><a href="#1" role="tab" data-toggle="tab">Vontade de fazer a diferença</a>
+                                <li><a href="#1" role="tab" data-toggle="tab">01. Vontade de fazer a diferença</a>
                                 </li>
-                                <li><a href="#2" role="tab" data-toggle="tab">Motivação de aprender sobre negócios</a></li>
-                                <li><a href="#3" role="tab" data-toggle="tab">Ideia, tecnologia ou projeto</a></li>
-                                <li><a href="#4" role="tab" data-toggle="tab">Startup</a></li>
-                                <li><a href="#5" role="tab" data-toggle="tab">Startup em expansão</a></li>
-                                <li><a href="#6" role="tab" data-toggle="tab">Negócio consolidado</a></li>
+                                <li><a href="#2" role="tab" data-toggle="tab">02. Motivação de aprender sobre negócios</a></li>
+                                <li><a href="#3" role="tab" data-toggle="tab">03. Ideia, tecnologia ou projeto</a></li>
+                                <li><a href="#4" role="tab" data-toggle="tab">04. Startup</a></li>
+                                <li><a href="#5" role="tab" data-toggle="tab">05. Startup em expansão</a></li>
+                                <li><a href="#6" role="tab" data-toggle="tab">06. Negócio consolidado</a></li>
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane" id="1">Conteúdo "Vontade de fazer a diferença"</div>
-                                <div role="tabpanel" class="tab-pane" id="2">Conteúdo "Motivação de aprender sobre negócios"</div>
-                                <div role="tabpanel" class="tab-pane" id="3">Conteúdo "Ideia, tecnologia ou projeto"</div>
-                                <div role="tabpanel" class="tab-pane" id="4">Conteúdo "Startup"</div>
-                                <div role="tabpanel" class="tab-pane" id="5">Conteúdo "Startup em expansão"</div>
-                                <div role="tabpanel" class="tab-pane" id="6">Conteúdo "Negócio consolidado"</div>
+                                <div role="tabpanel" class="tab-pane" id="1">
+                                    <div class="row">
+                                        <div class="col-xs-12 ol-sm-8 col-md-8 xol-lg-8">
+                                            <h2>Nível 01: Pensando em como fazer a diferença</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla metus felis, dapibus in arcu ut, convallis tempor tellus. Vestibulum malesuada fermentum nisi, non fermentum ipsum malesuada quis. Donec feugiat,
+                                                odio a sodales condimentum, nunc tortor volutpat sapien, maximus ultricies risus dui a nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla metus felis, dapibus in arcu ut, convallis tempor
+                                                tellus. Vestibulum malesuada fermentum nisi, non fermentum ipsum malesuada quis. Donec feugiat, odio a sodales condimentum, nunc tortor volutpat sapien, maximus ultricies risus dui a nisi. </p>
+                                        </div>
+                                    </div>
+                                    <div class="flipping-cards">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <div class="info">
+                                                                <span class="tag">Disciplina</span>
+                                                                <h3>Projetos e desafios</h3>
+                                                            </div>
+                                                            <div class="flip-overlay">
+                                                                <img src="./assets/images/thumb-flip-card.jpg" alt="Avatar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <p>Projeto Desafios: inovação e impacto social é uma disciplina eletiva para todos os alunos de graduação da PUCRS, vinculada à Escola de Negócios. O objetivo é incentivar a atitude empreendedora
+                                                                e de inovação através de desafios temáticos.</p><a href="https://idear.pucrs.br/o-que-fazemos/projeto-desafios/" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <div class="info">
+                                                                <span class="tag">Atendimentos</span>
+                                                                <h3>Assessorias e IDEAR</h3>
+                                                            </div>
+                                                            <div class="flip-overlay">
+                                                                <img src="./assets/images/thumb-flip-card.jpg" alt="Avatar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <p>Você tem uma ideia, mas não sabe por onde começar? As Assessorias IDEAR foram pensadas para você. A iniciativa tem como objetivo orientar e fornecer ferramentas a empreendedores de acordo com
+                                                                o estágio em que se encontram com seus projetos. Seja na busca por um propósito, na ideação, construção ou validação de um projeto, a equipe do IDEAR irá ajudar no seu desenvolvimento.</p>
+                                                            <a href="https://idear.pucrs.br/o-que-fazemos/assessorias-idear/" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <div class="info">
+                                                                <span class="tag">Evento</span>
+                                                                <h3>Ideação</h3>
+                                                            </div>
+                                                            <div class="flip-overlay">
+                                                                <img src="./assets/images/thumb-flip-card.jpg" alt="Avatar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <p>O Ideação é um evento que traz a temática do empreendedorismo e da inovação para debate, colocando esses dois assuntos em discussão. O principal objetivo é discutir e sensibilizar a comunidade
+                                                                para as tendências em relação a esses assuntos, seja através de workshops ou de bate-papos com empreendedores que tenham compromisso social.</p><a href="https://idear.pucrs.br/o-que-fazemos/ideacao/"
+                                                                class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flipping-cards">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <div class="info">
+                                                                <span class="tag">Atendimentos</span>
+                                                                <h3>Planejamento de Carreiras PUCRS</h3>
+                                                            </div>
+                                                            <div class="flip-overlay">
+                                                                <img src="./assets/images/thumb-flip-card.jpg" alt="Avatar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut velit a neque varius finibus at et justo. In hac habitasse platea dictumst. In sit amet risus nisl. </p><a href="https://carreiras.pucrs.br/"
+                                                                class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <div class="info">
+                                                                <span class="tag">Atendimentos</span>
+                                                                <h3>Tour Tecnopuc</h3>
+                                                            </div>
+                                                            <div class="flip-overlay">
+                                                                <img src="./assets/images/thumb-flip-card.jpg" alt="Avatar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <p>A visita inclui uma apresentação do Tecnopuc e introdução aos ecossistemas de inovação. Além disso, são apresentadas as partes que compõe o Parque: startups, empresas e entidades. Também é demonstrada
+                                                                a forma de atuação do Tecnopuc: light and fast; innovate and transform; connected and global.</p>
+                                                            <a href="#" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <div class="info">
+                                                                <span class="tag">Atendimentos</span>
+                                                                <h3>Tecnopuc Experience</h3>
+                                                            </div>
+                                                            <div class="flip-overlay">
+                                                                <img src="./assets/images/thumb-flip-card.jpg" alt="Avatar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <p>Um dia de atividades gratuitas abertas ao público com foco em networking, empreendedorismo, tecnologia e inovação dentro de um dos principais Parques Científicos e Tecnológicos da América Latina.</p>
+                                                            <a href="https://tecnopuc.pucrs.br/" class="sub-link"><i class="fas fa-caret-right"></i> Saiba mais</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="2">
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="3">
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="4">
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="5">
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="6">
+
+                                </div>
                             </div>
                         </div>
                     </div>
