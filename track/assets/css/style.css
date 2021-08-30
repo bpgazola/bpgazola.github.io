@@ -961,18 +961,22 @@ p.titulo {
     .collapsible-content-lateral {
         display: none;
     }
+    .btn-ver-mais-calendario,
+    .btn-ver-mais-noticias {
+        min-width: 300px;
+        padding: 2% 10% 2% 10%;
+        margin: 5% 0 5% 0;
+    }
 }
 
-@media (max-width: 1100px) {
-    .collapsible .fas {
-        margin-left: 35%;
+@media (max-width: 520px) {
+    #trilha-header h1 {
+        font-size: 2em;
+        line-height: 1.2em;
     }
 }
 
 @media (max-width: 990px) {
-    .container {
-        border: solid 2px blue;
-    }
     .lateral {
         display: none;
     }
@@ -1068,6 +1072,26 @@ p.titulo {
     }
     #contato .rodape-card {
         margin: 70px 0;
+    }
+    .flip-card {
+        margin-bottom: 3%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .collapsible .fas {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width:1200px) {
+    .flip-card,
+    .flip-card img {
+        width: 300px;
+        height: 200px;
+    }
+    .flip-card-back p {
+        font-size: .8em;
     }
 }
 
