@@ -34,6 +34,7 @@ a:hover {
 
 .flex-vertical-center {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -273,6 +274,120 @@ a:hover {
 
 
 /*capa */
+
+
+/* o que é */
+
+#o-que-e-track {
+    background-color: #fff;
+    height: auto;
+    margin-right: 150px;
+    padding-top: 10%;
+}
+
+#o-que-e-track p {
+    font-size: 1.2em;
+    color: #001E30
+}
+
+#o-que-e-track-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#o-que-e-track-header h1 {
+    color: #001e30;
+    font-size: 2em;
+    line-height: 2.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 5% 0;
+}
+
+.linha-wrap {
+    margin: 5% 0 5% 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.linha-wrap h2 {
+    width: 400px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 0 5% 0 5%;
+}
+
+.dash {
+    height: 3px;
+    width: 100%;
+    background: #F36A10;
+}
+
+.boxes {
+    margin: 0 0 5% 0;
+}
+
+.box {
+    background: #EDF1F5;
+    width: 100%;
+    min-height: 200px;
+    padding: 3%;
+}
+
+.box h3 {
+    font-size: 1.2em;
+    color: #001e30;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box-content {
+    display: flex;
+}
+
+.box .indice {
+    width: 100%;
+    height: auto;
+}
+
+.box .indice h4 {
+    font-size: 1.8em;
+    color: #FC703A;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box .indice p.descricao {
+    font-size: 1em!important;
+    color: #001E30;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.list {
+    margin: 3% 0 10% 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+}
+
+.list .fas {
+    font-size: 1.8em;
+}
+
+.list p {
+    margin-left: 1%
+}
+
+
+/* o que é */
 
 
 /*calendario */
@@ -520,7 +635,7 @@ p.titulo {
     flex-direction: column;
 }
 
-#trilha-header h1 {
+#trilha-header h2 {
     color: #001e30;
     font-size: 2em;
     line-height: 2.2em;
@@ -1011,7 +1126,8 @@ p.titulo {
     #noticias,
     #trilha,
     #video,
-    #contato {
+    #contato,
+    #o-que-e-track {
         margin-right: 0px;
     }
     #capa {
@@ -1075,6 +1191,12 @@ p.titulo {
     }
     .flip-card {
         margin-bottom: 3%;
+    }
+    .box {
+        margin-bottom: 3%;
+    }
+    .collapsible .fas {
+        margin-left: 25%!important;
     }
 }
 
