@@ -375,7 +375,6 @@ a:hover {
 
 .list-item {
     display: flex;
-    align-items: center;
 }
 
 .list .fas {
