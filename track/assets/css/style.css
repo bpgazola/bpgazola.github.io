@@ -945,12 +945,13 @@ p.titulo {
     color: #fff;
     text-align: center;
     padding: 60px 0;
+    margin-right: 150px;
 }
 
 #contato .circulo-azul {
     position: absolute;
     bottom: -10px;
-    right: 120px;
+    right: -120px;
 }
 
 #contato h1 {
