@@ -634,7 +634,7 @@ p.titulo {
     flex-direction: column;
 }
 
-#trilha-header h2 {
+#trilha-header h1 {
     color: #001e30;
     font-size: 2em;
     line-height: 2.2em;
