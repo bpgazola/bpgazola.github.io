@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <title>Drag and Drop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background: #1d1f20;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 990px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .board {
+            background: #FF6427;
+            border-radius: 4px;
+            padding: 45px;
+            width: 100%;
+            border-color: #FF6427;
+            border-width: 1px;
+        }
+        
+        .list {
+            width: 30%;
+        }
+        
+        .list h2 {
+            font-weight: 600;
+            line-height: 1.1em;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 0 5% 0;
+        }
+        
+        .card,
+        .list-content {
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 400ms;
+        }
+        
+        .list-content {
+            background: #FF6427;
+            border: dashed 1px #fff;
+            margin-right: 3%;
+        }
+        
+        .list-content.highlight {
+            background: #FE4D1B;
+            border: solid 1px #EA430F;
+        }
+        
+        .list-content.over {
+            background: #FF6427;
+            opacity: .8;
+        }
+        
+        .card {
+            background: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0px 8px 20px -2px #00000080;
+        }
+        
+        .card.dragging {
+            opacity: 0.3;
+        }
+        
+        .card p {
+            font-size: 1em;
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <section class="board">
+            <div class="container">
+                <div class="list">
+                    <h2>To Do</h2>
+                    <div class="list-content">
+                        <article class="card" draggable="true">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                <p>
+                        </article>
+                        <article class="card" draggable="true">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                <p>
+                        </article>
+                    </div>
+                </div>
+                <div class="list">
+                    <h2>Doing</h2>
+                    <div class="list-content">
+                        <article class="card" draggable="true">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                <p>
+                        </article>
+                    </div>
+                </div>
+                <div class="list">
+                    <h2>Done</h2>
+                    <div class="list-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Page javascript-->
+    <script type="text/javascript">
+        const cards = document.querySelectorAll('.card');
+        const lists = document.querySelectorAll('.list-content');
+
+        cards.forEach(card => {
+            card.addEventListener('dragstart', dragstart);
+            card.addEventListener('drag', drag);
+            card.addEventListener('dragend', dragend);
+        });
+
+        lists.forEach(list => {
+            list.addEventListener('dragover', dragover);
+            list.addEventListener('dragleave', dragleave);
+            list.addEventListener('drop', drop);
+        });
+
+        function dragover() {
+            const cardBeingDragged = document.querySelector('.dragging');
+            this.classList.add('over');
+            this.appendChild(cardBeingDragged);
+        }
+
+        function dragleave() {
+            this.classList.remove('over');
+        }
+
+        function drop() {
+            this.classList.remove('over');
+        }
+
+        function dragstart() {
+            lists.forEach(list => list.classList.add('highlight'));
+            this.classList.add('dragging');
+        }
+
+        function dragend() {
+            lists.forEach(list => list.classList.remove('highlight'));
+            this.classList.remove('dragging');
+        }
+
+        function drag() {
+            console.log('dragging');
+        }
+    </script>
+
+</body>
+
+</html>
