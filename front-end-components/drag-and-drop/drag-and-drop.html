@@ -86,6 +86,7 @@
             background: #fff;
             margin-bottom: 20px;
             box-shadow: 0px 8px 20px -2px #00000080;
+            list-style: none;
         }
         
         .card.dragging {
@@ -103,34 +104,23 @@
 <body>
 
     <main>
+        <input type="text" id="addToList" placeholder="Insira aqui um item para criar uma lista"><button onclick="newItemList()">Add</button>
         <section class="board">
             <div class="container">
                 <div class="list">
                     <h2>To Do</h2>
-                    <div class="list-content">
-                        <article class="card" draggable="true">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                <p>
-                        </article>
-                        <article class="card" draggable="true">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                <p>
-                        </article>
+                    <div class="list-content" data-list>
+
                     </div>
                 </div>
                 <div class="list">
                     <h2>Doing</h2>
                     <div class="list-content">
-                        <article class="card" draggable="true">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                <p>
-                        </article>
                     </div>
                 </div>
                 <div class="list">
                     <h2>Done</h2>
                     <div class="list-content">
-
                     </div>
                 </div>
             </div>
@@ -180,6 +170,20 @@
 
         function drag() {
             console.log('dragging');
+        }
+
+        function newItemList() {
+            const listsCards = document.querySelector('[data-list]');
+            const input = document.getElementById('addToList').value;
+            const card = document.createElement('li.card');
+            const contentCard = `<li class="card" draggable="true">${input}</li>`;
+            card.innerHTML = contentCard;
+            listsCards.appendChild(card);
+
+            card.addEventListener('dragstart', dragstart);
+            card.addEventListener('drag', drag);
+            card.addEventListener('dragend', dragend);
+
         }
     </script>
 
