@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
+    <!-- Bootstrap CSS -->
+    <!-- Última versão CSS compilada e minificada -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
 
     <title>Drag and Drop</title>
     <style>
@@ -31,8 +31,7 @@
             overflow-x: hidden;
         }
         
-        .container {
-            width: 990px;
+        .list-group {
             display: flex;
             justify-content: center;
         }
@@ -64,6 +63,9 @@
             border-radius: 10px;
             padding: 20px;
             transition: all 400ms;
+            -moz-transition: all 400ms;
+            -webkit-transition: all 400ms;
+            -o-transition: all 400ms;
         }
         
         .list-content {
@@ -156,23 +158,29 @@
 
     <main>
         <section class="board">
-            <div class="input-group">
-                <input type="text" id="addToList" placeholder="Insira aqui um item para criar uma tarefa"><button onclick="newItemList()" class="btn-add">Add</button>
-            </div>
             <div class="container">
-                <div class="list">
-                    <h2>To Do</h2>
-                    <div class="list-content" data-list>
-                    </div>
-                </div>
-                <div class="list">
-                    <h2>Doing</h2>
-                    <div class="list-content">
-                    </div>
-                </div>
-                <div class="list">
-                    <h2>Done</h2>
-                    <div class="list-content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="input-group">
+                            <input type="text" id="addToList" placeholder="Insira uma tarefa"><button onclick="newItemList()" class="btn-add">Add</button>
+                        </div>
+                        <div class="list-group">
+                            <div class="list">
+                                <h2>To Do</h2>
+                                <div class="list-content" data-list>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <h2>Doing</h2>
+                                <div class="list-content">
+                                </div>
+                            </div>
+                            <div class="list">
+                                <h2>Done</h2>
+                                <div class="list-content">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
