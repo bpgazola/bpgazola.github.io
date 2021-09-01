@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>To Do List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background: #1d1f20;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header {
+            margin-right: 0;
+            margin-left: 0;
+            padding: 45px;
+            width: 500px;
+            background-color: #fff;
+            border-color: #ddd;
+            border-width: 1px;
+            border-radius: 4px 4px 0 0;
+            box-shadow: 0px 8px 20px -2px #000000;
+        }
+        
+        h1 {
+            font-weight: 600;
+            line-height: 1.1em;
+            color: #337ab7;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 0 5% 0;
+        }
+        
+        .input-group {
+            display: flex;
+        }
+        
+        input {
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 1em;
+            line-height: 1.2em;
+            color: #555;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        }
+        
+        input:focus {
+            border-color: #66afe9;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+        
+        .btn-add {
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1;
+            color: #fff;
+            font-weight: 100;
+            line-height: 1.5em;
+            text-align: center;
+            background-color: #337ab7;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .btn-add:hover {
+            background-color: #128b67;
+            -moz-transition: 0.5s all ease-out;
+            -webkit-transition: 0.5s all ease-out;
+            -o-transition: 0.5s all ease-out;
+            transition: 0.5s all ease-out;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 6px 0 6px 45px;
+            list-style-type: none;
+            background: #fff;
+            color: #555;
+            font-size: 1em;
+            line-height: 1.2em;
+            border-bottom: solid 1px #ccc;
+            -moz-transition: 0.5s all ease-out;
+            -webkit-transition: 0.5s all ease-out;
+            -o-transition: 0.5s all ease-out;
+            transition: 0.5s all ease-out;
+        }
+        
+        ul li:first-child {
+            border-top: solid 1px #ccc;
+        }
+        
+        ul li:last-child {
+            border-radius: 0 0 4px 4px;
+        }
+        /*ul li:nth-child(odd) {
+            background: #ccc;
+        }*/
+        
+        ul li:hover {
+            background: #ddd;
+        }
+        
+        ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+        
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 6px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+        
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 6px 12px;
+        }
+        
+        .close:hover {
+            background-color: #c02e24;
+            color: #fff;
+            -moz-transition: 0.5s all ease-out;
+            -webkit-transition: 0.5s all ease-out;
+            -o-transition: 0.5s all ease-out;
+            transition: 0.5s all ease-out;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div id="toDoList" class="header">
+            <h1>To Do List</h1>
+            <div class="input-group">
+                <input type="text" id="addToList" placeholder="Insira aqui um item para criar uma lista"><span onclick="newItemList()" class="btn-add">Add</span>
+            </div>
+        </div>
+
+        <ul id="list">
+
+        </ul>
+    </main>
+
+    <!--Page javascript-->
+    <script type="text/javascript">
+        //Criando botão de fechar a cada item da lista
+        var toDoList = document.getElementsByTagName("li");
+        var i;
+        for (i = 0; i < toDoList.length; i++) {
+            var span = document.createElement("span");
+            var text = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(text);
+            toDoList[i].appendChild(span);
+        }
+        //Clicando no btn fechar para esconder um item da lista
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+        //Adicionando checked quando clicar em um item da lista
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);
+        //Criando e adicionando novo item à lista
+        function newItemList() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("addToList").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("Você precisa inserir um intem no formulário!");
+            } else {
+                document.getElementById("list").appendChild(li);
+            }
+            document.getElementById("addToList").value = "";
+
+            var span = document.createElement("span");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            li.appendChild(span);
+
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
