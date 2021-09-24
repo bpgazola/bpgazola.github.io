@@ -38,6 +38,10 @@ a:hover {
     align-items: center;
 }
 
+.hide {
+    display: none;
+}
+
 
 /* barra fixa lateral */
 
@@ -750,7 +754,7 @@ p.titulo {
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 20px solid #FFF;
+    border-left: 20px solid #edf1f5;
     border-top: 80px solid transparent;
     border-bottom: 80px solid transparent;
 }
@@ -788,14 +792,25 @@ p.titulo {
     border: none;
 }
 
-.tab-content {
+.tabcontent {
     padding: 0 2% 0 2%;
+    display: none;
+    animation: fadeEffect 1s;
 }
 
-.tab-content h2 {
+.tabcontent h2 {
     font-size: 20px;
     font-weight: bold;
     color: #001e30;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -841,7 +856,7 @@ p.titulo {
     background: #081420;
     font-size: 1em;
     transform: rotateY(-180deg);
-    opacity: .8;
+    opacity: 1;
     padding: 8%;
 }
 
@@ -1072,6 +1087,12 @@ p.titulo {
 
 /* media query */
 
+@media (max-width: 480px) {
+    .box-content {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 400px) {
     .collapsible-content-lateral {
         display: none;
@@ -1088,6 +1109,33 @@ p.titulo {
     #trilha-header h1 {
         font-size: 2em;
         line-height: 1.2em;
+    }
+    .collapsible p.titulo {
+        font-size: 1.5em;
+    }
+    .btn-ver-mais-calendario,
+    .btn-ver-mais-noticias {
+        margin: 8% 0 5% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-tabs li {
+        justify-content: center;
+        transform: rotate(90deg);
+        margin-bottom: 25px;
+    }
+    .nav-tabs li a {
+        transform: rotate(-90deg);
+    }
+    .nav-tabs li a.active {
+        display: none;
     }
 }
 
@@ -1120,6 +1168,9 @@ p.titulo {
         text-align: right;
         content: "\d7";
         font-size: 30px;
+    }
+    .nav-bar li:last-child {
+        display: none;
     }
     #capa,
     #calendario,
@@ -1163,6 +1214,9 @@ p.titulo {
         top: 20px;
         padding: 0 15px;
         width: 100%;
+    }
+    #capa h2 {
+        font-size: 1.5em;
     }
     .hamburguer-mobile {
         display: flex;
