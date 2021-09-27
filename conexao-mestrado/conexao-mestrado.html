@@ -1,0 +1,2415 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Programa Conexão Mestrado</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+    <meta name="description" content="Programa de Integração da Graduação com a Pós: você aproveita seus créditos eletivos para cursar disciplinas de mestrado e doutorado, com o mesmo valor da graduação, e antecipa seus estudos antes mesmo de ingressar na pós-graduação.">
+    <script type='text/javascript' src='https://www.pucrs.br/wp-content/themes/pucrs-responsivo/js/jquery.min.js'></script>
+    <script src="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/js/bootstrap.min.js"></script>
+    <link rel="icon" href="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/img/favicon.png">
+    <link rel="stylesheet" href="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/css/animate.min.css">
+    <link rel="stylesheet" href="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/css/aos.css">
+
+    <style>
+        html {
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -ms-font-smoothing: antialiased;
+        }
+        
+        html,
+        body {
+            font-family: "Open Sans", sans-serif;
+            height: 100%;
+            min-height: 100%;
+            text-rendering: optimizeLegibility;
+        }
+        
+        body {
+            font-size: 1rem;
+            font-weight: normal;
+            font-style: normal;
+            color: #082244;
+            background-color: #fff;
+            overflow-x: hidden;
+            line-height: normal;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none !important;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        a {
+            margin-bottom: 10px;
+        }
+        
+        .center_all {
+            text-align: center;
+        }
+        
+        .header {
+            min-height: 600px;
+            width: 100%;
+            background: url(http://www.pucrs.br/wp-content/uploads/2021/09/background_top_conexao_mestrado.png) no-repeat;
+            background-size: cover;
+            background-blend-mode: inherit;
+            background-color: #0E1376;
+            transition: all .5s;
+            position: relative;
+        }
+        
+        #logo_360 {
+            position: absolute;
+            width: 40%;
+            margin-top: 5%;
+            left: 15%;
+            transition: all .5s;
+        }
+        
+        .down-arrow {
+            color: #ffffff !important;
+            font-size: 50px;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        
+        .floating-arrow {
+            -webkit-animation-name: floating-arrow;
+            animation-name: floating-arrow;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+        
+        .down-arrow a {
+            color: #ffffff !important;
+        }
+        
+        .pulse2 {
+            -webkit-animation-name: pulse2;
+            animation-name: pulse2;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+        
+        @-webkit-keyframes pulse2 {
+            0% {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            50% {
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse2 {
+            0% {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            50% {
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @-webkit-keyframes floating-arrow {
+            from {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+            65% {
+                -webkit-transform: translate(-50%, 15px);
+                transform: translate(-50%, 15px);
+            }
+            to {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+        
+        @keyframes floating-arrow {
+            from {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+            65% {
+                -webkit-transform: translate(-50%, 15px);
+                transform: translate(-50%, 15px);
+            }
+            to {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+        
+        .floating-logo {
+            -webkit-animation-name: floating-logo;
+            animation-name: floating-logo;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @-webkit-keyframes floating-logo {
+            from {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+            50% {
+                -webkit-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px);
+            }
+            to {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+        
+        @keyframes floating-logo {
+            from {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+            50% {
+                -webkit-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px);
+            }
+            to {
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+        /*SECTIONS*/
+        
+        .apresentacao {
+            background: #0E1376;
+            padding: 40px 0;
+            min-height: 25%;
+        }
+        
+        .apresentacao p {
+            color: #ffffff;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+        
+        .certificacoes {
+            background: #FF908F;
+            padding: 40px 0;
+        }
+        
+        .disciplinas {
+            padding: 40px;
+        }
+        
+        .disciplinas h2,
+        .disciplinas p {
+            color: #0E1376
+        }
+        /*DISCIPLINAS*/
+        
+        .titulo-escola {
+            border-top: 1px solid #e8e8e8;
+        }
+        
+        .btn {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0E1376;
+            padding-left: 0;
+        }
+        /*CERTIFICACOES CARDS FLIP GIRA GIRA*/
+        /**/
+        
+        .card-container {
+            -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+            -o-perspective: 800px;
+            perspective: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .card-container:not(.manual-flip):hover .card,
+        .card-container.hover.manual-flip .card {
+            -webkit-transform: rotateY( 180deg);
+            -moz-transform: rotateY( 180deg);
+            -o-transform: rotateY( 180deg);
+            transform: rotateY( 180deg);
+        }
+        
+        .card-container.static:hover .card,
+        .card-container.static.hover .card {
+            -webkit-transform: none;
+            -moz-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+        
+        .card {
+            -webkit-transition: -webkit-transform .5s;
+            -moz-transition: -moz-transform .5s;
+            -o-transition: -o-transform .5s;
+            transition: transform .5s;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .front,
+        .back {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+            border-radius: 10px;
+        }
+        
+        .front {
+            z-index: 2;
+        }
+        
+        .back {
+            -webkit-transform: rotateY( 180deg);
+            -moz-transform: rotateY( 180deg);
+            -o-transform: rotateY( 180deg);
+            transform: rotateY( 180deg);
+            z-index: 3;
+        }
+        
+        .back .btn-simple {
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            left: 35%;
+            margin-bottom: 10px;
+        }
+        
+        .card {
+            background: none repeat scroll 0 0 #082244;
+            border-radius: 10px;
+            color: #444444;
+        }
+        
+        .card-container,
+        .front,
+        .back {
+            width: 100%;
+            height: 340px;
+        }
+        
+        .card .cover {
+            height: 60px;
+        }
+        
+        .card .cover img {
+            width: 100%;
+        }
+        
+        .card .user {
+            border-radius: 50%;
+            display: block;
+            height: 120px;
+            margin: -55px auto 0;
+            overflow: hidden;
+            width: 120px;
+        }
+        
+        .footer {
+            text-align: center;
+        }
+        
+        #footer_secundario {
+            font-size: 1.5rem;
+        }
+        
+        .card .content {
+            box-shadow: none;
+        }
+        
+        .card .content .main {
+            min-height: 160px;
+            margin-top: 30px;
+        }
+        
+        .card .back .content .main {
+            height: 215px;
+        }
+        
+        .card ul {
+            padding-top: 10px;
+            list-style-type: none;
+            padding-left: 25px;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        
+        .card a,
+        .card a:hover {
+            color: #0E1376;
+        }
+        
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            .front,
+            .back {
+                -ms-backface-visibility: visible;
+                backface-visibility: visible;
+            }
+            .back {
+                visibility: hidden;
+                -ms-transition: all 0.2s cubic-bezier(.92, .01, .83, .67);
+            }
+            .front {
+                z-index: 4;
+            }
+            .card-container:not(.manual-flip):hover .back,
+            .card-container.manual-flip.hover .back {
+                z-index: 5;
+                visibility: visible;
+            }
+        }
+        
+        .footer button {
+            background: #0E1376;
+            color: white;
+            padding: 8px 16px;
+            margin-top: 80px;
+        }
+        
+        .footer button:hover {
+            color: #ffffff;
+        }
+        
+        .card h2 {
+            color: #0E1376;
+            padding-top: 40px;
+            text-transform: initial;
+            font-weight: bold;
+            font-size: 28px;
+        }
+        
+        .card h3 {
+            color: #0E1376;
+            padding-top: 10px;
+            text-transform: initial;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .card img {
+            max-width: 40%;
+            margin-left: 30%;
+            margin-top: 10%;
+        }
+        /*CERTIFICACOES CARDS FLIP GIRA GIRA*/
+        
+        .escolas {
+            color: #fff;
+        }
+        
+        .trajetoria {
+            padding: 40px 0;
+            background-size: 3%;
+            background-position-x: 5%;
+        }
+        
+        .trajetoria p {
+            font-size: 1.2rem;
+            color: #0E1376;
+        }
+        
+        .trajetoria h2,
+        .trajetoria li {
+            color: #0E1376;
+        }
+        
+        .trajetoria h3 {
+            margin-top: 0px;
+        }
+        
+        .trajetoria .row {
+            padding-top: 40px;
+        }
+        /*VIDEO*/
+        
+        .quadro_video {
+            border: 10px solid #082244;
+        }
+        
+        .frase_video p {
+            display: -webkit-inline-box;
+            padding-left: 20px;
+        }
+        
+        .frase_video img {
+            /*padding-left: 60px;*/
+        }
+        /*VIDEO*/
+        
+        .inscricao {
+            padding: 40px 0;
+            background-color: #0E1376;
+            color: #fff;
+        }
+        
+        .inscricao p {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        
+        .inscricao .row {
+            padding-top: 40px;
+        }
+        
+        .table a {
+            color: #FFFFFF;
+        }
+        /*SECTIONS*/
+        /*FOOTER*/
+        
+        footer {
+            background: #0E1376;
+            color: #ffffff;
+            padding: 40px 0;
+            font-size: 1.8rem;
+        }
+        
+        footer p {
+            text-align: center;
+        }
+        
+        #pucrs_marista {
+            max-height: 54px;
+        }
+        /*REDES SOCIAIS*/
+        
+        .redes {
+            left: 30%;
+            top: 10px;
+            transition: all .5s;
+        }
+        
+        .redes i {
+            color: white;
+            font-size: 3rem;
+            margin-right: 10px;
+        }
+        
+        footer a {
+            color: #ffffff;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+        /*REDES SOCIAIS*/
+        /*FOOTER*/
+        
+        .aviso {
+            color: #fff;
+            font-size: 23px;
+            font-weight: bold;
+            display: inline-block;
+            background-color: ;
+            margin-left: 62%;
+            margin-top: 15%;
+        }
+        
+        .aviso2 {
+            font-size: 35px;
+            color: #FFFFFF;
+        }
+        /*MEDIAS QUERIES*/
+        
+        @media (min-width: 1600px) {
+            #logo_360 {
+                width: 26%;
+                margin-top: 8%;
+                left: 21%;
+            }
+            .img_menina {
+                padding-right: 5vh;
+            }
+            .trajetoria {
+                background-position-x: 5%;
+            }
+            /*#menina{
+        background: url(http://www.pucrs.br/wp-content/uploads/2018/12/foto-modelo.png) no-repeat bottom right;
+    }*/
+        }
+        
+        @media (max-width: 1366px) {
+            .img_menina {
+                padding-right: 5vh;
+            }
+            .trajetoria {
+                background-position-x: 3%;
+            }
+            /*#menina{
+        background: url(http://www.pucrs.br/wp-content/uploads/2018/12/foto-modelo.png) no-repeat top right;
+        height: 80vh;
+    }*/
+            #logo_360 {
+                min-width: 40%;
+                max-width: 45%;
+                margin-top: 10%;
+                left: 15%;
+            }
+        }
+        
+        @media (max-width: 1025px) {
+            #logo_360 {
+                width: 55%;
+                margin-top: 8%;
+                left: 10%;
+            }
+            .redes {
+                left: 25%;
+                padding-top: 1%;
+                transition: all .5s;
+            }
+            #menina {
+                height: 95vh;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #logo_360 {
+                width: 52%;
+                margin-top: 16%;
+                left: 15%;
+            }
+            .aviso {
+                margin-left: 57%;
+                margin-top: 16%;
+            }
+            .img_menina {
+                padding-right: 0px;
+            }
+            /*#menina {
+        background: url(http://www.pucrs.br/wp-content/uploads/2018/12/foto-modelo.png) no-repeat top right;
+        width: 99%;
+        transition: all .5s;
+    }*/
+            .frase_video img {
+                padding-left: 40px;
+            }
+            .redes {
+                left: 130px;
+                padding-top: 10px;
+                transition: all .5s;
+            }
+            .inscricao {
+                background-position-y: 15%;
+            }
+        }
+        
+        @media (max-width: 560px) {
+            .header {
+                background-position: center;
+            }
+            .frontside .card,
+            .backside .card {
+                min-height: 300px;
+                min-width: 280px;
+            }
+            .center_all_xs {
+                text-align: center;
+            }
+            footer {
+                font-size: 1.2rem;
+            }
+            .inscricao {
+                background-size: 15%;
+                background-position-x: 90%;
+                background-position-y: 4%;
+                transition: all .5s;
+                color: #fff;
+            }
+            .redes {
+                padding-top: 20px;
+                left: 0px;
+            }
+            .trajetoria .row {
+                padding-top: 10px;
+            }
+            #p_secundario {
+                padding-top: 20px;
+                color: #fff;
+            }
+            #logo_360 {
+                min-width: 100%;
+                margin-top: 15%;
+                left: 14%;
+            }
+            .aviso2 {
+                font-size: 29px;
+            }
+            .aviso {
+                font-size: 18px;
+                margin-left: 25%;
+                margin-top: 74%;
+                margin-bottom: 24%;
+            }
+            /*#menina {
+        background: url(http://www.pucrs.br/wp-content/uploads/2018/12/foto-modelo.png)no-repeat bottom right;
+        transition: all .5s;
+    }*/
+            #btn_comunicacao {
+                text-align: left;
+            }
+            ul {
+                padding-left: 15px;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            html {
+                font-size: 0.9rem;
+            }
+            .aviso {
+                margin-left: 18% !important;
+                margin-top: 81% !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section class="header">
+            <div>
+                <img class="animated fadeInDown" id="logo_360" src="http://www.pucrs.br/wp-content/uploads/2021/09/lettering_top_conexao_mestrado.png">
+            </div>
+            <div class="aviso aos-init aos-animate" data-aos="fade-left" data-aos-duration="600" data-aos-delay="250">
+                <p class="aviso2">Inscrições Abertas</p>
+            </div>
+            <div class="down-arrow floating-arrow">
+                <a href="#apresentacao">
+                    <i class="fa fa-angle-down"></i>
+                </a>
+            </div>
+        </section>
+        <section class="apresentacao" id="apresentacao">
+            <div class="container">
+                <p>Agora você pode antecipar o seu futuro acadêmico e <strong>ingressar no mestrado enquanto faz a graduação</strong>. Depois de finalizar o seu curso, também pode concluir o mestrado <strong>em apenas mais um ano</strong> de estudo.<br><br>Para
+                    fazer essa <strong>CONEXÃO MESTRADO</strong>, é preciso ter concluído pelo menos 50% do seu curso e passar pelo processo seletivo do Programa de Pós-Graduação desejado.
+                </p>
+            </div>
+        </section>
+
+        <section class="disciplinas">
+            <div class="container">
+                <h2><strong>Confira os Editais</strong></h2>
+                <div>
+                    <p>Confira os editais do Conexão Mestrado para o semestre 2022/1 </p>
+                    <br>
+                </div>
+
+                <div id="acordeon">
+                    <div class="card-acordeon">
+
+                        <!--SAUDE-->
+                        <div class="card-header" id="saude">
+                            <h5 class="titulo-escola">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSaude" aria-expanded="false" aria-controls="collapseSaude">Escola de Ciências da Saúde e da
+                                    Vida</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseSaude" class="collapse" aria-labelledby="headingSaude" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td rowspan="13"><strong>BIOLOGIA CELULAR E MOLECULAR</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>19503-02</td>
+                                        <td>MICROBIOLOGIA AMBIENTAL</td>
+                                        <td>3AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73164-02</td>
+                                        <td>BIOQUÍMICA DE PROCESSOS FISIOLÓGICOS E PATOLÓGICOS</td>
+                                        <td>3FG</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13157-02</td>
+                                        <td>ESTUDO DAS INTERAÇÕES PROTEINA-LIGANTE</td>
+                                        <td>3HI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7311B-02</td>
+                                        <td>DINÂMICA E POLÍTICA DA PESQUISA CIENTÍFICA</td>
+                                        <td>3JK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>PESQUISA TRANSLACIONAL: ANÁLISE E INTERPRETAÇÃO DE DADOS</td>
+                                        <td>4CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-196EJ-01 </td>
+                                        <td>TÓPICOS AVANÇADOS EM BIOCIÊNCIAS IV</td>
+                                        <td>4E</td>
+                                    </tr>
+                                    <tr>
+                                        <td>196B1-02</td>
+                                        <td>DOCKING SCREENS FOR DRUG DISCOVERY (INGLÊS)</td>
+                                        <td>4FG</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73140-03</td>
+                                        <td>BASES BIOLOGICAS DO FUNCIONAMENTO DO SISTEMA NERVOSO</td>
+                                        <td>2FGH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73154-02</td>
+                                        <td>TÓPICOS MOLECULARES EM BACTERIOLOGIA</td>
+                                        <td>5CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73152-04</td>
+                                        <td>ESPECTOMETRIA DE MASSAS APLICADAS A SISTEMAS BIOLOGICOS</td>
+                                        <td>6AD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73132-01</td>
+                                        <td>SEMINARIO INTEGRADOR II</td>
+                                        <td>6E</td>
+                                    </tr>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>VACINAS E IMUNOTERAPIAS NA COVID-19 </td>
+                                        <td>6FG</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="12"><strong>ECOLOGIA DA EVOLUÇÃO E BIODIVERSIDADE</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1963N-04</td>
+                                        <td>DIVERSIDADE, EVOLUÇÃO E PALEOBIOLOGIA DE DINOSSAUROS </td>
+                                        <td>3FGHI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1963M-04</td>
+                                        <td>SCIENTIFIC WRITING IN BIOLOGY</td>
+                                        <td>4FGHI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19510-02</td>
+                                        <td>ECOTOXICOLOGIA</td>
+                                        <td>3CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19509-04</td>
+                                        <td>INTERAÇÕES ECOLÓGICAS</td>
+                                        <td>6FGHI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1968D-02</td>
+                                        <td>ECOLOGIA DE COMUNIDADES MARINHAS</td>
+                                        <td>4CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1963V-02</td>
+                                        <td>MELIPONICULTURA AVANÇADA</td>
+                                        <td>5CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>63158-04</td>
+                                        <td>TÓPICOS ESPECIAIS EM ECOLOGIA E EVOLUÇÃO DA BIODIVERSIDADE II </td>
+                                        <td>5CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>63158-04</td>
+                                        <td>ICTIOLOGIA</td>
+                                        <td>3CDEE1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>196EC-02</td>
+                                        <td>ECOLOGIA DA RIZOSFERA: INTERAÇÃO ENTRE PLANTAS E MICROORGANISMOS</td>
+                                        <td>6CD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1963k-02</td>
+                                        <td>CURADORIA DE COLEÇÕES ZOOLÓGICAS</td>
+                                        <td>4AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1963P-04</td>
+                                        <td>FUNDAMENTOS DE BIOGEOGRAFIA</td>
+                                        <td>5FGHI</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td rowspan="4"><strong>ODONTOLOGIA</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>83274-02 </td>
+                                        <td>BIOÉTICA EM ODONTOLOGIA</td>
+                                        <td>5BC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>83292-02 </td>
+                                        <td>EPIDEMIOLOGIA ODONTOLÓGICA </td>
+                                        <td>3AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>83285-02 </td>
+                                        <td>FUNDAMENTOS BIOLÓGICOS DA PRÁTICA ODONTOLÓGICA II</td>
+                                        <td>6AB</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td rowspan="8"><strong>PSICOLOGIA</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>313A9-02</td>
+                                        <td>ANÁLISE AVANÇADA DE DADOS QUALITATIVOS</td>
+                                        <td>3EE1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>196EG-02</td>
+                                        <td>AVALIAÇÃO DE SERVIÇOS DE SAÚDE MENTAL</td>
+                                        <td>5HI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>196EF-04</td>
+                                        <td>ESTILO DE VIDA, AUTOCUIDADO E SAÚDE MENTAL </td>
+                                        <td>3ABCD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>313B4-02</td>
+                                        <td>PSICOPATOLOGIA COGNITIVA EXPERIMENTAL </td>
+                                        <td>4HI</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 313B7-02</td>
+                                        <td>PSICOTERAPIAS COGNITIVAS E COMPORTAMENTAIS</td>
+                                        <td>2HI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1968K-03</td>
+                                        <td>PROJETOS DE VIDA E TRABALHO </td>
+                                        <td>2BCD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>313B8-02</td>
+                                        <td>TEORIAS E INTERVENÇÕES EM SITUAÇÕES DE VIOLÊNCIA </td>
+                                        <td>5HI</td>
+                                    </tr>
+
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-SAUDE-->
+
+                        <!--COMUNICACAO-->
+                        <div class="card-header" id="Comunicacao">
+                            <h5 class="titulo-escola">
+                                <button id="btn_comunicacao" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseComunicacao" aria-expanded="false" aria-controls="collapseComunicacao">Escola de Comunicação, Artes <br class="visible-xs">
+                                    e Design - Famecos</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseComunicacao" class="collapse" aria-labelledby="headingComunicacao" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="5"><strong>COMUNICAÇÃO SOCIAL</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9232D-03</td>
+                                            <td>IMAGEM E IMAGINÁRIO</td>
+                                            <td>6IK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9231F-03</td>
+                                            <td>COMUNICAÇÃO ORGANIZACIONAL</td>
+                                            <td>4FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>62358-03</td>
+                                            <td>COMUN. AUDIOVISUAL: FRONTEIRAS, TECNOL. E RETÓRICAS </td>
+                                            <td>5IK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9232C-03</td>
+                                            <td>LINGUAGENS E TECNOLOGIAS DA COMUNICAÇÃO</td>
+                                            <td>4IK</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-COMUNICACAO-->
+
+                        <!--DIREITO-->
+                        <div class="card-header" id="Direito">
+                            <h5 class="titulo-escola">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseDireito" aria-expanded="false" aria-controls="collapseDireito">Escola de Direito</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseDireito" class="collapse" aria-labelledby="headingDireito" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td rowspan="4"><strong>CIÊNCIAS CRIMINAIS </strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>52499-02</td>
+                                            <td>TÓPICO V – CRIMINOLOGIA LATINO AMERICANO </td>
+                                            <td>3JK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>52442-01</td>
+                                            <td>TÓPICO - POLÍTICA CRIMINAL, ATIVISMO JUDICIAL E SISTEMA SANCIONADOR</td>
+                                            <td>6FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>22444-02</td>
+                                            <td>DIREITO PENAL ECONÔMICO </td>
+                                            <td>2LM</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td rowspan="4"><strong>DIREITO</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>42441-02 </td>
+                                            <td>CONSTITUIÇÃO E DIREITOS FUNDAMENTAIS II – DIREITO CONSTITUCIONAL INTERNACIONAL E COMPARADO (UNIÃO EUROPEIA E ALEMANHA) </td>
+                                            <td>3CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1921L-02 </td>
+                                            <td>BIOÉTICA, BIOTECNOLOGIA E DIREITOS HUMANOS NA SOCIEDADE TÉCNOLÓGICA </td>
+                                            <td>4CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>82406-02 </td>
+                                            <td>NOVAS TECNOLOGIAS: PROCESSOS E RELAÇÕES DO TRABALHO </td>
+                                            <td>6CD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-DIREITO-->
+
+                        <!--HUMANIDADES-->
+                        <div class="card-header" id="Humanidades">
+                            <h5 class="titulo-escola">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseHumanidades" aria-expanded="false" aria-controls="collapseHunamidades">Escola de Humanidades</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseHumanidades" class="collapse" aria-labelledby="headingHumanidades" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="5"><strong>CIÊNCIAS SOCIAIS</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>61641-04</td>
+                                            <td>NARRATIVAS BIOGRÁFICAS: CONDUÇÃO E ANÁLISE DE ENTREVISTAS</td>
+                                            <td>3AD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>313A5-04</td>
+                                            <td>TEORIAS CONTEMPORÂNEAS DA DEMOCRACIA </td>
+                                            <td>3FI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>61636-04</td>
+                                            <td>CIÊNCIAS SOCIAIS DAS INSTITUIÇÕES E ORGANIZAÇÕES ECONÔMICAS </td>
+                                            <td>4AD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>61629-04</td>
+                                            <td>ELEIÇÕES E REPRESENTAÇÃO POLÍTICA</td>
+                                            <td>6FI</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3"><strong>EDUCAÇÃO</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>91488-03</td>
+                                            <td>EDUCAÇÃO SUPERIOR E CONTEXTOS EMERGENTES</td>
+                                            <td>2HIJ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1918P-03</td>
+                                            <td>S.A.E: IMITAÇÃO E FORMAÇÃO MORAL</td>
+                                            <td>4KLM</td>
+                                        </tr>
+
+
+
+
+                                        <tr>
+                                            <td rowspan="9"><strong>FILOSOFIA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>61608-03 </td>
+                                            <td>FENOMENOLOGIA E HERMENÊUTICA I </td>
+                                            <td>2BCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>61609-03 </td>
+                                            <td>FILOSOFIA E INTERDISCIPLINARIDADE I </td>
+                                            <td>2FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>71530-03 </td>
+                                            <td>INTRODUCTION TO NEUROPHILOSOPHY III </td>
+                                            <td>3BCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>196EH-02</td>
+                                            <td>EPISTEMOLOGIA ANALÍTICA I </td>
+                                            <td>3FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>61606-03 </td>
+                                            <td>ESTADO E TEORIAS DA JUSTIÇA I </td>
+                                            <td>4BCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>61603-03 </td>
+                                            <td>DIALÉTICA I</td>
+                                            <td>4FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3150X-03 </td>
+                                            <td>ÉTICA E CONTEMPORANEIDADE: CRÍTICAS FILOSÓFICAS À VIOLÊNCIA IV </td>
+                                            <td> 5FGH </td>
+                                        </tr>
+                                        <tr>
+                                            <td>61613-03 </td>
+                                            <td>TEORIAS DA JUSTIÇA, ÉTICA E FILOSOFIA SOCIAL I </td>
+                                            <td>5BCD</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td rowspan="5"><strong>HISTÓRIA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>19101-04</td>
+                                            <td>TEORIA E METODOLOGIA EM HISTÓRIA POLÍTICA</td>
+                                            <td>5ABCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19110-04</td>
+                                            <td>TEORIA DA CULTURA E ETNICIDADE</td>
+                                            <td>4ABCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19119-04</td>
+                                            <td>TEORIA E METODOLOGIA EM HISTÓRIA SOCIAL</td>
+                                            <td>3FGHI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19103-04 </td>
+                                            <td>HISTÓRIA POLÍTICA, CIÊNCIA POLÍTICA E SOCIOLOGIA POLÍTICA</td>
+                                            <td>6FGHI</td>
+                                        </tr>
+
+
+
+
+                                        <tr>
+                                            <td rowspan="12"><strong>LETRAS</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>41216-03</td>
+                                            <td>TEORIAS DA CRIAÇÃO POÉTICA</td>
+                                            <td>4BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5121Z-02</td>
+                                            <td>TEORIAS DA NARRATIVA I </td>
+                                            <td>6BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>51247-03</td>
+                                            <td>IDENTIDADE E ALTERIDADE NA LITERATURA </td>
+                                            <td>2FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31291-03</td>
+                                            <td>LITERATURA E ESTUDOS CULTURAIS</td>
+                                            <td>3FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>41282-03</td>
+                                            <td>LITERATURA E LINGUAGEM DIGITAL</td>
+                                            <td>4FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5121F-03</td>
+                                            <td>APPLICATIONS OF WRITING AND LITERATURE TO FILM AND ITS THEORIES</td>
+                                            <td>5FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5121B-03</td>
+                                            <td>LITERATURA E FOTOGRAFIA </td>
+                                            <td>6FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31275-03</td>
+                                            <td>ENUNCIAÇÃO NA LINGUAGEM </td>
+                                            <td>3BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>51240-03</td>
+                                            <td>TEORIA DA VARIAÇÃO</td>
+                                            <td>4BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1918J-03 </td>
+                                            <td>PROCESSAMENTO DA LEITURA: TEORIAS E MÉTODOS</td>
+                                            <td>5BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31280-03</td>
+                                            <td>LEITURA, TEXTO E DISCURSO</td>
+                                            <td>3FH</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="5"><strong>SERVIÇO SOCIAL</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>42243-03</td>
+                                            <td>FAMÍLIA, HISTORICIDADE E POLÍTICA SOCIAL </td>
+                                            <td>5BCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>82258-03</td>
+                                            <td>HUMAN RIGHTS AND SOCIAL POLICIES</td>
+                                            <td>4IJK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>72295-03</td>
+                                            <td>POBREZA, EXCLUSÃO SOCIAL E POLÍTICA SOCIAL</td>
+                                            <td>4BCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>42238-03</td>
+                                            <td>POLÍTICAS SOCIAIS: CONCEITOS E CONFIGURAÇÕES</td>
+                                            <td>2BCD</td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td rowspan="4"><strong>TEOLOGIA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>31147-02</td>
+                                            <td>QUESTÕES DE TEOLOGIA E CIÊNCIA</td>
+                                            <td>2FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21199-02</td>
+                                            <td>TEOLOGIA LATINO AMERICANA</td>
+                                            <td>2HI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31145-02</td>
+                                            <td>ECUMENISMO</td>
+                                            <td>3CD</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-HUMANIDADES-->
+
+                        <!--MEDICINA-->
+                        <div class="card-header" id="Medicina">
+                            <h5 class="titulo-escola">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseMedicina" aria-expanded="false" aria-controls="collapseMedicina">Escola de Medicina</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseMedicina" class="collapse" aria-labelledby="headingMedicina" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td rowspan="13"><strong>GERONTOLOGIA BIOMÉDICA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10512-02</td>
+                                            <td>GERIATRIA PREVENTIVA</td>
+                                            <td>2FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20598-02</td>
+                                            <td>ENVELHECIMENTO E ATIVIDADE FÍSICA</td>
+                                            <td>2HI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1932D-02</td>
+                                            <td>SEGURANÇA DO PACIENTE IDOSO</td>
+                                            <td>4AD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20533-03</td>
+                                            <td>METODOLOGIA DA PESQUISA BIOMÉDICA: MÉTODOS QUANTITATIVOS</td>
+                                            <td>2BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20536-02</td>
+                                            <td>SEMINÁRIOS INTERDISCIPLINARES EM GERONTOLOGIA II</td>
+                                            <td>3AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1931A-02</td>
+                                            <td>ENVELHECIMENTO E NEUROBIOLOGIA DO CONTROLE MOTOR</td>
+                                            <td>3CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10590-02</td>
+                                            <td>DIAGNÓSTICO MOLECULAR DE DOENÇAS ASSOCIADAS AO ENVELHECIMENTO</td>
+                                            <td>3FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20534-03</td>
+                                            <td>PRATICA DE PESQUISA</td>
+                                            <td>3HJ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20537-03</td>
+                                            <td>CUIDADO NO PROCESSO SAÚDE-DOENÇA NO IDOSO</td>
+                                            <td>4FH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10518-02</td>
+                                            <td>GERONTOLOGIA SOCIAL</td>
+                                            <td>4CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1935M-03</td>
+                                            <td>PROCESSAMENTO E ANÁLISE DE IMAGENS BIOMÉDICAS</td>
+                                            <td>2HJ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1935L-02</td>
+                                            <td>ENCONTROS COM A LONGEVIDADE</td>
+                                            <td>4IJ</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="15"><strong>MEDICINA E CIÊNCIAS DA SAÚDE</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>935O-01</td>
+                                            <td>AGRAVOS À SAÚDE HUM. REL. AO TABAGISMO E POLUIÇÃO AMB.</td>
+                                            <td>5EE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1935N-02</td>
+                                            <td>FISIOPATOLOGIA DA PROTEÓLISE</td>
+                                            <td>2FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>33327-02</td>
+                                            <td>AGENTES QUIMIOTERÁPICOS E MECANISMOS DE AÇÃO</td>
+                                            <td>5FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>63405-02</td>
+                                            <td>NEUROIMAGEM DA COGNIÇÃO HUMANA</td>
+                                            <td>5HI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1933G-02</td>
+                                            <td>NEUROEPIGENÉTICA</td>
+                                            <td>3CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>733E-01</td>
+                                            <td>EFFECTIVELY COMMUNICATING RESEARCH</td>
+                                            <td>4AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>33329-02</td>
+                                            <td>BIOÉTICA</td>
+                                            <td>2JK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>33335-02</td>
+                                            <td>CARDIOLOGIA BÁSICA E PESQUISA</td>
+                                            <td>5EE1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1931B-02/td>
+                                                <td>BASES MOLECULARES DA NEUROGÊNESE EMBRIONÁRIA E NEUROPLASTICIDADE </td>
+                                                <td>4EE1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1931C-02</td>
+                                            <td>MODELOS CELULARES E FERRAMENTAS PARA ESTUDOS IN VITRO</td>
+                                            <td>6FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7333A-02</td>
+                                            <td>NEUROBIOLOGIA DO COMPORTAMENTO HUMANO</td>
+                                            <td>5EE1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>63380-02</td>
+                                            <td>SEM. EM FARMACOLOGIA BIOQUÍMICA E MOL.</td>
+                                            <td>4AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7331B-02</td>
+                                            <td>MÉTODOS LABORATORIAIS APLICADOS À PESQUISA</td>
+                                            <td>5FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7331F-02</td>
+                                            <td>EVIDENCIA CLINICO-EPIDEMIOLÓGICA</td>
+                                            <td>6NP</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="8"><strong>PEDIATRIA E SAÚDE DA CRIANÇA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1933H-02</td>
+                                            <td>VACINAS, CONCEITOS E ATUALIZAÇÕES</td>
+                                            <td>4CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>33351-02</td>
+                                            <td>REDAÇÃO CIENTIFICA</td>
+                                            <td>5CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19301-02</td>
+                                            <td>DESENVOLVIMENTO DE ENSAIOS CLÍNICOS</td>
+                                            <td>5FG</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1933D-02</td>
+                                            <td>SLEEP MEDICINE (EM INGLÊS)</td>
+                                            <td>5CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>193E-02</td>
+                                            <td>TERATOLOGIA EXPERIMENTAL</td>
+                                            <td>3BD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1933F-02</td>
+                                            <td>SELEÇÃO E AVALIAÇÃO DE INSTRUMENTOS DE PESQUISA</td>
+                                            <td>4EE1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1935K-02</td>
+                                            <td>INTRODUÇÃO À CIÊNCIA DE DADOS EM SAÚDE</td>
+                                            <td>6BC</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-MEDICINA-->
+
+                        <!--NEGOCIOS-->
+                        <div class="card-header" id="Negocios">
+                            <h5 class="titulo-escola">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNegocios" aria-expanded="false" aria-controls="collapseNegocios">Escola de Negócios</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseNegocios" class="collapse" aria-labelledby="headingNegocios" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="7"><strong>ADMINISTRAÇÃO</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>725GU-02</td>
+                                            <td>GOVERNO E SOCIEDADE</td>
+                                            <td>4KLMN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>725GT-02</td>
+                                            <td>SUSTENTABILIDADE CORPORATIVA</td>
+                                            <td>2KLMN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>32517-02</td>
+                                            <td>GESTÃO DO CONHECIMENTO</td>
+                                            <td>5KLMN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>72500-02</td>
+                                            <td>PESQUISA DE MARKETING</td>
+                                            <td>4FGHI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>42566-02</td>
+                                            <td>COMPORTAMENTO DO CONSUMIDOR I</td>
+                                            <td>6FGHI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>62526-02</td>
+                                            <td>MARKETING DE VAREJO</td>
+                                            <td>5KLMN</td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td rowspan="5"><strong>ECONOMIA DO DESENVOLVIMENTO</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>194DR-02</td>
+                                            <td>ECONOMIA BRASILEIRA</td>
+                                            <td>5KN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>194DM-02</td>
+                                            <td>ECONOMIA REGIONAL E URBANA </td>
+                                            <td>6KN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>194DT-02 </td>
+                                            <td>EQUILÍBRIO GERAL COMPUTÁVEL</td>
+                                            <td>6KN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>194E3-02 </td>
+                                            <td>TÓPICOS AVANÇADOS EM DESENVOLVIMENTO E MEIO AMBIENTE </td>
+                                            <td>4FH</td>
+                                        </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-NEGOCIOS-->
+
+                        <!--POLITECNICA-->
+                        <div class="card-header" id="Politecnica">
+                            <h5 class="titulo-escola">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsePolitecnica" aria-expanded="false" aria-controls="collapsePolitecnica">Escola Politécnica</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapsePolitecnica" class="collapse" aria-labelledby="headingPolitecnica" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 300px; vertical-align: center;">PROGRAMA DE PÓS-GRADUAÇÃO</th>
+                                            <th>CODCRED</th>
+                                            <th>DISCIPLINA</th>
+                                            <th>DIA/HORÁRIO</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="17"><strong>CIÊNCIA DA COMPUTAÇÃO</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1982E-02</td>
+                                            <td>ALTO DESEMPENHO PARA APLICAÇÕES DE BIG DATA </td>
+                                            <td>2CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1987I-02</td>
+                                            <td>APRENDIZADO POR REFORÇO </td>
+                                            <td>3CD </td>
+                                        </tr>
+                                        <tr>
+                                            <td>54672-02</td>
+                                            <td>CRIPTOGRAFIA AVANÇADA </td>
+                                            <td>5AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54677-02 </td>
+                                            <td>DESENVOLVIMENTO COLABORATIVO DE SOFTWARE</td>
+                                            <td>2CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1983J-02 </td>
+                                            <td>EXTRAÇÃO E ANÁLISE VISUAL DE DADOS HETEROGÊNEOS</td>
+                                            <td>3CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1982F-02</td>
+                                            <td>GESTÃO DE DADOS PARA BIG DATA</td>
+                                            <td>5AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1982H-02</td>
+                                            <td>INFRAESTRUTURA PARA BIG DATA</td>
+                                            <td>6CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1983K-02</td>
+                                            <td>PROGRAMAÇÃO PARALELA COM TROCA DE MENSAGENS</td>
+                                            <td>6AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54696-02</td>
+                                            <td>PROGRAMAÇÃO PARALELA HETEROGÊNEA</td>
+                                            <td>4AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>34656-02</td>
+                                            <td>PROJETO DE INTERFACES</td>
+                                            <td>2AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54610-02</td>
+                                            <td>REALIDADE VIRTUAL</td>
+                                            <td>4AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19801-02</td>
+                                            <td>REDES NEURAIS PROFUNDAS</td>
+                                            <td>6CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19853-02</td>
+                                            <td>SEGURANÇA EM SISTEMAS IOT</td>
+                                            <td>6AB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54660-03</td>
+                                            <td>SISTEMAS INTEGRADOS EM CHIP</td>
+                                            <td>2ABC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54665-03</td>
+                                            <td>SISTEMAS MULTIAGENTES</td>
+                                            <td>5CDE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1987J-02</td>
+                                            <td>VERIFICAÇÃO DE SISTEMAS CONCORRENTES</td>
+                                            <td>3AB</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td rowspan="6"><strong>EDUCAÇÃO EM CIÊNCIAS E MATEMÁTICA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>14247-03</td>
+                                            <td>EPISTEMOLOGIA E EDUCAÇÃO EM CIÊNCIAS E MATEMÁTICA</td>
+                                            <td>5BCD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14240-03</td>
+                                            <td>CIÊNCIA E REALIDADE </td>
+                                            <td>5FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14239-03</td>
+                                            <td>MATEMÁTICA E REALIDADE </td>
+                                            <td>5FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14238-03</td>
+                                            <td>PESQUISA E TECNOLOGIAS DE INFORMAÇÃO E COMUNICAÇÃO NA ECM</td>
+                                            <td>5IJK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14241-03 </td>
+                                            <td>TEORIAS DE APRENDIZAGEM EM EDUCAÇÃO EM CIÊNCIAS E MATEMÁTICA</td>
+                                            <td>6BCD</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td rowspan="11"><strong>ENGENHARIA E TECNOLOGIA DE MATERIAIS</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>94456-03</td>
+                                            <td>CARACTERIZAÇÃO DE MATERIAIS II</td>
+                                            <td>2FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54449-03</td>
+                                            <td>TÓPICOS AVANÇADOS DE PROCESSAMENTO DE MATERIAIS VI: SUPERFÍCIE, PELÍCULA E FILMES FINOS</td>
+                                            <td>3FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54446-03</td>
+                                            <td>MATERIAIS E PROCESSAMENTO PARA CAPTURA E ARMAZENAMENTO DE CARBONO</td>
+                                            <td>4FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>04423-03</td>
+                                            <td>FENÔMENOS DE TRANSPORTE</td>
+                                            <td>4IJK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54422-03</td>
+                                            <td>MATERIAIS POLIMÉRICOS</td>
+                                            <td>4IKJ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>94432-03</td>
+                                            <td>FUNDAMENTOS DE CIÊNCIA DOS MATERIAIS </td>
+                                            <td>5FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>54448-03</td>
+                                            <td>FUNDAMENTOS DE NANOCIÊNCIA E NANOTECNOLOGIA</td>
+                                            <td>5IJK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>94488-03</td>
+                                            <td>ESTRUTURAS E PROPRIEDADES DOS MATERIAIS DE CONSTRUÇÃO CIVIL</td>
+                                            <td>6FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>94434-03</td>
+                                            <td>INSTRUMENTAÇÃO</td>
+                                            <td>6FGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1987K-03 </td>
+                                            <td>DESIGN DE SISTEMAS SUSTENTÁVEIS </td>
+                                            <td>6IJK</td>
+                                        </tr>
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--fim-POLITECNICA-->
+
+
+                    </div>
+
+
+                </div>
+        </section>
+
+        <section class="certificacoes">
+            <div class="container">
+                <div class="escolas">
+                    <h2><strong>Programas de Pós-Graduação</strong></h2>
+                    <div>
+                        <p>Conheça os Programas de Pós-Graduação da PUCRS</p>
+                        <br>
+                    </div>
+                </div>
+
+                <!--
+            <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="600" data-aos-delay="150">
+                <div class="card-container manual-flip">
+                    <div class="card">
+                        <div class="front">
+                            <div class="content">
+                                <div class="main">
+                                    <h2 class="center_all">Escola de<br> Ciências</h2>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-mail-forward"></i> Saiba Mais
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="content">
+                                <div class="main">
+                                    <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                    <ul>
+                                        <li><a href="https://www.pucrs.br/ciencias/programa-de-pos-graduacao-em-biologia-celular-e-molecular" target="_blank">Biologia Celular e Molecular</a></li>
+                                        <li><a href="https://www.pucrs.br/ciencias/programa-de-pos-graduacao-em-ecologia-e-evolucao-da-biodiversidade" target="_blank"> Ecologia e Evolução da Biodiversidade</a></li>
+                                        <li><a href="https://www.pucrs.br/ciencias/programa-de-pos-graduacao-em-educacao-em-ciencias-e-matematica" target="_blank">Educação em Ciências e Matemática</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-simple" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-down" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola <br>de Ciências<br>da Saúde e<br>da Vida</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                        <ul>
+                                            <li><a href="https://www.pucrs.br/saude/programa-de-pos-graduacao-em-biologia-celular-e-molecular/" target="_blank">Biologia Celular e Molecular</a></li>
+
+                                            <li><a href="https://www.pucrs.br/saude/programa-de-pos-graduacao-em-biotecnologia-farmaceutica" target="_blank">Biotecnologia Farmacêutica</a></li>
+                                            <li><a href="https://www.pucrs.br/saude/programa-de-pos-graduacao-em-ecologia-e-evolucao-da-biodiversidade/" target="_blank">Ecologia e Evolução da Biodiversidade</a></li>
+                                            <li><a href="https://www.pucrs.br/saude/programa-de-pos-graduacao-em-odontologia" target="_blank">Odontologia</a></li>
+                                            <li><a href="https://www.pucrs.br/saude/programa-de-pos-graduacao-em-psicologia" target="_blank">Psicologia</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola de Comunicação, Artes e Design – Famecos</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programa de<br>Pós-Graduação</h3>
+                                        <ul>
+                                            <li><a href="https://www.pucrs.br/comunicacao/programa-de-pos-graduacao-em-comunicacao" target="_blank">Comunicação</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola de <br>Direito</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                        <ul>
+                                            <li><a href="https://www.pucrs.br/direito/programa-de-pos-graduacao-em-ciencias-criminais" target="_blank">Ciências Criminais</a></li>
+                                            <li><a href="https://www.pucrs.br/direito/programa-de-pos-graduacao-em-direito" target="_blank">Direito</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola de Humanidades</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                        <ul>
+                                            <li><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-ciencias-sociais" target="_blank">Ciências Sociais</a></li>
+                                            <li><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-educacao" target="_blank"> Educação</a><span style="color:#33a6a7"> • </span><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-filosofia"
+                                                    target="_blank">Filosofia</a></li>
+                                            <li><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-historia" target="_blank">História</a><span style="color:#33a6a7"> • </span><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-letras"
+                                                    target="_blank">Letras</a></li>
+                                            <li><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-servico-social" target="_blank">Serviço Social</a><span style="color:#33a6a7"> •
+                                                </span><a href="https://www.pucrs.br/humanidades/programa-de-pos-graduacao-em-teologia" target="_blank">Teologia</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-down" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola de Medicina</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                        <ul>
+
+                                            <li><a href="https://www.pucrs.br/medicina/programa-de-pos-graduacao-em-gerontologia-biomedica" target="_blank">Gerontologia Biomédica</a></li>
+                                            <li><a href="https://www.pucrs.br/medicina/programa-de-pos-graduacao-em-medicina-e-ciencias-da-saude" target="_blank">Medicina e Ciências da Saúde</a></li>
+                                            <li><a href="https://www.pucrs.br/medicina/programa-de-pos-graduacao-em-pediatria-e-saude-da-crianca" target="_blank">Pediatria e Saúde da Criança</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola de Negócios</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                        <ul>
+                                            <li><a href="https://www.pucrs.br/negocios/programa-de-pos-graduacao-em-administracao" target="_blank">Administração</a></li>
+                                            <li><a href="https://www.pucrs.br/negocios/programa-de-pos-graduacao-em-economia-do-desenvolvimento" target="_blank">Economia do Desenvolvimento</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="600" data-aos-delay="150">
+                    <div class="card-container manual-flip">
+                        <div class="card">
+                            <div class="front">
+                                <div class="content">
+                                    <div class="main">
+                                        <h2 class="center_all">Escola <br>Politécnica</h2>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Saiba Mais
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="center_all">Programas de<br>Pós-Graduação</h3>
+                                        <ul>
+                                            <li><a href="https://www.pucrs.br/politecnica/programa-de-pos-graduacao-em-ciencia-da-computacao" target="_blank">Ciência da Computação</a></li>
+                                            <li><a href="https://www.pucrs.br/politecnica/programa-de-pos-graduacao-em-educacao-em-ciencias-e-matematica/" target="_blank">Educação em Ciências e Matemática</a></li>
+                                            <li><a href="https://www.pucrs.br/politecnica/programa-de-pos-graduacao-em-engenharia-eletrica" target="_blank">Engenharia Elétrica</a></li>
+                                            <li><a href="https://www.pucrs.br/politecnica/programa-de-pos-graduacao-em-engenharia-e-tecnologia-de-materiais" target="_blank">Engenharia e Tecnologia de Materiais</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Voltar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="trajetoria">
+            <div class="container">
+                <h2><strong>Por que fazer?</strong></h2>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600" data-aos-delay="150">
+                        <p>
+                            A competitividade do mercado de trabalho exige novos conhecimentos e uma formação permanente. Ao cursar disciplinas da Pós-Graduação <i>scricto sensu</i> você:
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="600" data-aos-delay="150">
+                        <div>
+                            <ul>
+                                <li>Se aproxima da pesquisa científica e da produção acadêmica</li>
+                                <li>Conhece professores e pesquisadores de renome nacional e internacional</li>
+                                <li>Aproveita créditos eletivos da Graduação</li>
+                                <li>Antecipa parte da sua próxima formação</li>
+                                <li>Amplia seus conhecimentos e possibilidades profissionais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="inscricao">
+            <div class="container">
+                <h2><strong>Processo de Inscrição e Matrícula:</strong></h2>
+                <div>
+
+                    <p>Ficou interessado? Então, confira abaixo os passos necessários para fazer sua pré-inscrição e matrícula:
+                    </p>
+                    <br>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Data</strong></td>
+                                    <td><strong>Etapas</strong></td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>15 de setembro de 2021</strong></td>
+                                    <td>Publicação dos Editais
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1 de outubro a 5 de Novembro de 2021</strong></td>
+                                    <td>Pré-inscrição (disponível abaixo), indicando a disciplina escolhida, e encaminhar por e-mail para o Programa de Pós-Graduação (PPG) ao qual a disciplina está vinculada. Além disso, deverão ser anexados o Atestado de
+                                        Matrícula e Histórico Escolar tipo 0 (disponível no Portal do Aluno). <br><br> Os endereços de e-mail das secretarias dos PPGs estão disponíveis abaixo.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5 a 30 de novembro 2021 </strong></td>
+                                    <td>Após análise da Pré-incrição, a secretaria do PPG entrará em contato com o aluno para informar se foi aprovado para participar do Programa Conexão Mestrado.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6 de dezembro 2021 </strong></td>
+                                    <td>Publicação do resultado do Processo Seletivo aqui na página
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>13 de dezembro 2021 </strong></td>
+                                    <td>Prazo para interposição de recurso
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+                    <br>
+                    <p style="text-align: center;">
+                        <a href="http://www.pucrs.br/wp-content/uploads/2021/06/formulario-g-pg-propesq.docx" target="_blank" class="btn btn-info" role="button" style="background-color: #337ab7; border-color: #337ab7; padding-left: 12px; color:#fff;">Formulário
+                            de pré-inscrição</a>
+                    </p>
+                    <br>
+                    <br>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><strong>PPG</strong></td>
+                                    <td><strong>E-MAIL DE CONTATO</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Administração</td>
+                                    <td><a href="mailto:ppgad@pucrs.br">ppgad@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Biologia Celular e Molecular</td>
+                                    <td><a href="mailto:bcmpg@pucrs.br">bcmpg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Ciência da Computação</td>
+                                    <td><a href="mailto:ppgcc@pucrs.br">ppgcc@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Ciências Criminais</td>
+                                    <td><a href="mailto:ppgccrim@pucrs.br">ppgccrim@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Ciências Sociais</td>
+                                    <td><a href="mailto:csociais-pg@pucrs.br">csociais-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Comunicação Social</td>
+                                    <td><a href="mailto:famecos-pg@pucrs.br">famecos-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Direito</td>
+                                    <td><a href="mailto:ppgdir@pucrs.br">ppgdir@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Ecologia e Evolução da Biodiversidade</td>
+                                    <td><a href="mailto:eebpg@pucrs.br">eebpg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Economia do Desenvolvimento</td>
+                                    <td><a href="mailto:economia-pg@pucrs.br">economia-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Educação</td>
+                                    <td><a href="mailto:educacao-pg@pucrs.br">educacao-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Educação em Ciências e Matemática</td>
+                                    <td><a href="mailto:educempg@pucrs.br">educempg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Engenharia e Tecnologia de Materiais</td>
+                                    <td><a href="mailto:engenharia.pg.materiais@pucrs.br">engenharia.pg.materiais@pucrs.br</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Filosofia</td>
+                                    <td><a href="mailto:filosofia-pg@pucrs.br">filosofia-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Gerontologia Biomédica</td>
+                                    <td><a href="mailto:geronbio@pucrs.br">geronbio@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em História</td>
+                                    <td><a href="mailto:historia-pg@pucrs.br">historia-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Letras</td>
+                                    <td><a href="mailto:letras-pg@pucrs.br">letras-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Medicina e Ciências da Saúde</td>
+                                    <td><a href="mailto:medicina-pg@pucrs.br">medicina-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Odontologia</td>
+                                    <td><a href="mailto:odontologia-pg@pucrs.br">odontologia-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Pediatria e Saúde da Criança</td>
+                                    <td><a href="mailto:pediatria-pg@pucrs.br">pediatria-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Psicologia</td>
+                                    <td><a href="mailto:psicologia-pg@pucrs.br">psicologia-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Serviço Social</td>
+                                    <td><a href="mailto:servico-social-pg@pucrs.br">servico-social-pg@pucrs.br</a></td>
+                                </tr>
+                                <tr>
+                                    <td>PPG em Teologia</td>
+                                    <td><a href="mailto:teologia-pg@pucrs.br">teologia-pg@pucrs.br</a></td>
+                                </tr>
+                                <!--<tr>
+                                <td>PPG em Farmácia</td>
+                                <td><a href="mailto:farmacia-pg@pucrs.br">farmacia-pg@pucrs.br</a></td>
+                            </tr>
+                                <tr>
+                                    <td>PPG em Engenharia Elétrica</td>
+                                    <td><a href="mailto:engenharia.pg.eletrica@pucrs.br">engenharia.pg.eletrica@pucrs.br</a>
+                                    </td>
+                                </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="trajetoria">
+            <div class="container">
+                <h2 class="text-center"><strong>Valores</strong></h2>
+                <div class="row">
+                    <div class="col-xs-12 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600" data-aos-delay="150">
+                        <p class="text-center">
+                            Para informações financeiras contatar o Setor Financeiro Acadêmico.
+                        </p>
+
+                    </div>
+                </div>
+                <div data-aos="fade-down" data-aos-duration="600" data-aos-delay="150">
+                    <div class="row" style="display: flex; align-items: center; flex-direction: column;">
+                        <div class="col-xs-2"><a href="https://www.pucrs.br/ingresso/informacoes-financeiras/mensalidades-graduacao/#mensalidades" target="_blank" class="btn btn-info center-block" role="button" style="background-color: #337ab7; border-color: #337ab7; padding-left: 12px; color:#fff;">Saiba mais</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <footer>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left center_all_xs">
+                        <img id="pucrs_marista" src="https://www.pucrs.br/internacionalizacao/wp-content/uploads/sites/211/2018/07/logo-rodape-branco-464x140.png">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 redes pull-right center_all_xs">
+                        <a href="http://www.facebook.com/pucrs" target="_blank"><i class="fa fa-facebook-square fa-7x"></i></a>
+                        <a href="http://www.twitter.com/pucrs" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                        <a href="http://www.instagram.com/pucrs" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="http://www.youtube.com/pucrsonline" target="_blank"><i class="fa fa-youtube-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script type="text/javascript">
+        $().ready(function() {
+            $('[rel="tooltip"]').tooltip();
+        });
+
+        function rotateCard(btn) {
+            var $card = $(btn).closest('.card-container');
+            console.log($card);
+            if ($card.hasClass('hover')) {
+                $card.removeClass('hover');
+            } else {
+                $card.addClass('hover');
+            }
+        }
+    </script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/js/aos.min.js"></script>
+    <script src="https://www.pucrs.br/wp-content/themes/pucrs-responsivo/hotsites/certificacoes-estudo/src/js/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43503103-36"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-43503103-36');
+    </script>
+
+
+</body>
+
+</html>
