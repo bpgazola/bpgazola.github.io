@@ -180,7 +180,7 @@ header.change .navbar-brand {
     background-color: transparent;
     border-radius: 25px;
     padding: 0 20px 0 20px;
-    font-size: initial;
+    font-size: 1.2em;
     min-width: 300px;
     height: 54px;
     border: solid 2px #FFFFFF;
@@ -209,7 +209,7 @@ header.change .navbar-brand {
     background-color: #0C5193;
     border-radius: 25px;
     padding: 0 20px 0 20px;
-    font-size: initial;
+    font-size: 1.2em;
     min-width: 300px;
     border: none;
     height: 54px;
