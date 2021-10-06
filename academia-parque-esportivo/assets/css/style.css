@@ -197,6 +197,9 @@ header.change .navbar-brand {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+.thumbnail-overlay img {
+    width: 20%;
+}
 
 .thumbnail {
     display: block;
