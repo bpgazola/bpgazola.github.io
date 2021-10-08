@@ -40,7 +40,7 @@
             <nav>
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="#spotlight">
                             <img src="assets/images/academia-brand.svg">
                         </a>
                     </div>
@@ -55,12 +55,14 @@
                     <div class="element-fade-down" data-aos="fade-right" data-aos-delay="500"><img src="assets/images/banner-header-lettering-down.svg"></div>
                 </div>
                 <div class="bar-button">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <div class="arrow"><img src="assets/images/left-arrow.svg"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                <div class="arrow"><img src="assets/images/left-arrow.svg"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><button class="btn-default center-block"><a href="#">Quero conhecer os planos</a></button></div>
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><button class="btn-enroll center-block"><a href="#">Quero me matricular</a></button></div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><button class="btn-default"><a href="#">Quero conhecer os planos</a></button></div>
-                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><button class="btn-enroll"><a href="#">Quero me matricular</a></button></div>
                     </div>
                 </div>
             </div>
@@ -77,14 +79,6 @@
             </div>
             <div class="row">
                 <div id="carousel-tour" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-tour" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-tour" data-slide-to="1"></li>
-                        <li data-target="#carousel-tour" data-slide-to="2"></li>
-                        <li data-target="#carousel-tour" data-slide-to="3"></li>
-                    </ol>
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
@@ -100,6 +94,13 @@
                             <img src="assets/images/tour-virtual-slide-04.jpg" alt="...">
                         </div>
                     </div>
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-tour" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-tour" data-slide-to="1"></li>
+                        <li data-target="#carousel-tour" data-slide-to="2"></li>
+                        <li data-target="#carousel-tour" data-slide-to="3"></li>
+                    </ol>
                 </div>
             </div>
         </section>
@@ -128,18 +129,266 @@
         <section id="modalities">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="line"></div>
                         <h1>Modalidades</h1>
-                        <p>Oferecemos opções de aulas que atendem a diversas necessidades, objetivos e perfis. Saiba mais sobre cada uma e encontre aquela que é ideal para você.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="carousel-modalities">
+                        <p>Oferecemos opções de aulas que atendem a diversas<br/> necessidades, objetivos e perfis. Saiba mais sobre <br/>cada uma e encontre aquela que é ideal para você.</p>
+                        <div class="control-arrows">
+                            <div class="arrow-prev"></div>
+                            <div class="arrow-next"></div>
+                        </div>
+                        <div class="carousel-modalities">
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/biocircuit-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Bio Circuit</h2>
+                                                <div class="badges">
+                                                    <div class="label">Exclusivo</div>
+                                                </div>
+                                                <button data-target="#bio-circuit" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
 
+                                        </div>
+                                        <div class="card-back" id="bio-circuit">
+                                            <div class="card-content">
+                                                <p class="bio">Uma modalidade de <strong>treinamento em circuito</strong> perfeita para quem quer um <strong>treino personalizado, eficiente e rápido</strong>. Você só precisa fazer o login uma vez para seguir os exercícios
+                                                    do circuito com equipamentos que se adaptam a você. Uma <strong>experiência totalmente guiada</strong>, de estação em estação, onde você nunca para e nunca espera, pois a carga, repetições, descanso
+                                                    e o ritmo são automaticamente <strong>programados para você em tempo real</strong>. </p>
+                                                <p class="draft bio">Inclua no seu plano com desconto especial</p>
+                                                <button data-target="#bio-circuit" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/grupo-cycle-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Grupo Cycle</h2>
+                                                <div class="badges"><img src="assets/images/technogym-logo.svg">
+                                                    <div class="label">Exclusivo</div>
+                                                </div>
+                                                <button data-target="#grupo-cycle" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="grupo-cycle">
+                                            <div class="card-content">
+                                                <p>A primeira bicicleta de <strong>ciclismo indoor</strong> que registra em tempo real todos os <strong>dados de treinamento</strong>, permitindo que os usuários melhorem sua performance. Com um design único
+                                                    e biomecânica perfeita, a Group Cycle leva você a uma <strong>experiência de ciclismo indoor motivadora e totalmente conectada</strong>. </p>
+                                                <button data-target="#grupo-cycle" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/skillrow-class-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Skillrow Class</h2>
+                                                <div class="badges"><img src="assets/images/technogym-logo.svg">
+                                                    <div class="label">Exclusivo</div>
+                                                </div>
+                                                <button data-target="#skillrow-class" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="skillrow-class">
+                                            <div class="card-content">
+                                                <p>Uma autêntica experiência de <strong>remo indoor</strong> onde o equipamento reproduz fielmente a resistência viscosa da água, proporcionando um <strong>treinamento seguro e eficaz</strong>. Através da <strong>gamificação</strong>,
+                                                    que simula uma competição de remo entre os participantes, transforma ainda a atividade em um <strong>momento lúdico</strong>. </p>
+                                                <button data-target="#skillrow-class" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/omnia-class-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Omnia Class</h2>
+                                                <div class="badges"><img src="assets/images/technogym-logo.svg">
+                                                    <div class="label">Exclusivo</div>
+                                                </div>
+                                                <button data-target="#omnia-class" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="omnia-class">
+                                            <div class="card-content">
+                                                <p>Uma aula <strong>baseada na combinação de sete movimentos fundamentais</strong> e treinamento na zona do ritmo cardíaco. A variedade de exercícios garante uma <strong>experiência envolvente e eficaz</strong>,
+                                                    ideal para quem está iniciando sua jornada fitness e para quem procura uma atividade intensa de treinamento. </p>
+                                                <button data-target="#omnia-class" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/pilates-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Pilates</h2>
+                                                <button data-target="#pilates" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="pilates">
+                                            <div class="card-content">
+                                                <p>Método de condicionamento físico e mental que <strong>desenvolve o corpo como um todo</strong>. As aulas são realizadas através de exercícios progressivos, de baixo impacto, de poucas repetições e com precisão,
+                                                    proporcionando a <strong>eficiência do alongamento e do fortalecimento do corpo de forma integrada e harmônica</strong>. </p>
+                                                <button data-target="#pilates" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/yoga-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Yoga</h2>
+                                                <button data-target="#yoga" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="yoga">
+                                            <div class="card-content">
+                                                <p>Realiza um <strong>trabalho simultâneo com o corpo e a mente</strong> através de posições psicofísicas, técnicas respiratórias, concentração e relaxamento corporal. Sua prática busca proporcionar <strong>estabilidade,
+                                                    equilíbrio, fortalecimento muscular e flexibilidade</strong>, possibilitando o aumento da consciência individual. </p>
+                                                <button data-target="#yoga" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/hiit-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>HIIT</h2>
+                                                <button data-target="#hiit" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="hiit">
+                                            <div class="card-content">
+                                                <p>Uma aula com
+                                                    <strgon>exercícios variados de alta intensidade</strong>, realizados em <strong>períodos curtos e descanso intercalado</strong>, com <strong>elevado gasto calórico</strong>. É recomendada a pessoas com preparação
+                                                        física prévia. </p>
+                                                <button data-target="#hiit" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/corrida-orientada-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Corrida Orientada</h2>
+                                                <button data-target="#corrida-orientada" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="corrida-orientada">
+                                            <div class="card-content">
+                                                <p>Programa sistematizado de corrida que busca o <strong>desenvolvimento da capacidade aeróbica e das técnicas de corrida</strong>. As aulas são aplicadas a <strong>públicos iniciantes e avançados </strong>                                                    através da prescrição de alongamentos, exercícios educativos e períodos de corrida. </p>
+                                                <button data-target="#corrida-orientada" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="video-click">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="assets/images/condicionamento-futebol-thumb.jpg" alt="...">
+                                                </a>
+                                                <div class="thumbnail-overlay"><img src="assets/images/play-button.svg" class="play"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>Condicionamento<br/> para Futebol (Adulto) </h2>
+                                                <button data-target="#condicionamento-futebol" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-back" id="condicionamento-futebol">
+                                            <div class="card-content">
+                                                <p>Uma aula para <strong>desenvolver as capacidades relacionadas ao futebol</strong> – físicas, técnicas e táticas. A modalidade é oferecida ao público adulto (a partir de 18 anos) e é <strong>realizada nos campos, quadras de futebol
+                                                    e pista indoor</strong>, localizados na área externa do Parque Esportivo. </p>
+                                                <button data-target="#condicionamento-futebol" class="btn-toggle"><img src="assets/images/card-arrow.svg"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section class="float-button">
@@ -153,13 +402,17 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <!-- Bootstrap JS -->
     <!-- Última versão JavaScript compilada e minificada -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <!--Slick Carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js"></script>
     <!-- Page Scripts -->
     <script type="text/javascript" src="assets/js/header-fixed-top.js"></script>
     <script type="text/javascript" src="assets/js/carousel-tour.js"></script>
+    <script type="text/javascript" src="assets/js/slick-carousel.js"></script>
+    <script type="text/javascript" src="assets/js/toggle-card-carousel.js"></script>
+    <script type="text/javascript" src="assets/js/scroll-to.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
         AOS.init();
