@@ -69,7 +69,7 @@ p {
 
 header {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 900;
     min-height: 120px;
 }
@@ -102,7 +102,7 @@ header.change .navbar-brand {
 /* Sections */
 
 #spotlight {
-    background: url(../images/banner-header.jpg) no-repeat center;
+    background-image: url(../images/banner-header.jpg);
     background-position-y: 15%;
     background-size: cover;
     height: 680px;
@@ -112,7 +112,7 @@ header.change .navbar-brand {
 .element-fade-up {
     position: absolute;
     top: 95px;
-    left: 150px;
+    left: 200px;
 }
 
 .element-fade-up img {
@@ -122,7 +122,7 @@ header.change .navbar-brand {
 .element-fade-down {
     position: absolute;
     top: 400px;
-    left: 150px;
+    left: 200px;
 }
 
 .element-fade-down img {
@@ -132,7 +132,6 @@ header.change .navbar-brand {
 .bar-button {
     background-color: #85B653;
     min-height: 130px;
-    padding: 3%;
     width: 90%;
     top: 610px;
     position: relative;
@@ -140,7 +139,18 @@ header.change .navbar-brand {
     margin-right: -15px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+}
+
+.bar-button .container {
+    margin-left: 0!important;
+}
+
+.bar-button .btn-default {
+    float: right;
+}
+
+.bar-button .btn-enroll {
+    float: left;
 }
 
 #tour {
@@ -258,7 +268,7 @@ header.change .navbar-brand {
     left: 50%;
     z-index: 15;
     width: 60%;
-    top: 700px;
+    top: 45px;
     padding-left: 0;
     margin-left: -30%;
     text-align: center;
@@ -285,7 +295,308 @@ header.change .navbar-brand {
 }
 
 
-/* Slick Slider Carousel */
+/* Slick Slider Carousel Modalities*/
+
+.carousel-modalities {
+    margin-top: 100px;
+}
+
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    min-height: 1px;
+}
+
+
+/*.slick-slide img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-slide.items {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Cards Carousel Modalities*/
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    height: 380px;
+    width: 350px;
+}
+
+.card-content {
+    padding: 0 15px 0 15px;
+}
+
+.card h2 {
+    font-size: 1.8em;
+    color: #3A3A3A;
+    font-family: 'Gotham-Black';
+}
+
+.card .video-click {
+    cursor: pointer;
+    position: relative;
+}
+
+.card .video-click .thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .3);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card .video-click .thumbnail-overlay:hover {
+    background-color: rgb(0, 0, 0, .5);
+    transition: all 0.3s ease-out;
+}
+
+.card .thumbnail-overlay .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.card .thumbnail-overlay img {
+    width: 20%;
+}
+
+.card .thumbnail {
+    display: block;
+    padding: 0;
+    border: none;
+}
+
+.card .thumbnail img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-front {
+    position: absolute;
+}
+
+.card-back {
+    display: none;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    height: 380px;
+    width: 350px;
+    position: relative;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.card-back p {
+    text-align: center;
+    font-size: inherit;
+    color: #3A3A3A;
+}
+
+.card-back p:not(.bio) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.2em;
+}
+
+.card-back .btn-toggle img {
+    transform: rotate(180deg);
+}
+
+.badges {
+    display: flex;
+}
+
+.badges img {
+    width: 30%;
+    margin-right: 15px;
+}
+
+.label {
+    background-color: #F68F2D;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    color: #FFFFFF;
+    font-size: 1em;
+    font-family: 'Gotham-Book';
+    text-transform: uppercase;
+}
+
+.draft {
+    background-color: #85B653;
+    padding: 0 1px 0 1px;
+}
+
+
+/* Custom Arrows */
+
+.control-arrows {
+    position: absolute;
+    width: 95%;
+    margin-top: -200px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.arrow-prev {
+    background-color: #85B653;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-image: url(../images/carrousel-arrow-prev.svg);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.arrow-prev:hover {
+    background-color: #FFFFFF;
+    background-image: url(../images/carrousel-arrow-prev-hover.svg);
+    transition: all 0.3s ease-out;
+}
+
+.arrow-next:hover {
+    background-color: #FFFFFF;
+    background-image: url(../images/carrousel-arrow-next-hover.svg);
+    transition: all 0.3s ease-out;
+}
+
+.arrow-next {
+    background-color: #85B653;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-image: url(../images/carrousel-arrow-next.svg);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 45px;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.slick-dots li.slick-active {
+    background-color: #85B653;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
 
 
 /* Arrow */
@@ -324,7 +635,7 @@ header.change .navbar-brand {
 }
 
 .arrow img {
-    width: 80%;
+    width: 50%;
     height: 54px;
     display: block;
     margin-left: auto;
@@ -344,6 +655,7 @@ header.change .navbar-brand {
     border: solid 2px #FFFFFF;
     cursor: pointer;
     font-family: 'Gotham-Medium';
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btn-default:hover,
@@ -374,6 +686,7 @@ header.change .navbar-brand {
     height: 54px;
     cursor: pointer;
     font-family: 'Gotham-Medium';
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btn-enroll:hover,
@@ -386,4 +699,25 @@ header.change .navbar-brand {
 .btn-enroll:hover a {
     color: #FFFFFF;
     transition: all 0.3s ease-out;
+}
+
+.btn-toggle {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    height: 35px;
+    position: absolute;
+    top: 320px;
+    right: 15px;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-toggle img {
+    float: right;
+    height: 60%;
 }
