@@ -1429,6 +1429,19 @@ blockquote:after {
         margin: 5px 0 5px 0;
         font-size: 1em;
     }
+    #plans .card {
+        min-height: 580px;
+    }
+    #plans .card .btn-enroll {
+        min-width: 220px;
+    }
+    #plans .card-content a.link {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 @media (max-width: 991px) {
