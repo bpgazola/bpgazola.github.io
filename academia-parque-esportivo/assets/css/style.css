@@ -1632,6 +1632,21 @@ blockquote:after {
     .carousel-students {
         margin-top: 200px;
     }
+    .carousel-students .card {
+        height: 450px;
+    }
+    .carousel-students .card .info-perfil {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .carousel-students .card .info-perfil p {
+        text-align: center;
+    }
+    .carousel-students .card .info-perfil p.additional-info {
+        text-align: center;
+    }
     #app-store #donwload-app {
         display: flex;
         justify-content: center;
