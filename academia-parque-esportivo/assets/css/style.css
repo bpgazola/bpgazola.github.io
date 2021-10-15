@@ -1686,6 +1686,9 @@ blockquote:after {
         height: 220px;
         width: 350px;
     }
+    #plans .card {
+        min-height: 580px;
+    }
     #app-store .mockup-app {
         top: 30px;
         left: 100px;
