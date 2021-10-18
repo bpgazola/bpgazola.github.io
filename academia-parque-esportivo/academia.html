@@ -728,7 +728,7 @@
                         <a class="link" href="https://www.pucrs.br/parqueesportivo/" target="_blank">Acesse o site</a>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <div class="thumbnail"><img src="assets/images/parque-esportivo.jpg"></div>
+                        <div class="thumbnail"><img class="parallax" src="assets/images/parque-esportivo.jpg"></div>
                     </div>
                 </div>
             </div>
@@ -870,6 +870,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
         AOS.init();
+        
+          $(document).ready(function(){
+    $('.parallax').parallax();
+  });
     </script>
 
 
