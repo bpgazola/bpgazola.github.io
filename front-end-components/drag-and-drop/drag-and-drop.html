@@ -167,7 +167,7 @@
                         <div class="list-group">
                             <div class="list">
                                 <h2>To Do</h2>
-                                <div class="list-content" data-list>
+                                <div class="list-content" data-list="target">
                                 </div>
                             </div>
                             <div class="list">
@@ -233,7 +233,7 @@
         }
 
         function newItemList() {
-            const listsCards = document.querySelector('[data-list]');
+            const listsCards = document.querySelector('[data-list="target"]');
             const input = document.getElementById('addToList').value;
             const card = document.createElement('li.card');
             const contentCard = `<li class="card" draggable="true">${input}</li>`;
