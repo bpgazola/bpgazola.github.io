@@ -100,14 +100,14 @@
             content: none;
         }
         
-        .nav-tabs>li:nth-child(1)>p.disciplina {
+        .nav-tabs li:nth-child(1) p.disciplina {
             font-size: 1.5rem;
             color: var(--red-1);
             text-align: center;
             font-weight: bold;
         }
         
-        .nav-tabs>li:nth-child(1)>p.carga-horaria {
+        .nav-tabs li:nth-child(1) p.carga-horaria {
             font-size: 1.3rem;
             color: var(--red-1);
             text-align: center;
@@ -144,14 +144,14 @@
             margin-right: 90px;
         }
         
-        .nav-tabs>li:nth-child(2)>p.disciplina {
+        .nav-tabs li:nth-child(2) p.disciplina {
             font-size: 1.5rem;
             color: var(--red-2);
             text-align: center;
             font-weight: bold;
         }
         
-        .nav-tabs>li:nth-child(2)>p.carga-horaria {
+        .nav-tabs li:nth-child(2) p.carga-horaria {
             font-size: 1.3rem;
             color: var(--red-2);
             text-align: center;
@@ -182,14 +182,14 @@
             margin-right: 90px;
         }
         
-        .nav-tabs>li:nth-child(3)>p.disciplina {
+        .nav-tabs li:nth-child(3) p.disciplina {
             font-size: 1.5rem;
             color: var(--red-3);
             text-align: center;
             font-weight: bold;
         }
         
-        .nav-tabs>li:nth-child(3)>p.carga-horaria {
+        .nav-tabs>li:nth-child(3) p.carga-horaria {
             font-size: 1.3rem;
             color: var(--red-3);
             text-align: center;
@@ -220,14 +220,14 @@
             margin-right: 90px;
         }
         
-        .nav-tabs>li:nth-child(4)>p.disciplina {
+        .nav-tabs li:nth-child(4) p.disciplina {
             font-size: 1.5rem;
             color: var(--red-4);
             text-align: center;
             font-weight: bold;
         }
         
-        .nav-tabs>li:nth-child(4)>p.carga-horaria {
+        .nav-tabs li:nth-child(4) p.carga-horaria {
             font-size: 1.3rem;
             color: var(--red-4);
             text-align: center;
@@ -338,6 +338,8 @@
             height: 54px;
             border: solid 4px transparent;
             cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
             margin-left: 20px;
             margin-bottom: 15px;
             display: flex;
@@ -410,31 +412,24 @@
         #One .list-tabcontent li:nth-child(3) .btn a {
             color: var(--red-1);
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
+            ;
         }
         
         #Two .list-tabcontent li:nth-child(1) .btn a,
         #Two .list-tabcontent li:nth-child(2) .btn a {
             color: var(--red-2);
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
         }
         
         #Three .list-tabcontent li:nth-child(1) .btn a {
             color: var(--red-3);
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
         }
         
         #Four .list-tabcontent li:nth-child(1) .btn a,
         #Four .list-tabcontent li:nth-child(2) .btn a {
             color: var(--red-4);
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
         }
         
         #One .list-tabcontent li:nth-child(1) .btn:hover,
@@ -508,6 +503,7 @@
             display: none;
             padding: 5%;
             color: #FFFFFF;
+            animation: fadeEffect 1s;
         }
         
         .disciplinacontent h3 {
@@ -553,6 +549,69 @@
             width: 100%;
             height: auto;
             background-color: rgb(50, 51, 52, 0.5);
+        }
+        /* MEDIA QUERY */
+        
+        @media (max-width: 1200px) {
+            .nav-tabs li {
+                margin-bottom: 25px;
+            }
+            .disciplinas {
+                margin-left: 45px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .disciplinas {
+                margin-top: 45px;
+                margin-left: 0px;
+            }
+        }
+        
+        @media (max-width: 589px) {
+            .nav-tabs {
+                border: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-tabs li {
+                margin-bottom: 85px;
+            }
+            .nav-tabs li::after {
+                content: "+";
+                position: absolute;
+                margin-left: 10px;
+                margin-top: 155px;
+            }
+            .nav-tabs li:nth-child(1),
+            .nav-tabs li:nth-child(2),
+            .nav-tabs li:nth-child(3),
+            .nav-tabs li:nth-child(4) {
+                margin-right: 0px;
+            }
+        }
+        
+        @media (max-width: 455px) {
+            .list-tabcontent .btn {
+                min-width: 300px;
+                font-size: 1.3rem;
+            }
+            .list-tabcontent .btn .fas {
+                position: absolute;
+                margin-left: 250px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .list-tabcontent .btn {
+                min-width: 250px;
+                font-size: 1rem;
+            }
+            .list-tabcontent .btn .fas {
+                position: absolute;
+                margin-left: 200px;
+            }
         }
     </style>
 
