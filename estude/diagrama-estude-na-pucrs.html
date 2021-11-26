@@ -856,6 +856,13 @@
             document.getElementById(disciplinaNumber).style.display = "block";
             evt.currentTarget.className += " active";
         }
+        
+        //Smoth scroll top
+        $(".tablinks").click(function() {
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top
+            });
+        });
     </script>
 
 </body>
