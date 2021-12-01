@@ -635,25 +635,25 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-md-12 col-lg-12">
                             <ul class="nav nav-tabs">
-                                <li class="tablinks" onclick="openTab(event, 'One')">
+                                <li href="#One" class="tablinks" onclick="openTab(event, 'One')">
                                     <p class="disciplina">Políticas e gestão de comunicação</p>
                                     <p class="carga-horaria">720 horas | 48 créditos</p>
-                                    <i href="#One" class="fas fa-angle-down fa-2x"></i>
+                                    <i class="fas fa-angle-down fa-2x"></i>
                                 </li>
-                                <li class="tablinks" onclick="openTab(event, 'Two')">
+                                <li href="#Two" class="tablinks" onclick="openTab(event, 'Two')">
                                     <p class="disciplina">Interfaces entre negócios e comunicação</p>
                                     <p class="carga-horaria">570 horas* | 34 créditos</p>
-                                    <i href="#Two" class="fas fa-angle-down fa-2x"></i>
+                                    <i class="fas fa-angle-down fa-2x"></i>
                                 </li>
-                                <li class="tablinks" onclick="openTab(event, 'Three')">
+                                <li href="#Three" class="tablinks" onclick="openTab(event, 'Three')">
                                     <p class="disciplina">Projetos e ações de comunicação em diferentes mídias</p>
                                     <p class="carga-horaria">180 horas | 12 créditos</p>
-                                    <i href="#Three" class="fas fa-angle-down fa-2x"></i>
+                                    <i class="fas fa-angle-down fa-2x"></i>
                                 </li>
-                                <li class="tablinks" onclick="openTab(event, 'Four')">
+                                <li href="#Four" class="tablinks" onclick="openTab(event, 'Four')">
                                     <p class="disciplina">Vivências e conexões</p>
                                     <p class="carga-horaria">210 horas | 14 créditos</p>
-                                    <i href="#Four" class="fas fa-angle-down fa-2x"></i>
+                                    <i class="fas fa-angle-down fa-2x"></i>
                                 </li>
                             </ul>
                             <div id="One" class="tabcontent">
@@ -856,7 +856,7 @@
             document.getElementById(disciplinaNumber).style.display = "block";
             evt.currentTarget.className += " active";
         }
-        
+
         //Smoth scroll top
         $(".tablinks").click(function() {
             $("html, body").animate({
