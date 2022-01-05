@@ -3,7 +3,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     body {
@@ -92,10 +92,6 @@
         margin-top: 120px;
     }
     
-    .navbar-brand img {
-        width: 80%;
-    }
-    
     .navbar-nav {
         background-color: #FFFFFF;
         border: solid 1px #E1E1E1;
@@ -152,7 +148,7 @@
     /* SECTIONS */
     
     #spotlight {
-        background-color: #1D2646;
+        background-color: #354580;
         background-image: url(../images/background-top.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -167,21 +163,63 @@
     
     #prices {
         background-color: #FFFFFF;
+        margin-bottom: 45px;
     }
     
-    .tabs {
-        background-color: #F8C604;
-        min-height: 170px;
-        width: 100%;
+    #tips #top {
+        background-color: #1C74BA;
+        min-height: 500px;
+        padding-top: 85px;
+        position: relative;
     }
     
-    .tabs h1 {
-        color: #3180C3;
+    #tips .content {
+        position: relative;
+        top: -420px;
     }
     
-    .tabs h2 {
-        color: #131629;
-        margin-top: 65px;
+    #tips h1 {
+        color: #FFFFFF;
+    }
+    
+    #tips h2 {
+        color: #F8C604;
+    }
+    
+    #tips img {
+        margin-top: 180px;
+    }
+    
+    .float-button {
+        position: fixed;
+        bottom: 5%;
+        right: 1%;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 900;
+    }
+    
+    .float-button #whatsapp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: #85B653;
+        transition: transform .3s;
+        transform: scale(1);
+        border: solid 2px #FFFFFF;
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+    .float-button #whatsapp:hover,
+    .float-button #whatsapp:focus {
+        transform: scale(1.2);
     }
     /* Tabs */
     
@@ -215,6 +253,27 @@
     .tab-content {
         padding-top: 45px;
     }
+    
+    .tab-content p {
+        color: #1D2646;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+    }
+    
+    .tabs {
+        background-color: #F8C604;
+        min-height: 170px;
+        width: 100%;
+    }
+    
+    .tabs h1 {
+        color: #3180C3;
+    }
+    
+    .tabs h2 {
+        color: #131629;
+        margin-top: 65px;
+    }
     /* Tooltip */
     
     .tooltip-inner {
@@ -227,6 +286,8 @@
         font-weight: 800;
         background-color: #FFFFFF;
         border-radius: 5px;
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
     }
     
     .tooltip.top {
@@ -255,7 +316,7 @@
         border: solid 1px #E1E1E1;
         -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
-        margin-bottom: 15px;
+        margin-bottom: 45px;
     }
     
     .table {
@@ -263,7 +324,7 @@
     }
     
     .table thead tr th {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         font-family: 'Lato', sans-serif;
         font-weight: 800;
         text-align: center;
@@ -312,6 +373,30 @@
         font-size: 3.8rem;
         font-weight: 800;
         font-family: 'Lato', sans-serif;
+    }
+    
+    .about {
+        background-color: #1C74BA;
+        border-radius: 5px;
+        padding: 35px 25px 35px 25px;
+        display: flex;
+        margin-bottom: 45px;
+    }
+    
+    .about p {
+        color: #FFFFFF;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+    
+    .about .aside {
+        display: flex;
+        align-items: center;
+    }
+    
+    .about .aside .icon img {
+        height: 40px;
     }
     /* Carroussel */
     
