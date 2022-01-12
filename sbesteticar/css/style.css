@@ -110,6 +110,11 @@ header .fab::before {
     font-weight: 800;
 }
 
+.navbar-nav li:last-child a:visited,
+.navbar-nav li:last-child a:focus {
+    background-color: #F8C604;
+}
+
 .navbar-nav li:nth-child(1),
 .navbar-nav li:nth-child(2),
 .navbar-nav li:nth-child(3),
@@ -172,16 +177,17 @@ header .fab::before {
     margin-bottom: 45px;
 }
 
-#tips #top {
-    background-color: #1C74BA;
-    min-height: 500px;
-    padding-top: 85px;
-    position: relative;
+#tips {
+    margin-bottom: 45px;
 }
 
-#tips .content {
-    position: relative;
-    top: -420px;
+#tips #top {
+    background-color: #1C74BA;
+    height: 500px;
+}
+
+#tips .container {
+    margin-top: -420px;
 }
 
 #tips h1 {
@@ -196,10 +202,82 @@ header .fab::before {
     margin-top: 180px;
 }
 
-#tips .content p {
+#tips .container p {
     color: #1D2646;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
+}
+
+#map {
+    background-color: #F8C604;
+    height: 600px;
+    padding: 45px 0 45px 0;
+}
+
+#map h2 {
+    color: #1D2646;
+}
+
+#map h1 {
+    color: #3180C3;
+}
+
+#schedule {
+    margin-top: 45px;
+}
+
+#schedule ul {
+    list-style: none;
+}
+
+#schedule ul li {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#schedule ul li p {
+    color: #1D2646;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#schedule .fas {
+    color: #3180C3;
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 500px;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 100%;
+}
+
+#about-us {
+    background-color: #FFFFFF;
+    padding-top: 45px;
+}
+
+#about-us h2 {
+    color: #1D2646;
+    text-align: center;
+}
+
+#about-us h1 {
+    color: #3180C3;
+    text-align: center;
 }
 
 .float-button {
@@ -234,6 +312,35 @@ header .fab::before {
     transform: scale(1.2);
 }
 
+.button-top {
+    position: fixed;
+    bottom: 5%;
+    left: 1%;
+    height: 100px;
+    width: 100px;
+    z-index: 900;
+}
+
+.button-top #arrow-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+}
+
+.button-top #arrow-up .fas {
+    color: #000000;
+    font-size: 2.3rem;
+}
+
+.button-top #arrow-up a {
+    color: #000000;
+    font-size: inherit;
+    text-decoration: none;
+}
+
 
 /* Botões */
 
@@ -247,6 +354,7 @@ header .fab::before {
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     border: none;
+    margin-top: 25px;
 }
 
 .btn-default:hover,
