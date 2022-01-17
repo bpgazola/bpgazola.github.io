@@ -1161,6 +1161,7 @@
      .navbar-collapse {
          width: 25%;
          float: right;
+         margin-top: -25px;
      }
      #services .control-arrows {
          margin-top: -50px;
