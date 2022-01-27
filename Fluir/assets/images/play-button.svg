@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150.5" height="150.5" viewBox="0 0 150.5 150.5">
+  <g id="play-button" transform="translate(1.5 1.5)">
+    <g id="Grupo_118" data-name="Grupo 118">
+      <g id="Grupo_117" data-name="Grupo 117">
+        <path id="Caminho_92" data-name="Caminho 92" d="M73.75,0A73.75,73.75,0,1,0,147.5,73.75,73.833,73.833,0,0,0,73.75,0Zm0,141.354a67.6,67.6,0,1,1,67.6-67.6A67.681,67.681,0,0,1,73.75,141.354Z" fill="#fff" stroke="#fff" stroke-width="3"/>
+        <path id="Caminho_93" data-name="Caminho 93" d="M239.756,177.477l-43.021-27.656A3.073,3.073,0,0,0,192,152.4v55.313a3.072,3.072,0,0,0,4.736,2.584l43.021-27.656a3.072,3.072,0,0,0,0-5.168Zm-41.611,24.61V158.034l34.264,22.026Z" transform="translate(-136.688 -106.311)" fill="#fff" stroke="#fff" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>
