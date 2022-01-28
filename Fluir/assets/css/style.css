@@ -110,13 +110,13 @@ h2 {
 /* Sections */
 
 #background-image {
-    background-image: url(../images/foto-header.jpg);
+    background-image: url(../images/foto-header_1.jpg);
     background-repeat: no-repeat;
     position: fixed;
-    top: 80px;
+    margin-top: 80px;
     width: 100%;
     z-index: 0;
-    min-height: 562px;
+    min-height: 600px;
     height: auto;
     position: relative;
 }
@@ -267,6 +267,7 @@ h2 {
 
 .video-cases-hide {
     display: none;
+    margin-bottom: 1300px;
 }
 
 #cases .btn-default {
@@ -386,6 +387,9 @@ h2 {
     width: 15%;
 }
 
+
+/* Footer */
+
 footer {
     background: linear-gradient(90deg, rgba(44, 39, 128, 1) 0%, rgba(118, 115, 212, 1) 50%, rgba(41, 171, 226, 1) 100%);
     padding: 45px 0 45px 0;
@@ -440,13 +444,14 @@ footer hr.border {
 
 footer #logos {
     margin-top: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 footer #logos img {
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 20%;
 }
 
 #footer-info p {
@@ -816,11 +821,15 @@ footer #logos img {
     #about .element-right img {
         width: 40%;
     }
+    .carousel-why .card .card-inner .content {
+        padding: 45px;
+    }
     #why {
         padding-bottom: 85px;
     }
     #why .control-arrows {
-        margin-top: 590px;
+        position: absolute;
+        bottom: -40px;
         display: flex;
         justify-content: center;
     }
@@ -831,9 +840,11 @@ footer #logos img {
         margin-left: 5px;
     }
     #how .control-arrows {
-        margin-top: 450px;
+        position: absolute;
+        bottom: -80px;
         display: flex;
         justify-content: center;
+        margin-left: -15px;
     }
     #how .prev {
         margin-right: 5px;
@@ -851,9 +862,18 @@ footer #logos img {
     .carousel-tutorial .card {
         margin-right: 0px;
     }
+    #skills h2,
+    #skills p {
+        text-align: center;
+    }
     #skills .element-right img {
         width: 70%;
         margin-top: 65px;
+    }
+    #skills .btn-default {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     #cases .video-click {
         margin-top: 45px;
@@ -904,8 +924,13 @@ footer #logos img {
     .footer-content p {
         text-align: center;
     }
+    footer #logos {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+    }
     footer #logos img {
-        width: 20%;
+        width: 25%;
     }
     #footer-info p {
         text-align: center;
@@ -920,6 +945,12 @@ footer #logos img {
 }
 
 @media (max-width: 768px) {
+    .navbar-default .btn-default {
+        margin-left: 0px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
     #background-image {
         min-height: 300px;
     }
@@ -932,15 +963,78 @@ footer #logos img {
     #about .element-right img {
         width: 26%;
     }
+    #why .control-arrows {
+        position: absolute;
+        bottom: -40px;
+    }
+    .carousel-why .card {
+        background-color: #F5F5F5;
+        width: 100%;
+        height: 420px;
+    }
+    .carousel-why .card .card-inner .content {
+        padding: 45px;
+    }
+    .carousel-why .card .card-inner .content ul {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .carousel-why .card .card-inner .content ul li {
+        margin-top: 5px;
+    }
     .carousel-why .card .card-inner .thumb {
         display: none;
     }
     #resources .item {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+        margin-bottom: 15px;
+    }
+    #resources .item .item-content img.icon {
+        margin-right: 15px;
+        width: 10%;
+    }
+    #how {
+        background-color: #F5F5F5;
+        padding: 85px 0 145px 0;
+    }
+    #how .control-arrows {
+        position: absolute;
+        bottom: -80px;
+        margin-left: -15px;
+    }
+    #skills h2,
+    #skills p {
+        text-align: center;
+    }
+    #skills .btn-default {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 438px) and (min-width: 400px) {
+    .carousel-why .card {
+        background-color: #F5F5F5;
         width: 100%;
+        height: 480px;
+    }
+    #how .control-arrows {
+        bottom: -60px;
+    }
+    #resources .item {
+        width: 300px;
     }
 }
 
 @media (max-width: 320px) {
+    .navbar-default .btn-default {
+        margin-left: 0px;
+    }
     h1 {
         font-size: 3rem;
     }
@@ -974,5 +1068,9 @@ footer #logos img {
     }
     #cases .video-click {
         width: 100%;
+    }
+    .video-cases-hide {
+        display: none;
+        margin-bottom: 2950px;
     }
 }
