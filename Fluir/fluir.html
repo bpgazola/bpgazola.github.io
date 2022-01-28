@@ -382,7 +382,7 @@
                             <img class="icon" src="assets/images/icon-contato.svg">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <h2>Vamos conversar</h2>
+                            <h2>Vamos conversar?</h2>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                             <p>Para saber mais sobre o Programa Fluir,<br/> entre em contato com a sua liderança<br/><span> ou pelo email <a href="mailto:gepes@pucrs.br">gepes@pucrs.br</a></span></p>
@@ -393,11 +393,9 @@
                         <img class="image" src="assets/images/img-footer.svg">
                     </div>
                     <div class="row">
-                        <div id="logos">
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"><img src="assets/images/marista-logo.svg"></div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"><img src="assets/images/pucrs-logo.svg"></div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="logos"><img src="assets/images/marista-logo.svg"><img src="assets/images/pucrs-logo.svg">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -448,6 +446,11 @@
     <script type="text/javascript">
         $('#apresentacao-modelo').on('hidden.bs.modal', function(e) {
             $('#apresentacao-modelo iframe').attr("src", $('#apresentacao-modelo iframe').attr("src"));
+        });
+        $(document).ready(function() {
+            $('.navbar-default .navbar-nav li a').click(function() {
+                $('.navbar-collapse').collapse('hide');
+            });
         });
     </script>
 
