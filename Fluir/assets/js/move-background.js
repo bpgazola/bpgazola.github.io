@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var pixelToMove = 50;
+    var pixelToMove = 80;
     $("#background-image").mousemove(function(e) {
         var width = $(this).innerWidth();
 
