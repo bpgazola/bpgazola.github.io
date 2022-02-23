@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="http://www.pucrs.br/wp-content/uploads/2022/01/favicon.svg" type="image/x-icon" />
 
     <!-- title -->
-    <title>Volta às Aulas 2022 | PUCRS</title>
+    <title>Novo Semestre 2022 | PUCRS</title>
 
     <!-- css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -38,8 +38,7 @@
             --color-cinza: #b3b3b3;
             --color-cinza-claro: #EFEFF1;
             font-size: 14px;
-            max-width: 100%;
-            overflow-x: hidden;
+            overflow-x: hidden!important;
         }
         
         body {
@@ -48,6 +47,7 @@
             font-weight: 400;
             line-height: 2rem;
             font-family: 'Gotham', 'open sans', sans-serif;
+            overflow-x: hidden!important;
         }
         /* section */
         
@@ -94,6 +94,8 @@
             text-decoration: none;
             font-size: 5rem;
             font-weight: 800;
+            display: flex;
+            align-items: center;
         }
         
         h2 {
@@ -192,30 +194,50 @@
         
         .navbar {
             background-color: var(--color02);
-            height: 10vh;
-            padding: 0;
+            /*height: 10vh;*/
+            padding: 2% 0 2% 0;
             box-shadow: 0px 3px 6px #00000029;
             opacity: 1;
+            z-index: 1000;
+        }
+        
+        .navbar a {
+            color: #FFFFFF;
+        }
+        
+        .navbar .nav-link {
+            color: #FFFFFF!important;
+            font-size: 1.3rem;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
         }
         
         .navbar img {
             height: 4.5vh;
             width: auto;
-            margin: 0;
+            margin: 0 1% 0 0;
         }
         
-        .navbar span {
-            color: var(--color-branco);
-            font-size: 1.3rem;
-            margin-left: 10px;
-            font-weight: 500;
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            color: #FFFFFF;
         }
         /* ---- intro typewrite ---- */
         
         .intro {
             height: 90vh;
             z-index: 1;
-            background-image: url('http://www.pucrs.br/wp-content/uploads/2022/01/foto-intro.jpg');
+            background-image: url('http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-22-foto-intro-volta-as-aulas-01.jpg');
             text-align: center;
         }
         
@@ -254,6 +276,10 @@
             /*font-size: 4.5rem;*/
             font-size: 10vmin;
             float: left;
+        }
+        
+        .box-type .typewrite {
+            font-size: 10vmin;
         }
         
         .box-type .typewrite:hover {
@@ -455,7 +481,7 @@
         }
         
         .modal-content .programa {
-            margin-top: 80px;
+            margin: 20px 0 20px 0;
         }
         
         .modal-content .programa p {
@@ -528,6 +554,19 @@
             height: 80px;
             width: 80px;
             margin-right: 15px;
+        }
+        
+        @media (max-width: 576px) {
+            .alert.alert-grey,
+            .alert.alert-white {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .alert.alert-grey img,
+            .alert.alert-white img {
+                margin-bottom: 15px;
+            }
         }
         /* ---- footer ----- */
         
@@ -795,22 +834,45 @@
             color: #513FA4;
             font-size: 1.5rem;
             background-color: #EFEFF1;
+            border-top: solid 3px #dee2e6;
+            border-left: solid 3px #dee2e6;
+            border-right: solid 3px #dee2e6;
+            box-shadow: 0px 2px 0 #EFEFF1;
+        }
+        
+        #programacao ul li:nth-child(1) button {
+            color: #FF8E8D!important;
+        }
+        
+        #programacao ul li:nth-child(1) button.active {
+            color: #513FA4!important;
         }
         
         #galeria-fotos #galeriaTab .nav-link.active {
             color: #513FA4;
             font-size: 1.5rem;
             background-color: #EFEFF1;
+            border-top: solid 3px #dee2e6;
+            border-left: solid 3px #dee2e6;
+            border-right: solid 3px #dee2e6;
+            box-shadow: 0px 2px 0 #EFEFF1;
+        }
+        
+        #galeria-fotos #galeriaTab,
+        #programacao #scheduleTab {
+            border-bottom: solid 3px #dee2e6;
         }
         
         #programacao #scheduleTab .nav-link {
             color: #B3B3B3;
             font-size: 1.5rem;
+            border-bottom: #EFEFF1;
         }
         
         #galeria-fotos #galeriaTab .nav-link {
             color: #B3B3B3;
             font-size: 1.5rem;
+            border-bottom: #EFEFF1;
         }
         
         #programacao .schedule-items ul {
@@ -818,26 +880,41 @@
             display: inline;
         }
         
+        #programacao .schedule-items ul li {
+            cursor: pointer;
+        }
+        
         #galeria-fotos .schedule-items ul {
             list-style: none;
             display: inline;
+        }
+        
+        .lb-details {
+            display: none!important;
         }
         
         #programacao .schedule-items li {
             background-color: #FFFFFF;
             border-radius: 85px;
             font-size: inherit;
-            padding: 2%;
+            padding: 3%;
             width: 100%;
             display: flex;
             margin-bottom: 15px;
+            align-items: center;
         }
         
         #programacao .schedule-items .hour {
             color: #513FA4;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             width: auto;
-            margin-right: 5px;
+            margin-right: 1%;
+            padding-right: 1%;
+            border-right: solid 2px #513FA4;
+        }
+        
+        #programacao .schedule-items .description-event {
+            font-size: 1.3rem;
         }
         
         #medidas-seguranca {
@@ -849,7 +926,7 @@
         }
         
         #galeria-fotos .thumb-galeria-fotos {
-            width: 390px;
+            width: 100%;
             height: auto;
             margin-bottom: 45px;
             cursor: pointer;
@@ -857,8 +934,19 @@
             margin-right: 15px;
         }
         
+        #galeria-fotos .thumb-galeria-fotos img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        
         #galeria-fotos .schedule-items:nth-child(1) {
             margin-top: 45px;
+        }
+        
+        #galeria-fotos .schedule-items {
+            margin-top: -40px;
         }
         
         #galeria-fotos .thumb-galeria-fotos:hover {
@@ -866,7 +954,7 @@
         }
         
         #galeria-fotos .galeria-hide {
-            margin-top: -70px;
+            margin-top: -90px;
             display: none;
         }
         
@@ -880,6 +968,14 @@
             height: max-content;
             width: fit-content;
             border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            #galeria-fotos .thumb-galeria-fotos {
+                display: block;
+                margin-left: auto;
+                margin-right: auto
+            }
         }
         
         #filtro-instagram {
@@ -905,8 +1001,35 @@
             margin: 0 auto;
         }
         
+        #filtro-instagram .qrcode img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: auto;
+        }
+        
         .fa-long-arrow-alt-right {
             transform: rotate(-45deg);
+        }
+        
+        .button-footer-left {
+            color: #FFFFFF;
+        }
+        
+        .button-footer-right {
+            color: #FFFFFF;
+            text-align: right;
+        }
+        
+        @media (max-width: 768px) {
+            .button-footer-left,
+            .button-footer-right {
+                text-align: center;
+            }
+            .button-footer-left {
+                margin-bottom: 45px;
+            }
         }
     </style>
 </head>
@@ -915,9 +1038,34 @@
 
     <!-- header -->
     <header>
-        <nav class="navbar">
-            <div class="mx-auto align-center">
-                <a href="#"><img src="http://www.pucrs.br/wp-content/uploads/2022/01/logo-pucrs.svg" class="logo" alt="PUCRS" title="PUCRS"></a><span>| Volta às aulas 2022</span>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#header"><img src="http://www.pucrs.br/wp-content/uploads/2022/01/logo-pucrs.svg" class="logo" alt="PUCRS" title="PUCRS">| Novo Semestre 2022</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+              </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#modelo">Modelo de ensino</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#programacao">Programação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#medidas-seguranca">Segurança</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#beneficios">Benefícios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#diferenciais">Diferenciais</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria-fotos">Galeria</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -962,7 +1110,7 @@
         <section id="modelo">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-6 align-middle" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-12 col-md-6 align-middle" data-aos="fade-right" data-aos-duration="1000">
                         <h3>Bem-vindos/as</h3>
                         <p>Estamos começando um novo semestre com a proximidade que tanto desejamos, pois nosso <strong>ensino presencial volta a ser integral. E agora ele será potencializado pelas novas práticas digitais</strong> adotadas nos últimos semestres,
                             que irão complementar e aprofundar o nosso modelo de ensino.</p>
@@ -970,8 +1118,8 @@
                         <p>
                             <strong>Seja bem-vindo/a, aproveite cada momento e bons estudos!</strong></p>
                     </div>
-                    <div class="col col-md-6" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-17-foto-ensino-volta-as-aulas.png" class="img-destaque" title="modelo de ensino" />
+                    <div class="col-12 col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-22-foto-ensino-volta-as-aulas.png" class="img-destaque" title="modelo de ensino" />
                     </div>
                 </div>
             </div>
@@ -981,14 +1129,14 @@
         <section id="programacao">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-12 col-md-12" data-aos="fade-up" data-aos-duration="1000">
                         <h3>Programação</h3>
                         <h4>_Confira a programação completa do Volta às Aulas que preparamos para receber todos nossos alunos!</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-10 offset-md-1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="alert alert-grey" role="alert">
+                    <div class="col-10 col-md-10 offset-md-1 aos-init aos-animate mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="alert alert-white" role="alert">
                             <img src="http://www.pucrs.br/wp-content/uploads/2022/01/icon-rematriculas.svg">
                             <p>São diversas atividades com momentos de inspiração e diversão para você viver novamente o Campus. Confira, são palestras, aulas, momentos para pensar em carreira e oportunidades de trabalho e muito mais.
                             </p>
@@ -996,10 +1144,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-12 col-md-12" data-aos="fade-up" data-aos-duration="1000">
                         <ul class="nav nav-tabs" id="scheduleTab" role="tablist">
                             <li class="nav-item">
-                                <button class="nav-link active" id="" data-bs-toggle="tab" data-bs-target="#destaque" type="button" role="tab"><i class="fas fa-star"></i> Destaque</button>
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#destaque" type="button" role="tab"><i class="fas fa-star"></i> Destaque</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dia2" type="button" role="tab">2/3 à 11/3</button>
                             </li>
                             <li class="nav-item">
                                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dia3" type="button" role="tab">3/3</button>
@@ -1021,6 +1172,9 @@
                             </li>
                             <li class="nav-item">
                                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dia11" type="button" role="tab">11/3</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dia14" type="button" role="tab">14/3</button>
                             </li>
                             <li class="nav-item">
                                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dia15" type="button" role="tab">15/3</button>
@@ -1059,28 +1213,65 @@
                             <div class="tab-pane fade show active" id="destaque" role="tabpanel">
                                 <div class="schedule-items">
                                     <ul>
-                                        <li id="dia4-evento-01">
-                                            <div class="hour">Todos os turnos |</div>
+                                        <li id="destaque-evento-01">
+                                            <div class="hour">2 à 11/03 e 14 à 31/03</div>
                                             <div class="description-event">
-                                                <p>Aulas e oficinas abertas especiais Famecos.</p>
+                                                Entrega dos cadernos.
                                             </div>
                                         </li>
-                                        <li id="dia4-evento-02">
+                                        <li id="destaque-evento-02">
+                                            <div class="hour">3 e 20/03</div>
                                             <div class="description-event">
-                                                <div class="hour">Todos os turnos |</div>
-                                                <p>Galeria na rua da Cultura mostra Manu Raupp.</p>
+                                                Acesso gratuito ao Museu de Ciências e Tecnologia da PUCRS para estudantes.
+                                            </div>
+                                        </li>
+                                        <li id="destaque-evento-03">
+                                            <div class="description-event">
+                                                Confira as novas coleções e promoções da loja para dar aquele up no começo do semestre!
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+                            <!-- Porgramação dia 02 à 11 de março-->
+                            <div class="tab-pane fade" id="dia2" role="tabpanel">
+                                <div class="schedule-items">
+                                    <ul>
+                                        <li id="dia2-evento-01">
+                                            <div class="hour">9h30 às 13h30 </div>
+                                            <div class="description-event">
+                                                Entrega dos cadernos.
+                                            </div>
+                                        </li>
+                                        <li id="dia2-evento-02">
+                                            <div class="hour">17h30 às 21h30 </div>
+                                            <div class="description-event">
+                                                Entrega dos cadernos.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Porgramação dia 03 de março-->
                             <div class="tab-pane fade" id="dia3" role="tabpanel">
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia3-evento-01">
-                                            <div class="hour">Todos os turnos |</div>
+                                            <div class="hour">Expediente do Museu </div>
                                             <div class="description-event">
-                                                <p>Aulas e oficinas abertas especiais Famecos.</p>
+                                                Acesso gratuito ao Museu de Ciências e Tecnologia da PUCRS para estudantes.
+                                            </div>
+                                        </li>
+                                        <li id="dia3-evento-02">
+                                            <div class="hour">Todos os turnos </div>
+                                            <div class="description-event">
+                                                Aulas e oficinas abertas especiais Famecos.
+                                            </div>
+                                        </li>
+                                        <li id="dia3-evento-03">
+                                            <div class="hour">18h as 19h15 </div>
+                                            <div class="description-event">
+                                                Pocket Show com Bruno Tody.
                                             </div>
                                         </li>
                                     </ul>
@@ -1091,15 +1282,21 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia4-evento-01">
-                                            <div class="hour">Todos os turnos |</div>
+                                            <div class="hour">Todos os turnos </div>
                                             <div class="description-event">
-                                                <p>Aulas e oficinas abertas especiais Famecos.</p>
+                                                Aulas e oficinas abertas especiais Famecos.
                                             </div>
                                         </li>
                                         <li id="dia4-evento-02">
+                                            <div class="hour">Todos os turnos </div>
                                             <div class="description-event">
-                                                <div class="hour">Todos os turnos |</div>
-                                                <p>Galeria na rua da Cultura mostra Manu Raupp.</p>
+                                                Galeria na rua da Cultura: mostra Manu Raupp.
+                                            </div>
+                                        </li>
+                                        <li id="dia4-evento-03">
+                                            <div class="hour">Expediente do Museu </div>
+                                            <div class="description-event">
+                                                Acesso gratuito ao Museu de Ciências e Tecnologia da PUCRS para estudantes.
                                             </div>
                                         </li>
                                     </ul>
@@ -1110,9 +1307,9 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia7-evento-01">
-                                            <div class="hour">18h30 |</div>
+                                            <div class="hour">18h30 </div>
                                             <div class="description-event">
-                                                <p>Abertura dos pianos com Camila Orsatto. </p>
+                                                PUCRS Pianos: Camila Orsatto, voz e piano no Living 360°.
                                             </div>
                                         </li>
                                     </ul>
@@ -1123,33 +1320,51 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia8-evento-01">
-                                            <div class="hour">11h |</div>
+                                            <div class="hour">9h30 e 11h15 </div>
                                             <div class="description-event">
-                                                <p>"Ciência&Negócios: existe um segredo para trilhar este caminho?" - Tecnopuc Talks. </p>
+                                                Conheça a Biblioteca Central Irmão José Otão.
                                             </div>
                                         </li>
                                         <li id="dia8-evento-02">
-                                            <div class="hour">10 às 12h |</div>
+                                            <div class="hour">11h </div>
                                             <div class="description-event">
-                                                <p>Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. </p>
+                                                "Ciência&Negócios: existe um segredo para trilhar este caminho?" - Tecnopuc Talks.
                                             </div>
                                         </li>
                                         <li id="dia8-evento-03">
-                                            <div class="hour">12h |</div>
+                                            <div class="hour">10 às 12h </div>
                                             <div class="description-event">
-                                                <p>Abertura dos pianos com Camila Orsatto. </p>
+                                                Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.
                                             </div>
                                         </li>
                                         <li id="dia8-evento-04">
-                                            <div class="hour">17h às 19h |</div>
+                                            <div class="hour">12h </div>
                                             <div class="description-event">
-                                                <p>Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. </p>
+                                                PUCRS Pianos: Camila Orsatto, voz e piano no Tecnopuc.
                                             </div>
                                         </li>
                                         <li id="dia8-evento-05">
-                                            <div class="hour">18h às 19h |</div>
+                                            <div class="hour">13h30, 15h30 e 17h </div>
                                             <div class="description-event">
-                                                <p>Conheça a Iniciação Científica e o Integra Pós.</p>
+                                                Conheça a Biblioteca Central Irmão José Otão.
+                                            </div>
+                                        </li>
+                                        <li id="dia8-evento-06">
+                                            <div class="hour">17h às 19h|</div>
+                                            <div class="description-event">
+                                                Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.
+                                            </div>
+                                        </li>
+                                        <li id="dia8-evento-07">
+                                            <div class="hour">18h às 19h </div>
+                                            <div class="description-event">
+                                                Conheça a Iniciação Científica e o Integra Pós.
+                                            </div>
+                                        </li>
+                                        <li id="dia8-evento-08">
+                                            <div class="hour">18h30, 19h e 20h45 </div>
+                                            <div class="description-event">
+                                                Conheça a Biblioteca Central Irmão José Otão.
                                             </div>
                                         </li>
                                     </ul>
@@ -1160,27 +1375,45 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia9-evento-01">
-                                            <div class="hour">13h30 às 14h |</div>
+                                            <div class="hour">9h30 e 11h15 </div>
                                             <div class="description-event">
-                                                <p>Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. </p>
+                                                Conheça a Biblioteca Central Irmão José Otão.
                                             </div>
                                         </li>
                                         <li id="dia9-evento-02">
-                                            <div class="hour">18h às 19h |</div>
+                                            <div class="hour">13h, 15h30 e 17h </div>
                                             <div class="description-event">
-                                                <p>Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. </p>
+                                                Conheça a Biblioteca Central Irmão José Otão.
                                             </div>
                                         </li>
                                         <li id="dia9-evento-03">
-                                            <div class="hour">18h às 19h |</div>
+                                            <div class="hour">13h30 às 14h</div>
                                             <div class="description-event">
-                                                <p>Speak Out. </p>
+                                                Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.
                                             </div>
                                         </li>
                                         <li id="dia9-evento-04">
-                                            <div class="hour">19h às 20h45 |</div>
+                                            <div class="hour">18h às 19h </div>
                                             <div class="description-event">
-                                                <p>Aula Especial Aberta Politécnica: Desafios e tendências em inovação e tecnologia de Porto Alegre. Com o Secretário de inovação de Porto Alegre.</p>
+                                                Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.
+                                            </div>
+                                        </li>
+                                        <li id="dia9-evento-05">
+                                            <div class="hour">18h30, 19h e 20h45 </div>
+                                            <div class="description-event">
+                                                Conheça a Biblioteca Central Irmão José Otão.
+                                            </div>
+                                        </li>
+                                        <li id="dia9-evento-06">
+                                            <div class="hour">18h às 19h </div>
+                                            <div class="description-event">
+                                                Speak Out.
+                                            </div>
+                                        </li>
+                                        <li id="dia9-evento-07">
+                                            <div class="hour">19h às 20h45 </div>
+                                            <div class="description-event">
+                                                Aula Aberta da Escola Politécnica: Desafios e tendências em inovação e tecnologia de Porto Alegre.
                                             </div>
                                         </li>
                                     </ul>
@@ -1191,22 +1424,39 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia10-evento-01">
-                                            <div class="hour">9h45 às 11h30 |</div>
+                                            <div class="hour">9h30 e 11h15 </div>
                                             <div class="description-event">
-                                                <p>Nessa ocasião teremos a participação de 2 alumni e mais representantes dos seguintes setores da PUCRS: biblioteca, mobilidade acadêmica, PUCRS Carreiras, Idear, Patoral e Tecnopuc Startup. Também teremos
-                                                    a apresentação de uma banda ( Voz e Violão, teclado e percussão (Cajon). </p>
+                                                Conheça a Biblioteca Central Irmão José Otão.
                                             </div>
                                         </li>
                                         <li id="dia10-evento-02">
-                                            <div class="hour">11h30 às 12h30 |</div>
+                                            <div class="hour">11h30 às 12h30 </div>
                                             <div class="description-event">
-                                                <p>"Oi, sumido: como encontrar meu propósito com base nas competências empreendedoras". </p>
+                                                "Oi, sumido: como encontrar meu propósito com base nas competências empreendedoras".
                                             </div>
                                         </li>
                                         <li id="dia10-evento-03">
-                                            <div class="hour">17h às 19h |</div>
+                                            <div class="hour">13h, 15h30 e 17h </div>
                                             <div class="description-event">
-                                                <p>Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. </p>
+                                                Conheça a Biblioteca Central Irmão José Otão.
+                                            </div>
+                                        </li>
+                                        <li id="dia10-evento-04">
+                                            <div class="hour">17h às 19h </div>
+                                            <div class="description-event">
+                                                Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.
+                                            </div>
+                                        </li>
+                                        <li id="dia10-evento-05">
+                                            <div class="hour">18h às 19h15 </div>
+                                            <div class="description-event">
+                                                Pocket show com Living Music.
+                                            </div>
+                                        </li>
+                                        <li id="dia10-evento-06">
+                                            <div class="hour">18h30, 19h e 20h45 </div>
+                                            <div class="description-event">
+                                                Conheça a Biblioteca Central Irmão José Otão.
                                             </div>
                                         </li>
                                     </ul>
@@ -1217,9 +1467,34 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia11-evento-01">
-                                            <div class="hour">12h às 13h |</div>
+                                            <div class="hour">12h às 13h </div>
                                             <div class="description-event">
-                                                <p>Missa de Abertura do Ano (com transmissão no <a href="https://youtu.be/M8XdLNSd87U" target="_blank">Youtube</a>).</p>
+                                                Missa de Abertura do Ano com transmissão no Youtube.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Porgramação dia 14 de março-->
+                            <div class="tab-pane fade" id="dia14" role="tabpanel">
+                                <div class="schedule-items">
+                                    <ul>
+                                        <li id="dia14-evento-01">
+                                            <div class="hour">9h30 às 13h30 </div>
+                                            <div class="description-event">
+                                                Entrega dos cadernos.
+                                            </div>
+                                        </li>
+                                        <li id="dia14-evento-02">
+                                            <div class="hour">17h30 as 20h </div>
+                                            <div class="description-event">
+                                                Entrega dos cadernos.
+                                            </div>
+                                        </li>
+                                        <li id="dia14-evento-03">
+                                            <div class="hour">18h </div>
+                                            <div class="description-event">
+                                                PUCRS Pianos: Melissa Souza, piano na Escola Politécnica.
                                             </div>
                                         </li>
                                     </ul>
@@ -1230,15 +1505,9 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia15-evento-01">
-                                            <div class="hour">18h15 |</div>
+                                            <div class="hour">18h às 19h15 </div>
                                             <div class="description-event">
-                                                <p>Abertura de piano – Escola Politecnica.</p>
-                                            </div>
-                                        </li>
-                                        <li id="dia15-evento-02">
-                                            <div class="hour">18h às 19h15 |</div>
-                                            <div class="description-event">
-                                                <p>Aulão Parque Esportivo.</p>
+                                                Aulão de vôlei no Parque Esportivo.
                                             </div>
                                         </li>
                                     </ul>
@@ -1249,15 +1518,15 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia17-evento-01">
-                                            <div class="hour">11h30 às 12h30 |</div>
+                                            <div class="hour">11h30 às 12h30 </div>
                                             <div class="description-event">
-                                                <p>"Oi, sumido: como encontrar meu propósito com base nas competências empreendedoras". </p>
+                                                "Oi, sumido: como encontrar meu propósito com base nas competências empreendedoras".
                                             </div>
                                         </li>
                                         <li id="dia17-evento-02">
-                                            <div class="hour">18h15 |</div>
+                                            <div class="hour">18h </div>
                                             <div class="description-event">
-                                                <p>Abertura dos pianos com Lucas Brunet. </p>
+                                                PUCRS Pianos – Bibiana Petek e Lucas Brunnet, voz e piano na Escola de Humanidades.
                                             </div>
                                         </li>
                                     </ul>
@@ -1268,9 +1537,22 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia18-evento-01">
-                                            <div class="hour">18h às 19h |</div>
+                                            <div class="hour">18h às 19h </div>
                                             <div class="description-event">
-                                                <p>Palestra Espiritualidade e o Sentido da Vida Neurociência e Aprendizagem - Professores envolvidos: Luciano Marques de Jesus com Leonardo Agostini e Aline Fay. </p>
+                                                Palestra Espiritualidade e o Sentido da Vida Neurociência e Aprendizagem - Professores envolvidos: Luciano Marques de Jesus com Leonardo Agostini e Aline Fay.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Porgramação dia 20 de março-->
+                            <div class="tab-pane fade" id="dia20" role="tabpanel">
+                                <div class="schedule-items">
+                                    <ul>
+                                        <li id="dia20-evento-01">
+                                            <div class="hour">Expediente do Museu</div>
+                                            <div class="description-event">
+                                                Acesso gratuito a Museu de Ciências e Tecnologia da PUCRS para estudantes PUCRS.
                                             </div>
                                         </li>
                                     </ul>
@@ -1281,27 +1563,21 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia22-evento-01">
-                                            <div class="hour">8h às 12h |</div>
+                                            <div class="hour">8h às 12h </div>
                                             <div class="description-event">
-                                                <p>Experiência Tecnopuc (Labs & Hubs).</p>
+                                                Experiência Tecnopuc (Labs & Hubs).
                                             </div>
                                         </li>
                                         <li id="dia22-evento-02">
-                                            <div class="hour">18h |</div>
+                                            <div class="hour">18h </div>
                                             <div class="description-event">
-                                                <p>PUCRS Piano – Recital de Isabella Brill.</p>
+                                                PUCRS Pianos – recital com Sara Fleck na Biblioteca Central.
                                             </div>
                                         </li>
                                         <li id="dia22-evento-03">
-                                            <div class="hour">18h |</div>
+                                            <div class="hour">18h </div>
                                             <div class="description-event">
-                                                <p>Porto Alegre 250 Anos: História e Cultura nos Acervos do DELFOS. Abertura de exposição no Saguão da Biblioteca Central. </p>
-                                            </div>
-                                        </li>
-                                        <li id="dia22-evento-04">
-                                            <div class="hour">18h |</div>
-                                            <div class="description-event">
-                                                <p>Missão Possível – Impacto social no empreendedorismo: Posso mudar o mundo com a minha ideia? </p>
+                                                Porto Alegre 250 Anos: História e Cultura nos Acervos do DELFOS. Abertura de exposição no Saguão da Biblioteca Central.
                                             </div>
                                         </li>
                                     </ul>
@@ -1312,15 +1588,21 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia23-evento-01">
-                                            <div class="hour">11h |</div>
+                                            <div class="hour">11h </div>
                                             <div class="description-event">
-                                                <p>Aula aberta especial Medicina. Tema: O médico na era da tecnologia: o que ganhamos e o que perdemos? </p>
+                                                Aula aberta especial Medicina. Tema: O médico na era da tecnologia: o que ganhamos e o que perdemos?
                                             </div>
                                         </li>
                                         <li id="dia23-evento-02">
-                                            <div class="hour">16h30 às 17h30 |</div>
+                                            <div class="hour">16h30 às 17h30 </div>
                                             <div class="description-event">
-                                                <p>Workshop de meditação: Começando a meditar na PUCRS.</p>
+                                                Workshop de meditação: Começando a meditar na PUCRS.
+                                            </div>
+                                        </li>
+                                        <li id="dia23-evento-03">
+                                            <div class="hour">18h30 as 20h30 </div>
+                                            <div class="description-event">
+                                                Abertura Stricto 2022.
                                             </div>
                                         </li>
                                     </ul>
@@ -1331,9 +1613,15 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia24-evento-01">
-                                            <div class="hour">21h |</div>
+                                            <div class="hour">17h </div>
                                             <div class="description-event">
-                                                <p>Lágrimas no Mar – Arnaldo Antunes + Vitor Araújo. </p>
+                                                Missão Possível – Impacto social no empreendedorismo: Posso mudar o mundo com a minha ideia?
+                                            </div>
+                                        </li>
+                                        <li id="dia24-evento-02">
+                                            <div class="hour">21h </div>
+                                            <div class="description-event">
+                                                Lágrimas no Mar – Arnaldo Antunes + Vitor Araújo.
                                             </div>
                                         </li>
                                     </ul>
@@ -1344,9 +1632,9 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia25-evento-01">
-                                            <div class="hour">11h30 às 14h |</div>
+                                            <div class="hour">11h30 às 14h </div>
                                             <div class="description-event">
-                                                <p>RedBUll Paper Wings. </p>
+                                                RedBUll Paper Wings.
                                             </div>
                                         </li>
                                     </ul>
@@ -1357,15 +1645,9 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia29-evento-01">
-                                            <div class="hour">Dia todo |</div>
+                                            <div class="hour">9h as 18h30 </div>
                                             <div class="description-event">
-                                                <p>Você no Tecnopuc: Trilha Carreiras.</p>
-                                            </div>
-                                        </li>
-                                        <li id="dia29-evento-02">
-                                            <div class="hour">12h |</div>
-                                            <div class="description-event">
-                                                <p>PUCRS Piano.</p>
+                                                Você no Tecnopuc: Trilha Carreiras.
                                             </div>
                                         </li>
                                     </ul>
@@ -1376,21 +1658,27 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia30-evento-01">
-                                            <div class="hour">16h30 às 17h45 |</div>
+                                            <div class="hour">16h30 às 17h45 </div>
                                             <div class="description-event">
-                                                <p>Jogo da Vida.</p>
+                                                Jogo da Vida.
                                             </div>
                                         </li>
                                         <li id="dia30-evento-02">
-                                            <div class="hour">18h às 19h30 |</div>
+                                            <div class="hour">18h às 19h30 </div>
                                             <div class="description-event">
-                                                <p>Palestra Estratégias de Inserção no Mercado de Trabalho. Com Ana Cecilia Petersen e Priscila Dietrich (Consultoras de Carreira).</p>
+                                                Palestra Estratégias de Inserção no Mercado de Trabalho.
                                             </div>
                                         </li>
                                         <li id="dia30-evento-03">
-                                            <div class="hour">19h15 às 22h30 |</div>
+                                            <div class="hour">18h às 19h15 </div>
                                             <div class="description-event">
-                                                <p>Aula Aberta especial Negócios.</p>
+                                                Show especial com Vitor Kley.
+                                            </div>
+                                        </li>
+                                        <li id="dia30-evento-04">
+                                            <div class="hour">19h15 às 22h30 </div>
+                                            <div class="description-event">
+                                                Aula Aberta especial Negócios.
                                             </div>
                                         </li>
                                     </ul>
@@ -1401,9 +1689,21 @@
                                 <div class="schedule-items">
                                     <ul>
                                         <li id="dia31-evento-01">
-                                            <div class="hour">8h às 12h |</div>
+                                            <div class="hour">8h às 12h </div>
                                             <div class="description-event">
-                                                <p>Experiência Tecnopuc (Labs & Hubs).</p>
+                                                Experiência Tecnopuc (Labs & Hubs).
+                                            </div>
+                                        </li>
+                                        <li id="dia31-evento-02">
+                                            <div class="hour">9h30 às 13h30 </div>
+                                            <div class="description-event">
+                                                Entrega dos cadernos.
+                                            </div>
+                                        </li>
+                                        <li id="dia31-evento-03">
+                                            <div class="hour">17h30 às 21h30 </div>
+                                            <div class="description-event">
+                                                Entrega dos cadernos.
                                             </div>
                                         </li>
                                     </ul>
@@ -1421,6 +1721,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <h5>titulo</h5>
+                        <p class="conteudo">conteudo</p>
                         <div class="programa">
                             <p class="data">data</p>
                             <p class="horario">horario</p>
@@ -1428,6 +1729,7 @@
                             <p class="publico">publico</p>
                             <p class="realizador">realizador</p>
                         </div>
+                        <a class="btn btn-primario" target="_BLANK">texto botão</a>
                     </div>
                 </div>
             </div>
@@ -1437,13 +1739,13 @@
         <section id="medidas-seguranca">
             <div class="container-fluid" data-aos="fade-up" data-aos-duration="1000">
                 <div class="row">
-                    <div class="col col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-12 col-md-12" data-aos="fade-up" data-aos-duration="1000">
                         <h3>Medidas de segurança</h3>
                         <h4>_Você é nossa prioridade</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-10 offset-md-1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-10 col-md-10 offset-md-1 aos-init aos-animate mx-auto" data-aos="fade-up" data-aos-duration="1000">
                         <div class="alert alert-grey" role="alert">
                             <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-icon-medidas-seguranca-vota-as-aulas.png">
                             <p>O nosso <strong>compromisso com a vida</strong> vem sempre em primeiro lugar. Por isso, fique tranquilo/a: o retorno às aulas será feito <strong>com toda a segurança, reforçando os cuidados e protocolos de saúde</strong>.
@@ -1452,8 +1754,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-12 no-padding align-center">
-                        <a type="button" class="btn btn-primario" href="https://www.pucrs.br/coronavirus/" target="_blank">Confira nossas medidas de segurança <i class="fas fa-long-arrow-alt-right"></i></a>
+                    <div class="col-12 col-md-12 align-center">
+                        <div class="btn-group me-5">
+                            <a type="button" class="btn btn-primario" href="https://www.pucrs.br/coronavirus/" target="_blank">Confira nossas medidas de segurança <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                        <div class="btn-group me-5">
+                            <a type="button" class="btn btn-primario" href="#" target="_blank">Acesse nosso FAQ <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1462,16 +1769,16 @@
 
 
         <!-- Benefícios PUCRS -->
-        <section>
+        <section id="beneficios">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-12 col-md-12" data-aos="fade-up" data-aos-duration="1000">
                         <h3>Benefícios PUCRS</h3>
                         <h4>_Conheça os descontos e facilidades exclusivas para estudantes da Universidade</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-10 offset-md-1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-10 col-md-10 offset-md-1 aos-init aos-animate mx-auto" data-aos="fade-up" data-aos-duration="1000">
                         <div class="alert alert-white" role="alert">
                             <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-icon-beneficios-volta-as-aulas.png">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet enim eu mi tempus, in elementum lorem pellentesque. Quisque commodo ac augue sit amet sollicitudin. Ut suscipit erat nibh, in porttitor sem pellentesque
@@ -1485,7 +1792,7 @@
             <!-- botões -->
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-12">
+                    <div class="col-12 col-md-12">
                         <div class="container-flex">
                             <div class="card" id="card-b1" data-aos="flip-left" data-aos-duration="2000">
                                 <img src="http://www.pucrs.br/wp-content/uploads/2022/01/icon-b1.svg" />
@@ -1523,7 +1830,7 @@
             <!-- itens -->
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-12">
+                    <div class="col-12 col-md-12">
                         <hr/>
                         <div class="container-flex" id="pills">
                             <div class="pill item-b1" id="pill-b1">
@@ -1594,16 +1901,16 @@
         </section>
 
         <!-- Diferenciais PUCRS -->
-        <section class="section-branco">
+        <section class="section-branco" id="diferenciais">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-12 col-md-12" data-aos="fade-up" data-aos-duration="1000">
                         <h3>Diferenciais PUCRS</h3>
                         <h4>_Muito além da sala de aula</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-10 offset-md-1" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-10 col-md-10 offset-md-1 mx-auto" data-aos="fade-up" data-aos-duration="1000">
                         <div class="alert alert-grey" role="alert">
                             <img src="http://www.pucrs.br/wp-content/uploads/2022/01/icon-diferenciais.svg" />
                             <span>Somos reconhecidos pela excelência do nosso ensino, mas também por todas as outras experiências e oportunidades que oferecemos para que a sua jornada na graduação seja mais completa, personalizada e alinhada com o seu propósito.</span>
@@ -1611,7 +1918,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-12">
+                    <div class="col-12 col-md-12">
                         <div class="owl-carousel owl-theme">
                             <div class="card card-difer" id="card-d1" data-aos="flip-left" data-aos-duration="2000">
                                 <img src="http://www.pucrs.br/wp-content/uploads/2022/01/icon-d1.png" />
@@ -1663,7 +1970,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-12 no-padding align-center">
+                    <div class="col-12 col-md-12 no-padding align-center">
                         <button type="button" class="btn btn-primario novaaba" href="http://www.pucrs.br/wp-content/uploads/2022/01/2022_01_04-guia_do_estudante_graduacao_pucrs.pdf">Confira nossos diferenciais <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
@@ -1697,7 +2004,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-10 offset-md-1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col col-md-10 offset-md-1 aos-init aos-animate mx-auto" data-aos="fade-up" data-aos-duration="1000">
                         <div class="alert alert-white" role="alert">
                             <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-icon-galeria-fotos-volta-as-aulas.png">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet enim eu mi tempus, in elementum lorem pellentesque. Quisque commodo ac augue sit amet sollicitudin. Ut suscipit erat nibh, in porttitor sem pellentesque
@@ -1707,66 +2014,170 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-12" data-aos="fade-up" data-aos-duration="1000">
-                        <ul class="nav nav-tabs" id="galeriaTab" role="tablist">
-                            <li class="nav-item">
-                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#primeiraSemana" type="button" role="tab">1ª Semana</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#segundaSemana" type="button" role="tab">2ª Semana</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="galeriaTabContent">
-                            <div class="tab-pane fade show active" id="primeiraSemana" role="tabpanel">
-                                <div class="schedule-items">
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png"></a>
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png"></a>
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png"></a>
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png"></a>
-                                </div>
-                                <div class="schedule-items">
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png"></a>
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png"></a>
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png"></a>
-                                    <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png"></a>
-                                </div>
-                                <!-- botão ver mais -->
-                                <div class="row d-flex justify-content-center align-content-center">
-                                    <button type="button" class="btn-toggle primeira-semana" data-target="#galeria-hide-primeiraSemana">Veja mais</button>
-                                </div>
-                                <div class="galeria-hide" id="galeria-hide-primeiraSemana">
-                                    <div class="schedule-items">
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png"></a>
+                    <ul class="nav nav-tabs" id="galeriaTab" role="tablist" data-aos="fade-up" data-aos-duration="1000">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#primeiraSemana" type="button" role="tab">1ª Semana</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#segundaSemana" type="button" role="tab">2ª Semana</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="galeriaTabContent" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="tab-pane fade show active" id="primeiraSemana" role="tabpanel">
+                            <div class="schedule-items">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png"></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="segundaSemana" role="tabpanel">
+                            <div class="schedule-items">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- botão ver mais -->
+                            <div class="row d-flex justify-content-center align-content-center">
+                                <button type="button" class="btn-toggle primeira-semana" data-target="#galeria-hide-primeiraSemana">Veja mais</button>
+                            </div>
+                            <div class="galeria-hide" id="galeria-hide-primeiraSemana">
                                 <div class="schedule-items">
-                                    <div class="schedule-items">
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png"></a>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png"></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="schedule-items">
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png"></a>
-                                        <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="segundaSemana" role="tabpanel">
+                            <div class="schedule-items">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-12.png"></a>
+                                        </div>
                                     </div>
-                                    <!-- botão ver mais -->
-                                    <div class="row d-flex justify-content-center align-content-center">
-                                        <button type="button" class="btn-toggle segunda-semana" data-target="#galeria-hide-segundaSemana">Veja mais</button>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-11.png"></a>
+                                        </div>
                                     </div>
-                                    <div class="galeria-hide" id="galeria-hide-segundaSemana">
-                                        <div class="schedule-items">
-                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png"></a>
-                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png"></a>
-                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png"></a>
-                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png" data-lightbox="galeria-primeiraSemana"><img class="thumb-galeria-fotos" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png"></a>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-10.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-09.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-items">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-08.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-07.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-06.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="thumb-galeria-fotos">
+                                            <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-05.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- botão ver mais -->
+                            <div class="row d-flex justify-content-center align-content-center">
+                                <button type="button" class="btn-toggle segunda-semana" data-target="#galeria-hide-segundaSemana">Veja mais</button>
+                            </div>
+                            <div class="galeria-hide" id="galeria-hide-segundaSemana">
+                                <div class="schedule-items">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-04.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-03.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-02.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                            <div class="thumb-galeria-fotos">
+                                                <a href="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png" data-lightbox="galeria-primeiraSemana"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-fotos-galeria-primeira-semana-volta-as-aulas-01.png"></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1781,33 +2192,46 @@
         <section id="filtro-instagram">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-md-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-imagem-destaque-filtro-instagram-votla-as-aulas.png" class="img-destaque">
+                    <div class="col-12 col-sm-12 col-md-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-imagem-destaque-filtro-instagram-votla-as-aulas.png" class="img-fluid mb-5">
                     </div>
-                    <div class="col col-md-6 align-middle aos-init aos-animate text-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-12 col-sm-12 col-md-6 align-middle aos-init aos-animate text-center" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="qrcode mx-auto"><img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-023-qrcode-volta-as-aulas-01.png"></div>
                         <h3>Experimente nosso filtro</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet enim eu mi tempus, in elementum lorem pellentesque. Quisque commodo ac augue sit amet sollicitudin. Ut suscipit erat nibh, in porttitor sem pellentesque
                             at.
                         </p>
                         <div class="mx-auto">
-                            <button type="button" class="btn btn-primario" href="https://www.instagram.com/pucrs/" target="_blank">Visite nosso Instagram <i class="fas fa-long-arrow-alt-right"></i></button>
+                            <a type="button" class="btn btn-primario" href="https://www.instagram.com/pucrs/" target="_blank">Visite nosso Instagram <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <img src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-imagem-bottom-volta-as-aulas.png">
-
-
     </main>
-
+    <img class="img-fluid" src="http://www.pucrs.br/wp-content/uploads/2022/02/2022-02-18-imagem-bottom-volta-as-aulas.png">
     <!-- footer -->
     <footer class="bg-social parallax">
         <section>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col col-12 social">
+                    <div class="col-12 col-md-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="button-footer-left">
+                            <p>Perdeu sua escala?</p>
+                            <p> Ainda dá tempo de aproveitar esse semestre!</p>
+                            <a type="button" class="btn btn-primario" href="https://matricula.pucrs.br/#/login" target="_blank">Faça sua rematrícula <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="button-footer-right">
+                            <p>Quer estudar na PUCRS?</p>
+                            <p> Você pode aproveitar tudo isso e muito mais!</p>
+                            <a type="button" class="btn btn-primario" href="https://www.pucrs.br/estudenapucrs/" target="_blank">Estude na PUCRS <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-12 social mt-5">
                         <h5 class="align-center">Nos acompanhe nas redes sociais</h5>
                         <div class="align-center">
                             <a href="https://www.facebook.com/pucrs" target="_BLANK" class="align-middle" title="Facebook" alt="Facebook">
@@ -1847,7 +2271,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-12">
+                    <div class="col-12 col-md-12">
                         <hr/>
                         <a href="https://www.pucrs.br/" target="_blank" title="PUCRS" alt="PUCRS"><img src="http://www.pucrs.br/wp-content/uploads/2022/01/logo-marista-pucrs.svg" class="logo" /></div>
                     </a>
@@ -1860,9 +2284,6 @@
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="assets/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/app.js" type="text/javascript"></script>
-    <script src="assets/js/typewrite.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/0a9d736472.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
@@ -1886,11 +2307,6 @@
         });
 
 
-        /* fancybox */
-        $(document).ready(function() {
-            $(".fancybox").fancybox();
-        });
-
         /* troca de página */
 
         $('.novaaba').on('click', function(e) {
@@ -1906,6 +2322,22 @@
                 scrollTop: $("#pills").offset().top
             }, 'fast');
         }
+
+        $(function() {
+            $('.navbar-nav a').click(function() {
+                $('html, body').animate({
+                    scrollTop: $($(this).attr("href")).offset().top
+                });
+            });
+        });
+
+        /* fecha navbar collapse após clique */
+
+        $(document).ready(function() {
+            $('.navbar-nav a').click(function() {
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
 
         /* cards - benefícios */
 
@@ -1953,303 +2385,623 @@
 
         $('.schedule-items li').on('click', function(e) {
             switch ($(this).attr('id')) {
+                case 'dia2-evento-01':
+                    $titulo = 'Entrega dos cadernos';
+                    $conteudo = 'Entrega dos Cadernos para estudantes de Graduação, Mestrado e Doutorado - um dos momentos mais esperados pelos estudantes PUCRS, marca o início do semestre. ';
+                    $data = '02/03';
+                    $horario = '9h30 às 13h30';
+                    $local = 'Balcão de relacionamento do Living 360°';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = '#';
+                    break;
+                case 'dia2-evento-02':
+                    $titulo = 'Entrega dos cadernos';
+                    $conteudo = 'Entrega dos Cadernos para estudantes de Graduação, Mestrado e Doutorado - um dos momentos mais esperados pelos estudantes PUCRS, marca o início do semestre. ';
+                    $data = '02/03';
+                    $horario = '17h30 às 21h30';
+                    $local = 'Balcão de relacionamento do Living 360°';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = '#';
+                    break;
                 case 'dia3-evento-01':
-                    $titulo = 'Aulas e oficinas abertas especiais Famecos';
+                    $titulo = 'Acesso gratuito a Museu de Ciências e Tecnologia da PUCRS  para estudantes PUCRS.  ';
+                    $conteudo = 'O Museu de Ciências e Tecnologia PUCRS abre suas portas para os alunos de graduação e pós-graduação da PUCRS. Com apresentação da carteira de estudante/crachá - PUCRS (pessoal e intransferível), o aluno/a tem direito à isenção do ingresso e pode vivenciar todas as experiencias lúdicas e inusitadas do espaço.  ';
+                    $data = '03/03';
+                    $horario = 'Segunda à sexta-feira, das 9h às 17h e sábados e domingos, das 10h às 18h';
+                    $local = 'MCT - Prédio 40 do Campus';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/mct/';
+                    break;
+                case 'dia3-evento-02':
+                    $titulo = 'Aulas e oficinas abertas especiais Famecos ';
+                    $conteudo = 'Aulas diferentes da grade tradicional, voltadas para promover a circulação dos alunos entre diferentes áreas de conhecimento, proporcionando momentos de interdisciplinaridade e possibilitando novas experiências.';
                     $data = '03/03';
                     $horario = 'Todos os turnos';
-                    $local = 'Famecos';
+                    $local = 'Prédio 7';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'Famecos';
+                    $realizador = 'Escola de Comunicação, Artes e Design - Famecos';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/comunicacao/';
+                    break;
+                case 'dia3-evento-03':
+                    $titulo = 'Pocket show com Bruno Tody ';
+                    $conteudo = 'Show de música acústica para animar o fim de tarde no campus. ';
+                    $data = '03/03';
+                    $horario = '18h às 19h15';
+                    $local = 'Gramado em frente ao Living 360° ';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Cultura';
+                    $botao = 'Saiba mais';
+                    $link = '#';
                     break;
                 case 'dia4-evento-01':
-                    $titulo = 'Aulas e oficinas abertas especiais Famecos';
+                    $titulo = 'Aulas e oficinas abertas especiais Famecos ';
+                    $conteudo = 'Aulas difenreciadas voltadas para promover a interação dos alunos entre diferentes áreas de conhecimento, proporcionando momentos de interdisciplinaridade e possibilitando novas experiências. ';
                     $data = '04/03';
                     $horario = 'Todos os turnos';
-                    $local = 'Famecos';
+                    $local = 'Prédio 7';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'Famecos';
+                    $realizador = 'Escola de Comunicação, Artes e Design - Famecos';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/comunicacao/';
                     break;
                 case 'dia4-evento-02':
-                    $titulo = 'Galeria na rua da Cultura mostra Manu Raupp ';
+                    $titulo = 'Galeria na rua da Cultura: mostra Manu Raupp ';
+                    $conteudo = 'Primeira exibição artística na Galeria Rua da Cultura com a artista Manu Raupp. Os quatro trabalhos inéditos, desenvolvidos para o espaço, ficarão disponíveis nos murais a partir do dia 2 de março. A artista possui uma produção em desenho e pintura, com combinações livres de formas, linhas, sobreposições e cores.   '
                     $data = '04/03';
                     $horario = 'Todos os turnos';
                     $local = 'Rua da Cultura';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'Instituto de Cultura';
+                    $realizador = 'PUCRS Cultura';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.manuraupp.com/';
+                    break;
+                case 'dia4-evento-03':
+                    $titulo = 'Acesso gratuito a Museu de Ciências e Tecnologia da PUCRS  para estudantes PUCRS. ';
+                    $conteudo = 'O Museu de Ciências e Tecnologia PUCRS abre suas portas para os alunos de graduação e pós-graduação da PUCRS. Com apresentação da carteira de estudante- PUCRS (pessoal e intransferível), o aluno/a tem direito à isenção do ingresso e pode vivenciar todas as experiencias lúdicas e inusitadas do espaço. '
+                    $data = '04/03';
+                    $horario = 'Segunda à sexta-feira, das 9h às 17h e sábados e domingos, das 10h às 18h';
+                    $local = 'MCT - Prédio 40 do Campus';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/mct/';
                     break;
                 case 'dia7-evento-01':
-                    $titulo = 'Abertura dos pianos com Camila Orsatto ';
+                    $titulo = 'PUCRS Pianos - Camila Orsatto, voz e piano no Living 360°';
+                    $conteudo = 'O PUCRS Pianos, criado em 2018, terá sua retomada oficial no mês de Março, com apresentações nos pianos comunitários. A primeira reabertura acontece no Living 360º, com a apresentação da artista Camila Orsatto. O repertório da cantora e pianista reúne jazz blues, pop e canções próprias.'
                     $data = '07/03';
                     $horario = '18h30';
                     $local = 'Living 360°';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'Instituto de Cultura';
+                    $realizador = 'PUCRS Cultura';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/cultura/';
                     break;
                 case 'dia8-evento-01':
-                    $titulo = '“Ciência&Negócios: existe um segredo para trilhar este caminho?” - Tecnopuc Talks';
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
                     $data = '08/03';
-                    $horario = '11h';
-                    $local = 'Tecnopuc';
+                    $horario = '9h30 e 11h15';
+                    $local = 'Biblioteca Irmão José Otão';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'Tecnopuc + PUCRS cultura ';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
                     break;
                 case 'dia8-evento-02':
-                    $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. ';
+                    $titulo = '“Ciência&Negócios: existe um segredo para trilhar este caminho?” - Tecnopuc Talks';
+                    $conteudo = 'Talk no Café Coworking com 4 empreendedoras/cientistas da comunidade Tecnopuc + Coffee na Linha do Tempo e reinauguração do piano com Camila Orsatto.  Evento híbrido (vagas limitadas e inscrições prévias para evento presencial no  link abaixo.  '
                     $data = '08/03';
                     $horario = '11h';
-                    $local = 'Prédio 7 e Prédia 11';
+                    $local = 'Café Coworking do Global Tecnopuc - Prédio 97B, térreo ';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'PUCRS Carreiras ';
+                    $realizador = 'Tecnopuc + PUCRS cultura ';
+                    $botao = 'Saiba mais';
+                    $link = 'https://tecnopuc.pucrs.br/talkcienciaenegocios/';
                     break;
                 case 'dia8-evento-03':
-                    $titulo = 'Abertura dos pianos com Camila Orsatto ';
+                    $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. ';
+                    $conteudo = ''
+                    $data = '08/03';
+                    $horario = '10h às 12h';
+                    $local = 'Prédio 7 e Prédio 11';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Carreiras ';
+                    $botao = 'Saiba mais';
+                    $link = 'https://carreiras.pucrs.br/';
+                    break;
+                case 'dia8-evento-04':
+                    $titulo = 'PUCRS Pianos – Camila Orsatto, voz e piano no Tecnopuc ';
+                    $conteudo = 'Após a edição do Tecnopuc Talks, e em celebração ao Dia Internacional da Mulher, a cantora e pianista Camila Orsatto apresenta um repertório que reúne canções de artistas mulheres de dentro e fora do Brasil, com ritmos que vão do jazz ao pop.'
                     $data = '08/03';
                     $horario = '12h';
                     $local = 'Tecnopuc';
                     $publico = 'Comunidade Universitária';
-                    $realizador = 'Instituto de Cultura';
-                    break;
-                case 'dia8-evento-04':
-                    $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. ';
-                    $data = '08/03';
-                    $horario = '11h';
-                    $local = 'Prédio 7 e Prédia 11';
-                    $publico = 'Comunidade Universitária';
-                    $realizador = 'PUCRS Carreiras ';
+                    $realizador = 'PUCRS Cultura';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/cultura/';
                     break;
                 case 'dia8-evento-05':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '08/03';
+                    $horario = '13h30, 15h30 e 17h';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
+                    break;
+                case 'dia8-evento-06':
+                    $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. ';
+                    $conteudo = ''
+                    $data = '08/03';
+                    $horario = '17h às 19h';
+                    $local = 'Prédio 7 e Prédio 11';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Carreiras ';
+                    $botao = 'Saiba mais';
+                    $link = '#';
+                    break;
+                case 'dia8-evento-07':
                     $titulo = 'Conheça a Iniciação Científica e o Integra Pós ';
+                    $conteudo = 'Que tal ter a possibilidaade  de atuação em projetos de pesquisadores com expertise nas diferentes áreas do conhecimento?  E antecipar seu futuro acadêmico e viver a experiência do Mestrado e Doutorado durante a graduação? Venha enteder essa e outras dúvidas, te esperamos.'
                     $data = '08/03';
                     $horario = '18h às 19h';
                     $local = 'Em frente a sala de Iniciação Científica';
                     $publico = 'Alunos de Graduação';
                     $realizador = 'PROPESQ';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/pesquisa/iniciacao-cientifica/';
+                    break;
+                case 'dia8-evento-08':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '08/03';
+                    $horario = '18h30, 19h e 20h45';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
                     break;
                 case 'dia9-evento-01':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '09/03';
+                    $horario = '9h30 e 11h15';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
+                    break;
+                case 'dia9-evento-02':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '09/03';
+                    $horario = '13h, 15h30 e 17h';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
+                    break;
+                case 'dia9-evento-03':
                     $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.';
+                    $conteudo = ''
                     $data = '09/03';
                     $horario = '13h30 às 14h';
                     $local = 'Prédio 12 e Prédio 50';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'PUCRS Carreiras';
+                    $botao = 'Saiba mais';
+                    $link = '#';
                     break;
-                case 'dia9-evento-02':
+                case 'dia9-evento-04':
                     $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras.';
+                    $conteudo = ''
                     $data = '09/03';
                     $horario = '18h às 19h';
                     $local = 'Prédio 12 e Prédio 50';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'PUCRS Carreiras';
+                    $botao = 'Saiba mais';
+                    $link = '#';
                     break;
-                case 'dia9-evento-03':
+                case 'dia9-evento-05':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '09/03';
+                    $horario = '18h30, 19h e 20h45';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
+                    break;
+                case 'dia9-evento-06':
                     $titulo = 'Speak Out ';
+                    $conteudo = 'Otávio, responsável pela Mobilidade OUT mediará um bate-papo com quatro alunos/as que realizaram mobilidade acadêmica (presencial e/ou virtual) para compartilhar suas experiências. Aproveitaremos para divulgar que o edital de mobilidade 2022/2 encerra no dia 23 de março e para esclarecer dúvidas.  '
                     $data = '09/03';
                     $horario = '18h às 19h';
                     $local = 'Chimarródromo com puffs ';
                     $publico = 'Alunos de Graduação';
                     $realizador = 'PROPESQ + Escritório Internacional';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/internacional/mobilidade-academica/';
                     break;
-                case 'dia9-evento-04':
-                    $titulo = 'Aula Especial Aberta Politécnica: Desafios e tendências em inovação e tecnologia de Porto Alegre.Com o Secretário de inovação de Porto Alegre ';
+                case 'dia9-evento-07':
+                    $titulo = 'Aula Aberta da Escola Politécnica: Desafios e tendências em inovação e tecnologia de Porto Alegre';
+                    $conteudo = 'Aula especial aberta à toda comunidade acadêmica, ministrada pelo Secretário de inovação de Porto Alegre, Luis Carlos Pinto.A atividade serra transmitida através do canal da PUCRS.'
                     $data = '09/03';
                     $horario = '19h15 às 20h45';
                     $local = 'Salão de Atos';
                     $publico = 'Alunos de Graduação';
                     $realizador = 'Escola Politécnica';
+                    $botao = 'Saiba mais';
+                    $link = '#';
                     break;
                 case 'dia10-evento-01':
-                    $titulo = 'Nessa ocasião teremos a participação de 2 alumni e mais representantes dos seguintes setores da PUCRS: biblioteca, mobilidade acadêmica, PUCRS Carreiras, Idear, Patoral e Tecnopuc Startup. Também teremos a apresentação de uma banda ( Voz e Violão, teclado e percussão (Cajon) ';
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
                     $data = '10/03';
-                    $horario = '9h45 às 11h30';
-                    $local = 'Auditório térro do Prédio 50';
-                    $publico = 'Turmas do primeiro a quarto semestre';
-                    $realizador = 'Escola de Negócios';
+                    $horario = '9h30 e 11h15';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
                     break;
                 case 'dia10-evento-02':
                     $titulo = '“Oi, sumido: como encontrar meu propósito com base nas competências empreendedoras';
+                    $conteudo = 'O IDEAR,  laboratório para você se desenvolver, compartilhar ideias e criar projetos para a sociedade, traz a programação uma palestra que busca estimular a busca pelo propósito, através de uma atividade dinamica e clara. Te esperamos! '
                     $data = '10/03';
                     $horario = '11h30 às 12h30';
                     $local = 'Idear - Sala 110 do Living 360°';
                     $publico = 'Alunos de Graduação';
                     $realizador = 'Idear';
+                    $botao = 'Saiba mais';
+                    $link = 'https: http://webappcl.pucrs.br/inscricoes/inscricao?projeto=b8809fd6bcdcf38f';
                     break;
                 case 'dia10-evento-03':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '10/03';
+                    $horario = '13h, 15h30 e 17h';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
+                    break;
+                case 'dia10-evento-04':
                     $titulo = 'Stand no saguão dos prédios com distribuição de brindes, atividades e informação sobre os serviços do PUCRS Carreiras. ';
+                    $conteudo = ''
                     $data = '10/03';
                     $horario = '17h30 às 19h';
                     $local = 'Prédio 30';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'PUCRS Carreiras';
+                    $botao = 'Saiba mais';
+                    $link = 'https://carreiras.pucrs.br/';
+                    break;
+                case 'dia10-evento-05':
+                    $titulo = 'Pocket show com Living Music ';
+                    $conteudo = 'Projeto criado por alunos, de diferentes Escolas da PUCRS, que se encontravam no piano do Living 360º com um objetivo em comum: fazer música. '
+                    $data = '10/03';
+                    $horario = '18h às 19h15';
+                    $local = 'Laro da Solidariedade';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Cultura';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/livingmusicpucrs/';
+                    break;
+                case 'dia10-evento-06':
+                    $titulo = 'Conheça a Biblioteca Central Irmão José Otão ';
+                    $conteudo = 'O roteiro a ser apresentado no tour, trará informações importantes sobre a Bilioteca e seus serviços, como : autoempréstimo, Dicas de Leitura, scanner  e treinamentos, além de sua infraestrutura como salas de estudo, espaço aberto , empréstimo de notes e exposição obras raras. As inscrições devem ser feitas na secretária da biblioteca.   '
+                    $data = '10/03';
+                    $horario = '18h30, 19h e 20h45';
+                    $local = 'Biblioteca Irmão José Otão';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Biblioteca Irmão José Otão';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.instagram.com/bibliotecapucrs/?hl=pt';
                     break;
                 case 'dia11-evento-01':
-                    $titulo = 'Missa de Abertura do Ano (com transmissão no <a href="https://youtu.be/M8XdLNSd87U">Youtube</a>)';
+                    $titulo = 'Missa de Abertura do Ano (com transmissão no Youtube)';
+                    $conteudo = 'Com transmissão no youtube, ocorrerá na Igreja Universitária Cristo Mestre a Missa de Abertura do Ano Letivo,  a celebração, em tom de acolhida aos alunos, professores e colaboradores da PUCRS, marca o início das atividades acadêmicas. '
                     $data = '11/03';
                     $horario = '12h às 13h';
                     $local = 'Igreja Cristo Mestre';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'Pastoral';
+                    $botao = 'Saiba mais';
+                    $link = 'https://youtu.be/M8XdLNSd87';
+                    break;
+                case 'dia14-evento-01':
+                    $titulo = 'Entrega dos cadernos ';
+                    $conteudo = 'Entrega dos Cadernos para estudantes de Graduação, Mestrado e Doutorado - um dos momentos mais esperados pelos estudantes PUCRS, marca o início do semestre. '
+                    $data = '14/03';
+                    $horario = '9h30 às 13h30';
+                    $local = 'Térreo do Living 360° no Balcão de Relacionamento ';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = '#';
+                    break;
+                case 'dia14-evento-02':
+                    $titulo = 'Entrega dos cadernos ';
+                    $conteudo = 'Entrega dos Cadernos para estudantes de Graduação, Mestrado e Doutorado - um dos momentos mais esperados pelos estudantes PUCRS, marca o início do semestre. '
+                    $data = '14/03';
+                    $horario = '17h30 às 20h';
+                    $local = 'Térreo do Living 360° no Balcão de Relacionamento ';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = '#';
+                    break;
+                case 'dia14-evento-03':
+                    $titulo = 'PUCRS Pianos: Melissa Souza, piano na Escola Politécnica  ';
+                    $conteudo = 'A artista Melissa Souza reabre o piano da Escola Politécnica tocando standarts de jazz, como Miles Davis e Coltrane, e standarts brasileiros, adicionando alguns improvisos aos temas. '
+                    $data = '14/03';
+                    $horario = '18h';
+                    $local = 'Prédio 30 ';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Cultura';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/cultura/';
                     break;
                 case 'dia15-evento-01':
-                    $titulo = 'Abertura de piano';
-                    $data = '15/03';
-                    $horario = '18h15';
-                    $local = 'Escola Politécnica';
-                    $publico = 'Comunidade Universitária';
-                    $realizador = 'Instituto de Cultura';
-                    break;
-                case 'dia15-evento-02':
-                    $titulo = 'Aulão Parque Esportiv';
+                    $titulo = 'Aulão Parque Esportivo';
+                    $conteudo = 'O Parque Esportivo da PUCRS promove uma aula inaugural gratuita e aberta para toda a comunidade. Para inscrever, o contato deve ser feito  direto na Secretaria pelo telefone (51) 3353-4787 '
                     $data = '15/03';
                     $horario = '18h às 19h15';
                     $local = 'Parque Esportivo';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'Parque Esportivo';
+                    $botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/parqueesportivo/';
                     break;
                 case 'dia17-evento-01':
                     $titulo = '“Oi, sumido: como encontrar meu propósito com base nas competências empreendedoras”';
+                    $conteudo = 'O IDEAR,  laboratório para você se desenvolver, compartilhar ideias e criar projetos para a sociedade, traz a programação uma palestra que busca estimular a busca pelo propósito, através de uma atividade dinamica e clara. Te esperamos! '
                     $data = '17/03';
                     $horario = '11h30 às 12h30';
                     $local = 'Idear - Sala 110 do Living 360°';
                     $publico = 'Alunos de Graduação';
-                    $realizador = 'Parque Esportivo';
+                    $realizador = 'Idear';
+                    $botao = 'Saiba mais';
+                    $link = 'https: http://webappcl.pucrs.br/inscricoes/inscricao?projeto=b8809fd6bcdcf38f';
                     break;
                 case 'dia17-evento-02':
-                    $titulo = 'Abertura dos pianos com Lucas Brunet ';
+                    $titulo = 'PUCRS Pianos: Bibiana Petek e Lucas Brunnet, voz e piano na Escola de Humanidades ';
+                    $conteudo = 'Reabertura do piano com os artistas Bibiana Petek (voz) e Lucas Brunnet (piano). O repertório da dupla conta com músicas autorais, com raiz na MPB e releitura de músicas de diversas décadas. '
                     $data = '17/03';
                     $horario = '18h15';
                     $local = 'Escola de Humanidades';
                     $publico = 'Alunos de Graduação';
-                    $realizador = 'Instituto de Cultura';
+                    $realizador = 'PUCRS Cultura';
+                    botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/cultura/';
                     break;
                 case 'dia18-evento-01':
                     $titulo = 'Palestra Espiritualidade e o Sentido da Vida Neurociência e Aprendizagem - Professores envolvidos: Luciano Marques de Jesus com Leonardo Agostini e Aline Fay   ';
+                    $conteudo = ''
                     $data = '18/03';
                     $horario = '18h às 19h';
                     $local = 'Átrio Prédio 9';
-                    $publico = 'Comunidade Universiatária';
+                    $publico = 'Comunidade Universitária';
                     $realizador = 'Escola de Humanidades';
+                    botao = 'Saiba mais';
+                    $link = '#';
                     break;
                 case 'dia22-evento-01':
                     $titulo = 'Experiência Tecnopuc (Labs & Hubs) imersão no ecossistema do Tecnopuc, integrando Labs e Hubs, para o desenvolvimento de uma solução inovadora.';
+                    $conteudo = 'Experiência de imersão no ecossistema do Tecnopuc, integrando Labs e Hubs, para o desenvolvimento de uma solução inovadora. Inscrições prévias (20-30 vagas em cada dia, divididas por Escolas)'
                     $data = '22/03';
                     $horario = '8h às 12h';
-                    $local = 'Tecnopuc';
-                    $publico = 'Comunidade Universiatária';
+                    $local = 'Café Coworking do Global Tecnopuc (Prédio 97B, térreo) ';
+                    $publico = 'Comunidade Universitária';
                     $realizador = 'Tecnopuc';
+                    botao = 'Saiba mais';
+                    $link = 'https://tecnopuc.pucrs.br/';
                     break;
                 case 'dia22-evento-02':
-                    $titulo = 'PUCRS Piano – Recital de Isabella Brill ';
+                    $titulo = 'PUCRS Pianos: recital com Sara Fleck na Biblioteca. ';
+                    $conteudo = 'Quem faz a penúltima apresentação de reabertura dos pianos da PUCRS é Sara Fleck. O repertório da pianista traz composições de nomes da música clássica, como Bach, Beethoven, Robert Schumann e Sergei Prokofiev. '
                     $data = '22/03';
                     $horario = '18h';
                     $local = 'Saguão da Bilbioteca';
-                    $publico = 'Comunidade Universiatária';
-                    $realizador = 'Instituto de Cultura';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Cultura';
+                    botao = 'Saiba mais';
+                    $link = '#';
                     break;
                 case 'dia22-evento-03':
-                    $titulo = 'Porto Alegre 250 Anos: História e Cultura nos Acervos do DELFOS. Abertura de exposição no Saguão da Biblioteca Central.  ';
+                    $titulo = 'Exposição Porto Alegre 250 Anos: História e Cultura nos Acervos do DELFOS.';
+                    $conteudo = 'Abertura da exposição sobre os 250 anos de Porto Alegre com itens do acervo do Delfos - Espaço de Documentação e Memória Cultural da PUCRS. '
                     $data = '22/03';
                     $horario = '18h';
                     $local = 'Saguão da Bilbioteca';
-                    $publico = 'Comunidade Universiatária';
-                    $realizador = 'Instituto de Cultura';
-                    break;
-                case 'dia22-evento-04':
-                    $titulo = 'Missão Possível – Impacto social no empreendedorismo: Posso mudar o mundo com a minha ideia?  ';
-                    $data = '22/03';
-                    $horario = '18h';
-                    $local = 'Youtube PUCRS';
-                    $publico = 'Alunos de Graduação';
-                    $realizador = 'Idear';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS Cultura';
+                    botao = 'Saiba mais';
+                    $link = 'https: https://www.pucrs.br/cultura';
                     break;
                 case 'dia23-evento-01':
-                    $titulo = 'Pró-reitor e Diretor de Pós-Graduação apresentarão um panorama sobre a pós no Brasil, mudanças na sociedade e o que motivou o desenho do novo modelo da pós Stricto Sensu na PUCRS. Também serão apresentadas oportunidades de internacionalização e estruturas do Campus.  ';
+                    $titulo = 'Aula aberta especial Medicina. Tema: O médico na era da tecnologia: o que ganhamos e o que perdemos? ';
+                    $conteudo = ''
                     $data = '23/03';
-                    $horario = '18h30 às 20h30';
-                    $local = 'Auditório do Prédio 50 + Transmissão via Youtube';
-                    $publico = 'Alunos de Stricto Sensu';
-                    $realizador = 'PROPESQ';
+                    $horario = '11h';
+                    $local = 'Teatro do Prédio 40';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Escola de Medicina';
+                    botao = 'Saiba mais';
+                    $link = '#';
                     break;
                 case 'dia23-evento-02':
                     $titulo = 'Workshop de meditação: Começando a meditar na PUCRS';
+                    $conteudo = 'As práticas de meditação são ótimos exercícios para cultivar o nosso bem-estar. Mas começar nem sempre é fácil! Por isso, a PROIIN, através da Pastoral, promove um workshop prático de meditação. Neste momento serão apresentadas as práticas de meditação que são oferecidas na Universidade. Além disso, os participantes poderão participar de uma meditação guiada, visita guiada à sala de meditação do living 360º e apresentação do portfólio de atividades. ';
                     $data = '23/03';
                     $horario = '16h30 às 17h30';
                     $local = 'Arena 226 do Living 360°';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'PROIIN';
+                    botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/institucional/unidades-administrativas/proiin/';
+                    break;
+                case 'dia23-evento-03':
+                    $titulo = 'Abertura Stricto 2022 ';
+                    $conteudo = 'O Pró-reitor e Diretor de Pós-Graduação apresentara um panorama sobre a pós no Brasil, mudanças na sociedade e o que motivou o desenho do novo modelo da pós Stricto Sensu na PUCRS. Também serão apresentadas oportunidades de internacionalização e estruturas do Campus. ';
+                    $data = '23/03';
+                    $horario = '18h30 às 20h30';
+                    $local = 'Auditório do Prédio 50 + Transmissão via Youtube';
+                    $publico = 'Alunos Stricto Sensu';
+                    $realizador = 'PROPESQ';
+                    botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/estudenapucrs/cursos/#pos-graduacao';
                     break;
                 case 'dia24-evento-01':
+                    $titulo = 'Missão Possível – Impacto social no empreendedorismo: Posso mudar o mundo com a minha ideia?  ';
+                    $conteudo = 'A primeira oficina terá como convidado Henrique Dias, um dos fundadores da NoHarm, que comparitlhará suas experiências na construção de uma startup, baseada em tecnologia de ponta na área da saúde pública. É necessária a inscrição para participar da oficina.';
+                    $data = '24/03';
+                    $horario = '17h';
+                    $local = 'Youtube da PUCRS';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'Idear';
+                    botao = 'Saiba mais';
+                    $link = 'https://idear.pucrs.br/o-que-fazemos/missao-possivel/';
+                    break;
+                case 'dia24-evento-02':
                     $titulo = 'Lágrimas no Mar – Arnaldo Antunes + Vitor Araújo ';
+                    $conteudo = 'O cantor e compositor Arnaldo Antunes apresenta seu novo trabalho do com o pianista Vitor Araújo. O show de voz e piano, traz um formato inédito para os artistas que uniram o gosto pela experimentação na criação do álbum. Os ingressos podem ser no Link abaixo. ';
                     $data = '24/03';
                     $horario = '21h';
                     $local = 'Salão de Atos';
                     $publico = 'Alunos sorteados';
-                    $realizador = 'Instituto de Cultura';
+                    $realizador = 'PUCRS Cultura';
+                    botao = 'Saiba mais';
+                    $link = 'https://uhuu.com/evento/rs/porto-alegre/arnaldo-antunes-lagrimas-no-mar-9086#/';
                     break;
                 case 'dia25-evento-01':
                     $titulo = 'RedBUll Paper Wings  ';
+                    $conteudo = 'Campeonato mundial de aviões de Papel promovido pela Red Bull acontecerá na PUCRS. Com diversas etapas classificatórias, que acontecem em diversos países, com a final na Áustria.  ';
                     $data = '25/03';
                     $horario = '11h30 às 14h';
                     $local = 'Parque Esportivo';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'ReBull';
+                    botao = 'Saiba mais';
+                    $link = '#';
                     break;
                 case 'dia29-evento-01':
-                    $titulo = 'Você no Tecnopuc: Trilha Carreiras. Empresas do Tecnopuc prepararão atividades voltadas a apresentação de oportunidades de trabalho para estudantes PUCRS. O Tecnopuc fará a curadoria das atividades.';
+                    $titulo = 'Você no Tecnopuc: Trilha Carreiras. ';
+                    $conteudo = 'Empresas do Tecnopuc prepararão atividades voltadas a apresentação de oportunidades de trabalho para estudantes PUCRS. O Tecnopuc fará a curadoria das atividades. Inscrições prévias. ';
                     $data = '29/03';
-                    $horario = 'Todo o dia';
-                    $local = 'Aguarde';
+                    $horario = '9h ÀS 18h30';
+                    $local = 'Portal Tecnopuc (Prédio 99A, térreo) ';
                     $publico = 'Alunos de Graduação e Pós-Graduação com interesse em oportunidades de trabalho na Nova Economia';
                     $realizador = 'Tecnopuc + PUCRS Carreiras';
-                    break;
-                case 'dia29-evento-02':
-                    $titulo = 'PUCRS Piano';
-                    $data = '29/03';
-                    $horario = '12h';
-                    $local = 'Hospital São Lucas da PUCRS';
-                    $publico = 'Comunidade em Geral';
-                    $realizador = 'Instituto de Cultura';
+                    botao = 'Saiba mais';
+                    $link = 'https://tecnopuc.pucrs.br/';
                     break;
                 case 'dia30-evento-01':
-                    $titulo = 'Jogo da Vida atividade voltada à reflexão sobre o projeto pessoal de vida dos estudantes, com dinâmicas práticas e apresentação de oportunidades de aprofundamento. ';
+                    $titulo = 'Jogo da Vida';
+                    $conteudo = 'Atividade voltada à reflexão sobre o projeto pessoal de vida dos estudantes, com dinâmicas práticas e apresentação de oportunidades de aprofundamento. ';
                     $data = '30/03';
                     $horario = '16h30 às 17h45';
                     $local = 'Arena 226 do Living 360°';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'PROIIN';
+                    botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/institucional/unidades-administrativas/proiin/';
                     break;
                 case 'dia30-evento-02':
-                    $titulo = 'Palestra Estratégias de Inserção no Mercado de Trabalho. Com Ana Cecilia Petersen e Priscila Dietrich (Consultoras de Carreira) ';
+                    $titulo = 'Palestra Estratégias de Inserção no Mercado de Trabalho. ';
+                    $conteudo = 'Com Ana Cecilia Petersen e Priscila Dietrich (Consultoras de Carreira), o PUCRS Carreiras te convida a falar sobre os desafios e expectavidas sobre o mercado de trabalho. ';
                     $data = '30/03';
                     $horario = '18h às 19h30';
                     $local = 'Auditório do Living 360°';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'PUCRS Carreiras';
+                    botao = 'Saiba mais';
+                    $link = 'https://carreiras.pucrs.br/';
                     break;
                 case 'dia30-evento-03':
+                    $titulo = 'Show especial  com Vitor Kley';
+                    $conteudo = '';
+                    $data = '30/03';
+                    $horario = '18h às 19h15';
+                    $local = 'Palco da Rua da Cultura';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'ATL House';
+                    botao = 'Saiba mais';
+                    $link = '#';
+                    break;
+                case 'dia30-evento-04':
                     $titulo = 'Aula Aberta especial Negócios ';
+                    $conteudo = 'O evento possuí duas atividades: abertura com música e violão; e palestra com Luis Fernando Saraiva com o tema "Mudando dentro da Mudança".';
                     $data = '30/03';
                     $horario = '19h15 às 22h30';
                     $local = 'Teatro do Prédio 40';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'Escola de Negócios';
+                    botao = 'Saiba mais';
+                    $link = 'https://www.pucrs.br/negocios/';
                     break;
                 case 'dia31-evento-01':
-                    $titulo = 'Experiência Tecnopuc (Labs & Hubs) imersão no ecossistema do Tecnopuc, integrando Labs e Hubs, para o desenvolvimento de uma solução inovadora. ';
+                    $titulo = 'Experiência Tecnopuc (Labs & Hubs)';
+                    $conteudo = 'Experiência de imersão no ecossistema do Tecnopuc, integrando Labs e Hubs, para o desenvolvimento de uma solução inovadora. Inscrições prévias e vagas limitadas (20-30 vagas em cada dia, divididas por Escolas).  ';
                     $data = '31/03';
                     $horario = '8h às 12h';
-                    $local = 'Tecnopuc';
+                    $local = 'Café Coworking do Global Tecnopuc (Prédio 97B, térreo) ';
                     $publico = 'Comunidade Universitária';
                     $realizador = 'Tecnopuc';
+                    botao = 'Saiba mais';
+                    $link = 'https://tecnopuc.pucrs.br/';
+                    break;
+                case 'dia31-evento-02':
+                    $titulo = 'Entrega dos cadernos';
+                    $conteudo = 'Entrega dos Cadernos para estudantes de Graduação, Mestrado e Doutorado - um dos momentos mais esperados pelos estudantes PUCRS, marca o início do semestre.';
+                    $data = '02/03';
+                    $horario = '9h30 às 13h30';
+                    $local = 'Balcão de relacionamento do Living 360°';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = '#';
+                    break;
+                case 'dia31-evento-03':
+                    $titulo = 'Entrega dos cadernos';
+                    $conteudo = 'Entrega dos Cadernos para estudantes de Graduação, Mestrado e Doutorado - um dos momentos mais esperados pelos estudantes PUCRS, marca o início do semestre.';
+                    $data = '02/03';
+                    $horario = '17h30 às 21h30';
+                    $local = 'Balcão de relacionamento do Living 360°';
+                    $publico = 'Comunidade Universitária';
+                    $realizador = 'PUCRS';
+                    $botao = 'Saiba mais';
+                    $link = '#';
                     break;
             }
 
             $('.modal-body > h5').html($titulo);
+            $('.modal-body > .conteudo').html($conteudo);
             $('.modal-body > .programa .data').html($data);
             $('.modal-body > .programa .horario').html($horario);
             $('.modal-body > .programa .local').html($local);
             $('.modal-body > .programa .publico').html($publico);
             $('.modal-body > .programa .realizador').html($realizador);
             $('#programacaoModal').modal('show');
+            $('.modal-body > a').html($botao + ' <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>');
+            $(".modal-body > a").attr("href", 'http://' + $link);
         });
 
         /* modal benefícios*/
@@ -2408,8 +3160,15 @@
             AOS.init();
         });
 
+        /* AOS.init({
+             disable: function() {
+                 var maxWidth = 768;
+                 return window.innerWidth < maxWidth;
+             }
+         });/*
 
-        /* ----- typewrite ----- */
+
+         /* ----- typewrite ----- */
 
         var TxtType = function(el, toRotate, period) {
             this.toRotate = toRotate;
