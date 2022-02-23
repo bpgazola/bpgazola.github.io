@@ -291,8 +291,22 @@ h2 {
 }
 
 #simulation {
-    background: linear-gradient(90deg, rgba(44, 39, 128, 1) 0%, rgba(118, 115, 212, 1) 50%, rgba(41, 171, 226, 1) 100%);
+    background: linear-gradient(90deg, rgba(44, 39, 128), rgba(118, 115, 212), rgba(41, 171, 226));
     padding: 45px 0 45px 0;
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #simulation-content {
@@ -393,6 +407,8 @@ h2 {
 footer {
     background: linear-gradient(90deg, rgba(44, 39, 128, 1) 0%, rgba(118, 115, 212, 1) 50%, rgba(41, 171, 226, 1) 100%);
     padding: 45px 0 45px 0;
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
 }
 
 .footer-content {
