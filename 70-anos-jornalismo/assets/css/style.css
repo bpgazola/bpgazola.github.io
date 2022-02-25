@@ -1,0 +1,297 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    --color-red: #DB4152;
+    --color-light-blue: #5E73EA;
+    --color-heavy-blue: #18208B;
+    --color-blue: #0D4A81;
+    --color-pink: #FF908F;
+    --color-white: #FFFFFF;
+    color: var(--color-white);
+}
+
+body,
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+    line-height: 2rem;
+    overflow-x: hidden!important;
+}
+
+
+/* tittle */
+
+h1 {
+    font-family: inherit;
+    font-size: 2.5rem;
+    color: var(--color-red);
+    text-align: center;
+    line-height: 3rem;
+    margin: 1rem 0 5rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+h1::before {
+    content: "";
+    width: 35px;
+    height: 5px;
+    margin: 2.2rem 0.5rem 0 0;
+    background-color: var(--color-blue);
+}
+
+
+/* sections */
+
+section {
+    padding: 5rem 0 5rem 0;
+}
+
+section:nth-child(2),
+section:nth-child(4) {
+    padding: 10rem 0 10rem 0;
+}
+
+#top {
+    background-image: url('../images/image-top.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.headlight img {
+    margin-top: 20rem;
+    width: 90%;
+}
+
+.arrow {
+    animation-name: arrow;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    margin-top: 5rem;
+}
+
+.icon img {
+    margin-bottom: 2rem;
+}
+
+#manifest {
+    background-color: var(--color-heavy-blue);
+}
+
+#pattern {
+    background-image: url('../images/image-pattern.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#pattern .quote {
+    background-color: var(--color-heavy-blue);
+    color: var(--color-white);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    font-family: inherit;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 40vh auto;
+}
+
+#schedule {
+    background-color: var(--color-heavy-blue);
+}
+
+
+/* calender events */
+
+#schedule .card .row {
+    align-items: center;
+}
+
+#schedule .card {
+    border: none;
+    border-radius: 0;
+    margin: 0 0 1rem 0;
+}
+
+.collapsible {
+    width: 100%;
+    background-color: var(--color-white);
+    cursor: pointer;
+    padding: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.collapsible:focus {
+    outline: none;
+}
+
+.date .day {
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.date .month {
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.date hr {
+    border-top: solid 3px #0D4A81;
+    width: 30%;
+    float: right;
+    margin-top: 1rem;
+}
+
+.title-event {
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.fas {
+    color: var(--color-red);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.description-event p {
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: inherit;
+    text-align: left;
+    padding-right: 5rem;
+    margin: 1rem auto;
+}
+
+.schedule-program {
+    margin: 3rem auto;
+}
+
+.schedule-program .date::before {
+    content: "Data: ";
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
+}
+
+.schedule-program .hour::before {
+    content: "Horário: ";
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
+}
+
+.schedule-program .target::before {
+    content: "Público: ";
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
+}
+
+.schedule-program .promoter::before {
+    content: "Realizador: ";
+    color: var(--color-blue);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
+}
+
+.schedule-program .date,
+.schedule-program .hour,
+.schedule-program .target,
+.schedule-program .promoter {
+    color: var(--color-blue);
+}
+
+
+/* button */
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    font-size: inherit;
+    border-radius: 50px;
+    color: var(--color-white);
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+    margin: 0 0 3rem 0;
+}
+
+.subscription {
+    background-color: var(--color-red);
+}
+
+.subscription:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-out;
+    color: var(--color-white);
+}
+
+
+/* nav */
+
+nav {
+    background-color: var(--color-heavy-blue);
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+
+/* media query */
+
+@media (max-width: 768px) {
+    #top {
+        background-position-x: -800px;
+    }
+}
+
+
+/* Animações */
+
+@keyframes arrow {
+    0% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: translate(0, 20%);
+        -moz-transform: translate(0, 20%);
+        -ms-transform: translate(0, 20%);
+        -o-transform: translate(0, 20%);
+        transform: translate(0, 20%);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
