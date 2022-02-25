@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_847" data-name="Retângulo 847" width="62.443" height="52.891" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_3068" data-name="Grupo 3068" transform="translate(-922 -3662.191)">
+    <circle id="Elipse_1" data-name="Elipse 1" cx="55" cy="55" r="55" transform="translate(922 3662.191)" fill="#fff"/>
+    <g id="Grupo_3062" data-name="Grupo 3062" transform="translate(946.242 3690.649)">
+      <rect id="Retângulo_834" data-name="Retângulo 834" width="61.013" height="47.576" transform="translate(0.715 4.601)" fill="#5e73ea"/>
+      <g id="Grupo_3061" data-name="Grupo 3061" transform="translate(0 0)">
+        <g id="Grupo_3060" data-name="Grupo 3060" clip-path="url(#clip-path)">
+          <path id="Caminho_3933" data-name="Caminho 3933" d="M61.728,55.14H.715A.715.715,0,0,1,0,54.425V6.85a.715.715,0,0,1,.715-.715H61.728a.715.715,0,0,1,.715.715V54.425a.715.715,0,0,1-.715.715M1.43,53.71H61.014V7.565H1.43Z" transform="translate(0 -2.249)" fill="#182089"/>
+          <rect id="Retângulo_835" data-name="Retângulo 835" width="53.245" height="42.378" transform="translate(4.599 4.601)" fill="#eaeaea"/>
+          <rect id="Retângulo_836" data-name="Retângulo 836" width="5.764" height="42.378" transform="translate(52.08 4.601)" fill="#eaeaea"/>
+          <path id="Caminho_3934" data-name="Caminho 3934" d="M60.092,49.942H6.847a.715.715,0,0,1-.715-.715V6.85a.715.715,0,0,1,.715-.715H60.092a.715.715,0,0,1,.715.715V49.228a.715.715,0,0,1-.715.715m-52.53-1.43H59.377V7.565H7.562Z" transform="translate(-2.248 -2.249)" fill="#182089"/>
+          <path id="Caminho_3935" data-name="Caminho 3935" d="M17.985,8.9h0a1.8,1.8,0,0,1-1.8-1.8V2.925a1.8,1.8,0,1,1,3.593,0V7.1a1.8,1.8,0,0,1-1.8,1.8" transform="translate(-5.934 -0.414)" fill="#5e73ea"/>
+          <path id="Caminho_3936" data-name="Caminho 3936" d="M38.162,8.9h0a1.8,1.8,0,0,1-1.8-1.8V2.925a1.8,1.8,0,1,1,3.593,0V7.1a1.8,1.8,0,0,1-1.8,1.8" transform="translate(-13.331 -0.414)" fill="#5e73ea"/>
+          <path id="Caminho_3937" data-name="Caminho 3937" d="M58.338,8.9h0a1.8,1.8,0,0,1-1.8-1.8V2.925a1.8,1.8,0,0,1,3.593,0V7.1a1.8,1.8,0,0,1-1.8,1.8" transform="translate(-20.727 -0.414)" fill="#5e73ea"/>
+          <path id="Caminho_3938" data-name="Caminho 3938" d="M78.515,8.9h0a1.8,1.8,0,0,1-1.8-1.8V2.925a1.8,1.8,0,0,1,3.593,0V7.1a1.8,1.8,0,0,1-1.8,1.8" transform="translate(-28.123 -0.414)" fill="#5e73ea"/>
+          <path id="Caminho_3939" data-name="Caminho 3939" d="M17.572,9.2A2.514,2.514,0,0,1,15.06,6.691V2.512a2.511,2.511,0,1,1,5.022,0V6.691A2.514,2.514,0,0,1,17.572,9.2m0-7.772A1.083,1.083,0,0,0,16.49,2.512V6.691a1.081,1.081,0,1,0,2.163,0V2.512A1.083,1.083,0,0,0,17.572,1.43" transform="translate(-5.521 0)" fill="#182089"/>
+          <path id="Caminho_3940" data-name="Caminho 3940" d="M37.749,9.2a2.514,2.514,0,0,1-2.512-2.512V2.512a2.511,2.511,0,1,1,5.022,0V6.691A2.514,2.514,0,0,1,37.749,9.2m0-7.772a1.083,1.083,0,0,0-1.081,1.081V6.691a1.081,1.081,0,0,0,2.163,0V2.512A1.083,1.083,0,0,0,37.749,1.43" transform="translate(-12.917 0)" fill="#182089"/>
+          <path id="Caminho_3941" data-name="Caminho 3941" d="M57.925,9.2a2.514,2.514,0,0,1-2.511-2.512V2.512a2.511,2.511,0,1,1,5.022,0V6.691A2.514,2.514,0,0,1,57.925,9.2m0-7.772a1.083,1.083,0,0,0-1.081,1.081V6.691a1.081,1.081,0,1,0,2.163,0V2.512A1.083,1.083,0,0,0,57.925,1.43" transform="translate(-20.313 0)" fill="#182089"/>
+          <path id="Caminho_3942" data-name="Caminho 3942" d="M78.1,9.2A2.514,2.514,0,0,1,75.59,6.691V2.512a2.512,2.512,0,0,1,5.023,0V6.691A2.514,2.514,0,0,1,78.1,9.2m0-7.772A1.083,1.083,0,0,0,77.02,2.512V6.691a1.081,1.081,0,0,0,2.163,0V2.512A1.083,1.083,0,0,0,78.1,1.43" transform="translate(-27.709 0)" fill="#182089"/>
+          <rect id="Retângulo_837" data-name="Retângulo 837" width="7.453" height="7.453" transform="translate(10.255 12.622)" fill="#db4152"/>
+          <rect id="Retângulo_838" data-name="Retângulo 838" width="7.453" height="7.453" transform="translate(21.748 12.622)" fill="#fff"/>
+          <rect id="Retângulo_839" data-name="Retângulo 839" width="7.453" height="7.453" transform="translate(33.242 12.622)" fill="#fff"/>
+          <rect id="Retângulo_840" data-name="Retângulo 840" width="7.453" height="7.453" transform="translate(44.736 12.622)" fill="#fff"/>
+          <rect id="Retângulo_841" data-name="Retângulo 841" width="7.453" height="7.453" transform="translate(10.255 23.297)" fill="#db4152"/>
+          <rect id="Retângulo_842" data-name="Retângulo 842" width="7.453" height="7.453" transform="translate(21.748 23.297)" fill="#fff"/>
+          <rect id="Retângulo_843" data-name="Retângulo 843" width="7.453" height="7.453" transform="translate(33.242 23.297)" fill="#fff"/>
+          <rect id="Retângulo_844" data-name="Retângulo 844" width="7.453" height="7.453" transform="translate(44.736 23.297)" fill="#fff"/>
+          <rect id="Retângulo_845" data-name="Retângulo 845" width="7.453" height="7.453" transform="translate(10.255 33.972)" fill="#db4152"/>
+          <rect id="Retângulo_846" data-name="Retângulo 846" width="7.453" height="7.453" transform="translate(21.748 33.972)" fill="#fff"/>
+          <path id="Caminho_3943" data-name="Caminho 3943" d="M23.228,27.681H15.776a.714.714,0,0,1-.715-.715V19.513a.715.715,0,0,1,.715-.715h7.453a.716.716,0,0,1,.715.715v7.453a.715.715,0,0,1-.715.715m-6.738-1.43h6.023V20.228H16.491Z" transform="translate(-5.521 -6.891)" fill="#182089"/>
+          <path id="Caminho_3944" data-name="Caminho 3944" d="M41.373,27.681H33.921a.715.715,0,0,1-.715-.715V19.513a.715.715,0,0,1,.715-.715h7.452a.715.715,0,0,1,.715.715v7.453a.715.715,0,0,1-.715.715m-6.738-1.43h6.023V20.228H34.636Z" transform="translate(-12.172 -6.891)" fill="#182089"/>
+          <path id="Caminho_3945" data-name="Caminho 3945" d="M59.518,27.681H52.066a.715.715,0,0,1-.715-.715V19.513a.715.715,0,0,1,.715-.715h7.452a.715.715,0,0,1,.715.715v7.453a.715.715,0,0,1-.715.715m-6.737-1.43H58.8V20.228H52.781Z" transform="translate(-18.824 -6.891)" fill="#182089"/>
+          <path id="Caminho_3946" data-name="Caminho 3946" d="M77.664,27.681H70.211a.715.715,0,0,1-.715-.715V19.513a.716.716,0,0,1,.715-.715h7.453a.715.715,0,0,1,.715.715v7.453a.714.714,0,0,1-.715.715m-6.738-1.43h6.023V20.228H70.926Z" transform="translate(-25.475 -6.891)" fill="#182089"/>
+          <path id="Caminho_3947" data-name="Caminho 3947" d="M23.228,44.534H15.776a.715.715,0,0,1-.715-.715V36.366a.715.715,0,0,1,.715-.715h7.453a.715.715,0,0,1,.715.715v7.452a.715.715,0,0,1-.715.715M16.491,43.1h6.023V37.081H16.491Z" transform="translate(-5.521 -13.069)" fill="#182089"/>
+          <path id="Caminho_3948" data-name="Caminho 3948" d="M41.373,44.534H33.921a.715.715,0,0,1-.715-.715V36.366a.715.715,0,0,1,.715-.715h7.452a.715.715,0,0,1,.715.715v7.452a.715.715,0,0,1-.715.715M34.636,43.1h6.023V37.081H34.636Z" transform="translate(-12.172 -13.069)" fill="#182089"/>
+          <path id="Caminho_3949" data-name="Caminho 3949" d="M59.518,44.534H52.066a.715.715,0,0,1-.715-.715V36.366a.715.715,0,0,1,.715-.715h7.452a.715.715,0,0,1,.715.715v7.452a.715.715,0,0,1-.715.715M52.781,43.1H58.8V37.081H52.781Z" transform="translate(-18.824 -13.069)" fill="#182089"/>
+          <path id="Caminho_3950" data-name="Caminho 3950" d="M77.664,44.534H70.211a.715.715,0,0,1-.715-.715V36.366a.715.715,0,0,1,.715-.715h7.453a.715.715,0,0,1,.715.715v7.452a.715.715,0,0,1-.715.715M70.926,43.1h6.023V37.081H70.926Z" transform="translate(-25.475 -13.069)" fill="#182089"/>
+          <path id="Caminho_3951" data-name="Caminho 3951" d="M23.228,61.386H15.776a.714.714,0,0,1-.715-.715V53.218a.715.715,0,0,1,.715-.715h7.453a.716.716,0,0,1,.715.715v7.453a.715.715,0,0,1-.715.715m-6.738-1.43h6.023V53.933H16.491Z" transform="translate(-5.521 -19.246)" fill="#182089"/>
+          <path id="Caminho_3952" data-name="Caminho 3952" d="M41.373,61.386H33.921a.715.715,0,0,1-.715-.715V53.218a.715.715,0,0,1,.715-.715h7.452a.715.715,0,0,1,.715.715v7.453a.715.715,0,0,1-.715.715m-6.738-1.43h6.023V53.933H34.636Z" transform="translate(-12.172 -19.246)" fill="#182089"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
