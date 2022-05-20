@@ -3,8 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* Text spotlight */
+
+.text-spotlight {
+    color: #29ABE2;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 
@@ -29,6 +43,37 @@ h2 {
     font-weight: 100;
 }
 
+h2 strong {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+h3 {
+    color: #212529;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: bold;
+}
+
+
+/* Paragraph */
+
+p {
+    font-family: inherit;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 100;
+}
+
+strong {
+    font-family: inherit;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: bold;
+}
+
 
 /* Navbar */
 
@@ -47,11 +92,12 @@ h2 {
 
 .navbar-default .navbar-brand {
     width: 200px;
+    cursor: pointer;
 }
 
 .navbar-default .navbar-brand img {
-    width: 50%;
-    margin-top: -20px;
+    width: 100%;
+    margin-top: -15px;
 }
 
 .navbar-default .navbar-nav li {
@@ -106,11 +152,40 @@ h2 {
     transition: all 0.3s ease-out;
 }
 
+.btn-gray {
+    background-color: #B8B8B8;
+    border-radius: 25px;
+    padding: 8px 32px 8px 32px;
+    font-size: inherit;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    border: solid 2px #B8B8B8;
+    font-weight: bold;
+}
+
+.btn-gray:hover,
+.btn-gray:focus {
+    background-color: #FFFFFF;
+    border: solid 2px #B8B8B8;
+    transition: all 0.3s ease-out;
+    /*box-sizing: border-box;*/
+}
+
+.btn-gray a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn-gray:hover a {
+    color: #B8B8B8;
+    transition: all 0.3s ease-out;
+}
+
 
 /* Sections */
 
 #background-image {
-    background-image: url(../images/foto-header_1.jpg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-foto-header_1.jpg");
     background-repeat: no-repeat;
     position: fixed;
     margin-top: 80px;
@@ -121,6 +196,10 @@ h2 {
     position: relative;
 }
 
+#top {
+    margin-top: 80px;
+}
+
 #about {
     background-color: #FFFFFF;
     padding: 185px 0 45px 0;
@@ -129,8 +208,12 @@ h2 {
 #about p {
     font-size: 2rem;
     line-height: 3rem;
-    font-weight: 600;
+    font-weight: 100;
     text-align: center;
+}
+
+#about h1 {
+    font-weight: 600;
 }
 
 #about .btn-default {
@@ -170,12 +253,13 @@ h2 {
 
 #how h2 {
     text-align: center;
+    font-weight: 600;
 }
 
 #how p {
     font-style: italic;
     font-size: inherit;
-    font-weight: 600;
+    font-weight: 100;
     text-align: center;
     color: #212529;
 }
@@ -210,12 +294,13 @@ h2 {
 
 #skills h2 {
     margin-bottom: 45px;
+    font-weight: 600;
 }
 
 #skills p {
     font-size: 2rem;
     line-height: 3rem;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 #skills .element-right img {
@@ -251,12 +336,13 @@ h2 {
 
 #cases h2 {
     text-align: center;
+    font-weight: 600;
 }
 
 #cases p {
     font-style: italic;
     font-size: inherit;
-    font-weight: 600;
+    font-weight: 100;
     text-align: center;
     color: #212529;
 }
@@ -297,21 +383,248 @@ h2 {
     background-size: 200% 200%;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+#header-pages {
+    background: linear-gradient(90deg, rgba(44, 39, 128), rgba(118, 115, 212), rgba(41, 171, 226));
+    padding: 45px 0 45px 0;
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+#header-pages .row {
+    display: flex;
+    justify-content: center;
+}
+
+#header-pages-content {
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+    padding: 5rem 0 5rem 0;
+}
+
+#header-pages-content h1 {
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+#header-pages .icon img {
+    width: 55px;
+}
+
+#glossary {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+#glossary h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+#glossary p {
+    font-style: italic;
+    font-size: inherit;
+    font-weight: 100;
+    text-align: center;
+    color: #212529;
+    margin: 45px 0 45px 0;
+}
+
+#faq {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+#faq h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+#faq p {
+    font-style: italic;
+    font-size: inherit;
+    font-weight: 100;
+    text-align: center;
+    color: #212529;
+    margin: 45px 0 45px 0;
+}
+
+#timeline {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+#timeline h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+#timeline p {
+    font-style: italic;
+    font-size: inherit;
+    font-weight: 100;
+    text-align: center;
+    color: #212529;
+    margin: 45px 0 45px 0;
+}
+
+#timeline .element-animate img {
+    width: 70%;
+}
+
+#know {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+.spotlight {
+    padding: 85px 0 45px 0;
+}
+
+.spotlight-thumb img {
+    width: 30%;
+}
+
+.box-gradient {
+    background: linear-gradient(90deg, rgba(44, 39, 128), rgba(118, 115, 212), rgba(41, 171, 226));
+    padding: 45px 0 45px 0;
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+.spotlight .box-gradient {
+    margin-top: -125px;
+    padding: 45px 0 125px 0;
+}
+
+.spotlight .box-gradient h1 {
+    color: #FFFFFF;
+    margin-top: 145px;
+}
+
+.spotlight .box-gradient p {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#model {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+#model h3 {
+    margin-bottom: 85px;
+}
+
+#model ul li {
+    color: #212529;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 4rem;
+    list-style-position: inside;
+    list-style-image: url(http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-topicos.svg);
+}
+
+#what-move-you,
+#what-move-us {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+#what-move-us h3 {
+    text-align: left;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.group-list {
+    margin-top: 45px;
+}
+
+.group-list h3::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    margin: 0.8rem 1.5rem 0 0;
+    background-color: #7673D4;
+    border-radius: 50%;
+}
+
+.group-list ul li {
+    color: #212529;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 4rem;
+    list-style-position: inside;
+    list-style-image: url(http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-topicos.svg);
+}
+
+#what-move-you p:first-of-type,
+#what-move-us p:first-of-type {
+    margin-top: 45px;
+}
+
+#what-move-you .text-spotlight,
+#what-move-us .text-spotlight {
+    font-size: 2rem;
+}
+
+#what-move-you ul {
+    margin: 25px 0 10px 0;
+}
+
+#what-move-you ul li {
+    color: #212529;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 4rem;
+    list-style-position: inside;
+    list-style-image: url(http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-topicos.svg);
+}
+
+#what-move-you .box-more,
+#what-move-us .box-more {
+    margin-top: 85px;
+}
+
+.box-more {
+    background-color: #F5F5F5;
+    border-right: solid 15px #E6E7E8;
+    display: flex;
+    align-items: center;
+}
+
+.box-more .content {
+    margin-left: 45px;
+}
+
+.box-more h2 {
+    font-weight: 600;
+}
+
+.box-more .thumb {
+    width: 25%;
+}
+
+.box-more .btn-default {
+    padding: 8px 85px 8px 85px;
 }
 
 #simulation-content {
     display: flex;
     align-items: center;
+}
+
+#simulation h2 {
+    font-weight: 600;
 }
 
 #simulation h2,
@@ -321,6 +634,7 @@ h2 {
 
 #simulation p {
     font-style: italic;
+    font-weight: 100;
 }
 
 #simulation img.icon {
@@ -357,12 +671,20 @@ h2 {
 }
 
 #resources h2 {
+    font-weight: 600;
+}
+
+#resources h2,
+#resources p {
     text-align: center;
+}
+
+#resources p {
+    font-weight: 100;
 }
 
 #resources .set-items {
     margin-top: 145px;
-    margin-bottom: 450px;
 }
 
 #resources .item {
@@ -399,6 +721,651 @@ h2 {
 #resources .item .item-content img.icon {
     margin-right: 25px;
     width: 15%;
+}
+
+#essential-skills {
+    background-color: #FFFFFF;
+    padding: 85px 0 45px 0;
+}
+
+#essential-skills .row:nth-child(2),
+#essential-skills .row:nth-child(3) {
+    margin-top: 45px;
+}
+
+#essential-skills .card a {
+    display: block;
+    position: relative;
+    background-color: #F5F5F5;
+    width: 100%;
+    min-height: 500px;
+    padding: 45px;
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#essential-skills .card a span {
+    display: block;
+    position: absolute;
+    padding: 45px;
+    width: 100%;
+    min-height: 500px;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+}
+
+#essential-skills .card a:hover span {
+    height: 100%;
+    background-color: #F5F5F5;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#essential-skills .card a:hover span p {
+    font-family: inherit;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 100;
+}
+
+#essential-skills .card a h2 {
+    font-weight: 600;
+    margin-top: 45px;
+    text-align: center;
+}
+
+#essential-skills .card a .icon {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    height: 600px;
+    top: 3rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 5rem;
+}
+
+.bg-header::before {
+    background-image: url("../images/2022-05-18-fluir-foto-topo-trilha.png");
+    z-index: -1;
+}
+
+.header .row {
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-top: 22rem;
+    padding: 5rem 0 5rem 0;
+}
+
+.header-content h1 {
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.header .icon img {
+    width: 55px;
+}
+
+.header .row:nth-child(2) {
+    margin-top: 18rem;
+}
+
+.icon-arrow-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 20px #00000030;
+    margin-bottom: 5rem;
+}
+
+.icon-arrow-down img {
+    transform: rotate(90deg);
+}
+
+.trail-content {
+    background-color: #A2D7ED;
+    padding: 2rem 0 0 5rem;
+    margin: 5rem 0 5rem 0;
+}
+
+
+/*.trail-content .row:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}*/
+
+.tooltip-inner {
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.trail-content h2 {
+    margin-bottom: 45px;
+}
+
+.trail-content .content {
+    background-color: #F5F5F5;
+    min-height: 670px;
+}
+
+
+/*.trail-content .content .row:nth-child(1) {
+    display: flex;
+    align-items: center;
+}*/
+
+.trail-content .caption {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: #212529;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    width: fit-content;
+    position: absolute;
+    left: -9rem;
+    bottom: 9rem;
+}
+
+.trail-content .description {
+    padding: 1rem;
+}
+
+.trail-content .text-spotlight {
+    color: #7673D4;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.trail-content .group-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.trail-content .group-buttons .btn-default,
+.trail-content .group-buttons .btn-gray {
+    margin: 1rem 0 1rem 0;
+}
+
+.trail-content .overlay-content .caption {
+    bottom: 3rem;
+    right: -8rem;
+}
+
+.overlay-content {
+    display: none;
+}
+
+
+/*.trail-content .overlay-content .row:nth-child(1) {
+    display: unset;
+}*/
+
+.trail-content .overlay-content .thumb img {
+    width: 70%;
+}
+
+.trail-content .overlay-content .group-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* Botões voltar e selecionar a trilha */
+
+.trail-content .overlay-content .back {
+    background-color: #7673D4;
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    border: solid 2px #7673D4;
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-prev-branca.svg");
+    background-size: 30px;
+    background-position: 15px 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.trail-content .overlay-content .back:hover {
+    background-color: #FFFFFF;
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-prev-roxa.svg");
+    transition: all 0.3s ease-out;
+    color: #7673D4;
+}
+
+.trail-content .overlay-content .select-trail {
+    background-color: #7673D4;
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    border: solid 2px #7673D4;
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-next-branca.svg");
+    background-size: 30px;
+    background-position: 205px 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.trail-content .overlay-content .select-trail:hover {
+    background-color: #FFFFFF;
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-next-roxa.svg");
+    transition: all 0.3s ease-out;
+    color: #7673D4;
+}
+
+.overlay-carousel-trail {
+    display: none;
+}
+
+.trail-content .overlay-carousel-trail .content {
+    padding: 3rem;
+}
+
+
+/*.trail-content .overlay-carousel-trail .row {
+    display: unset;
+    align-items: unset;
+}*/
+
+.trail-content .overlay-carousel-trail .icon-question-mark {
+    background-color: #7673D4;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    position: absolute;
+    margin: 0 0 0 1rem;
+    transform: rotate(-15deg);
+}
+
+.trail-content .overlay-carousel-trail .icon-question-mark:hover {
+    background-color: #9E9E9E;
+    transition: all 0.3s ease-out;
+}
+
+.trail-content .overlay-carousel-trail .icon-question-mark::after {
+    content: "?";
+}
+
+.card-trail {
+    background-color: transparent;
+    padding: 3rem;
+    border-radius: 5px;
+    min-height: 350px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    cursor: pointer;
+}
+
+.administrative-leadership {
+    background-color: #E1BDC3;
+}
+
+.administrative-leadership:hover {
+    background-color: #D66B80;
+    transition: all 0.3s ease-out;
+}
+
+.administrative-menager {
+    background-color: #B4D3DC;
+}
+
+.administrative-menager:hover {
+    background-color: #4FAFCB;
+}
+
+.academic-leadership {
+    background-color: #EBD7B2;
+}
+
+.academic-leadership:hover {
+    background-color: #F7B944;
+    transition: all 0.3s ease-out;
+}
+
+.academic {
+    background-color: #B8C3D7;
+}
+
+.academic:hover {
+    background-color: #6080BA;
+    transition: all 0.3s ease-out;
+}
+
+.card-trail .thumb {
+    margin-top: 15px;
+}
+
+.card-trail .thumb img {
+    width: 80%;
+}
+
+.btn-card-trail {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 15px 25px 15px 25px;
+    min-width: 250px;
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    bottom: 55px;
+}
+
+.btn-card-trail a {
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: #212529;
+    font-weight: bold;
+}
+
+.administrative-leadership .btn-card-trail:hover {
+    background-color: #E1BDC3;
+    transition: all 0.3s ease-out;
+}
+
+.administrative-menager .btn-card-trail:hover {
+    background-color: #B4D3DC;
+    transition: all 0.3s ease-out;
+}
+
+.academic-leadership .btn-card-trail:hover {
+    background-color: #EBD7B2;
+    transition: all 0.3s ease-out;
+}
+
+.academic .btn-card-trail:hover {
+    background-color: #B8C3D7;
+    transition: all 0.3s ease-out;
+}
+
+
+/* Carousel Trail */
+
+.overlay-carousel-trail .control-arrows {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.overlay-carousel-trail .prev-card-arrow {
+    width: 52px;
+    height: 32px;
+    background-size: 30px;
+    background-image: url("../images/2022-03-10-fluir-seta-prev-roxa.svg");
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.overlay-carousel-trail .prev-card-arrow:hover,
+.overlay-carousel-trail .prev-card-arrow:focus {
+    background-image: url("../images/2022-05-19-fluir-seta-prev-cinza.svg");
+    transition: all 0.3s ease-out;
+}
+
+.overlay-carousel-trail .next-card-arrow {
+    width: 52px;
+    height: 32px;
+    background-size: 30px;
+    background-image: url("../images/2022-03-10-fluir-seta-next-roxa.svg");
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.overlay-carousel-trail .next-card-arrow:hover,
+.overlay-carousel-trail .next-card-arrow:focus {
+    background-image: url("../images/2022-05-19-fluir-seta-next-cinza.svg");
+    transition: all 0.3s ease-out;
+}
+
+.carousel-trail .slick-initialized .slick-slide {
+    display: block;
+}
+
+
+/*.trail-content::before {
+    content: "trilha de carreiras";
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: #212529;
+    font-weight: 600;
+    text-transform: uppercase;
+}*/
+
+
+/* Keyframes */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        transition: ease-in 3ms;
+    }
+    50% {
+        background-position: 100% 50%;
+        transition: ease-in 3ms;
+    }
+    100% {
+        background-position: 0% 50%;
+        transition: ease-in 3ms;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(0, 1rem);
+        -moz-transform: translate(0, 1rem);
+        -ms-transform: translate(0, 1rem);
+        -o-transform: translate(0, 1rem);
+        transform: translate(0, 1rem);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+.arrow {
+    animation-name: arrow;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+
+/* Accordion FAQ */
+
+#faq .panel-group .panel {
+    border-radius: 5px;
+}
+
+#faq .panel {
+    box-shadow: 0px 1px 3px #00000029;
+    background-color: #F5F5F5;
+}
+
+#faq .panel-group .panel {
+    margin: 5px 0 15px 0;
+}
+
+#faq .panel-group .panel:nth-child(1) {
+    margin: 85px 0 15px 0;
+}
+
+#faq .panel-heading {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#faq .panel-default {
+    border: none;
+}
+
+#faq .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: transparent;
+}
+
+#faq .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    padding: 0 45px 45px 45px;
+}
+
+#faq .panel-heading a {
+    color: #212529;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    width: fit-content;
+}
+
+#faq .panel-heading a:hover,
+#faq .panel-heading a:focus {
+    text-decoration: none;
+}
+
+#faq .panel-body p {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 100;
+    text-align: left;
+    margin-top: 0px;
+    font-style: normal;
+}
+
+#faq .plus {
+    background-image: url(http://www.pucrs.br/wp-content/uploads/2022/04/2022-04-11-fluir-accordion-plus.svg);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.3s ease-out;
+    transform: rotate(360deg);
+}
+
+#faq .minus {
+    background-image: url(http://www.pucrs.br/wp-content/uploads/2022/04/2022-04-11-fluir-accordion-minus.svg);
+    width: 23px;
+    height: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.3s ease-out;
+}
+
+
+/*  Tabs Glossary */
+
+#glossary .nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+}
+
+#glossary .nav-tabs li a {
+    color: #7673D4;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#glossary .nav-tabs li.active a,
+#glossary .nav-tabs li.active a:focus,
+#glossary .nav-tabs li.active a:hover {
+    color: #7673D4;
+    cursor: default;
+    background-color: #FFFFFF;
+    border: 2px solid transparent;
+    border-bottom-color: #7673D4;
+}
+
+#glossary .nav-tabs li a:hover {
+    background-color: #FFFFFF;
+    border: 2px solid transparent;
+    border-bottom-color: #7673D4;
+    transition: all 0.3s ease-out;
+}
+
+#glossary .tab-pane {
+    margin-top: 45px;
+}
+
+#glossary .tab-pane p {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#glossary .tab-pane p strong {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-style: normal;
 }
 
 
@@ -480,6 +1447,13 @@ footer #logos img {
 }
 
 
+/* Carousel Top */
+
+.carousel-top .items img {
+    width: 100%;
+}
+
+
 /* Carousel Whay */
 
 .carousel-why {
@@ -492,7 +1466,12 @@ footer #logos img {
     height: 500px;
 }
 
-.carousel-why .card a {
+.carousel-why .card h2 {
+    font-weight: 600;
+}
+
+
+/*.carousel-why .card a {
     color: #7673D4;
     font-family: inherit;
     font-size: inherit;
@@ -503,6 +1482,13 @@ footer #logos img {
 .carousel-why .card a:hover {
     text-decoration: underline;
 }
+
+
+.carousel-why .card .card-inner .content a {
+    color: #7673D4;
+}
+
+*/
 
 .carousel-why .card .card-inner {
     display: flex;
@@ -515,7 +1501,7 @@ footer #logos img {
 .carousel-why .card .card-inner .content ul li {
     margin-top: 15px;
     list-style-position: inside;
-    list-style-image: url(../images/seta-topicos.svg);
+    list-style-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-topicos.svg");
     /*list-style-type: none;
     position: relative;
     list-style-position: inside;
@@ -537,12 +1523,8 @@ footer #logos img {
     color: #212529;
     font-family: inherit;
     font-size: inherit;
-    font-weight: 600;
+    font-weight: 100;
     line-height: 2.8rem;
-}
-
-.carousel-why .card .card-inner .content a {
-    color: #7673D4;
 }
 
 
@@ -629,7 +1611,7 @@ footer #logos img {
     height: 40px;
     border-radius: 50px;
     border: solid 2px #7673D4;
-    background-image: url(../images/seta-prev-branca.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-prev-branca.svg");
     background-size: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -638,7 +1620,7 @@ footer #logos img {
 
 #why .arrow-prev:hover {
     background-color: #FFFFFF;
-    background-image: url(../images/seta-prev-roxa.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-prev-roxa.svg");
     transition: all 0.3s ease-out;
 }
 
@@ -649,7 +1631,7 @@ footer #logos img {
     margin-right: 25px;
     border-radius: 50px;
     border: solid 2px #7673D4;
-    background-image: url(../images/seta-next-branca.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-next-branca.svg");
     background-size: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -658,7 +1640,7 @@ footer #logos img {
 
 #why .arrow-next:hover {
     background-color: #FFFFFF;
-    background-image: url(../images/seta-next-roxa.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-next-roxa.svg");
     transition: all 0.3s ease-out;
 }
 
@@ -678,7 +1660,7 @@ footer #logos img {
     height: 40px;
     border-radius: 50px;
     border: solid 2px #7673D4;
-    background-image: url(../images/seta-prev-branca.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-prev-branca.svg");
     background-size: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -687,7 +1669,7 @@ footer #logos img {
 
 #how .prev:hover {
     background-color: #FFFFFF;
-    background-image: url(../images/seta-prev-roxa.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-prev-roxa.svg");
     transition: all 0.3s ease-out;
 }
 
@@ -698,7 +1680,7 @@ footer #logos img {
     margin-right: 25px;
     border-radius: 50px;
     border: solid 2px #7673D4;
-    background-image: url(../images/seta-next-branca.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-next-branca.svg");
     background-size: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -707,7 +1689,7 @@ footer #logos img {
 
 #how .next:hover {
     background-color: #FFFFFF;
-    background-image: url(../images/seta-next-roxa.svg);
+    background-image: url("http://www.pucrs.br/wp-content/uploads/2022/03/2022-03-10-fluir-seta-next-roxa.svg");
     transition: all 0.3s ease-out;
 }
 
@@ -781,6 +1763,65 @@ footer #logos img {
 }
 
 
+/* Dots */
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 15px;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 1px #7673D4;
+    background-color: #FFFFFF;
+}
+
+.slick-dots li.slick-active {
+    background-color: #7673D4;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li:hover,
+.slick-dots li:focus {
+    background-color: #7673D4;
+    transition: all 0.3s ease-out;
+}
+
+
 /* Modal Videos */
 
 .modal-open .modal {
@@ -796,7 +1837,7 @@ footer #logos img {
 
 .modal-content {
     position: relative;
-    background-color: #000000;
+    background-color: #7673D4;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: none;
@@ -810,6 +1851,18 @@ footer #logos img {
     padding: 0;
 }
 
+.modal-body .subtitle {
+    padding: 15px;
+}
+
+.modal-body .subtitle p {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 100;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
 .modal .btn-close {
     font-size: 1em;
     line-height: 1;
@@ -819,7 +1872,7 @@ footer #logos img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: #7673D4;
     z-index: 900;
     border: solid 1px #FFFFFF;
     margin-top: -20px;
@@ -829,7 +1882,21 @@ footer #logos img {
 
 /* Media Query */
 
+@media(max-width:1200px) {
+    .trail-content .overlay-content .thumb img {
+        width: 85%;
+    }
+}
+
 @media (max-width: 991px) {
+    #header-pages img.icon,
+    .header img.icon {
+        width: 12%;
+    }
+    #header-pages-content h1,
+    .header-content h1 {
+        text-align: center;
+    }
     #about .element-left img {
         width: 20%;
         margin-bottom: 45px;
@@ -958,6 +2025,34 @@ footer #logos img {
         text-align: center;
         float: none;
     }
+    .spotlight-thumb img {
+        width: 40%;
+    }
+    #model ul {
+        margin-bottom: 85px;
+    }
+    #essential-skills .card a {
+        margin-bottom: 45px;
+    }
+    #essential-skills .row:nth-child(3) {
+        margin-top: 0px;
+    }
+    .trail-content .content .element-left img {
+        height: 670px;
+    }
+    .trail-content .overlay-content .group-buttons {
+        margin-top: 65px;
+    }
+    .trail-content .overlay-content .thumb img {
+        width: 100%;
+    }
+    .trail-content .overlay-content .content {
+        padding: 3rem;
+    }
+    .trail-content .overlay-content .caption {
+        bottom: 3rem;
+        left: -12rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -966,6 +2061,15 @@ footer #logos img {
     }
     h1 {
         font-size: 3rem;
+    }
+    #header-pages-content,
+    .header-content {
+        display: block;
+        padding-top: 5rem;
+    }
+    #header-pages .icon img,
+    .header .icon img {
+        width: 60px;
     }
     #background-image {
         min-height: 300px;
@@ -1032,6 +2136,56 @@ footer #logos img {
         margin-left: auto;
         margin-right: auto;
     }
+    .header .row:nth-child(2) {
+        margin-top: 14rem;
+    }
+    .trail-content .content .row {
+        display: block;
+        align-items: unset;
+    }
+    .trail-content .caption {
+        bottom: -39rem;
+    }
+    .trail-content .description {
+        padding: 3rem;
+    }
+    .trail-content .content .element-left img {
+        height: auto;
+    }
+    .trail-content .overlay-content .group-buttons {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .trail-content .overlay-content .back,
+    .trail-content .overlay-content .select-trail {
+        margin: 1rem 0 1rem 0;
+    }
+    .trail-content .overlay-content .caption {
+        bottom: 6rem;
+        left: -12rem;
+    }
+}
+
+@media (max-width: 490px) {
+    .box-more {
+        flex-direction: column;
+    }
+    .box-more .thumb {
+        width: 100%;
+    }
+    .box-more .content {
+        margin-left: 0px;
+    }
+    .box-more h2 {
+        text-align: center;
+    }
+    .box-more .btn-default {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 440px) and (min-width: 319px) {
@@ -1040,6 +2194,9 @@ footer #logos img {
     }
     #how .video-click {
         margin-top: 30px;
+    }
+    #glossary .nav-tabs {
+        display: block;
     }
 }
 
@@ -1084,5 +2241,8 @@ footer #logos img {
     .video-cases-hide {
         display: none;
         margin-bottom: 2950px;
+    }
+    #glossary .nav-tabs {
+        display: block;
     }
 }
