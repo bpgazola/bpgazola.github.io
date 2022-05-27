@@ -1,0 +1,133 @@
+/* Footer */
+
+footer .container-fluid {
+    padding: 5rem 0 5rem 0;
+}
+
+footer {
+    background-color: var(--color-blue);
+    min-height: 300px;
+}
+
+footer p {
+    color: var(--color-white);
+}
+
+footer .bar-icons {
+    background-color: var(--color-yellow);
+    margin-top: -200px;
+}
+
+footer .bar-icons img {
+    width: 120px;
+}
+
+footer .brands {
+    margin-top: 5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+footer #pucrs {
+    width: 220px;
+    height: 56px;
+    background-image: url('../image/icon-pucrs-default.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer #pucrs:hover,
+footer #pucrs:focus {
+    background-image: url('../image/icon-pucrs-default-hover.svg');
+}
+
+footer #kings-college {
+    width: 174px;
+    height: 100px;
+    background-image: url('../image/icon-king-college-default.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer #kings-college:hover,
+footer #kings-college:focus {
+    background-image: url('../image/icon-kings-college-hover.svg');
+}
+
+footer #ufrgs {
+    width: 190px;
+    height: 146px;
+    background-image: url('../image/icon-ufrgs-default.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer #ufrgs:hover,
+footer #ufrgs:focus {
+    background-image: url('../image/icon-ufrgs-hover.svg');
+}
+
+footer .network {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+footer .network .icon {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+footer .network .icon#facebook {
+    width: 27px;
+    height: 27px;
+    background-image: url('../image/icon-facebook.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer .network .icon#facebook:hover,
+footer .network .icon#facebook:focus {
+    background-image: url('../image/icon-facebook-hover.svg');
+}
+
+footer .network .icon#twitter {
+    width: 27px;
+    height: 21px;
+    background-image: url('../image/icon-twitter.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer .network .icon#twitter:hover,
+footer .network .icon#twitter:focus {
+    background-image: url('../image/icon-twitter-hover.svg');
+}
+
+footer .network .icon#instagram {
+    width: 21px;
+    height: 21px;
+    background-image: url('../image/icon-instagram.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer .network .icon#instagram:hover,
+footer .network .icon#instagram:focus {
+    background-image: url('../image/icon-instagram-hover.svg');
+}
+
+footer hr.line {
+    border: solid 1px var(--color-white);
+    width: 80%;
+    margin: 8rem 0 0 0;
+}
+
+footer .brands span.vertical-line {
+    background-color: var(--color-white);
+    width: 2px;
+    height: 100px;
+    position: relative;
+    top: -5rem;
+}

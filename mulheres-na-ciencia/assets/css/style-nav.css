@@ -1,0 +1,93 @@
+/* Navbar */
+
+.navbar {
+    background-color: var(--color-white);
+    box-shadow: 0px 3px 6px var(--color-light-black);
+    padding: 1rem 3.5rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-nav .dropdown-menu {
+    min-width: fit-content!important;
+    margin: 1.5rem 0 0;
+    padding: 1.5rem 1rem;
+}
+
+.navbar-nav .nav-item:nth-child(7)>.dropdown-menu {
+    left: -2rem!important;
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link,
+.dropdown-item {
+    color: var(--color-black);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+
+/*.navbar-nav .nav-item {
+    margin: 0 0.5rem 0 0.5rem;
+}*/
+
+.navbar-nav .nav-link:hover,
+.dropdown-item:hover {
+    background-color: var(--color-white);
+    color: var(--color-light-red);
+    transition: all 0.3s ease-out;
+}
+
+.navbar-nav .nav-item:hover:after {
+    content: "";
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-light-red);
+    position: absolute;
+    margin-left: 0.5rem;
+}
+
+.navbar-nav .nav-item.active a {
+    color: var(--color-light-red);
+}
+
+.navbar-nav .nav-item.active>.dropdown-menu a {
+    color: var(--color-black);
+}
+
+.navbar-nav .nav-item.active:before {
+    content: "";
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-light-red);
+    position: absolute;
+    margin: 3rem 0 0 0.5rem;
+    transition: none;
+}
+
+.dropdown-item:hover:before {
+    content: "";
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-light-red);
+    position: absolute;
+    margin: 2.3rem 0 0 0;
+    transition: all 0.3s ease-out;
+}
+
+.navbar-nav .nav-item:nth-child(7)>.dropdown-menu>.dropdown-item:hover:before {
+    display: none;
+}
+
+.navbar-nav .nav-item:nth-child(7):hover:after {
+    display: none;
+}
+
+button.navbar-toggler:focus {
+    outline: none;
+}
