@@ -329,7 +329,7 @@
             var tweet = encodeURIComponent($("meta[property='og:description']").attr("content"));
 
             $(".social-share.facebook").on("click", function() {
-                url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+                url = "https://www.facebook.com/sharer.php?url=" + pageUrl;
                 socialWindow(url);
             });
 
