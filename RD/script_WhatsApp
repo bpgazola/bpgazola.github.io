@@ -1,0 +1,10 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    //conteúdo que será compartilhado: Título da página + URL
+    var conteudo = encodeURIComponent(document.title + " " + window.location.href);
+    //altera a URL do botão
+    document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?Olha o que eu acabei de ler!=" + É uma carta para pessoas recém-diagnosticadas com Esclerose Múltipla: https://amigosmultiplos.org.br/noticia/uma-carta-para-pessoas-com-diagnostico-recente-de-esclerose-multipla/
+
+Eu vi na última edição do Clube AME. Assine você também e receba uma curadoria de conteúdo exclusiva sobre Esclerose Múltipla: https://amigosmultiplos.org.br/produtos/;
+}, false);
+</script>
