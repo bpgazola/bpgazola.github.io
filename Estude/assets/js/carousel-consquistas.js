@@ -1,4 +1,4 @@
-$('.carousel-porque-estudar').slick({
+$('.carousel-consquistas').slick({
     dots: true,
     infinite: true,
     autoplay: true,
