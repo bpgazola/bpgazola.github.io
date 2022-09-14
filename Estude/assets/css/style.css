@@ -838,7 +838,7 @@ a.external-link:focus {
     padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .carousel-escolas .items #descricao-escola-ciencias-saude,
     .carousel-escolas .items #descricao-escola-comunicacao,
     .carousel-escolas .items #descricao-escola-direito,
