@@ -626,6 +626,7 @@ hr.line {
 .laboratories .thumbnail-laboratory {
     position: relative;
     display: block;
+    min-height: fit-content;
 }
 
 .laboratories .row>.col-sm-12:nth-child(1) .thumbnail-overlay {
