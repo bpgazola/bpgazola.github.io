@@ -1,0 +1,11 @@
+<svg id="Componente_128_25" data-name="Componente 128 – 25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58.19" height="58.188" viewBox="0 0 58.19 58.188">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_886" data-name="Retângulo 886" width="58.19" height="58.188" fill="#3287bb"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_3246" data-name="Grupo 3246" clip-path="url(#clip-path)">
+    <path id="Caminho_14133" data-name="Caminho 14133" d="M29.095,0A29.094,29.094,0,1,1,0,29.094,29.126,29.126,0,0,1,29.095,0m0,54.08A24.986,24.986,0,1,0,4.107,29.094,25.015,25.015,0,0,0,29.095,54.08" transform="translate(0.001 0)" fill="#3287bb"/>
+    <path id="Caminho_14134" data-name="Caminho 14134" d="M37.351,26.6l-7.074,5.1H48.793v4.107H30.277l7.074,5.1-2.4,3.332L20.411,33.763,34.947,23.273Z" transform="translate(-6.92 -4.669)" fill="#3287bb"/>
+  </g>
+</svg>
