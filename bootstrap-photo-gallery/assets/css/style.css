@@ -1,0 +1,47 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.modal-open {
+    padding-right: 0!important;
+}
+
+.gallery {
+    padding: 5rem 0 5rem 0;
+}
+
+.gallery-photos img {
+    margin: 1rem 0 1rem 0;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .gallery-photos img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:991px) {
+    .gallery-photos img {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.carousel-item img {
+    width: 600px;
+    height: 400px;
+    cursor: pointer;
+}
