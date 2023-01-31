@@ -197,15 +197,13 @@
             card.addEventListener('drag', drag);
             card.addEventListener('dragend', dragend);
             
-            card.addEventListener('touchstart', touchstart);
-            card.addEventListener('touchmove', touchmove);
-            card.addEventListener('touchleave', touchleave);
         });
 
         lists.forEach(list => {
             list.addEventListener('dragover', dragover);
             list.addEventListener('dragleave', dragleave);
             list.addEventListener('drop', drop);
+            
         });
 
         function dragover() {
@@ -248,9 +246,6 @@
             card.addEventListener('drag', drag);
             card.addEventListener('dragend', dragend);
             
-            card.addEventListener('touchstart', touchstart);
-            card.addEventListener('touchmove', touchmove);
-            card.addEventListener('touchleave', touchleave);
 
         }
     </script>
