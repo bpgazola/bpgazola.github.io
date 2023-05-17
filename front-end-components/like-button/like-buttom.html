@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+      .like-btn {
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: grid;
+}  
+
+.like-btn svg {
+    width: 1rem;
+    fill: #000;
+}
+.like-btn.active svg {
+    fill: rgb(236, 47, 88);
+}
+    </style>
+    <button class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+        <path d="M4.8824 12.9557L10.5021 19.3071C11.2981 20.2067 12.7019 20.2067 13.4979 19.3071L19.1176 12.9557C20.7905 11.0649 21.6596 8.6871 20.4027 6.41967C18.9505 3.79992 16.2895 3.26448 13.9771 5.02375C13.182 5.62861 12.5294 6.31934 12.2107 6.67771C12.1 6.80224 11.9 6.80224 11.7893 6.67771C11.4706 6.31934 10.818 5.62861 10.0229 5.02375C7.71053 3.26448 5.04945 3.79992 3.59728 6.41967C2.3404 8.6871 3.20947 11.0649 4.8824 12.9557Z" />
+        </svg><span class="count" data-target="01">0</span></button>
+       <script>
+
+           function incrementCount(target) {
+              // get current target count
+              const currentTarget = document.querySelector(`.count[data-target="${target}"`).innerHTML;
+              const newValue = parseInt(currentTarget) + 1;
+
+       
+              // set this new value 
+              document.querySelector(`.count[data-target="${target}"`).innerHTML = newValue;
+            }
+       
+           function saveCountToLocalStorage(target) {
+               // get the value of current target
+               const currentTarget = document.querySelector(`.count[data-target="${target}"`).innerHTML;
+         
+               // now save this in Local Storage
+               localStorage.setItem(`target-${target}`, currentTarget);
+            }
+
+          
+       
+           const likeButtons = document.querySelectorAll('.like-btn');
+           likeButtons.forEach(button => {
+             button.addEventListener('click', (event) => {
+               // Select target using the data-target attribute
+               const target = event.currentTarget.querySelector('span').getAttribute('data-target');
+               
+               // Call both functions
+               incrementCount(target);
+               saveCountToLocalStorage(target);
+               
+               // Add `active` class to the clicked button
+               event.currentTarget.classList.add("active");
+
+
+            });
+
+            window.onload = function () {
+                const likeButtons = document.querySelectorAll('.like-btn');
+                likeButtons.forEach(button => {
+                // Retrieve saved data from Local Storage
+                const target = button.querySelector('span').getAttribute('data-target');
+                const currentTarget = localStorage.getItem(`target-${target}`);
+    
+                // Set new value
+                if (currentTarget) {
+                    document.querySelector(`.count[data-target="${target}"`).innerHTML = currentTarget;
+                    button.classList.add("active");
+                }
+            });
+        };
+           
+    });
+
+         
+       </script>
+</body>
+</html>
+
+
