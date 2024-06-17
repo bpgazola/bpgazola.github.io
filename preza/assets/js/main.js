@@ -47,7 +47,7 @@ $('.carousel-method').slick({
     },]
 });
 
-$('#panelMenu a, .float-button').click(function () {
+$('#panelMenu a, .float-button, .btn-default').click(function () {
     $('html, body').animate({ scrollTop: $($(this).attr("href")).offset().top});
 });
 
