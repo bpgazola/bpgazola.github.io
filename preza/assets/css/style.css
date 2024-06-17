@@ -100,6 +100,18 @@ p strong {
     border: solid 1px var(--color-purple);
 }
 
+.btn-send {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: solid 1px var(--color-purple);
+}
+
+.btn-send:hover {
+    background-color: transparent;
+    color: var(--color-purple);
+    border: solid 1px var(--color-purple);
+}
+
 button[type="submit"] {
     /* display: flex;
     align-items: center; */
