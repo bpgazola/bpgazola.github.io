@@ -572,29 +572,6 @@ header {
     color: var(--color-green);
 }
 
-@media (max-width: 991px) {
-
-    .carousel-spotlight .item:nth-child(2) {
-        background-image: url('../img/slick-slide-xs-sm-01.png');
-        background-size: cover;
-    }
-
-    .carousel-spotlight .item:nth-child(3) {
-        background-image: url('../img/slick-slide-xs-sm-02.png');
-        background-size: cover;
-    }
-
-    .carousel-spotlight .item:nth-child(4) {
-        background-image: url('../img/slick-slide-xs-sm-03.png');
-        background-size: cover;
-    }
-
-    .carousel-spotlight .item:nth-child(5) {
-        background-image: url('../img/slick-slide-xs-sm-04.png');
-        background-size: cover;
-    }
-}
-
 
 /* 
 .carousel-spotlight .item:nth-child(1) .thumbnail {
@@ -932,12 +909,6 @@ hr.line {
 }
 
 
-@media (max-width: 991px) {
-    .float-button {
-        margin: 3rem 0 3rem 0;
-    } 
-}
-
 .float-button div {
     width: 20px;
     height: 2px;
@@ -963,7 +934,7 @@ hr.line {
     .carousel-spotlight .item .col-sm-12,
     .carousel-spotlight .item .col-md-12 {
         text-align: center;
-        padding: 0 10rem 0 10rem;
+        padding: 0 15rem 0 10rem;
     }
 
     .about img {
@@ -974,16 +945,58 @@ hr.line {
         width: 30rem;
     }
 
+    .carousel-spotlight .item:nth-child(2) {
+        background-image: url('../img/slick-slide-xs-sm-01.png');
+        background-size: cover;
+    }
 
+    .carousel-spotlight .item:nth-child(3) {
+        background-image: url('../img/slick-slide-xs-sm-02.png');
+        background-size: cover;
+    }
+
+    .carousel-spotlight .item:nth-child(4) {
+        background-image: url('../img/slick-slide-xs-sm-03.png');
+        background-size: cover;
+    }
+
+    .carousel-spotlight .item:nth-child(5) {
+        background-image: url('../img/slick-slide-xs-sm-04.png');
+        background-size: cover;
+    }
     /* section:is(.about, .how-do) {
         padding: 3rem 0;
     } */
+    .float-button {
+        margin: 3rem 0 3rem 0;
+    } 
 }
+
+@media (max-width: 768px) {
+    .carousel-spotlight .item .col-sm-12,
+    .carousel-spotlight .item .col-md-12 {
+        text-align: center;
+        padding: 0 10rem 0 8rem;
+    }
+}
+
 
 @media (max-width: 425px) {
     * {
         font-size: 1rem;
         line-height: 1.5rem;
+    }
+    .carousel-spotlight .item .col-sm-12,
+    .carousel-spotlight .item .col-md-12 {
+        text-align: center;
+        padding: 0 3rem 0 5rem;
+    }
+    .carousel-spotlight .item {
+        min-height: 768px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-position: -5rem 0;
     }
 }
 
