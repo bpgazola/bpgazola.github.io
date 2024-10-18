@@ -684,8 +684,8 @@ section {
 
 #accordion .panel .panel-heading .icon-plus  {
     background-color: #fff4e4;
-    width: 48px;
-    height: 48px;
+    max-width: 48px;
+    max-height: 48px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -697,8 +697,8 @@ section {
 
 #accordion .panel .panel-heading .icon-minus {
     background-color: #fff4e4;
-    width: 48px;
-    height: 48px;
+    max-width: 48px;
+    max-height: 48px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
