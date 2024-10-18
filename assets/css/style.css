@@ -1067,6 +1067,11 @@ footer .network {
         font-size: 0.8rem;
     }
 
+    #accordion .panel .panel-heading .icon-plus, #accordion .panel .panel-heading .icon-minus {
+        min-width: 25px;
+        min-height: 25px;
+    }
+
 }
 
 
