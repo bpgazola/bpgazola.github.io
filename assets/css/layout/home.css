@@ -1,0 +1,75 @@
+header {
+    background: url('../../images/header-background-home-code.jpg');
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: 0 0 5rem 0;
+}
+
+header .overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: #0091ad;
+    opacity: 0.8;
+}
+
+/* header::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 768px;
+    background-color: #0091ad;
+    opacity: 0.8;
+} */
+
+header h1, header h2 {
+    color: #fff4e4;
+}
+
+header span {
+    font-family: inherit;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-weight: 800;
+    color: #f9c845;
+}
+
+header img.top-highline:hover {
+    animation: wiggle 3s ease-in-out;
+}
+
+header .group-item {
+    margin: 2rem auto;
+}
+
+header .group-item .item {
+    display: flex;
+    color: #fff4e4;
+    font-family: inherit;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin: 1.5rem auto;
+}
+
+header .group-item .item img {
+    width: 1.5rem;
+    margin: 0 1rem 0 0;
+}
+
+header img.arrow {
+    width: 4rem;
+    cursor: pointer;
+    animation: move 1.5s infinite;
+}
+
+/* Sections */
+
+
+

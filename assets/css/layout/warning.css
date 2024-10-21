@@ -1,0 +1,13 @@
+.warning {
+    background-color: #f7e8a4;
+    border: solid 1px #f9c845;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.warning .icon img {
+    width: 4rem;
+}

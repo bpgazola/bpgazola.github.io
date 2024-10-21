@@ -1,0 +1,81 @@
+
+.work {
+    background-color: #f7e8a4;
+}
+
+.work h3 {
+    color: #f96e46;
+}
+
+.work .card-porfolio {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.work .card-porfolio .thumbnail img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+} 
+
+
+.work .card-porfolio .overlay {
+    background-color: #f96e46;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.work .card-porfolio:hover .overlay {
+    visibility: visible;
+}
+
+
+.work .card-porfolio .overlay p {
+    color: #fff4e4;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.work .card-porfolio .overlay a.link {
+    background: url('../images/icon-arrow-link.svg') no-repeat 5rem 0.35rem;
+    background-size: 0.5rem;
+    padding: 0 1rem 0 0;
+}
+
+.work .card-porfolio .overlay a.link:hover::after {
+    width: 4.5rem;
+}
+
+.work .btn-default {
+    max-width: 200px;
+    margin-top: 3rem;
+}
+
+.work .btn-default::after {
+    content: 'Ver mais';
+}
+
+.work .btn-default.showLess {
+    margin-top: 5rem;
+}
+
+.work .btn-default.showLess::after {
+    content: 'Ver menos';
+}
+/* 
+.work .btn-default:hover::after,
+.work .btn-default.showLess:hover::after {
+    color: #00A69C;
+} */

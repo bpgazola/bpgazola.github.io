@@ -1,0 +1,31 @@
+header {
+    background: url("../../images/header-background-email-marketing.jpg");
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: 0 0 5rem 0;
+}
+
+header .overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: #0091ad;
+    opacity: 0.8;
+}
+
+header h3 {
+    color: #F9C845;
+}
+
+header p {
+    color: #fff4e4;
+}
+
+
+

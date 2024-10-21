@@ -1,0 +1,55 @@
+
+.who {
+    background-color: #fff4e4;
+}
+
+.who h1, .who p {
+    color: #545863;
+}
+
+.who h3 {
+    color: #f96e46;
+}
+
+.who .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.who .profile, .who .profile-resume {
+    margin: 7rem 0 0 0;
+}
+
+.who .profile a.download-resume::before {
+    position: absolute;
+    content: "";
+    background-image: url('../../images/icon-download.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    margin: 0.3rem 0 0 -1.3rem;
+}
+
+.who .profile a.download-resume {
+    font-size: 1.3rem;
+    color: #f96e46;
+    font-weight: 600;
+    margin: 1rem 0 0 1rem;
+}
+
+.who .profile-resume p, .who .profile-resume p span {
+    font-family: inherit;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: 1rem auto;
+}
+
+.who .profile-resume p span.spotlight {
+    background-color: #545863;
+    padding: 0.3rem 0 0.3rem 0;
+    color: #fff4e4;
+}

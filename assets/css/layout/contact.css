@@ -1,0 +1,52 @@
+.contact {
+    background-color: #545863;
+}
+
+.contact h3 {
+    color: #fff4e4;
+}
+
+.contact .item {
+    display: flex;
+    align-items: flex-start;
+    color: #fff4e4;
+    margin: 1rem auto;
+}
+
+.contact .item>div  {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.contact .item .icon img {
+    width: 2rem;
+    margin: 0 1rem 0 0;
+}
+
+.contact .item .icon img:hover {
+    animation: wiggle 3s ease-in-out;
+}
+
+.contact .item a {
+    color: #00e8fc;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: none !important;
+    position: relative;
+}
+
+.contact .item a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 2rem;
+    background-color: #f9c845;
+    transition: width 0.3s ease-in-out;
+}
+
+.contact .item a:hover::after {
+    width: 100%;
+}

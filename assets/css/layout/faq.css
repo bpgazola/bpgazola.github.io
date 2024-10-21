@@ -1,0 +1,75 @@
+
+
+.faq {
+    background-color: #545863;
+}
+
+.faq h3 {
+    color: #fff4e4;
+}
+
+#accordion .panel {
+    background-color: #0091AD;
+    border: solid 1px #00E8FC;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+#accordion .panel .panel-heading h2 {
+    color: #F9C845;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+#accordion .panel .panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#accordion .panel .panel-heading .icon-plus  {
+    background-color: #fff4e4;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(90deg);
+    
+}
+
+#accordion .panel .panel-heading .icon-minus {
+    background-color: #fff4e4;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(180deg);
+}
+
+#accordion .panel .panel-heading .icon-plus::after {
+    content: "+";
+    color: #0091AD;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#accordion .panel .panel-heading .icon-minus::after {
+    content: "-";
+    color: #0091AD;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#accordion .panel .panel-body p {
+    color: #fff4e4;
+}
+
