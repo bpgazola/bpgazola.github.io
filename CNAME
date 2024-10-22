@@ -1,1 +1,4 @@
-http://bpgazola.github.io
+mte1._domainkey.bpgazola.github.io
+dkim1.mandrillapp.com
+mte2._domainkey.bpgazola.github.io
+dkim2.mandrillapp.com
