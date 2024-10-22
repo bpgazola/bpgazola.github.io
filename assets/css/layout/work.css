@@ -74,8 +74,3 @@
 .work .btn-default.showLess::after {
     content: 'Ver menos';
 }
-/* 
-.work .btn-default:hover::after,
-.work .btn-default.showLess:hover::after {
-    color: #00A69C;
-} */
