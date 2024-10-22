@@ -49,7 +49,7 @@
 }
 
 .work .card-porfolio .overlay a.link {
-    background: url('../images/icon-arrow-link.svg') no-repeat 5rem 0.35rem;
+    background: url('../../images/icon-arrow-link.svg') no-repeat 5rem 0.35rem;
     background-size: 0.5rem;
     padding: 0 1rem 0 0;
 }
