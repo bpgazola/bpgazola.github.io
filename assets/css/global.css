@@ -400,7 +400,7 @@ footer .network {
     }
 }
 
-/* Keiframes */
+/* Keyframes */
 
 /* Media Queries */
 
@@ -423,6 +423,12 @@ footer .network {
     header img.top-highline {
         width: 15rem;
     }
+    header img {
+        max-width: 15rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .who .profile {
         align-items: center;
@@ -442,6 +448,13 @@ footer .network {
 
 }
 
+@media only screen and (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: translate(0) scale(1) !important;
+    }
+}
+
 
 @media (max-width: 425px) {
     .brand img {
@@ -452,9 +465,3 @@ footer .network {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    [data-aos] {
-        opacity: 1 !important;
-        transform: translate(0) scale(1) !important;
-    }
-}
