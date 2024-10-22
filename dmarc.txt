@@ -1,0 +1,2 @@
+_dmarc.bpgazola.github.io
+v=DMARC1; p=none;
