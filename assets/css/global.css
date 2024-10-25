@@ -131,9 +131,9 @@ p strong {
     content: "";
     background-image: url('../images/linkedin-share-button.png');
     background-repeat: no-repeat;
-    background-position: -0.1rem -0.1rem;
-    background-size: 1.3rem;
-    margin: 0.1rem -1.5rem;
+    background-position: 0 0;
+    background-size: contain;
+    margin: 0 -1.5rem;
     width: 20px;
     height: 20px;
     border: solid 1px #fff4e4;
