@@ -467,7 +467,7 @@ footer .network {
 }
 
 .modal .modal-body {
-    padding: 0 0 2rem 0;
+    padding: 0 0 2rem 0 !important;
 }
 
 .modal .modal-body p {
