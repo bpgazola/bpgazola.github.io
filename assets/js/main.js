@@ -1,5 +1,5 @@
+// Boot AOS library
 AOS.init();
-
 
 // Get elements by class name
 const iconMenu = document.querySelectorAll('.icon-menu, .icon-menu-close, #panelMenu li');
@@ -43,6 +43,7 @@ moveToAnchor.forEach((element) => {
   });
 });
 
+// Slick Carousel
 $('.carousel-services').slick({
     dots: true,
     infinite: false,
@@ -68,6 +69,7 @@ $('.carousel-services').slick({
     }]
 });
 
+// Show and hide cards
 function setupPortfolioCards() {
     const groupCards = document.querySelector('.group-cards');
     const portfolioCards = groupCards.querySelectorAll('.card-porfolio');
