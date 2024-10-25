@@ -564,6 +564,10 @@ footer .network {
         min-width: 25px;
         min-height: 25px;
     }
+    .share .share-icon {
+        background-position: 11rem 0;
+       
+    }
 
 }
 
@@ -572,6 +576,7 @@ footer .network {
         opacity: 1 !important;
         transform: translate(0) scale(1) !important;
     }
+    
 }
 
 
