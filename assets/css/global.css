@@ -118,6 +118,47 @@ p strong {
     color: #fff4e4;
 }
 
+
+.btn-share-linkedin {
+    background-color: #0a66c2;
+    color:#fff4e4 !important;
+    padding: 1rem 3rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.btn-share-linkedin::before {
+    position: absolute;
+    content: "";
+    background-image: url('../images/linkedin-share-button.png');
+    background-repeat: no-repeat;
+    background-position: -0.1rem -0.1rem;
+    background-size: 1.3rem;
+    margin: 0.1rem -1.5rem;
+    width: 20px;
+    height: 20px;
+    border: solid 1px #fff4e4;
+    border-radius: 2px;
+}
+
+.btn-share-whatsapp {
+    background-color: #25d366;
+    color:#fff4e4 !important;
+    padding: 1rem 3rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.btn-share-whatsapp::before {
+    position: absolute;
+    content: "";
+    background-image: url('../images/whats-app-share-button.png');
+    background-repeat: no-repeat;
+    background-position: -0.1rem -0.2rem;
+    background-size: 1.5rem;
+    margin: 0.1rem -1.5rem;
+    width: 20px;
+    height: 20px;
+}
+
 /* Button */
 
 /* Link */
@@ -374,6 +415,8 @@ footer .network {
 
 /* Float Button */
 
+/* Share Buttons */
+
 .share {
     position: fixed;
     bottom: 7rem;
@@ -415,8 +458,16 @@ footer .network {
     color: #fff4e4;
 }
 
+/* Share Buttons */
+
+/* Modal */
+
 .modal-header {
     border-bottom: none !important;
+}
+
+.modal .modal-body {
+    padding: 0 0 2rem 0;
 }
 
 .modal .modal-body p {
@@ -429,45 +480,8 @@ footer .network {
     font-weight: 600;
 }
 
-.btn-share-linkedin {
-    background-color: #0a66c2;
-    color:#fff4e4 !important;
-    padding: 1rem 3rem;
-    margin: 0 0.5rem 0 0.5rem;
-}
+/* Modal */
 
-.btn-share-linkedin::before {
-    position: absolute;
-    content: "";
-    background-image: url('../images/linkedin-share-button.png');
-    background-repeat: no-repeat;
-    background-position: -0.1rem -0.1rem;
-    background-size: 1.3rem;
-    margin: 0.1rem -1.5rem;
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff4e4;
-    border-radius: 2px;
-}
-
-.btn-share-whatsapp {
-    background-color: #25d366;
-    color:#fff4e4 !important;
-    padding: 1rem 3rem;
-    margin: 0 0.5rem 0 0.5rem;
-}
-
-.btn-share-whatsapp::before {
-    position: absolute;
-    content: "";
-    background-image: url('../images/whats-app-share-button.png');
-    background-repeat: no-repeat;
-    background-position: -0.1rem -0.2rem;
-    background-size: 1.5rem;
-    margin: 0.1rem -1.5rem;
-    width: 20px;
-    height: 20px;
-}
 
 /* Keyframes */
 
