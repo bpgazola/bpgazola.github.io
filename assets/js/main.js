@@ -118,3 +118,29 @@ $('.collapse').on('shown.bs.collapse', function() {
     $(this).parent().find(".icon-minus").removeClass("icon-minus").addClass("icon-plus");
 });
 
+// Social share buttons
+$(document).ready(function($) {
+    setShareLinks();
+
+    function socialWindow(url) {
+        const left = (screen.width - 600) / 2;
+        const top = (screen.height - 600) / 2;
+        const params = "menubar=no,toolbar=no,status=no,width=600,height=600,top=" + top + ",left=" + left;
+        window.open(url, "NewWindow", params);
+    }
+
+    function setShareLinks() {
+        const pageUrl = encodeURIComponent(document.URL);
+
+        $('.social-share.btn-share-whatsapp').on('click', function() {
+            const url = "https://wa.me/?text=" + pageUrl;
+            socialWindow(url);
+        });
+
+        $('.social-share.btn-share-linkedin').on('click', function() {
+            const url = "https://www.linkedin.com/cws/share?url=" + pageUrl;
+            socialWindow(url);
+        });
+    }
+});
+
