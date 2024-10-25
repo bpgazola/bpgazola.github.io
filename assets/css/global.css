@@ -118,7 +118,6 @@ p strong {
     color: #fff4e4;
 }
 
-
 .btn-share-linkedin {
     background-color: #0a66c2;
     color:#fff4e4 !important;
@@ -456,6 +455,7 @@ footer .network {
 .share .share-icon:hover::after {
     content: "Compartilhe";
     color: #fff4e4;
+    font-size: inherit !important;
 }
 
 /* Share Buttons */
@@ -566,8 +566,15 @@ footer .network {
     }
     .share .share-icon {
         background-position: 11rem 0;
-       
     }
+    .share .share-icon:hover {
+       
+        padding: 1rem 2rem;
+    }
+    .share .share-icon:hover::after {
+        font-size: 1.3rem !important;
+    }
+   
 
 }
 
