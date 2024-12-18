@@ -832,7 +832,7 @@ footer a, footer a:hover {
         padding: 2rem 1rem 2rem 1rem;
     }
 
-    h1 {
+    h1, h1 span {
         font-size: 3rem;
         line-height: 3.5rem;
     }
