@@ -816,6 +816,9 @@ footer a, footer a:hover {
     .social-links {
         display: none !important;
     }
+    form input[type=date], form input[type=datetime-local], form input[type=month], form input[type=time] {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 425px) {
