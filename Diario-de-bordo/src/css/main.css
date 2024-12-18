@@ -818,6 +818,26 @@ footer a, footer a:hover {
     }
 }
 
+@media (max-width: 425px) {
+
+    .destinations a.link {
+        float: none !important;
+        display: flex;
+        justify-content: center;
+        margin-top: -1rem;
+        width: 100%;
+    }
+    .why .container-box {
+       
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
 @media (max-width: 320px) {
     .navbar-brand img {
         width: 10rem;
