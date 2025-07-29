@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gincana Techwizards: Desafio 1 de 9</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border-top: 5px solid #007bff; /* Linha de destaque azul */
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .charada-texto {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #444;
+            background-color: #e9f5ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #0056b3;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .pato-avisos {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffeeba;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            color: #856404;
+            font-style: italic;
+        }
+        #feedback {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .feedback-success {
+            color: #28a745;
+        }
+        .feedback-error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gincana Techwizards: Desafio 1 de 9</h1>
+        
+        <div class="pato-avisos">
+            *Aviso do Pato Programador:*<br>
+            Olá, Techwizard! A sua jornada para a vitória na gincana começa agora. O Pato Programador deixou uma charada para você desvendar. Concentre-se, utilize seus conhecimentos e avance para a próxima fase!
+        </div>
+
+        <h2>A Charada:</h2>
+        <p class="charada-texto">
+            "Não tenho boca, mas falo com o mundo. Com fios ou sem, a informação inundo. Sou a ponte invisível, que dados faz voar. O que sou eu, que te ajuda a conectar?"
+        </p>
+
+        <h3>Sua Resposta:</h3>
+        <input type="text" id="respostaCharada" placeholder="Digite sua resposta aqui...">
+        
+        <h3>Próxima Dica:</h3>
+        <p>Ao acertar a charada, clique no botão abaixo para ser redirecionado para a próxima etapa da gincana!</p>
+        
+        <button onclick="verificarResposta()">Descobrir Próxima Pista!</button>
+
+        <div id="feedback"></div>
+
+    </div>
+
+    <script>
+        function verificarResposta() {
+            const respostaUsuario = document.getElementById('respostaCharada').value.trim().toLowerCase();
+            const respostaCorreta = "a rede"; // RESPOSTA CORRETA PARA ESTA CHARADA (em minúsculas)
+            
+            const feedbackDiv = document.getElementById('feedback');
+            feedbackDiv.classList.remove('feedback-success', 'feedback-error');
+
+            if (respostaUsuario === respostaCorreta) {
+                feedbackDiv.classList.add('feedback-success');
+                feedbackDiv.innerHTML = "Parabéns! Você acertou! Redirecionando para a próxima charada...";
+                // REDIRECIONA PARA A PRÓXIMA CHARADA APÓS UM PEQUENO ATRASO
+                setTimeout(() => {
+                    window.location.href = "charada2.html"; // MUDAR PARA charada3.html, charada4.html, etc.
+                }, 1500); // 1.5 segundos de atraso
+            } else {
+                feedbackDiv.classList.add('feedback-error');
+                feedbackDiv.innerHTML = "Ops! Resposta incorreta. O Pato Programador sugere que você tente novamente!";
+            }
+        }
+    </script>
+</body>
+</html>
