@@ -1,0 +1,12 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 01 Sep 2025 14:31:17 at https://view.greatpages.com.br/preview/2059069/1756747759 +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "pt_BR, en, *" https://view.greatpages.com.br/preview/2059069/1756747759 -O1 "C:\Users\bpgaz\V4 - Clientes\Club Wash\www\LP - Club Wash" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:31:25	Error: 	"Not Found" (404) at link https://view.greatpages.com.br/preview/2059069/copiar/ (from https://view.greatpages.com.br/preview/2059069/1756747759)
+
+HTTrack Website Copier/3.49-2 mirror complete in 8 seconds : 6 links scanned, 4 files written (1611277 bytes overall) [1321440 bytes received at 165180 bytes/sec], 363591 bytes transferred using HTTP compression in 4 files, ratio 19%, 1.2 requests per connection
+(1 errors, 0 warnings, 0 messages)
